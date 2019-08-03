@@ -1,3 +1,15 @@
-header
-  .container
-    h3 Шапка
+header.main-header
+  .container.flex
+    a.main-header__logo(href="#"): img(src="../../logo.svg", alt="Toxin")
+    nav.main-header__nav
+      ul.site-nav
+        li.site-nav__item: a.site-nav__link(href="#") О нас
+        li.site-nav__item.site-nav__item_has-submenu
+          a.site-nav__link(href="#") Услуги
+        li.site-nav__item: a.site-nav__link(href="#") Вакансии
+        li.site-nav__item: a.site-nav__link(href="#") Новости
+        li.site-nav__item.site-nav__item_has-submenu
+          a.site-nav__link(href="#") Соглашения
+        li.site-nav__item: a.site-nav__link.btn.btn_common(href="#") Войти
+        li.site-nav__item: a.site-nav__link.btn.btn_gradient(href="#") Зарегистрироваться
+      
