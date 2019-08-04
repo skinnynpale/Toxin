@@ -1,0 +1,13 @@
+extends ../template-base
+
+block title
+  title Отель «Toxin» | Компоненты
+  
+block styles
+  link(rel="stylesheet" href="ui-kit.sass")
+
+block content
+  include ../mixins-pug
+  
+  .ui-kit-container
+    input.field-default(type="email" placeholder="Email")
