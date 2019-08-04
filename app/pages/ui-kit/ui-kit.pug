@@ -9,5 +9,11 @@ block styles
 block content
   include ../mixins-pug
   
-  .ui-kit-container
-    input.field-default(type="email" placeholder="Email")
+  main
+    .ui-kit-container
+      p.field
+        label.field(for="field-email") Text Field
+        input.field_default#field-email(type="email" placeholder="Email")
+        
+        
+      input.field_default.field_default-dropdown(value="Сколько гостей")
