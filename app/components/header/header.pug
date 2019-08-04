@@ -1,15 +1,21 @@
 header.main-header
   .container.flex
     a.main-header__logo(href="#"): img(src="../../logo.svg", alt="Toxin")
-    nav.main-header__nav
+    nav.main-header__nav(class="flex")
       ul.site-nav
-        li.site-nav__item: a.site-nav__link(href="#") О нас
+        li.site-nav__item
+          a.site-nav__link(href="#") О нас
         li.site-nav__item.site-nav__item_has-submenu
           a.site-nav__link(href="#") Услуги
-        li.site-nav__item: a.site-nav__link(href="#") Вакансии
-        li.site-nav__item: a.site-nav__link(href="#") Новости
+        li.site-nav__item
+          a.site-nav__link(href="#") Вакансии
+        li.site-nav__item
+          a.site-nav__link(href="#") Новости
         li.site-nav__item.site-nav__item_has-submenu
           a.site-nav__link(href="#") Соглашения
-        li.site-nav__item: a.site-nav__link.btn.btn_common(href="#") Войти
-        li.site-nav__item: a.site-nav__link.btn.btn_gradient(href="#") Зарегистрироваться
-      
+      .user-nav
+        ul.user-nav__list
+          li.user-nav__item
+            +button-link('btn_not-gradient', 'Войти')(href="#")
+          li.user-nav__item
+            +button-link('btn_gradient', 'Зарегистрироваться')(href="#")
