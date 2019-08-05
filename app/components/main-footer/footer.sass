@@ -59,3 +59,17 @@
   margin-left: 20px
   &:first-child
     margin-left: 0
+
+.field-arrow
+  position: relative
+  &::after
+    content: url('../../components/main-footer/img/arrow_forward.svg')
+    display: inline-block
+    width: 44px
+    height: 44px
+    // background-color: $accent25
+    position: absolute
+    top: 12px
+    right: 0
+    text-align: center
+    cursor: pointer
