@@ -1,10 +1,18 @@
 .main-footer
   .container
     padding: 100px 0
+    padding-top: 103px
     display: -webkit-flex
     display: -ms-flex
     display: flex
     justify-content: space-between
+
+.main-footer__info
+  margin-top: 15px
+
+.main-footer__logo
+  display: block
+  margin-top: -3px
 
 .main-footer__nav
     display: -webkit-flex
@@ -20,11 +28,12 @@
   color: $accent50
   line-height: 17px
 
+
 .footer-nav__item
-  margin-top: 20px
-      display: list-item
+  margin-top: 21px
+  display: list-item
   &:nth-child(2)
-    margin-top: 21
+    margin-top: 21px
 
 .main-footer__description
   width: 260px
@@ -38,14 +47,14 @@
 
 .footer-subscription__offer
   margin:
-    top: 21px
-    bottom: 20px
+    top: 18px
+    bottom: 23px
 
 .sub-footer__copyright
   font-size: 14px
 
 .sub-footer
-  border-top: 1px solid $accent25
+  border-top: 1px solid rgba(#d0d0d4, 0.50)
   padding: 23px 0
   .container
     display: -webkit-flex
@@ -56,20 +65,8 @@
 
 .footer-soc__list
   display: inline-block
-  margin-left: 20px
+  margin-left: 21px
+  margin-top: 2px
+  margin-right: 1px
   &:first-child
     margin-left: 0
-
-.field-arrow
-  position: relative
-  &::after
-    content: url('../../components/main-footer/img/arrow_forward.svg')
-    display: inline-block
-    width: 44px
-    height: 44px
-    // background-color: $accent25
-    position: absolute
-    top: 12px
-    right: 0
-    text-align: center
-    cursor: pointer

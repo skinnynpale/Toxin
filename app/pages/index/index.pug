@@ -11,8 +11,26 @@ block content
   
   include ../../components/main-header/header
     
-  main
+  main.main
     .container
       //- a(href="../ui-kit/ui-kit.pug") Ui kit
+      .find-room
+        h1.find-room__title Найдём номера под ваши пожелания
+        form.find-room__form
+          .find-room__group
+            .find-room__item
+              label(for="arrival") Прибытие
+              input.field_default.field_default-expand#arrival(value="ДД.ММ.ГГГГ")
+            .find-room__item
+              label(for="arrival") Выезд
+              input.field_default.field_default-expand#arrival(value="ДД.ММ.ГГГГ")
+          .find-room__item.find-room__guests
+            label(for="arrival") Гости
+            input.field_default.field_default-expand#arrival(value="Сколько гостей")
+          a.btn.btn_gradient.find-room__button(href="#") Подобрать номер
+            svg(width='18', height='18', xmlns='http://www.w3.org/2000/svg')
+              path(d='M9 0.984375L17.0156 9L9 17.0156L7.59375 15.6094L13.1719 9.98438H0.984375V8.01562H13.1719L7.59375 2.39062L9 0.984375Z')
+      p.main__wishes Лучшие номера для вашей работы, отдыха и просто вдохновения
+          
       
   include ../../components/main-footer/footer
