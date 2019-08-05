@@ -1,2 +1,11 @@
-mixin field-default(classes)
-  input(class="field-" + classes)&attributes(attributes)
+mixin field(classes, text, showLabel, id, arrow)
+  if (id.indexOf('email') != -1 && arrow == true)
+    .field-arrow
+      input(class="field_default " + classes, id=id)(type="email" placeholder="Email")
+  else if (id.indexOf('email') != -1)
+    input(class="field_default " + classes, id=id)(type="email" placeholder="Email")
+  else if (showLabel == false)
+    input(class="field_default " + classes, id=id)&attributes(attributes)
+  else if (showLabel == true)
+    label(for=id)= text
+    input(class="field_default " + classes, id=id)&attributes(attributes)
