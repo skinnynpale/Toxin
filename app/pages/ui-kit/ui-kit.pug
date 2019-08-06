@@ -33,9 +33,14 @@ block content
             +field-arrow('subscription text field', 'subscr')(type="email" placeholder="Email")
         .buttons
           .buttons__checkbox
-            h3.checkbox__title Checkbox Buttons
+            h3 Checkbox Buttons
             .checkbox__example
               +checkbox('Можно курить', 'smoke')
               +checkbox('Можно с питомцами', 'pets', 1)
               +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
+          .buttons__radio
+            h3 Radio Buttons
+            .radio__example
+              include ../../components/radio/radio
+
             
