@@ -13,6 +13,9 @@
 
 .btn_not-gradient
   padding: 8px 19px 7px 19px
+  &:hover::after
+    background: linear-gradient(180deg, #d2bdff 0%, #b9c9fe 100%)
+
 
 .btn_not-gradient::after
   content: ""
@@ -28,6 +31,8 @@
 .btn_gradient
   color: #fff
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  &:hover
+    background: linear-gradient(180deg, #d2bdff 0%, #b9c9fe 100%)
 
 .btn_arrow
   width: 100%
