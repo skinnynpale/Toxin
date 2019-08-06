@@ -3,9 +3,9 @@
   form.find-room__form
     .find-room__group
       .find-room__item
-        +field('field_default-expand', 'Прибытие', true, 'arrival')(value="ДД.ММ.ГГГГ")
+        +field-dropdown('Прибытие', 'arrival')(value="ДД.ММ.ГГГГ")
       .find-room__item
-        +field('field_default-expand', 'Выезд', true, 'check-out')(value="ДД.ММ.ГГГГ")
+        +field-dropdown('Выезд', 'checkOut')(value="ДД.ММ.ГГГГ")
     .find-room__item.find-room__guests
-      +field('field_default-expand', 'Выезд', true, 'guests')(value="Сколько гостей")
+      +field-dropdown('Гости', 'guests')(value="Сколько гостей")
       +button('btn_gradient btn_arrow find-room__btn', 'Подобрать номер')(href="#!")

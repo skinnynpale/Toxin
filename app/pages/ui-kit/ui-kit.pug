@@ -13,4 +13,16 @@ block content
     
     include colors-type/colors-type
     
-    
+    img.logo_min(src="img/logo_min.svg", alt="logo")
+      
+    .form-elements
+      .container
+        .fields
+          .t-field-default
+            +field-label('text field', 'fieldDefault')(placeholder="Email")
+          .t-field-default
+            +field-label('text field', 'fieldHover')(value="This is pretty awesome")
+          .t-field-default
+            +field-dropdown('text field', 'dropdown')(value="Сколько гостей")
+          .t-field-default
+            +field-masked('Masked text field', 'masked', 't-field_dropdown')(placeholder="ДД.ММ.ГГГГ")
