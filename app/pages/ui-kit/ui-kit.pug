@@ -27,3 +27,6 @@ block content
           .t-field
             +field-masked('Masked text field', 'masked', 't-field_dropdown')(placeholder="ДД.ММ.ГГГГ")
           +field-group('t-field', 'date Dropdown', 'arrival', 'date Dropdown', 'checkOut', '', '19.03.2019')(placeholder="ДД.ММ.ГГГГ")
+          .t-field
+            +field-dropdown('filter date dropdown', 'filterDate')(value="19 авг - 23 авг")
+          +field-arrow('subscription text field', 'subscr')(type="email" placeholder="Email")

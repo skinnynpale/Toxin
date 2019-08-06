@@ -9,10 +9,15 @@ mixin field-dropdown(text, id, value)
   label(class="label-cap" for=id)= text
   input(class="field_default field_default-dropdown " id=id, value=value)&attributes(attributes)
 
-mixin field-arrow()
-  .field-arrow
-    input(class="field_default ")&attributes(attributes)
-
+mixin field-arrow(text, id)
+  if (text && id)
+    .field-arrow
+      label(for=id)= text
+      input(class="field_default " id=id)&attributes(attributes)
+  else
+    .field-arrow
+      input(class="field_default ")&attributes(attributes)  
+  
 mixin field-masked(text, id)
   label(for=id)= text
   input(class="field_default field_default-masked", id=id disabled)&attributes(attributes)
