@@ -38,11 +38,6 @@
   &:disabled
     background: #fff
 
-label
-  width: 100%
-  display: inline-block
-  margin-bottom: 5px
-
 div[class$='group-field']
   display: -webkit-flex
   display: -ms-flex
@@ -55,6 +50,13 @@ div[class$='group-field']
 
 .label-cap
   position: relative
+  font-family: $default-font
+  font-size: 12px
+  line-height: 15px
+  text-transform: uppercase
+  font-weight: bold
+  color: $accent
+  line-height: 15px
   &::after
     content: ""
     display: inline-block

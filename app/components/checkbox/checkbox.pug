@@ -1,0 +1,9 @@
+mixin checkbox(text, id, checked)
+  if (checked == true)
+    .checkbox
+      input(id=id type='checkbox' checked)
+      label(for=id)= text
+  else
+    .checkbox
+      input(id=id type='checkbox')
+      label(for=id)= text
