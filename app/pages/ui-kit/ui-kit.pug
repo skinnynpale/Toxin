@@ -18,11 +18,12 @@ block content
     .form-elements
       .container
         .fields
-          .t-field-default
+          .t-field
             +field-label('text field', 'fieldDefault')(placeholder="Email")
-          .t-field-default
+          .t-field
             +field-label('text field', 'fieldHover')(value="This is pretty awesome")
-          .t-field-default
+          .t-field
             +field-dropdown('text field', 'dropdown')(value="Сколько гостей")
-          .t-field-default
+          .t-field
             +field-masked('Masked text field', 'masked', 't-field_dropdown')(placeholder="ДД.ММ.ГГГГ")
+          +field-group('t-field', 'date Dropdown', 'arrival', 'date Dropdown', 'checkOut', '', '19.03.2019')(placeholder="ДД.ММ.ГГГГ")

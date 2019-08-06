@@ -1,11 +1,7 @@
 .find-room
   h1.find-room__title Найдём номера под ваши пожелания
   form.find-room__form
-    .find-room__group
-      .find-room__item
-        +field-dropdown('Прибытие', 'arrival')(value="ДД.ММ.ГГГГ")
-      .find-room__item
-        +field-dropdown('Выезд', 'checkOut')(value="ДД.ММ.ГГГГ")
+    +field-group('t-field', 'Прибытие', 'arrival', 'Выезд', 'checkOut')(placeholder="ДД.ММ.ГГГГ")
     .find-room__item.find-room__guests
       +field-dropdown('Гости', 'guests')(value="Сколько гостей")
       +button('btn_gradient btn_arrow find-room__btn', 'Подобрать номер')(href="#!")

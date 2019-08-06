@@ -1,0 +1,25 @@
+mixin field-default()
+  input(class="field_default ")&attributes(attributes)
+
+mixin field-label(text, id)
+  label(for=id)= text
+  input(class="field_default ", id=id)&attributes(attributes)
+    
+mixin field-dropdown(text, id, value)
+  label(class="label-cap" for=id)= text
+  input(class="field_default field_default-dropdown " id=id, value=value)&attributes(attributes)
+
+mixin field-arrow()
+  .field-arrow
+    input(class="field_default ")&attributes(attributes)
+
+mixin field-masked(text, id)
+  label(for=id)= text
+  input(class="field_default field_default-masked", id=id disabled)&attributes(attributes)
+
+mixin field-group(classes, text1, id1, text2, id2, value1, value2)
+  div(class=classes + '__group-field')
+    div(class=classes + '__item')
+      +field-dropdown(text1, id1, value1)&attributes(attributes)
+    div(class=classes + '__item')
+      +field-dropdown(text2, id2, value2)&attributes(attributes)
