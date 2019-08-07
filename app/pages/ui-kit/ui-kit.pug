@@ -67,6 +67,7 @@ block content
               +rate(1)
               +rate(1)
               +rate(1)
+        .buttons2
           include ../../components/range-slider/range-slider
           .buttons__buttons
             h3 buttons
@@ -80,7 +81,10 @@ block content
               a.default-link(href="#!") Click me
               a.default-link(href="#!") Click me
             .buttons__arrow
-              +button('btn_gradient btn_arrow find-room__btn', 'Перейти к оплате')(href="#!")    
+              +button('btn_gradient btn_arrow find-room__btn', 'Перейти к оплате')(href="#!")  
+          .buttons__pagination
+            h3 pagination
+            include ../../components/pagination/pagination
               
 
             
