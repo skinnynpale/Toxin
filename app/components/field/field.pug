@@ -8,6 +8,16 @@ mixin field-label(text, id)
 mixin field-dropdown(text, id, value)
   label(class="label-cap" for=id)= text
   input(class="field_default field_default-dropdown " id=id, value=value)&attributes(attributes)
+  div(class="dropdown__content")
+    span.dropdown__item
+      span.dropdown__target спальни
+      span.dropdown__value 2
+    span.dropdown__item
+      span.dropdown__target кровати
+      span.dropdown__value 2
+    span.dropdown__item
+      span.dropdown__target ванные комнаты
+      span.dropdown__value.dropdown__value-zero 0
 
 mixin field-arrow(text, id)
   if (text && id)
