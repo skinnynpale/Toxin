@@ -1,4 +1,3 @@
-input#man(type='radio' name='sex' value='man')
-label(for='man') Мужчина
-input#woman(type='radio' name='sex' value='woman')
-label(for='woman') Женщина
+mixin radio(text, id, name, value)
+  input(id=id type='radio' name=name value=value)
+  label(for=id)= text

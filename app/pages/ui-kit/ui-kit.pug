@@ -41,7 +41,8 @@ block content
           .buttons__radio
             h3 Radio Buttons
             .radio__example
-              include ../../components/buttons/radio/radio
+              +radio('Мужчина', 'man', 'sex', 'man')
+              +radio('Женщина', 'woman', 'sex', 'woman')
           .buttons__toggle
             h3 Toggle
             .toggle__example
@@ -56,32 +57,24 @@ block content
           .buttons__rate
             h3 Rate Button
             .rate__group
-              +rate(1)
-              +rate(1)
-              +rate(1)
-              +rate(1)
-              +rate()
+              +rating('example', 4, 5)
             .rate__group
-              +rate(1)
-              +rate(1)
-              +rate(1)
-              +rate(1)
-              +rate(1)
+              +rating('example', 5, 5)
         .buttons2
           include ../../components/range-slider/range-slider
           .buttons__buttons
             h3 buttons
             .buttons__gradient
-              +button('btn_gradient', 'Click Me')(href="#")
-              +button('btn_gradient', 'Click Me')(href="#")
+              +btn_gradient('btn__example', 'Click Me')
+              +btn_gradient('btn__example', 'Click Me')
             .buttons__not-gradient
-              +button('btn_not-gradient', 'Click Me')(href="#")
-              +button('btn_not-gradient', 'Click Me')(href="#")
+              +btn_not-gradient('btn__example', 'Click Me')
+              +btn_not-gradient('btn__example', 'Click Me')
             .buttons__links
-              a.default-link(href="#!") Click me
-              a.default-link(href="#!") Click me
+              +link('link_example','Click me')
+              +link('link_example','Click me')
             .buttons__arrow
-              +button('btn_gradient btn_arrow find-room__btn', 'Перейти к оплате')(href="#!")  
+              +btn_arrow('btn__example', 'Перейти к оплате')
           .buttons__pagination
             h3 pagination
             include ../../components/pagination/pagination
