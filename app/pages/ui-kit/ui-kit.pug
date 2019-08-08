@@ -84,4 +84,15 @@ block content
         .fields
           .t-field
             +field-dropdown('Dropdown', 'dropdown')(value="2 спальни, 2 кровати...")
-            
+          .checkbox__expandable
+            h3.checkbox__title expandable checkbox list
+            .checkbox__example-expandable
+              +checkbox('Можно курить', 'smoke')
+              +checkbox('Можно с питомцами', 'pets', 1)
+              +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
+
+    .rooms-filter
+      .container
+        .rooms-filter__wrapper
+          .t-field.rooms-filter__date
+            +field-dropdown('даты пребывания в отеле', 'roomsFilterDate')(value="19 авг - 23 авг")

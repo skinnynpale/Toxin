@@ -1,7 +1,7 @@
 .find-room
   h1.find-room__title Найдём номера под ваши пожелания
   form.find-room__form
-    +field-group('t-field', 'Прибытие', 'arrival', 'Выезд', 'checkOut')(placeholder="ДД.ММ.ГГГГ")
+    +field-group('find-room', 'Прибытие', 'arrival', 'Выезд', 'checkOut')(value="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
     .find-room__item.find-room__guests
       +field-dropdown('Гости', 'guests')(value="Сколько гостей")
-      +btn_arrow('find-room__btn', 'Подобрать номер')
+    +btn_arrow('find-room__btn', 'Подобрать номер')
