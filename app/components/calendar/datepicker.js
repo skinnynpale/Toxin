@@ -56,7 +56,7 @@
             prevHtml: '<svg><path d="M 17,12 l -5,5 l 5,5"></path></svg>',
             nextHtml: '<svg><path d="M 14,12 l 5,5 l -5,5"></path></svg>',
             navTitles: {
-                days: 'MM, <i>yyyy</i>',
+                days: 'MM <i>yyyy</i>',
                 months: 'yyyy',
                 years: 'yyyy1 - yyyy2'
             },
@@ -107,7 +107,7 @@
         this.opts = $.extend(true, {}, defaults, options, this.$el.data());
 
         if ($body == undefined) {
-            $body = $('body');
+            $body = $('.find-room');
         }
 
         if (!this.opts.startDate) {
@@ -776,22 +776,22 @@
                     top = dims.top + dims.height + offset;
                     break;
                 case 'left':
-                    left = dims.left - selfDims.width - offset;
+                    left = 31;
                     break;
             }
 
             switch(secondary) {
                 case 'top':
-                    top = dims.top;
+                    top = 0;
                     break;
                 case 'right':
                     left = dims.left + dims.width - selfDims.width;
                     break;
                 case 'bottom':
-                    top = dims.top + dims.height - selfDims.height;
+                    top = 0;
                     break;
                 case 'left':
-                    left = dims.left;
+                    left = 31;
                     break;
                 case 'center':
                     if (/left|right/.test(main)) {
@@ -804,7 +804,7 @@
             this.$datepicker
                 .css({
                     left: left,
-                    top: top
+                    top: 195
                 })
         },
 
@@ -1478,7 +1478,7 @@
             daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
             months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
             monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-            today: 'Сегодня',
+            today: 'Применить',
             clear: 'Очистить',
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
@@ -1843,11 +1843,11 @@
         },
 
         _addButtonsIfNeed: function () {
-            if (this.opts.todayButton) {
-                this._addButton('today')
-            }
             if (this.opts.clearButton) {
                 this._addButton('clear')
+            }
+            if (this.opts.todayButton) {
+                this._addButton('today')
             }
         },
 
@@ -2201,7 +2201,7 @@
         _onChangeRange: function (e) {
             var $target = $(e.target),
                 name = $target.attr('name');
-            
+
             this.d.timepickerIsActive = true;
 
             this[name] = $target.val();
