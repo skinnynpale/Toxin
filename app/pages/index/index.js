@@ -11,4 +11,22 @@ $('#find-room__from').datepicker({
   nextHtml: '<div class="find-room__arrow-date find-room__arrow-date-next"></div>',
   clearButton: true,
   todayButton: true,
-})
+});
+
+// Dropdown
+const adult = document.getElementById('adult');
+const adultValue = document.getElementById('adultValue');
+const adultMinus = adult.childNodes[1]
+
+
+adultMinus.addEventListener('click', function() {
+  console.log('Тык');
+});
+
+function isZero(e) {
+  if (e.innerHTML == 0) {
+    return e.previousSibling.classList.add('dropdown__btn_disable');
+  }
+}
+
+console.log(isZero(adultValue));

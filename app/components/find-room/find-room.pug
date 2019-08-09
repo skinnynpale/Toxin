@@ -4,4 +4,23 @@
     +field-group('find-room', 'Прибытие', 'find-room__from', 'Выезд', 'find-room__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
     .find-room__item.find-room__guests
       +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
+      div(class="dropdown__content")
+        span.dropdown__item#adult
+          span.dropdown__target Взрослые
+          a.dropdown__btn.dropdown__btn-minus(href="#!") -
+          span.dropdown__value#adultValue 0
+          a.dropdown__btn.dropdown__btn-plus(href="#!") +
+        span.dropdown__item
+          span.dropdown__target Дети
+          a.dropdown__btn.dropdown__btn-minus(href="#!") -
+          span.dropdown__value 2
+          a.dropdown__btn.dropdown__btn-plus(href="#!") +
+        span.dropdown__item
+          span.dropdown__target Младенцы
+          a.dropdown__btn.dropdown__btn-minus.dropdown__btn_disable(href="#!") -
+          span.dropdown__value 3
+          a.dropdown__btn.dropdown__btn-plus(href="#!") +
+        .dropdown__functions
+          a.dropdown__func-btn.dropdown__clear(href="#!") Очистить
+          a.dropdown__func-btn.dropdown__apply(href="#!") Применить
     +btn_arrow('find-room__btn', 'Подобрать номер')
