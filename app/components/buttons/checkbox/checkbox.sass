@@ -1,5 +1,5 @@
 .checkbox
-  line-height: 23px
+  line-height: 25px
   color: $accent50
   input[type="checkbox"]
     opacity: 0
@@ -17,7 +17,7 @@
     &::before
       height: 20px
       width: 20px
-      border: 1px solid $purple
+      border: 1px solid $accent25
       border-radius: 4px
       left: 0px
       top: 2px
@@ -34,5 +34,66 @@
       content: none
     &:checked + label::after
       content: ""
+    &:checked + label::before
+      border: 1px solid $purple
     &:focus + label::before
       outline: none
+
+.checkbox__wrapper_rich
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
+
+.checkbox__title_rich
+  color: $accent75
+  font-weight: bold
+  width: 100% !important
+
+.checkbox__text_rich
+  font-size: 12px
+  line-height: 14px
+  margin-top: -5px
+  font-weight: 100
+  margin-top: 2px
+  color: $accent50
+  width: 230px
+
+//
+
+.checkbox__title_expandable
+  position: relative
+  cursor: pointer
+  padding-bottom: 18px
+  &::after
+    content: ""
+    display: inline-block
+    position: absolute
+    right: 0
+    top: 4px
+    width: 9px
+    height: 9px
+    border: 2px solid $accent50
+    border-top: 0
+    border-left: 0
+    transform: translateY(-50%) rotate(45deg)
+
+.checkbox__wrapper_expandable
+  opacity: 0
+  max-height: 0
+  overflow: hidden
+  left: 100000px
+  -moz-transition: opacity .3s, max-height .3s
+  -ms-transition: opacity .3s, max-height .3s
+  transition: opacity .3s, max-height .3s
+
+.checkbox__wrapper_expandable-active
+  max-height: 1000px
+  left: auto
+  opacity: 1
+
+.checkbox__title_expandable-active
+  transition: .3s
+  &::after
+    transform: translateY(0%) rotate(-135deg)
+
+//
