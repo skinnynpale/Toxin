@@ -13,9 +13,71 @@ block content
   include ../../components/main-header/header
     
   main.main
+    .container
+      .rooms-filter
+        .rooms-filter__item.datepicker-place
+          .t-field.rooms-filter__field
+            +field-dropdown('Даты пребывания в отеле', 'dateFilter')(value="Выберите дату" readonly)
+          .t-field.rooms-filter__field
+            +field-dropdown('Гости', 'guestsFilter')(value="Сколько гостей" readonly)
+            .dropdown__content#guestsDrop
+              span.dropdown__item
+                span.dropdown__target Взрослые
+                a.dropdown__btn.dropdown__btn-minus(href="#!") -
+                span.dropdown__value 0
+                a.dropdown__btn.dropdown__btn-plus(href="#!") +
+              span.dropdown__item
+                span.dropdown__target Дети
+                a.dropdown__btn.dropdown__btn-minus(href="#!") -
+                span.dropdown__value 0
+                a.dropdown__btn.dropdown__btn-plus(href="#!") +
+              span.dropdown__item#guestsDropPrimeItem
+                span.dropdown__target Младенцы
+                a.dropdown__btn.dropdown__btn-minus(href="#!") -
+                span.dropdown__value#guestsDropPrimeItemValue 0
+                a.dropdown__btn.dropdown__btn-plus(href="#!") +
+              .dropdown__functions
+                a.dropdown__func-btn.dropdown__clear(href="#!") Очистить
+                a.dropdown__func-btn.dropdown__apply(href="#!") Применить
+        .rooms-filter__item.range-slider
+          h3.rooms-filter__name Диапазон цены
+          .range-slider__app
+            .range-slider__line
+            .range-slider__circle.range-slider__circle-start
+            .range-slider__range
+            .range-slider__circle.range-slider__circle-end
+            p.range-slider__info Стоимость за сутки пребывания в номере
+        .rooms-filter__item
+          h3.rooms-filter__name Привелегии
+          .checkbox__example.rooms-filter__checkbox
+            +checkbox('Можно курить', 'smoke')
+            +checkbox('Можно с питомцами', 'pets', 1)
+            +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
+        .rooms-filter__item
+          h3.rooms-filter__name Доступность
+          .rooms-filter__checkbox
+            +checkbox_rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
+            +checkbox_rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'helper')
+        .rooms-filter__item
+          +field-dropdown('Удобства номера', 'comfortFilter')(value="3 гостя, 1 младенец" readonly)
+        .rooms-filter__item
+          h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
+          .checkbox__wrapper_expandable#moreComfortFilterWrapper
+            +checkbox('Завтрак', 'breakfast')
+            +checkbox('Письменный стол', 'desk', 1)
+            +checkbox('Стул для кормления', 'feedingChair', 1)
+            +checkbox('Кроватка', 'crib', 1)
+            +checkbox('Телевизор', 'tv')
+            +checkbox('Шампунь', 'shampoo')
+            +checkbox('Интернет', 'internet')
+            +checkbox('Связь с космосом', 'spaceConnection')
 
+      .rooms
+        h1 Номера, которые мы для вас подобрали
+    
+    
   include ../../components/main-footer/footer
   
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="../../components/calendar/datepicker.js")
-  script(src="rooms.js" defer)
+  script(src="rooms.js")
