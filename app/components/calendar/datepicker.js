@@ -107,7 +107,7 @@
         this.opts = $.extend(true, {}, defaults, options, this.$el.data());
 
         if ($body == undefined) {
-            $body = $('.find-room');
+            $body = $('.datepicker-place');
         }
 
         if (!this.opts.startDate) {
@@ -767,16 +767,16 @@
 
             switch (main) {
                 case 'top':
-                    top = dims.top - selfDims.height - offset;
+                    top = auto;
                     break;
                 case 'right':
-                    left = dims.left + dims.width + offset;
+                    left = auto;
                     break;
                 case 'bottom':
-                    top = dims.top + dims.height + offset;
+                    top = 0;
                     break;
                 case 'left':
-                    left = 31;
+                    left = 0;
                     break;
             }
 
@@ -803,8 +803,8 @@
 
             this.$datepicker
                 .css({
-                    left: left,
-                    top: 195
+                    left: 0,
+                    top: 0
                 })
         },
 
@@ -814,6 +814,22 @@
             this.setPosition(this.opts.position);
             this.$datepicker.addClass('active');
             this.visible = true;
+
+            this.$datepicker
+                if (this["el"].id == 'dateFilter') {
+                  this.$datepicker
+                    .css({
+                      left: '280px',
+                      top: '25px'
+                    });
+                }
+                if (this["el"].id == 'find-room__from') {
+                  this.$datepicker
+                    .css({
+                      left: '0px',
+                      top: '25px'
+                    });
+                }
 
             if (onShow) {
                 this._bindVisionEvents(onShow)
