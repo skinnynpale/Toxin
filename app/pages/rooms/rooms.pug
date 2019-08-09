@@ -1,0 +1,21 @@
+extends ../template-base
+
+block title
+  title Отель «Toxin» | Номера, которые мы для вас подобрали
+  
+block styles
+  link(rel="stylesheet" href="rooms.sass")
+
+
+block content
+  include ../mixins-pug
+  
+  include ../../components/main-header/header
+    
+  main.main
+
+  include ../../components/main-footer/footer
+  
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="../../components/calendar/datepicker.js")
+  script(src="rooms.js" defer)
