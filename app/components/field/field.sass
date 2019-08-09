@@ -75,24 +75,32 @@ div[class$='group-field']
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05)
   border-top: none
   border-radius: 4px
-  padding: 13px 15px
-  padding-right: 7px
-  padding-top: 7px
+  padding: 7px 7px 13px 15px
   position: absolute
-  display: none
   background-color: #fff
   z-index: 1
+  opacity: 0
+  max-height: 0
+  overflow: hidden
+  left: 100000px
+  -moz-transition: opacity .3s, max-height .3s
+  -ms-transition: opacity .3s, max-height .3s
+  transition: opacity .3s, max-height .3s
+
+.dropdown__content_active
+  max-height: 300px
+  left: auto
+  opacity: 1
+  border-top-right-radius: 0
+  border-top-left-radius: 0
+
+.field_default_active
+  border: 1px solid $accent50
+  border-bottom-right-radius: 0
+  border-bottom-left-radius: 0
 
 .find-room__item
   position: relative
-  &:hover
-    .dropdown__content
-      display: block
-      border-top-right-radius: 0
-      border-top-left-radius: 0
-    .field_default
-      border-bottom-right-radius: 0
-      border-bottom-left-radius: 0
 
 .dropdown__item
   text-transform: uppercase
@@ -105,11 +113,13 @@ div[class$='group-field']
   display: flex
   justify-content: space-between
   align-items: center
-  margin-top: 7px
+  margin-top: 20px
+  position: relative
   &:first-child
-    margin-top: 0
+    margin-top: 5px
 
 .dropdown__btn
+  position: absolute
   width: 30px
   height: 30px
   border-radius: 50%
@@ -117,20 +127,24 @@ div[class$='group-field']
   border: 1px solid $accent50
   color: $accent50
   text-align: center
-  line-height: 30px
+  line-height: 29px
   font-size: 18px
   font-weight: 100
+  transition: 0.25s ease
   &:active
-    background-color: $accent
+    background-color: $purple
+    transition: 0.25s ease
     color: #fff
     border: none
     font-weight: bold
 
 .dropdown__btn-minus
-  margin-left: auto
+  right: 62px
+.dropdown__btn-plus
+  right: 0
 
 .dropdown__value
-  margin: 0 15px
+  margin-right: 42px
 
 .dropdown__btn_disable
   border: 1px solid $accent25
@@ -141,7 +155,7 @@ div[class$='group-field']
   margin-bottom: 20px
 
 .dropdown__functions
-  margin-top: 20px
+  margin-top: 30px
   display: -webkit-flex
   display: -ms-flex
   display: flex
