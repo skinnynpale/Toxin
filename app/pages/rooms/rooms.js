@@ -86,54 +86,58 @@ for (var i = 0; i < valuesComfort.length; i++) {
   valuesComfort[i].nextSibling.addEventListener("click", function(event) {
     this.previousSibling.previousSibling.classList.remove('dropdown__btn_disable');
     this.previousSibling.innerHTML = +this.previousSibling.innerHTML + 1;
+    window.readyStrForInputComfort = '';
 
     // если клик по bedrooms
     if (this.parentNode.id == "bedrooms") {
       if (this.previousSibling.innerHTML == 1) {
         arrayComfort.push(this.previousSibling.innerHTML + ' спальня');
         window.keyBedrooms = arrayComfort.indexOf('1 спальня');
-        inputComfortFilter.value = arrayComfort;
       }
-      if (this.previousSibling.innerHTML >= 2) {
+      else if (this.previousSibling.innerHTML >= 2) {
         arrayComfort[keyBedrooms] = this.previousSibling.innerHTML + ' спальни';
-        inputComfortFilter.value = arrayComfort;
       }
-      if (this.previousSibling.innerHTML >= 5) {
+      else if (this.previousSibling.innerHTML >= 5) {
         arrayComfort[keyBedrooms] = this.previousSibling.innerHTML + ' спален';
-        inputComfortFilter.value = arrayComfort;
       }
+      arrayComfort.forEach(function(item, index, array) {
+        readyStrForInputComfort += item + ' ';
+      });
+      inputComfortFilter.value = readyStrForInputComfort;
     }
     // если клик по beds
     if (this.parentNode.id == "beds") {
       if (this.previousSibling.innerHTML == 1) {
         arrayComfort.push(this.previousSibling.innerHTML + ' кровать');
         window.keyBeds = arrayComfort.indexOf('1 кровать');
-        inputComfortFilter.value = arrayComfort;
       }
-      if (this.previousSibling.innerHTML >= 2) {
+      else if (this.previousSibling.innerHTML >= 2) {
         arrayComfort[keyBeds] = this.previousSibling.innerHTML + ' кровати';
-        inputComfortFilter.value = arrayComfort;
       }
-      if (this.previousSibling.innerHTML >= 5) {
+      else if (this.previousSibling.innerHTML >= 5) {
         arrayComfort[keyBeds] = this.previousSibling.innerHTML + ' кроватей';
-        inputComfortFilter.value = arrayComfort;
       }
+      arrayComfort.forEach(function(item, index, array) {
+        readyStrForInputComfort += item + ' ';
+      });
+      inputComfortFilter.value = readyStrForInputComfort;
     }
     // если клик по bathrooms
     if (this.parentNode.id == "bathrooms") {
       if (this.previousSibling.innerHTML == 1) {
         arrayComfort.push(this.previousSibling.innerHTML + ' ванная комната');
         window.keyBathrooms = arrayComfort.indexOf('1 ванная комната');
-        inputComfortFilter.value = arrayComfort;
       }
-      if (this.previousSibling.innerHTML >= 2) {
+      else if (this.previousSibling.innerHTML >= 2) {
         arrayComfort[keyBathrooms] = this.previousSibling.innerHTML + ' ванных комнаты';
-        inputComfortFilter.value = arrayComfort;
       }
-      if (this.previousSibling.innerHTML >= 5) {
+      else if (this.previousSibling.innerHTML >= 5) {
         arrayComfort[keyBathrooms] = this.previousSibling.innerHTML + ' ванных комнат';
-        inputComfortFilter.value = arrayComfort;
       }
+      arrayComfort.forEach(function(item, index, array) {
+        readyStrForInputComfort += item + ' ';
+      });
+      inputComfortFilter.value = readyStrForInputComfort;
     }
 
 
@@ -151,58 +155,49 @@ for (var i = 0; i < valuesComfort.length; i++) {
       if (this.parentNode.id == "bedrooms") {
         if (this.nextSibling.innerHTML == 0) {
           arrayComfort.splice(keyBedrooms, 1)
-          inputComfortFilter.value = arrayComfort;
         }
-        if (this.nextSibling.innerHTML == 1) {
+        else if (this.nextSibling.innerHTML == 1) {
           arrayComfort[keyBedrooms] = this.nextSibling.innerHTML + ' спальня';
-          inputComfortFilter.value = arrayComfort;
         }
-        if (this.nextSibling.innerHTML >= 2) {
+        else if (this.nextSibling.innerHTML >= 2) {
           arrayComfort[keyBedrooms] = this.nextSibling.innerHTML + ' спальни';
-          inputComfortFilter.value = arrayComfort;
         }
-        if (this.nextSibling.innerHTML >= 5) {
+        else if (this.nextSibling.innerHTML >= 5) {
           arrayComfort[keyBedrooms] = this.nextSibling.innerHTML + ' спален';
-          inputComfortFilter.value = arrayComfort;
         }
+        inputComfortFilter.value = readyStrForInputComfort;
       }
       // если клик по beds
       if (this.parentNode.id == "beds") {
         if (this.nextSibling.innerHTML == 0) {
           arrayComfort.splice(keyBeds, 1)
-          inputComfortFilter.value = arrayComfort;
         }
-        if (this.nextSibling.innerHTML == 1) {
+        else if (this.nextSibling.innerHTML == 1) {
           arrayComfort[keyBeds] = this.nextSibling.innerHTML + ' спальня';
-          inputComfortFilter.value = arrayComfort;
         }
-        if (this.nextSibling.innerHTML >= 2) {
+        else if (this.nextSibling.innerHTML >= 2) {
           arrayComfort[keyBeds] = this.nextSibling.innerHTML + ' спальни';
-          inputComfortFilter.value = arrayComfort;
         }
-        if (this.nextSibling.innerHTML >= 5) {
+        else if (this.nextSibling.innerHTML >= 5) {
           arrayComfort[keyBeds] = this.nextSibling.innerHTML + ' спален';
-          inputComfortFilter.value = arrayComfort;
         }
+        inputComfortFilter.value = arrayComfort;
       }
       // если клик по bathrooms
       if (this.parentNode.id == "bathrooms") {
         if (this.nextSibling.innerHTML == 0) {
           arrayComfort.splice(keyBathrooms, 1)
-          inputComfortFilter.value = arrayComfort;
         }
-        if (this.nextSibling.innerHTML == 1) {
+        else if (this.nextSibling.innerHTML == 1) {
           arrayComfort[keyBathrooms] = this.nextSibling.innerHTML + ' ванная комната';
-          inputComfortFilter.value = arrayComfort;
         }
-        if (this.nextSibling.innerHTML >= 2) {
+        else if (this.nextSibling.innerHTML >= 2) {
           arrayComfort[keyBathrooms] = this.nextSibling.innerHTML + ' ванных комнаты';
-          inputComfortFilter.value = arrayComfort;
         }
-        if (this.nextSibling.innerHTML >= 5) {
+        else if (this.nextSibling.innerHTML >= 5) {
           arrayComfort[keyBathrooms] = this.nextSibling.innerHTML + ' ванных комнат';
-          inputComfortFilter.value = arrayComfort;
         }
+        inputComfortFilter.value = arrayComfort;
       }
     }
   });
