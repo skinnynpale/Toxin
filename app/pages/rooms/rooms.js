@@ -41,6 +41,4 @@ window.primeItem = document.getElementById('guestsDropPrimeItemValue'); // Мл�
 
 window.amount = 0;
 
-const dep = require('../../components/field/dropdown/dropdown.js');
-
 //

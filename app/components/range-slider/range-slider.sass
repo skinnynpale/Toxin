@@ -1,4 +1,4 @@
-.buttons__range-slider
+.range-slider
   width: 266px
   position: relative
   &::after
@@ -13,33 +13,32 @@
   &::after
     content: '5 000₽ - 10 000₽'
 
-.rs__line
+.range-slider__line
   height: 6px
   border: 1px solid $accent25
   border-radius: 3px
   margin-top: 23px
 
-.rs__example
+.range-slider__app
   position: relative
 
-.rs__circle
+.range-slider__circle
   position: absolute
   width: 14px
   height: 14px
   border-radius: 10px
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
   border: 2px solid #FFFFFF
-  z-index: 9
   top: -4px
   cursor: pointer
 
-.rs__circle-start
+.range-slider__circle-start
   left: 80px
 
-.rs__circle-end
+.range-slider__circle-end
   right: 90px
 
-.rs__range
+.range-slider__range
   width: 88px
   height: 6px
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
@@ -47,3 +46,10 @@
   position: absolute
   top: 0
   left: 80px
+  z-index: -1
+
+.range-slider__info
+  color: $accent50
+  font-size: 12px
+  line-height: 14px
+  margin-top: 10px
