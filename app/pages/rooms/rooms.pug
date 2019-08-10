@@ -59,7 +59,24 @@ block content
             +checkbox_rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
             +checkbox_rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'helper')
         .rooms-filter__item
-          +field-dropdown('Удобства номера', 'comfortFilter')(value="3 гостя, 1 младенец" readonly)
+          .t-field
+            +field-dropdown('Удобства номера', 'comfortFilter')(value="Выберите удобства" readonly)
+            .dropdown__content.dropdown__content-poor#comfortDrop
+              span.dropdown__item#bedrooms
+                span.dropdown__target cпальни
+                a.dropdown__btn.dropdown__btn-minus(href="#!") -
+                span.dropdown__value 0
+                a.dropdown__btn.dropdown__btn-plus(href="#!") +
+              span.dropdown__item#beds
+                span.dropdown__target кровати
+                a.dropdown__btn.dropdown__btn-minus(href="#!") -
+                span.dropdown__value 0
+                a.dropdown__btn.dropdown__btn-plus(href="#!") +
+              span.dropdown__item#bathrooms
+                span.dropdown__target ванные комнаты
+                a.dropdown__btn.dropdown__btn-minus(href="#!") -
+                span.dropdown__value 0
+                a.dropdown__btn.dropdown__btn-plus(href="#!") +
         .rooms-filter__item
           h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
           .checkbox__wrapper_expandable#moreComfortFilterWrapper

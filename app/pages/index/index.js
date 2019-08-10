@@ -26,7 +26,7 @@ datepickerButtons[1].addEventListener("click", function(event) {
 // Dropdown
 window.input = document.getElementById('guests');
 window.dropMenu = document.getElementById('guestsDrop');
-window.values = document.querySelectorAll('.dropdown__content .dropdown__value');
+window.values = document.querySelectorAll('#guestsDrop .dropdown__value');
 window.funcBtns = document.querySelectorAll('.dropdown__func-btn');
 window.primeItem = document.getElementById('guestsDropPrimeItemValue'); // Младенцы
 

@@ -25,7 +25,7 @@ for (var i = 0; i < values.length; i++) {
   }
   // +
   values[i].nextSibling.addEventListener("click", function(event) {
-    this.previousSibling.previousSibling.classList.remove('dropdown__btn_disable')
+    this.previousSibling.previousSibling.classList.remove('dropdown__btn_disable');
     this.previousSibling.innerHTML = +this.previousSibling.innerHTML + 1;
     amount += 1;
     if (amount == 1) {
