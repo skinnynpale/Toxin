@@ -91,19 +91,20 @@ block content
         h1.rooms__offer Номера, которые мы для вас подобрали
         .rooms__grid
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/room_1.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 888
-                +link('rooms-item__lux', 'Люкс')
-                p.rooms-item__price <b>9 990₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 5, 5)
-                p.rooms-item__reviews <b>145</b> Отзывов
+            a(href="http://", target="_blank")
+              .rooms-item__image
+                img.rooms-item__img(src="img/room_1.jpg", alt="Фотография номера")
+                include ../../components/image-helpers/image-helpers
+              .rooms-item__wrapper
+                .rooms-item__info
+                  h2.rooms-item__num 
+                    span №
+                    | 888
+                  +link('rooms-item__lux', 'Люкс')
+                  p.rooms-item__price <b>9 990₽</b> в сутки
+                .rooms-item__rating
+                  +rating('rooms-rating', 5, 5, 'ratingRoom')
+                  p.rooms-item__reviews <b>145</b> Отзывов
           .rooms__item
             .rooms-item__image
               img.rooms-item__img(src="img/image.jpg", alt="Фотография номера")

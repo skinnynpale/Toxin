@@ -1,6 +1,8 @@
 // Подключение rangeslider
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
+// Подключение рейтинга
+import '../../components/buttons/rate/rate.js';
 
 // Инициализация rangeslider
 const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue')
