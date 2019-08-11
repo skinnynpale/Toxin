@@ -1,0 +1,22 @@
+extends ../template-base
+
+block title
+  title Отель «Toxin» | №888 Люкс (подробности номера)
+  
+block styles
+  link(rel="stylesheet" href="page-room.sass")
+
+
+block content
+  include ../mixins-pug
+  
+  include ../../components/main-header/header
+    
+  main
+
+  include ../../components/main-footer/footer
+  
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="../../components/calendar/datepicker.js")
+  script(src="page-room.js")
+  script(src="../../components/field/dropdown/dropdown.js")
