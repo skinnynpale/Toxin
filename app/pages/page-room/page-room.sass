@@ -4,3 +4,56 @@
 @import "../../components/field/field.sass"
 @import "../../components/field/dropdown/dropdown.sass"
 @import "../../components/calendar/datepicker.css"
+
+.gallery
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-template-rows: 1fr 1fr
+
+.gallery__img
+  width: 100%
+  height: 100%
+
+.gallery__item--1
+  grid-column: 1 / 3
+  grid-row: 1 / 3
+
+.page-room__details
+  margin: 70px 0
+
+.page-room__details
+  .container
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+
+.page-room__info-title
+  margin-bottom: 20px
+
+// Сведения о номере
+
+.data-list
+  list-style-type: none
+
+.data-list__item
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: flex-end
+  padding-bottom: 17px
+  border-bottom: 1px solid $accent10
+  margin-bottom: 23px
+  &:last-child
+    border-bottom: 0
+
+.data-list__ico
+  font-size: 48px
+  background: -webkit-linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  user-select: none
+  margin-right: 10px
+
+.data-list__title
+  color: $accent75
+  font-weight: bold

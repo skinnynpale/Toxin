@@ -4,6 +4,7 @@ block title
   title Отель «Toxin» | №888 Люкс (подробности номера)
   
 block styles
+  link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
   link(rel="stylesheet" href="page-room.sass")
 
 
@@ -12,8 +13,42 @@ block content
   
   include ../../components/main-header/header
     
-  main
-
+  main.page-room
+    .gallery
+      figure.gallery__item.gallery__item--1
+        img.gallery__img(src="img/image.jpg", alt="Фотография номера")
+      figure.gallery__item.gallery__item--2
+        img.gallery__img(src="img/image 2.jpg", alt="Фотография номера")
+      figure.gallery__item.gallery__item--3
+        img.gallery__img(src="img/image 3.jpg", alt="Фотография номера")
+      
+    .page-room__details
+      .container
+        .page-room__info-grid
+          .page-room__data-list
+            h2.page-room__info-title Сведения о номере
+            ul.data-list
+              li.data-list__item
+                i.material-icons.data-list__ico insert_emoticon
+                .data-list__content-wrapper
+                  b.data-list__title Комфорт
+                  p.data-list__text Шумопоглощающие стены
+              li.data-list__item
+                i.material-icons.data-list__ico location_city
+                .data-list__content-wrapper
+                  b.data-list__title Удобство
+                  p.data-list__text Окно в каждой из спален
+              li.data-list__item
+                i.material-icons.data-list__ico whatshot
+                .data-list__content-wrapper
+                  b.data-list__title Уют
+                  p.data-list__text Номер оснащен камином
+          .page-room__impressions
+          .page-room__testimonials
+          .page-room__rules
+          .page-room__cancel
+        .page-room__check      
+          
   include ../../components/main-footer/footer
   
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
