@@ -41,11 +41,9 @@ block content
                 a.dropdown__func-btn.dropdown__apply(href="#!") Применить
         .rooms-filter__item.range-slider
           h3.rooms-filter__name Диапазон цены
+          span.rooms-filter__values#rangeSliderRoomValue
           .range-slider__app
-            .range-slider__line
-            .range-slider__circle.range-slider__circle-start
-            .range-slider__range
-            .range-slider__circle.range-slider__circle-end
+            input(type="text" class="js-range-slider" name="my_range" value="")
             p.range-slider__info Стоимость за сутки пребывания в номере
         .rooms-filter__item
           h3.rooms-filter__name Привелегии
