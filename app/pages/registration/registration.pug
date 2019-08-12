@@ -1,0 +1,17 @@
+extends ../template-base
+
+block title
+  title Отель «Toxin» | Регистрация
+  
+block styles
+  link(rel="stylesheet" href="registration.sass")
+
+
+block content
+  include ../mixins-pug
+  
+  include ../../components/main-header/header
+    
+  main.main
+
+  include ../../components/main-footer/footer
