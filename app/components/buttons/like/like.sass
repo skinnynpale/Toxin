@@ -16,9 +16,9 @@
   min-width: 40px
   &::after
     background: none
-  &:hover::after
-    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-
+  &:hover
+    &::after
+      background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
   &:hover::before
     color: $purple
   &:hover
@@ -27,15 +27,23 @@
       path
         fill: $purple
         stroke: none
+
 .like__svg
   position: absolute
   left: 4px
   top: 4px
 
 .like__btn-checked
+  color: $purple
   &::after
     background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-  color: $purple
+  &:hover
+    color: $accent25
+    &::after
+      background: none
+    .like__svg
+      path
+        fill: $accent25
   .like__svg
     path
       fill: $purple

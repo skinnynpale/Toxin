@@ -5,6 +5,7 @@
 @import "../../components/field/dropdown/dropdown.sass"
 @import "../../components/calendar/datepicker.css"
 @import "../../components/donut/donut.sass"
+@import "../../components/buttons/like/like.sass"
 
 // Галлерея
 .gallery
@@ -38,6 +39,7 @@
   display: grid
   grid-template-columns: 1fr 1fr
   grid-column-gap: 70px
+  grid-row-gap: 30px
 
 // Сведения о номере
 
@@ -66,3 +68,49 @@
 .advan-list__title
   color: $accent75
   font-weight: bold
+
+// Отзывы посетителей номера
+
+.page-room__reviews
+  grid-column: 1 / -1
+
+.page-room__title-group
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  align-items: baseline
+
+.reviews__author
+  color: $accent75
+  line-height: 24px
+  cursor: pointer
+  &:hover
+    text-decoration: underline
+
+.reviews__text
+  line-height: 24px
+  margin-top: 10px
+
+.reviews__item
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  margin-bottom: 23px
+  &:last-child
+    margin-bottom: 0
+
+.reviews__dynamics
+  text-align: center
+
+.reviews__profile-photo
+  margin-bottom: 1px
+  max-width: none
+  z-index: 1
+  position: relative
+  cursor: pointer
+
+.reviews__likes
+  position: relative
+  z-index: 2
+  margin-top: -20px
