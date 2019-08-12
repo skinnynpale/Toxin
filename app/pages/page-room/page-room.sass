@@ -21,6 +21,15 @@
   grid-column: 1 / 3
   grid-row: 1 / 3
 
+.gallery__item
+  overflow: hidden
+
+.gallery__img
+  transition: 0.5s
+  &:hover
+    transform: scale(1.1)
+    transition: 1s
+
 // Детали номера
 
 .page-room__details
@@ -112,7 +121,10 @@
 
 .reviews__likes
   margin-top: 12px
+
 // Правила
+.page-room__rules
+  margin-left: 20px
 
 .rules-list
   list-style-type: none
@@ -121,6 +133,10 @@
   font-size: 14px
   line-height: 24px
   position: relative
+  max-width: 243px
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
   &::before
     content: ''
     width: 10px
@@ -132,27 +148,79 @@
     top: 7px
     left: -20px
 
-// Чек
-.check
+// Забронировать
+.check-form
   padding: 40px 30px 30px 30px
-
-.page-room__check
   border: 1px solid rgba(0, 0, 0, 0.12)
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
   border-radius: 4px
+  align-self: start
 
-.check__item_group
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  align-items: baseline
+.check-form__item
+  margin-bottom: 20px
+  position: relative
+  &:nth-last-child(2)
+    margin-bottom: 0px
+  &_group
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: baseline
+    position: relative
+    justify-content: space-between
 
-.check__number
+.check-form__number
   margin-right: 5px
   span
     font-family: 'montserrat-example', sans-serif
     font-size: 13px
     margin-right: 5px
 
-.check__price_default
+.check-form__price_default
   margin-left: auto
+
+.check-form__field
+  position: relative
+  width: 150px
+
+.check-form__conclusion
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: space-between
+  margin-bottom: 10px
+
+.check-form__text
+  max-width: 214px
+  position: relative
+  line-height: 18px
+
+.check-form__text-info::after
+  content: 'i'
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  border: 1px solid $accent25
+  position: absolute
+  text-align: center
+  line-height: 18px
+  color: $accent25
+  cursor: help
+  top: 0
+  right: -30px
+  display: block
+  font-weight: bold
+
+.check-form__final-price
+  margin-top: 30px
+
+.check-form__price-line
+  border-bottom: 2px dotted $accent25
+  width: 100%
+  height: 5px
+  margin: 0 5px
+
+.check-form__final-price
+  h2:last-child
+    white-space: nowrap
+    font-family: 'montserrat-example'

@@ -1,9 +1,11 @@
 .find-room
   h1.find-room__title Найдём номера под ваши пожелания
   form.find-room__form.datepicker-place
-    +field-group('find-room', 'Прибытие', 'find-room__from', 'Выезд', 'find-room__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
-    .find-room__item.find-room__guests
-      +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
+    .find-room__item
+      +field-group('find-room', 'Прибытие', 'find-room__from', 'Выезд', 'find-room__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
+    .find-room__item
+      .find-room__guests
+        +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
       .dropdown__content#guestsDrop
         span.dropdown__item
           span.dropdown__target Взрослые

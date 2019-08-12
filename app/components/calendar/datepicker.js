@@ -816,6 +816,13 @@
             this.visible = true;
 
             this.$datepicker
+                if (this["el"].id == 'check-form__from') {
+                  this.$datepicker
+                    .css({
+                      left: '30px',
+                      top: '160px'
+                    });
+                }
                 if (this["el"].id == 'dateFilter') {
                   this.$datepicker
                     .css({
