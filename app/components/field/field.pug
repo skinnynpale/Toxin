@@ -2,11 +2,11 @@ mixin field-default()
   input(class="field_default ")&attributes(attributes)
 
 mixin field-label(text, id)
-  label(for=id)= text
+  label(class="label" for=id)= text
   input(class="field_default ", id=id)&attributes(attributes)
     
 mixin field-dropdown(text, id, value)
-  label(class="label-cap" for=id)= text
+  label(class="label label_cap" for=id)= text
   input(class="field_default field_default-dropdown " id=id, value=value)&attributes(attributes)
 
 mixin field-arrow(text, id)

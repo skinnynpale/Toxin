@@ -43,8 +43,7 @@ div[class$='group-field']
     position: relative
     width: 150px
 
-.label-cap
-  position: relative
+.label
   font-family: $default-font
   font-size: 12px
   line-height: 15px
@@ -52,6 +51,9 @@ div[class$='group-field']
   font-weight: bold
   color: $accent
   line-height: 15px
+
+.label_cap
+  position: relative
   &::after
     content: ""
     display: inline-block
@@ -65,3 +67,7 @@ div[class$='group-field']
     border-left: 0
     transform: translateY(-50%) rotate(45deg)
     cursor: pointer
+
+.reg-form__item
+  h3
+    margin-bottom: 5px
