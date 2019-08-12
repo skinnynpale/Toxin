@@ -28,9 +28,9 @@
 
 .page-room__details
   .container
-    display: -webkit-flex
-    display: -ms-flex
-    display: flex
+    display: grid
+    grid-template-columns: 1fr 1fr 380px
+    grid-column-gap: 70px
 
 .page-room__info-title
   margin-bottom: 20px
@@ -40,6 +40,7 @@
   grid-template-columns: 1fr 1fr
   grid-column-gap: 70px
   grid-row-gap: 30px
+  grid-column: 1 / 3
 
 // Сведения о номере
 
@@ -102,15 +103,56 @@
 
 .reviews__dynamics
   text-align: center
+  margin-right: 10px
 
 .reviews__profile-photo
   margin-bottom: 1px
   max-width: none
-  z-index: 1
-  position: relative
   cursor: pointer
 
 .reviews__likes
+  margin-top: 12px
+// Правила
+
+.rules-list
+  list-style-type: none
+
+.rules-list__item
+  font-size: 14px
+  line-height: 24px
   position: relative
-  z-index: 2
-  margin-top: -20px
+  &::before
+    content: ''
+    width: 10px
+    height: 10px
+    background-color: $accent25
+    border-radius: 50%
+    display: inline-block
+    position: absolute
+    top: 7px
+    left: -20px
+
+// Чек
+.check
+  padding: 40px 30px 30px 30px
+
+.page-room__check
+  border: 1px solid rgba(0, 0, 0, 0.12)
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+  border-radius: 4px
+
+.check__item_group
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: baseline
+
+.check__number
+  margin-right: 5px
+  span
+    font-family: 'montserrat-example', sans-serif
+    font-size: 13px
+    margin-right: 5px
+
+.check__price_default
+  margin-left: auto

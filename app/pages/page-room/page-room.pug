@@ -85,9 +85,27 @@ block content
                   .reviews__text Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
              
           .page-room__rules
-          .page-room__cancel
-        .page-room__check
-          h1 Привет
+            h2.page-room__info-title Правила
+            ul.rules-list
+              li.rules-list__item Нельзя с питомцами
+              li.rules-list__item Без вечеринок и мероприятий
+              li.rules-list__item Время прибытия — после 13:00, а выезд до 12:00
+          .page-room__cancel.cancel
+            h2.page-room__info-title Отмена
+            p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        .page-room__check.check
+          .check__item.check__item_group
+            h2.check__number
+              span №
+              | 888
+            +link('check__lux', 'Люкс')
+            p.check__price_default <b>9 990₽</b> в сутки
+          .check__item
+            
+
+            
+          
+          
   include ../../components/main-footer/footer
   
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
