@@ -25,29 +25,47 @@ block content
     .page-room__details
       .container
         .page-room__info-grid
-          .page-room__data-list
+          .page-room__advan-list
             h2.page-room__info-title Сведения о номере
-            ul.data-list
-              li.data-list__item
-                i.material-icons.data-list__ico insert_emoticon
-                .data-list__content-wrapper
-                  b.data-list__title Комфорт
-                  p.data-list__text Шумопоглощающие стены
-              li.data-list__item
-                i.material-icons.data-list__ico location_city
-                .data-list__content-wrapper
-                  b.data-list__title Удобство
-                  p.data-list__text Окно в каждой из спален
-              li.data-list__item
-                i.material-icons.data-list__ico whatshot
-                .data-list__content-wrapper
-                  b.data-list__title Уют
-                  p.data-list__text Номер оснащен камином
+            ul.advan-list
+              li.advan-list__item
+                i.material-icons.advan-list__ico insert_emoticon
+                .advan-list__content-wrapper
+                  b.advan-list__title Комфорт
+                  p.advan-list__text Шумопоглощающие стены
+              li.advan-list__item
+                i.material-icons.advan-list__ico location_city
+                .advan-list__content-wrapper
+                  b.advan-list__title Удобство
+                  p.advan-list__text Окно в каждой из спален
+              li.advan-list__item
+                i.material-icons.advan-list__ico whatshot
+                .advan-list__content-wrapper
+                  b.advan-list__title Уют
+                  p.advan-list__text Номер оснащен камином
           .page-room__impressions
+            h2.page-room__info-title Впечатления от номера
+            .donut
+              .donut__circle
+                include ../../components/donut/donut
+              .donut__info
+                .donut__char
+                  .donut__lap.donut__lap_orange
+                  .donut__lap-value Великолепно
+                .donut__char
+                  .donut__lap.donut__lap_green
+                  .donut__lap-value Хорошо
+                .donut__char
+                  .donut__lap.donut__lap_purple
+                  .donut__lap-value Удовлетворительно
+                .donut__char
+                  .donut__lap.donut__lap_black
+                  .donut__lap-value Разочарован
+                
           .page-room__testimonials
           .page-room__rules
           .page-room__cancel
-        .page-room__check      
+        .page-room__check
           
   include ../../components/main-footer/footer
   

@@ -1,7 +1,7 @@
 {
-  "name": "project",
+  "name": "toxin",
   "version": "1.0.0",
-  "description": "the project name",
+  "description": "toxin hotel, fsd 2 step",
   "main": "app/pages/index/index.pug",
   "scripts": {
     "start": "rimraf dist && parcel app/pages/index/index.pug --open",
