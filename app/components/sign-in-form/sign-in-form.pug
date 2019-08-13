@@ -1,0 +1,11 @@
+form.reg-form
+  .reg-from__wrapper
+    h1.reg-form__title Войти
+    .reg-form__item
+      +field-default(placeholder="Email" name="email")
+      +field-default(placeholder="Пароль" type="password")
+    .reg-from__item
+      +btn_arrow('reg-form__btn', 'Войти')(href="#!")
+    .reg-from__sign-in
+      p Нет аккаунта на Toxin?
+      +btn_not-gradient('reg-from__btn-login', 'Создать')(href="../registration/registration.pug")

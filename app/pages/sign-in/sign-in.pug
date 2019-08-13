@@ -1,10 +1,10 @@
 extends ../template-base
 
 block title
-  title Отель «Toxin» | Регистрация
+  title Отель «Toxin» | Вход
   
 block styles
-  link(rel="stylesheet" href="registration.sass")
+  link(rel="stylesheet" href="sign-in.sass")
 
 
 block content
@@ -14,6 +14,7 @@ block content
     
   main.main
     .container
-      include ../../components/reg-form/reg-form
+      include ../../components/sign-in-form/sign-in-form
+
             
   include ../../components/main-footer/footer

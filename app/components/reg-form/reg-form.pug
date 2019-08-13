@@ -1,0 +1,20 @@
+form.reg-form
+  .reg-from__wrapper
+    h1.reg-form__title Регистрация аккаунта
+    .reg-form__item
+      +field-default(placeholder="Имя" name="name")
+      +field-default(placeholder="Фамилия" name="surname")
+      +radio('Мужчина', 'man', 'sex', 'man')(checked)
+      +radio('Женщина', 'woman', 'sex', 'woman')
+    .reg-form__item
+      +field-label('Дата рождения', 'birthday')(placeholder="ДД.ММ.ГГГГ" name="birthday")
+    .reg-form__item
+      h3 Данные для входа в сервис
+      +field-default(placeholder="Email" name="email")
+      +field-default(placeholder="Пароль" type="password")
+      +btn-toggle('Получать спецпредложения', 'receive-offers', 'reg-form__toggle')
+    .reg-from__item
+      +btn_arrow('reg-form__btn', 'Перейти к оплате')(href="#!")
+    .reg-from__sign-in
+      p Уже есть аккаунт на Toxin
+      +btn_not-gradient('reg-from__btn-login', 'Войти')(href="../sign-in/sign-in.pug")

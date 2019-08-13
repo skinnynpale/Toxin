@@ -1,0 +1,41 @@
+@import "../field/field.sass"
+@import "../buttons/radio/radio.sass"
+@import "../buttons/toggle/toggle.sass"
+
+.reg-form
+  z-index: 0
+  background-color: #fff
+  border: 1px solid rgba(0, 0, 0, 0.12)
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+  border-radius: 4px
+  padding: 40px 30px 30px 30px
+
+.reg-from__wrapper
+  width: 320px
+
+.reg-form__title
+  margin-bottom: 20px
+
+.reg-form__item
+  margin-bottom: 20px
+
+.reg-form__item > input, label:not(.label)
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
+
+.reg-form__toggle
+  margin-top: 5px
+
+.reg-from__sign-in
+  margin-top: 30px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: space-between
+  p
+    color: #000
+
+.reg-from__btn-login
+  padding: 15px 26px
