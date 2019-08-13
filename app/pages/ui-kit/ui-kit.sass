@@ -1,5 +1,6 @@
 @import "../../sass/main.sass"
 @import "colors-type/colors-type.sass"
+// @import "form-elements/form-elements.sass"
 @import "../../components/field/field.sass"
 @import "../../components/buttons/checkbox/checkbox.sass"
 @import "../../components/buttons/radio/radio.sass"
@@ -120,32 +121,3 @@
     width: 266px
   h3
     margin-bottom: 18px
-
-//
-
-.checkbox__title
-  position: relative
-  cursor: pointer
-  margin: 0 !important
-  padding-bottom: 18px
-  &::after
-    content: ""
-    display: inline-block
-    position: absolute
-    right: 0
-    top: 4px
-    width: 9px
-    height: 9px
-    border: 2px solid $accent50
-    border-top: 0
-    border-left: 0
-    transform: translateY(-50%) rotate(45deg)
-
-.checkbox__expandable
-  position: relative
-  &:hover
-    .checkbox__example-expandable
-      display: block
-.checkbox__example-expandable
-  position: absolute
-  display: none

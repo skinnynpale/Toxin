@@ -1,11 +1,9 @@
-import 'ion-rangeslider'
-import 'ion-rangeslider/css/ion.rangeSlider.css';
+// Развернутый список с чекбоксами
+const moreComfortFilter = document.getElementById('moreComfortFilter');
+const moreComfortFilterWrapper = document.getElementById('moreComfortFilterWrapper');
 
-$(".js-range-slider").ionRangeSlider({
-        type: "double",
-        min: 0,
-        max: 1000,
-        from: 200,
-        to: 500,
-        grid: true
-    });
+moreComfortFilter.addEventListener("click", function(event) {
+  moreComfortFilterWrapper.classList.toggle('checkbox__wrapper_expandable-active');
+  this.classList.toggle('checkbox__title_expandable-active');
+});
+//

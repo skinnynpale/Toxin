@@ -55,6 +55,7 @@ moreComfortFilter.addEventListener("click", function(event) {
   moreComfortFilterWrapper.classList.toggle('checkbox__wrapper_expandable-active');
   this.classList.toggle('checkbox__title_expandable-active');
 });
+//
 
 
 // Dropdown

@@ -1,0 +1,24 @@
+extends ../template-base
+
+block title
+  title Отель «Toxin» | UI kit
+  
+block styles
+  link(rel="stylesheet" href="UI-kit-new.sass")
+
+
+block content
+  include ../mixins-pug
+    
+  main.main
+    .container
+      .main__item
+        +field-default(placeholder="Email" name="email")
+      .main__item
+        +field-dropdown('Гости', 'guestsDrop')(value="Сколько гостей" readonly)
+
+  
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="../../components/calendar/datepicker.js")
+  script(src="UI-kit-new.js")
+  script(src="../../components/field/dropdown/dropdown.js")

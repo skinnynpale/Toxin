@@ -13,9 +13,9 @@ block content
     
     include colors-type/colors-type
     
-    img.logo_min(src="img/logo_min.svg", alt="logo")
       
     .form-elements
+      img.logo_min(src="img/logo_min.svg", alt="logo")
       .container
         .fields
           .t-field
@@ -79,25 +79,28 @@ block content
             h3 pagination
             include ../../components/pagination/pagination
               
-    .form-elements_expandable
-      .container
-        .fields
-          .t-field
-            +field-dropdown('Dropdown', 'dropdown')(value="2 спальни, 2 кровати...")
-          .checkbox__expandable
-            h3.checkbox__title expandable checkbox list
-            .checkbox__example-expandable
-              +checkbox('Можно курить', 'smoke')
-              +checkbox('Можно с питомцами', 'pets', 1)
-              +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
+      .form-elements_expandable
+        .container
+          .fields
+            .t-field
+              +field-dropdown('Dropdown', 'dropdown')(value="2 спальни, 2 кровати...")
+            h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
+            .checkbox__wrapper_expandable#moreComfortFilterWrapper
+              +checkbox('Завтрак', 'breakfast')
+              +checkbox('Письменный стол', 'desk', 1)
+              +checkbox('Стул для кормления', 'feedingChair', 1)
+              +checkbox('Кроватка', 'crib', 1)
+              +checkbox('Телевизор', 'tv')
+              +checkbox('Шампунь', 'shampoo')
+              +checkbox('Интернет', 'internet')
+              +checkbox('Связь с космосом', 'spaceConnection')
 
-    .rooms-filter
-      .container
-        .rooms-filter__wrapper
-          .t-field.rooms-filter__date
-            +field-dropdown('даты пребывания в отеле', 'roomsFilterDate')(value="19 авг - 23 авг")
+      .rooms-filter
+        .container
+          .rooms-filter__wrapper
+            .t-field.rooms-filter__date
+              +field-dropdown('даты пребывания в отеле', 'roomsFilterDate')(value="19 авг - 23 авг")
     
-    <input type="text" class="js-range-slider" name="my_range" value="" />
   
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="ui-kit.js")
