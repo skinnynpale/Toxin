@@ -1,0 +1,11 @@
+form.user-form
+  .user-form__wrapper
+    h1.user-form__title Войти
+    .user-form__item
+      +field-default(placeholder="Email" name="email")
+      +field-default(placeholder="Пароль" type="password")
+    .user-form__item
+      +btn_arrow('user-form__btn', 'Войти')(href="#!")
+    .user-form__sign-in
+      p Нет аккаунта на Toxin?
+      +btn_not-gradient('user-form__btn-login', 'Создать')(href="../sign-up/sign-up.pug")
