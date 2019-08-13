@@ -45,6 +45,17 @@ $('#uiDateFilter').datepicker({
   todayButton: true,
   dateFormat: "dd M",
 });
+$('#ui-kit__preview-calendar').datepicker({
+  minDate: new Date(),
+  range: true,
+  multipleDatesSeparator: " - ",
+  prevHtml: '<div class="find-room__arrow-date find-room__arrow-date-prev"></div>',
+  nextHtml: '<div class="find-room__arrow-date find-room__arrow-date-next"></div>',
+  clearButton: true,
+  todayButton: true,
+  dateFormat: "dd M",
+  inline: true,
+});
 // 818 строка в datepicker.js для настроек
 
 // Развернутый список с чекбоксами
@@ -56,3 +67,25 @@ moreComfortFilter.addEventListener("click", function(event) {
   this.classList.toggle('checkbox__title_expandable-active');
 });
 //
+
+// Подключение rangeslider
+import 'ion-rangeslider';
+import 'ion-rangeslider/css/ion.rangeSlider.css';
+// Инициализация rangeslider
+const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue')
+
+$(".js-range-slider").ionRangeSlider({
+  type: "double",
+  min: 0,
+  max: 15000,
+  from: 5000,
+  to: 10000,
+  onStart: function (data) {
+      rangeSliderRoomValue.innerHTML = data.from + '₽' + ' - ' + data.to + '₽';
+  },
+  onChange: function (data) {
+      rangeSliderRoomValue.innerHTML = data.from + '₽' + ' - ' + data.to + '₽';
+  },
+  hide_min_max: true,
+  hide_from_to: true
+});

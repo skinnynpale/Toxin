@@ -16,65 +16,144 @@ block content
       .main__item
         +field(placeholder="Email" name="email")
         
-      //- .main__item
-      //-   .field__dropdown-wrapper
-      //-     +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
-      //-     .dropdown__content#guestsDrop
-      //-       span.dropdown__item
-      //-         span.dropdown__target Взрослые
-      //-         a.dropdown__btn.dropdown__btn-minus(href="#!") -
-      //-         span.dropdown__value 0
-      //-         a.dropdown__btn.dropdown__btn-plus(href="#!") +
-      //-       span.dropdown__item
-      //-         span.dropdown__target Дети
-      //-         a.dropdown__btn.dropdown__btn-minus(href="#!") -
-      //-         span.dropdown__value 0
-      //-         a.dropdown__btn.dropdown__btn-plus(href="#!") +
-      //-       span.dropdown__item#guestsDropPrimeItem
-      //-         span.dropdown__target Младенцы
-      //-         a.dropdown__btn.dropdown__btn-minus(href="#!") -
-      //-         span.dropdown__value#guestsDropPrimeItemValue 0
-      //-         a.dropdown__btn.dropdown__btn-plus(href="#!") +
-      //-       .dropdown__functions
-      //-         a.dropdown__func-btn.dropdown__clear(href="#!") Очистить
-      //-         a.dropdown__func-btn.dropdown__apply(href="#!") Применить
-      //- .main__item
-      //-   +field-masked()(placeholder="ДД.ММ.ГГГГ")
-      //- .main__item.datepicker-place#firstDatepickerGroup
-      //-   +field-group('find-room', 'Прибытие', 'ui-kit-field__from', 'Выезд', 'ui-kit-field__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
-      //- .main__item.main__item_short.datepicker-place#secondDatepicker
-      //-   +field-dropdown('Даты пребывания в отеле', 'uiDateFilter')(value="Выберите дату" readonly)
-      //- .main__item.main__item_short
-      //-   +field-arrow()(name="email" placeholder="Email")
-      //- .main__item.main__item_short
-      //-   h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
-      //-   .checkbox__wrapper_expandable#moreComfortFilterWrapper
-      //-     +checkbox('Завтрак', 'breakfast')
-      //-     +checkbox('Письменный стол', 'desk', 1)
-      //-     +checkbox('Стул для кормления', 'feedingChair', 1)
-      //-     +checkbox('Кроватка', 'crib', 1)
-      //-     +checkbox('Телевизор', 'tv')
-      //-     +checkbox('Шампунь', 'shampoo')
-      //-     +checkbox('Интернет', 'internet')
-      //-     +checkbox('Связь с космосом', 'spaceConnection')
-      //- .main__item
-      //-   ul.advan-list
-      //-     li.advan-list__item
-      //-       i.material-icons.advan-list__ico insert_emoticon
-      //-       .advan-list__content-wrapper
-      //-         b.advan-list__title Комфорт
-      //-         p.advan-list__text Шумопоглощающие стены
-      //-     li.advan-list__item
-      //-       i.material-icons.advan-list__ico location_city
-      //-       .advan-list__content-wrapper
-      //-         b.advan-list__title Удобство
-      //-         p.advan-list__text Окно в каждой из спален
-      //-     li.advan-list__item
-      //-       i.material-icons.advan-list__ico whatshot
-      //-       .advan-list__content-wrapper
-      //-         b.advan-list__title Уют
-      //-         p.advan-list__text Номер оснащен камином
-      //- 
+      .main__item
+        .field__dropdown-wrapper
+          +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
+          .dropdown__content#guestsDrop
+            span.dropdown__item
+              +dropdown-item('Взрослые')
+            span.dropdown__item
+              +dropdown-item('Дети')
+            span.dropdown__item#guestsDropPrimeItem
+              +dropdown-item('Младенцы', 'guestsDropPrimeItemValue')
+            .dropdown__functions
+              a.dropdown__func-btn.dropdown__clear(href="#!") Очистить
+              a.dropdown__func-btn.dropdown__apply(href="#!") Применить
+      .main__item
+        +field-masked()(placeholder="ДД.ММ.ГГГГ")
+      .main__item.datepicker-place#firstDatepickerGroup
+        +field-group('find-room', 'Прибытие', 'ui-kit-field__from', 'Выезд', 'ui-kit-field__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
+      .main__item.main__item_short.datepicker-place#secondDatepicker
+        +field-dropdown('Даты пребывания в отеле', 'uiDateFilter')(value="Выберите дату" readonly)
+      .main__item.main__item_short
+        +field-arrow()(name="email" placeholder="Email")
+      .main__item.main__item_short
+        h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
+        .checkbox__wrapper_expandable#moreComfortFilterWrapper
+          +checkbox('Завтрак', 'breakfast')
+          +checkbox('Письменный стол', 'desk', 1)
+          +checkbox('Стул для кормления', 'feedingChair', 1)
+          +checkbox('Кроватка', 'crib', 1)
+          +checkbox('Телевизор', 'tv')
+          +checkbox('Шампунь', 'shampoo')
+          +checkbox('Интернет', 'internet')
+          +checkbox('Связь с космосом', 'spaceConnection')
+      .main__item
+        ul.advantages
+          li.advantages__item
+            +advantages({
+              ico: "insert_emoticon",
+              title: "Комфорт",
+              text: "Шумопоглощающие стены"
+            })
+          li.advantages__item
+            +advantages({
+              ico: "location_city",
+              title: "Удобство",
+              text: "Окно в каждой из спален"
+            })
+          li.advantages__item
+            +advantages({
+              ico: "whatshot",
+              title: "Уют",
+              text: "Номер оснащен камином"
+            })
+            
+    .container   
+      .main__item
+        +checkbox('Можно курить', 'smoke')
+        +checkbox('Можно с питомцами', 'pets', 1)
+        +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
+      .main__item
+        +radio('Мужчина', 'man', 'sex', 'man')(checked)
+        +radio('Женщина', 'woman', 'sex', 'woman')
+      .main__item
+        +btn-toggle('Получать спецпредложения', 'receive-offers', 'user-form__toggle')
+      .main__item
+        +like(12, true)
+      .main__item
+        +rating('rooms-rating', 4, 5, 'ratingRoom')
+      .main__item
+        +checkbox_rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
+        +checkbox_rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'helper')
+      .main__item.main__item_long
+        .reviews__item
+          +reviews-item({
+            img: "../page-room/img/author1.jpg",
+            likes: "12",
+            likeCheck: true,
+            author: "Мурад Сарафанов",
+            date: "5 дней назад",
+            text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+          })
+    .container
+      .main__item
+        .rooms-filter__item.range-slider
+          h3.rooms-filter__name Диапазон цены
+          span.rooms-filter__values#rangeSliderRoomValue
+          .range-slider__app
+            input(type="text" class="js-range-slider" name="my_range" value="")
+            p.range-slider__info Стоимость за сутки пребывания в номере
+      .main__item
+        +btn_gradient('user-nav__reg', 'Зарегистрироваться')(href="../sign-up/sign-up.pug")
+        +btn_not-gradient('user-nav__login', 'Войти')(href="../sign-in/sign-in.pug")
+        +link("ui-kit__link", "Click me")
+        +btn_arrow('find-room__btn', 'Подобрать номер')(href="../rooms/rooms.pug")
+      .main__item
+        include ../../components/pagination/pagination
+      .main__item
+        h2.page-room__info-title Правила
+        ul.rules-list
+          +bullet-item("Нельзя с питомцами")
+          +bullet-item("Без вечеринок и мероприятий")
+          +bullet-item("Время прибытия — после 13:00, а выезд до 12:00")
+  section.cards
+    .container
+      .cards__item
+        include ../../components/find-room/find-room
+      .cards__item
+        include ../../components/user-form/sign-up-form
+    .container
+      .cards__item
+        include ../../components/check-form/check-form
+      .cards__item
+        include ../../components/user-form/sign-in-form
+    .container
+      .cards__item
+        input(id="ui-kit__preview-calendar")
+      .cards__item
+        .rooms__item
+          +rooms-item({
+            img: "../rooms/img/room_1.jpg",
+            num: "888",
+            lux: true,
+            price: "9 990",
+            stars: 5,
+            reviews: 145
+          })
+      .cards__item
+        .rooms__item
+          +rooms-item({
+            img: "../rooms/img/image.jpg",
+            num: "840",
+            lux: true,
+            price: "9 900",
+            stars: 4,
+            reviews: 65
+          })
+      
+        
+              
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="../../components/calendar/datepicker.js")
   script(src="UI-kit-new.js")

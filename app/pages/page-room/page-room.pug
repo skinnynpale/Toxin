@@ -27,22 +27,25 @@ block content
         .page-room__info-grid
           .page-room__advan-list
             h2.page-room__info-title Сведения о номере
-            ul.advan-list
-              li.advan-list__item
-                i.material-icons.advan-list__ico insert_emoticon
-                .advan-list__content-wrapper
-                  b.advan-list__title Комфорт
-                  p.advan-list__text Шумопоглощающие стены
-              li.advan-list__item
-                i.material-icons.advan-list__ico location_city
-                .advan-list__content-wrapper
-                  b.advan-list__title Удобство
-                  p.advan-list__text Окно в каждой из спален
-              li.advan-list__item
-                i.material-icons.advan-list__ico whatshot
-                .advan-list__content-wrapper
-                  b.advan-list__title Уют
-                  p.advan-list__text Номер оснащен камином
+            ul.advantages
+              li.advantages__item
+                +advantages({
+                  ico: "insert_emoticon",
+                  title: "Комфорт",
+                  text: "Шумопоглощающие стены"
+                })
+              li.advantages__item
+                +advantages({
+                  ico: "location_city",
+                  title: "Удобство",
+                  text: "Окно в каждой из спален"
+                })
+              li.advantages__item
+                +advantages({
+                  ico: "whatshot",
+                  title: "Уют",
+                  text: "Номер оснащен камином"
+                })
           .page-room__impressions
             h2.page-room__info-title Впечатления от номера
             .donut
@@ -87,59 +90,13 @@ block content
           .page-room__rules
             h2.page-room__info-title Правила
             ul.rules-list
-              li.rules-list__item Нельзя с питомцами
-              li.rules-list__item Без вечеринок и мероприятий
-              li.rules-list__item Время прибытия — после 13:00, а выезд до 12:00
+              +bullet-item("Нельзя с питомцами")
+              +bullet-item("Без вечеринок и мероприятий")
+              +bullet-item("Время прибытия — после 13:00, а выезд до 12:00")
           .page-room__cancel.cancel
             h2.page-room__info-title Отмена
             p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-        form.check-form.datepicker-place
-          .check-form__item.check-form__item_group
-            h2.check-form__number
-              span №
-              | 888
-            +link('check-form__lux', 'Люкс')
-            p.check-form__price_default <b>9 990₽</b> в сутки
-          .check-form__item
-            +field-group('check-form', 'Прибытие', 'check-form__from', 'Выезд', 'check-form__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
-          .check-form__item
-            +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
-            .dropdown__content#guestsDrop
-              span.dropdown__item
-                span.dropdown__target Взрослые
-                a.dropdown__btn.dropdown__btn-minus(href="#!") -
-                span.dropdown__value 0
-                a.dropdown__btn.dropdown__btn-plus(href="#!") +
-              span.dropdown__item
-                span.dropdown__target Дети
-                a.dropdown__btn.dropdown__btn-minus(href="#!") -
-                span.dropdown__value 0
-                a.dropdown__btn.dropdown__btn-plus(href="#!") +
-              span.dropdown__item#guestsDropPrimeItem
-                span.dropdown__target Младенцы
-                a.dropdown__btn.dropdown__btn-minus(href="#!") -
-                span.dropdown__value#guestsDropPrimeItemValue 0
-                a.dropdown__btn.dropdown__btn-plus(href="#!") +
-              .dropdown__functions
-                a.dropdown__func-btn.dropdown__clear(href="#!") Очистить
-                a.dropdown__func-btn.dropdown__apply(href="#!") Применить
-          .check-form__item
-            .check-form__conclusion
-              span.check-form__text 9 990₽ х 4 суток
-              span.check-form__text 39 960₽
-            .check-form__conclusion
-              span.check-form__text.check-form__text-info Сбор за услуги: скидка 2 179₽
-              span.check-form__text 0₽
-            .check-form__conclusion
-              span.check-form__text.check-form__text-info Сбор за дополнительные услуги
-              span.check-form__text 300₽
-          .check-form__item
-            .check-form__final-price.check-form__item_group
-              h2 Итого
-              .check-form__price-line
-              h2 38 081₽
-          .check-form__item
-            +btn_arrow('check-form__book-btn', 'Забронировать')(href="#!")
+        include ../../components/check-form/check-form
 
               
             

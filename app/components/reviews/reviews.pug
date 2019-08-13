@@ -1,0 +1,15 @@
+mixin reviews-item(parameters)
+  - var img = parameters.img
+  - var likes = parameters.likes
+  - var likeCheck = parameters.likeCheck
+  - var author = parameters.author
+  - var date = parameters.date
+  - var text = parameters.text
+  
+  .reviews__dynamics
+    img.reviews__profile-photo(src=img)
+    .reviews__likes: +like(likes, likeCheck)
+  .reviews__comment
+    b.reviews__author= author
+    .reviews__date= date
+    .reviews__text= text

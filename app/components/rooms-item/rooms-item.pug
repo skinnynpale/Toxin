@@ -1,0 +1,25 @@
+mixin rooms-item(parameters)
+  - var img = parameters.img
+  - var num = parameters.num
+  - var lux = parameters.lux
+  - var price = parameters.price
+  - var stars = parameters.stars
+  - var reviews = parameters.reviews
+  .rooms-item__image
+    img.rooms-item__img(src=img, alt="Фотография номера")
+    include ../../components/image-helpers/image-helpers
+  .rooms-item__wrapper
+    .rooms-item__info
+      h2.rooms-item__num 
+        span №
+        h2= num
+      if (lux == true)
+        +link('rooms-item__lux', 'Люкс')
+      p.rooms-item__price
+        b= price + "₽"
+        |  в сутки
+    .rooms-item__rating
+      +rating('rooms-rating', stars, 5, 'ratingRoom')
+      p.rooms-item__reviews
+        b= reviews
+        |  Отзывов
