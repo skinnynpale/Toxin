@@ -4,6 +4,7 @@ block title
   title Отель «Toxin» | UI kit
   
 block styles
+  link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
   link(rel="stylesheet" href="UI-kit-new.sass")
 
 
@@ -13,11 +14,67 @@ block content
   main.main
     .container
       .main__item
-        +field-default(placeholder="Email" name="email")
-      .main__item
-        +field-dropdown('Гости', 'guestsDrop')(value="Сколько гостей" readonly)
-
-  
+        +field(placeholder="Email" name="email")
+        
+      //- .main__item
+      //-   .field__dropdown-wrapper
+      //-     +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
+      //-     .dropdown__content#guestsDrop
+      //-       span.dropdown__item
+      //-         span.dropdown__target Взрослые
+      //-         a.dropdown__btn.dropdown__btn-minus(href="#!") -
+      //-         span.dropdown__value 0
+      //-         a.dropdown__btn.dropdown__btn-plus(href="#!") +
+      //-       span.dropdown__item
+      //-         span.dropdown__target Дети
+      //-         a.dropdown__btn.dropdown__btn-minus(href="#!") -
+      //-         span.dropdown__value 0
+      //-         a.dropdown__btn.dropdown__btn-plus(href="#!") +
+      //-       span.dropdown__item#guestsDropPrimeItem
+      //-         span.dropdown__target Младенцы
+      //-         a.dropdown__btn.dropdown__btn-minus(href="#!") -
+      //-         span.dropdown__value#guestsDropPrimeItemValue 0
+      //-         a.dropdown__btn.dropdown__btn-plus(href="#!") +
+      //-       .dropdown__functions
+      //-         a.dropdown__func-btn.dropdown__clear(href="#!") Очистить
+      //-         a.dropdown__func-btn.dropdown__apply(href="#!") Применить
+      //- .main__item
+      //-   +field-masked()(placeholder="ДД.ММ.ГГГГ")
+      //- .main__item.datepicker-place#firstDatepickerGroup
+      //-   +field-group('find-room', 'Прибытие', 'ui-kit-field__from', 'Выезд', 'ui-kit-field__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
+      //- .main__item.main__item_short.datepicker-place#secondDatepicker
+      //-   +field-dropdown('Даты пребывания в отеле', 'uiDateFilter')(value="Выберите дату" readonly)
+      //- .main__item.main__item_short
+      //-   +field-arrow()(name="email" placeholder="Email")
+      //- .main__item.main__item_short
+      //-   h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
+      //-   .checkbox__wrapper_expandable#moreComfortFilterWrapper
+      //-     +checkbox('Завтрак', 'breakfast')
+      //-     +checkbox('Письменный стол', 'desk', 1)
+      //-     +checkbox('Стул для кормления', 'feedingChair', 1)
+      //-     +checkbox('Кроватка', 'crib', 1)
+      //-     +checkbox('Телевизор', 'tv')
+      //-     +checkbox('Шампунь', 'shampoo')
+      //-     +checkbox('Интернет', 'internet')
+      //-     +checkbox('Связь с космосом', 'spaceConnection')
+      //- .main__item
+      //-   ul.advan-list
+      //-     li.advan-list__item
+      //-       i.material-icons.advan-list__ico insert_emoticon
+      //-       .advan-list__content-wrapper
+      //-         b.advan-list__title Комфорт
+      //-         p.advan-list__text Шумопоглощающие стены
+      //-     li.advan-list__item
+      //-       i.material-icons.advan-list__ico location_city
+      //-       .advan-list__content-wrapper
+      //-         b.advan-list__title Удобство
+      //-         p.advan-list__text Окно в каждой из спален
+      //-     li.advan-list__item
+      //-       i.material-icons.advan-list__ico whatshot
+      //-       .advan-list__content-wrapper
+      //-         b.advan-list__title Уют
+      //-         p.advan-list__text Номер оснащен камином
+      //- 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="../../components/calendar/datepicker.js")
   script(src="UI-kit-new.js")

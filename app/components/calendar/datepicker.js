@@ -816,6 +816,20 @@
             this.visible = true;
 
             this.$datepicker
+                if (this["el"].id == 'uiDateFilter') {
+                  this.$datepicker
+                    .css({
+                      left: '280px',
+                      top: '100px'
+                    });
+                }
+                if (this["el"].id == 'ui-kit-field__from') {
+                  this.$datepicker
+                    .css({
+                      left: '0px',
+                      top: '75px'
+                    });
+                }
                 if (this["el"].id == 'check-form__from') {
                   this.$datepicker
                     .css({

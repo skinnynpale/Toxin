@@ -1,4 +1,4 @@
-.field_default
+.field
   width: 100%
   height: 44px
   border: 1px solid $accent25
@@ -11,7 +11,7 @@
   &:hover, &:focus
     border: 1px solid $accent50
 
-.field-arrow
+.field-wrapper_type_arrow
   position: relative
   &::after
     content: url('../../components/main-footer/img/arrow_forward.svg')
@@ -24,10 +24,10 @@
     text-align: center
     cursor: pointer
 
-.field_default-dropdown
+.field_type_dropdown
   cursor: pointer
 
-.field_default-masked
+.field_type_masked
   cursor: default
   &:hover
     border: 1px solid $accent25
@@ -52,7 +52,7 @@ div[class$='group-field']
   color: $accent
   line-height: 15px
 
-.label_cap
+.label_type_dropdown
   position: relative
   &::after
     content: ""
@@ -67,7 +67,3 @@ div[class$='group-field']
     border-left: 0
     transform: translateY(-50%) rotate(45deg)
     cursor: pointer
-
-.reg-form__item
-  h3
-    margin-bottom: 5px

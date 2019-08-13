@@ -2,16 +2,16 @@ form.user-form
   .user-form__wrapper
     h1.user-form__title Регистрация аккаунта
     .user-form__item
-      +field-default(placeholder="Имя" name="name")
-      +field-default(placeholder="Фамилия" name="surname")
+      +field(placeholder="Имя" name="name")
+      +field(placeholder="Фамилия" name="surname")
       +radio('Мужчина', 'man', 'sex', 'man')(checked)
       +radio('Женщина', 'woman', 'sex', 'woman')
     .user-form__item
       +field-label('Дата рождения', 'birthday')(placeholder="ДД.ММ.ГГГГ" name="birthday")
     .user-form__item
       h3 Данные для входа в сервис
-      +field-default(placeholder="Email" name="email")
-      +field-default(placeholder="Пароль" type="password")
+      +field(placeholder="Email" name="email")
+      +field(placeholder="Пароль" type="password")
       +btn-toggle('Получать спецпредложения', 'receive-offers', 'user-form__toggle')
     .user-form__item
       +btn_arrow('user-form__btn', 'Перейти к оплате')(href="#!")
