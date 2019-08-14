@@ -93,7 +93,7 @@ block content
           .rooms__item
             a(href="../page-room/page-room.pug")
               +rooms-item({
-                img: "img/room_1.jpg",
+                img: "img/image-1.jpg",
                 num: "888",
                 lux: true,
                 price: "9 990",
@@ -101,155 +101,104 @@ block content
                 reviews: 145
               })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 840
-                p.rooms-item__price <b>9 000₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 4, 5)
-                p.rooms-item__reviews <b>65</b> Отзывов
+            +rooms-item({
+              img: "img/image-2.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image-1.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 980
-                +link('rooms-item__lux', 'Люкс')
-                p.rooms-item__price <b>8 500₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 3, 5)
-                p.rooms-item__reviews <b>35</b> Отзывов
+            +rooms-item({
+              img: "img/image-3.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image-4.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 856
-                +link('rooms-item__lux', 'Люкс')
-                p.rooms-item__price <b>7 300₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 5, 5)
-                p.rooms-item__reviews <b>19</b> Отзывов
+            +rooms-item({
+              img: "img/image-4.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image-2.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 740
-                p.rooms-item__price <b>6 000₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 4, 5)
-                p.rooms-item__reviews <b>44</b> Отзывов
+            +rooms-item({
+              img: "img/image-5.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image-3.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 982
-                +link('rooms-item__lux', 'Люкс')
-                p.rooms-item__price <b>5 800₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 3, 5)
-                p.rooms-item__reviews <b>56</b> Отзывов
+            +rooms-item({
+              img: "img/image-6.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image-7.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 678
-                +link('rooms-item__lux', 'Люкс')
-                p.rooms-item__price <b>5 500₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 5, 5)
-                p.rooms-item__reviews <b>45</b> Отзывов
+            +rooms-item({
+              img: "img/image-7.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image-5.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 450
-                p.rooms-item__price <b>5 300₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 4, 5)
-                p.rooms-item__reviews <b>39</b> Отзывов
+            +rooms-item({
+              img: "img/image-8.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image-6.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 350
-                +link('rooms-item__lux', 'Люкс')
-                p.rooms-item__price <b>5 000₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 3, 5)
-                p.rooms-item__reviews <b>77</b> Отзывов
+            +rooms-item({
+              img: "img/image-9.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image-9.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 666
-                +link('rooms-item__lux', 'Люкс')
-                p.rooms-item__price <b>5 000₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 5, 5)
-                p.rooms-item__reviews <b>25</b> Отзывов
+            +rooms-item({
+              img: "img/image-10.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image-8.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 444
-                p.rooms-item__price <b>5 000₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 4, 5)
-                p.rooms-item__reviews <b>15</b> Отзывов
+            +rooms-item({
+              img: "img/image-11.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
           .rooms__item
-            .rooms-item__image
-              img.rooms-item__img(src="img/image 2.jpg", alt="Фотография номера")
-              include ../../components/image-helpers/image-helpers
-            .rooms-item__wrapper
-              .rooms-item__info
-                h2.rooms-item__num 
-                  span №
-                  | 352
-                +link('rooms-item__lux', 'Люкс')
-                p.rooms-item__price <b>5 000₽</b> в сутки
-              .rooms-item__rating
-                +rating('rooms-rating', 3, 5)
-                p.rooms-item__reviews <b>55</b> Отзывов
+            +rooms-item({
+              img: "img/image-12.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
         include ../../components/pagination/pagination
     
     
