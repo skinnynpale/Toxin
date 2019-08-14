@@ -17,6 +17,8 @@
 @import "../../components/user-form/user-form"
 @import "../../components/check-form/check-form"
 @import "../../components/rooms-item/rooms-item"
+@import "../../components/main-header/header"
+@import "../../components/main-footer/footer"
 
 .main
   display: grid
@@ -31,7 +33,6 @@
 .main__item
   border: 3px dotted $accent25
   max-width: 320px
-  margin-bottom: 20px
   position: relative
   &:last-child
     margin-bottom: 0
@@ -48,7 +49,14 @@
   display: -ms-flex
   display: flex
 
-
-
 #ui-kit__preview-calendar
   display: none
+
+.header-footer
+  background-color: #F4F4F6
+  > div
+    margin-bottom: 20px
+
+.section__item
+  z-index: 0
+  position: relative
