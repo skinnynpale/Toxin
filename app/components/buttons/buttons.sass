@@ -11,7 +11,7 @@
   position: relative
   background-color: #fff
 
-.btn_not-gradient
+.btn_theme_not-gradient
   padding: 2px 12px 7px 19px
   &:not(.like__btn)
     padding: 8px 19px 7px 19px
@@ -19,7 +19,7 @@
     opacity: 0.5
 
 
-.btn_not-gradient::after
+.btn_theme_not-gradient::after
   content: ""
   position: absolute
   z-index: -1
@@ -30,19 +30,19 @@
   right: -2px
   background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 
-.btn_gradient
+.btn_theme_gradient
   color: #fff
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
   &:hover
     opacity: 0.5
 
-.btn_arrow
+.btn_with-arrow
   width: 100%
   text-align: center
   padding: 15px
   padding-left: 13px
   position: relative
-  .btn-arrow__svg
+  .btn_with-arrow__svg
     position: absolute
     top: 13px
     right: 12px
