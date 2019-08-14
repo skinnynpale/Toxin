@@ -108,7 +108,7 @@ block content
         +btn_gradient('user-nav__reg', 'Зарегистрироваться')(href="../sign-up/sign-up.pug")
         +btn_not-gradient('user-nav__login', 'Войти')(href="../sign-in/sign-in.pug")
         +link("ui-kit__link", "Click me")
-        +btn_arrow('find-room__btn', 'Подобрать номер')(href="../rooms/rooms.pug")
+        +btn_arrow('', 'Подобрать номер')(href="../rooms/rooms.pug")
       .main__item
         include ../../components/pagination/pagination
       .main__item
@@ -151,6 +151,20 @@ block content
             stars: 4,
             reviews: 65
           })
+  section.header-footer
+    .header-non-authorized
+      .section__item
+        include ../../components/main-header/header
+    .header-authorized
+      .section__item
+        include ../../components/main-header/header-authorized
+    .footer-rich
+      .section__item
+        include ../../components/main-footer/footer
+    .footer-poor
+      .section__item
+        include ../../components/main-footer/footer-poor
+      
       
         
               
