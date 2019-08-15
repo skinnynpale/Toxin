@@ -67,3 +67,16 @@ div[class$='group-field']
     border-left: 0
     transform: translateY(-50%) rotate(45deg)
     cursor: pointer
+
+
+
+
+
+@media screen and ( max-width: 405px )
+  div[class$='group-field']
+    flex-direction: column
+    div[class$='field']
+      width: 100%
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
