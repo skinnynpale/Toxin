@@ -1,5 +1,3 @@
-import "../../components/header/header"
-
 // Datepicker
 $('#find-room__from').datepicker({
   minDate: new Date(),

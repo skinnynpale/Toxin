@@ -2,21 +2,21 @@ header.main-header
   .container
     a.main-header__logo(href="/index.pug"): img(src="../../logo.svg", alt="Toxin")
     a(href="#!").main-header__burger
-    nav.main-header__nav
-      ul.site-nav
-        li.site-nav__item
-          a.site-nav__link(href="#") О нас
-        li.site-nav__item.site-nav__item_has-submenu
-          a.site-nav__link(href="#") Услуги
-        li.site-nav__item
-          a.site-nav__link(href="#") Вакансии
-        li.site-nav__item
-          a.site-nav__link(href="#") Новости
-        li.site-nav__item.site-nav__item_has-submenu
-          a.site-nav__link(href="#") Соглашения
-      ul.user-nav
-        li.user-nav__item
-          +btn_not-gradient('user-nav__login', 'Войти')(href="../sign-in/sign-in.pug")
-        li.user-nav__item
-          +btn_gradient('user-nav__reg', 'Зарегистрироваться')(href="../sign-up/sign-up.pug")
+    //- nav.main-header__nav
+    ul.site-nav
+      li.site-nav__item
+        a.site-nav__link(href="#") О нас
+      li.site-nav__item.site-nav__item_has-submenu
+        a.site-nav__link(href="#") Услуги
+      li.site-nav__item
+        a.site-nav__link(href="#") Вакансии
+      li.site-nav__item
+        a.site-nav__link(href="#") Новости
+      li.site-nav__item.site-nav__item_has-submenu
+        a.site-nav__link(href="#") Соглашения
+    ul.user-nav
+      li.user-nav__item
+        +btn_not-gradient('user-nav__login', 'Войти')(href="../sign-in/sign-in.pug")
+      li.user-nav__item
+        +btn_gradient('user-nav__reg', 'Зарегистрироваться')(href="../sign-up/sign-up.pug")
     

@@ -3,8 +3,6 @@ import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 // Подключение рейтинга
 import '../../components/buttons/rate/rate.js';
-// burger-menu
-import '../../components/header/header'
 
 // Инициализация rangeslider
 const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue')

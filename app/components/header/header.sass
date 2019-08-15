@@ -26,6 +26,7 @@
   display: -ms-flex
   display: flex
   align-items: center
+  margin-left: auto
 
 .site-nav__item
   display: inline-block
@@ -58,6 +59,9 @@ a[class*="__link"]:hover
     border: 2px solid $accent25
     border-top: 0
     border-left: 0
+
+.user-nav
+  z-index: 0
 
 .user-nav__item
   margin-right: 20px
@@ -110,34 +114,42 @@ a[class*="__link"]:hover
 @media screen and ( max-width: 920px )
   .main-header__nav
     margin-top: 15px
-
-@media screen and ( max-width: 795px )
+  
   .site-nav
-    margin-top: 30px
     order: 1
+    margin-left: 0px
+    margin-top: 20px
 
 @media screen and ( max-width: 500px )
   .main-header__burger
     display: block
 
-  .main-header__nav
+  // .main-header__nav
+  //   display: none
+  //   border-top: 3px solid $purple
+  //   width: 100%
+  //   padding: 15px
+  .site-nav
     display: none
-    border-top: 3px solid $purple
-    width: 100%
-    padding: 15px
+    order: 0
+  
+  .user-nav
+    display: none
+    margin-top: 5px
 
   .site-nav
     flex-direction: column
     align-items: flex-start
+    border-top: 3px solid $purple
+    padding-top: 20px
     &__item
       margin-bottom: 15px
       width: 100%
 
-@media screen and ( max-width: 360px )
+@media screen and ( max-width: 331px )
   .user-nav
     text-align: center
     &__item
-      margin-bottom: 20px
-      margin-right: 0
+      margin-bottom: 10px
       &:last-child
         margin-bottom: 0
