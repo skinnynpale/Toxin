@@ -3,6 +3,8 @@ import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 // Подключение рейтинга
 import '../../components/buttons/rate/rate.js';
+// burger-menu
+import '../../components/header/header'
 
 // Инициализация rangeslider
 const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue')
@@ -235,3 +237,18 @@ function isZero(e) {
     return !!e.previousSibling.classList.toggle('dropdown__btn_disable');
   }
 }
+
+
+// Показать фильтры
+$('.js-show-filters').click(function (event) {
+  event.preventDefault();
+  var $elem = $('.rooms-filter');
+  $elem.slideToggle(300);
+
+  if (this.innerHTML == "Показать фильтры") {
+    this.innerHTML = "Спрятать фильтры";
+  } else {
+    this.innerHTML = "Показать фильтры";
+  }
+
+});
