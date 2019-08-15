@@ -4,12 +4,13 @@
   border-top: 1px solid $accent25
   background-color: #fff
   .container
-    padding: 100px 0
+    padding: 100px 15px
     padding-top: 102px
     display: -webkit-flex
     display: -ms-flex
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
 
 .main-footer__info
   margin-top: 16px
@@ -89,3 +90,38 @@
     width: 560px
   .main-footer__info
     margin: 20px 0
+
+
+
+
+@media screen and ( max-width: 1185px )
+  .main-footer__subscription
+    margin-left: 0
+
+@media screen and ( max-width: 876px )
+  .main-footer__nav, .main-footer__subscription
+    margin-top: 30px  
+
+@media screen and ( max-width: 772px )
+  .main-footer
+    .container
+      justify-content: center
+      text-align: center
+      > div
+        margin: 0
+  
+  .main-footer__nav
+    margin: 60px 0
+  
+  .footer-nav:nth-child(2)
+    margin: 0 15px
+
+@media screen and ( max-width: 541px )
+  .sub-footer
+    .container
+      flex-wrap: wrap
+      justify-content: center
+      text-align: center
+  
+  .sub-footer__nav
+    margin-top: 20px
