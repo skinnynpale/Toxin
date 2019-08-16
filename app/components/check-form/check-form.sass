@@ -6,7 +6,8 @@
   border-radius: 4px
   align-self: start
   background-color: #fff
-  width: 380px
+  max-width: 380px
+  width: 100%
 
 .check-form__item
   margin-bottom: 20px
@@ -76,3 +77,8 @@
   h2:last-child
     white-space: nowrap
     font-family: 'montserrat-example'
+
+
+@media screen and ( max-width: 403px )
+  .check-form__text-info::after
+    display: none
