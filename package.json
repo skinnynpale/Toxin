@@ -5,7 +5,7 @@
   "main": "app/pages/index/index.pug",
   "scripts": {
     "start": "rimraf dist && parcel app/pages/index/index.pug --open",
-    "build": "rimraf dist docs && parcel build app/pages/index/index.pug -d docs --no-cache --public-url ./dist/"
+    "build": "rimraf dist docs && parcel build app/pages/index/index.pug -d docs --no-cache --public-url ./Toxin/"
   },
   "keywords": [],
   "author": "skinnynpale",
