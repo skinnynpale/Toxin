@@ -1,4 +1,4 @@
 # Toxin
 Отель «Toxin»
 
-Превью: https://skinnynpale.github.io/Toxin/
+Просмотр: https://skinnynpale.github.io/Toxin/
