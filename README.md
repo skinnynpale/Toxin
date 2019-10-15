@@ -3,7 +3,7 @@
 ### [Превью сайта](https://skinnynpale.github.io/Toxin/)
 
 ### Клонировать репозиторий
-`git clone github.com/skinnynpale/Toxin`
+`git clone https://github.com/skinnynpale/Toxin`
 
 | Режим разработки | Режим продакшена |
 | ---------------- | ---------------- |
