@@ -9,25 +9,6 @@ form.check-form.datepicker-place
     +field-group('check-form', 'Прибытие', 'check-form__from', 'Выезд', 'check-form__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
   .check-form__item
     +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
-    .dropdown__content#guestsDrop
-      span.dropdown__item
-        span.dropdown__target Взрослые
-        a.dropdown__btn.dropdown__btn-minus(href="#!") -
-        span.dropdown__value 0
-        a.dropdown__btn.dropdown__btn-plus(href="#!") +
-      span.dropdown__item
-        span.dropdown__target Дети
-        a.dropdown__btn.dropdown__btn-minus(href="#!") -
-        span.dropdown__value 0
-        a.dropdown__btn.dropdown__btn-plus(href="#!") +
-      span.dropdown__item#guestsDropPrimeItem
-        span.dropdown__target Младенцы
-        a.dropdown__btn.dropdown__btn-minus(href="#!") -
-        span.dropdown__value#guestsDropPrimeItemValue 0
-        a.dropdown__btn.dropdown__btn-plus(href="#!") +
-      .dropdown__functions
-        a.dropdown__func-btn.dropdown__clear(href="#!") Очистить
-        a.dropdown__func-btn.dropdown__apply(href="#!") Применить
   .check-form__item
     .check-form__conclusion
       span.check-form__text 9 990₽ х 4 суток

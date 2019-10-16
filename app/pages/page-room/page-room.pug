@@ -2,7 +2,7 @@ extends ../template-base
 
 block title
   title Отель «Toxin» | №888 Люкс 9 990₽ в сутки
-  
+
 block styles
   link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
   link(rel="stylesheet" href="page-room.sass")
@@ -10,9 +10,9 @@ block styles
 
 block content
   include ../mixins-pug
-  
+
   include ../../components/header/header-non-authorized
-    
+
   main.page-room
     .gallery
       figure.gallery__item.gallery__item--1
@@ -21,7 +21,7 @@ block content
         img.gallery__img(src="img/image-2.jpg", alt="Фотография номера")
       figure.gallery__item.gallery__item--3
         img.gallery__img(src="img/image-3.jpg", alt="Фотография номера")
-      
+
     .page-room__details
       .container
         .page-room__info-grid
@@ -64,7 +64,7 @@ block content
                 .donut__char
                   .donut__lap.donut__lap_black
                   .donut__lap-value Разочарован
-                
+
           .page-room__reviews
             .page-room__title-group
               h2.page-room__info-title Отзывы посетителей номера
@@ -86,7 +86,7 @@ block content
                   b.reviews__author Патрисия Стёклышкова
                   .reviews__date Неделю назад
                   .reviews__text Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
-             
+
           .page-room__rules
             h2.page-room__info-title Правила
             ul.rules-list
@@ -98,14 +98,14 @@ block content
             p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         include ../../components/check-form/check-form
 
-              
-            
 
-            
-          
-          
+
+
+
+
+
   include ../../components/footer/footer
-  
+
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="../../components/calendar/datepicker.js")
   script(src="page-room.js")

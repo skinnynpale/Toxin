@@ -11,27 +11,30 @@
   "author": "skinnynpale",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
     "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.6.0",
     "cssnano": "^4.1.10",
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
     "ion-rangeslider": "^2.3.0",
+    "jquery": "^3.4.1",
+    "jquery-ui-dist": "^1.12.1",
     "normalize": "^0.3.1",
+    "normalize.css": "^8.0.1",
     "parcel-bundler": "^1.12.3",
     "postcss-modules": "^1.4.1",
-    "prettier": "^1.18.2",
     "pug": "^2.0.3",
     "rimraf": "^2.6.3",
     "sass": "^1.21.0"
   },
-  "dependencies": {
-    "jquery": "^3.4.1",
-    "normalize.css": "^8.0.1"
-  },
   "browserslist": [
-    "> 1%",
+    "> 0.25%",
     "last 4 versions"
   ]
 }

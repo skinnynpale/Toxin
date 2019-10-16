@@ -2,16 +2,16 @@ extends ../template-base
 
 block title
   title Отель «Toxin» | Номера, которые мы для вас подобрали
-  
+
 block styles
   link(rel="stylesheet" href="rooms.sass")
 
 
 block content
   include ../mixins-pug
-  
+
   include ../../components/header/header-non-authorized
-    
+
   main.main
     .container
       .rooms-filter
@@ -19,26 +19,7 @@ block content
           .t-field.rooms-filter__field
             +field-dropdown('Даты пребывания в отеле', 'dateFilter')(value="Выберите дату" readonly)
           .t-field.rooms-filter__field
-            +field-dropdown('Гости', 'guestsFilter')(value="Сколько гостей" readonly)
-            .dropdown__content#guestsDrop
-              span.dropdown__item
-                span.dropdown__target Взрослые
-                a.dropdown__btn.dropdown__btn-minus(href="#!") -
-                span.dropdown__value 0
-                a.dropdown__btn.dropdown__btn-plus(href="#!") +
-              span.dropdown__item
-                span.dropdown__target Дети
-                a.dropdown__btn.dropdown__btn-minus(href="#!") -
-                span.dropdown__value 0
-                a.dropdown__btn.dropdown__btn-plus(href="#!") +
-              span.dropdown__item#guestsDropPrimeItem
-                span.dropdown__target Младенцы
-                a.dropdown__btn.dropdown__btn-minus(href="#!") -
-                span.dropdown__value#guestsDropPrimeItemValue 0
-                a.dropdown__btn.dropdown__btn-plus(href="#!") +
-              .dropdown__functions
-                a.dropdown__func-btn.dropdown__clear(href="#!") Очистить
-                a.dropdown__func-btn.dropdown__apply(href="#!") Применить
+            +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
         .rooms-filter__item.range-slider
           h3.rooms-filter__name Диапазон цены
           span.rooms-filter__values#rangeSliderRoomValue
@@ -59,22 +40,6 @@ block content
         .rooms-filter__item
           .t-field
             +field-dropdown('Удобства номера', 'comfortFilter')(value="Выберите удобства" readonly)
-            .dropdown__content.dropdown__content-poor#comfortDrop
-              span.dropdown__item#bedrooms
-                span.dropdown__target cпальни
-                a.dropdown__btn.dropdown__btn-minus(href="#!") -
-                span.dropdown__value 0
-                a.dropdown__btn.dropdown__btn-plus(href="#!") +
-              span.dropdown__item#beds
-                span.dropdown__target кровати
-                a.dropdown__btn.dropdown__btn-minus(href="#!") -
-                span.dropdown__value 0
-                a.dropdown__btn.dropdown__btn-plus(href="#!") +
-              span.dropdown__item#bathrooms
-                span.dropdown__target ванные комнаты
-                a.dropdown__btn.dropdown__btn-minus(href="#!") -
-                span.dropdown__value 0
-                a.dropdown__btn.dropdown__btn-plus(href="#!") +
         .rooms-filter__item
           h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
           .checkbox__wrapper_expandable#moreComfortFilterWrapper
@@ -201,10 +166,10 @@ block content
             })
         .rooms__pagination
           include ../../components/pagination/pagination
-    
-    
+
+
   include ../../components/footer/footer
-  
+
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="../../components/calendar/datepicker.js")
   script(src="rooms.js")

@@ -2,25 +2,26 @@ extends ../template-base
 
 block title
   title Отель «Toxin» | Главная
-  
+
 block styles
   link(rel="stylesheet" href="index.sass")
 
 
 block content
   include ../mixins-pug
-  
+
   include ../../components/header/header-non-authorized
-  
-  //- a(id="ui-kit" href="../UI-kit-new/UI-kit-new.pug") Ui kit
-  
+
+  //a(id="ui-kit" href="../UI-kit-new/UI-kit-new.pug") Ui kit
+  a(id="ui-kit" href="../test-dev/test-dev.pug") test-dev
+
   main.main
     .container
       include ../../components/find-room/find-room
       p.main__wishes Лучшие номера для вашей работы, отдыха и просто вдохновения
 
   include ../../components/footer/footer
-  
+
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="../../components/calendar/datepicker.js")
   script(src="index.js")

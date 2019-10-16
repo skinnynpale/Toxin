@@ -4,7 +4,8 @@
         "es6": true
     },
     "extends": [
-        "eslint:recommended"
+        "airbnb-base",
+        "prettier"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -15,5 +16,7 @@
         "sourceType": "module"
     },
     "rules": {
-    }
+        "prettier/prettier": ["error"]
+    },
+    "plugins": ["prettier"]
 }

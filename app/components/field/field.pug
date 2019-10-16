@@ -4,15 +4,15 @@ mixin field()
 mixin field-label(text, id)
   label(class="label" for=id)= text
   input(class="field", id=id)&attributes(attributes)
-    
+
 mixin field-dropdown(text, id, value)
   label(class="label label_type_dropdown" for=id)= text
   input(class="field field_type_dropdown " id=id, value=value)&attributes(attributes)
 
 mixin field-arrow(text, id)
   .field-wrapper_type_arrow
-    input(class="field")&attributes(attributes)  
-  
+    input(class="field")&attributes(attributes)
+
 mixin field-masked(text, id)
   input(class="field field_masked", id=id disabled)&attributes(attributes)
 
