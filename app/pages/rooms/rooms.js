@@ -3,7 +3,7 @@ import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 // Подключение рейтинга
 import '../../components/buttons/rate/rate';
-import DropDown from '../../components/field/dropdown/dropdown';
+import DropDown from '../../components/dropdown/dropdown';
 
 // Инициализация rangeslider
 const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue');

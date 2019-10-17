@@ -1,4 +1,4 @@
-import DropDown from '../../components/field/dropdown/dropdown';
+import DropDown from '../../components/dropdown/dropdown';
 
 const guests = document.getElementById('guests');
 const guestsDropDown = new DropDown({

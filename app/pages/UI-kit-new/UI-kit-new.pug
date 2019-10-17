@@ -2,7 +2,7 @@ extends ../template-base
 
 block title
   title Отель «Toxin» | UI kit
-  
+
 block styles
   link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
   link(rel="stylesheet" href="UI-kit-new.sass")
@@ -10,12 +10,12 @@ block styles
 
 block content
   include ../mixins-pug
-    
+
   main.main
     .container
       .main__item
         +field(placeholder="Email" name="email")
-        
+
       .main__item
         .field__dropdown-wrapper
           +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
@@ -68,8 +68,8 @@ block content
               title: "Уют",
               text: "Номер оснащен камином"
             })
-            
-    .container   
+
+    .container
       .main__item
         +checkbox('Можно курить', 'smoke')
         +checkbox('Можно с питомцами', 'pets', 1)
@@ -164,11 +164,10 @@ block content
     .footer-poor
       .section__item
         include ../../components/footer/footer-poor
-      
-      
-        
-              
+
+
+
+
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="../../components/calendar/datepicker.js")
   script(src="UI-kit-new.js")
-  script(src="../../components/field/dropdown/dropdown.js")

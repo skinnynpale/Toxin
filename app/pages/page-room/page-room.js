@@ -1,5 +1,5 @@
 // Datepicker
-import DropDown from '../../components/field/dropdown/dropdown';
+import DropDown from '../../components/dropdown/dropdown';
 
 $('#check-form__from').datepicker({
   minDate: new Date(),
