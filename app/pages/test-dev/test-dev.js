@@ -1,47 +1,31 @@
 import DropDown from '../../components/dropdown/dropdown';
+import Calendar from '../../components/calendar/Calendar';
 
-// const guests = document.getElementById('guests');
-// const dropdown = new DropDown({
-//   anchor: guests,
-//   fallbackTitle: 'Сколько гостей',
-//   showFullAmount: true,
-//   anchorDeclensions: ['гость', 'гостя', 'гостей'],
-//   items: [
-//     {
-//       title: 'Младенцы',
-//       show: true,
-//       declensions: ['младенец', 'младенца', 'младенцев'],
-//     },
-//     {
-//       title: 'Дети',
-//     },
-//     {
-//       title: 'Взрослые',
-//     },
-//   ],
-//   helpButtons: true,
-// });
-const dropdown = new DropDown({
-  anchor: guests,
-  fallbackTitle: 'Выберите удобства',
-  showFullAmount: false,
+const guestsDropDown = new DropDown({
+  anchor: document.getElementById('guests'),
+  fallbackTitle: 'Сколько гостей',
+  showFullAmount: true,
   anchorDeclensions: ['гость', 'гостя', 'гостей'],
   items: [
     {
-      title: 'CПАЛЬНИ',
+      title: 'Младенцы',
       show: true,
-      declensions: ['спальня', 'спальни', 'спален'],
+      declensions: ['младенец', 'младенца', 'младенцев'],
     },
     {
-      title: 'КРОВАТИ',
-      show: true,
-      declensions: ['кровать', 'кровати', 'кроватей'],
+      title: 'Дети',
     },
     {
-      title: 'ВАННЫЕ КОМНАТЫ',
-      show: true,
-      declensions: ['ванная комната', 'ванных комнаты', 'ванных комнат'],
+      title: 'Взрослые',
     },
   ],
-  helpButtons: false,
+  helpButtons: true,
+});
+
+const findRoomCalendar = new Calendar('#find-room__from', {
+  multipleDatesSeparator: '-',
+  onSelect(formattedDate) {
+    $('#find-room__from').val(formattedDate.split('-')[0]);
+    $('#find-room__to').val(formattedDate.split('-')[1]);
+  },
 });

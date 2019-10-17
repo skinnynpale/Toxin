@@ -3,11 +3,12 @@ import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 // Подключение рейтинга
 import '../../components/buttons/rate/rate';
+
 import DropDown from '../../components/dropdown/dropdown';
+import Calendar from '../../components/calendar/Calendar';
 
 // Инициализация rangeslider
 const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue');
-
 $('.js-range-slider').ionRangeSlider({
   type: 'double',
   min: 0,
@@ -24,29 +25,9 @@ $('.js-range-slider').ionRangeSlider({
   hide_from_to: true,
 });
 
-// Datepicker
-$('#dateFilter').datepicker({
-  minDate: new Date(),
-  range: true,
-  multipleDatesSeparator: ' - ',
-  prevHtml: '<div class="find-room__arrow-date find-room__arrow-date-prev"></div>',
-  nextHtml: '<div class="find-room__arrow-date find-room__arrow-date-next"></div>',
-  clearButton: true,
-  todayButton: true,
+const dateFilterCalendar = new Calendar('#dateFilter', {
   dateFormat: 'dd M',
-});
-// 818 строка в datepicker.js для настроек
-
-// Закрытие календаря по нажатию кнопки применить
-const datepickerButtons = document.querySelectorAll('.datepicker--button');
-const myDatepicker = $('#dateFilter')
-  .datepicker()
-  .data('datepicker');
-
-$('#dateFilter').val('Выберите дату');
-
-datepickerButtons[1].addEventListener('click', function(event) {
-  myDatepicker.hide();
+  multipleDatesSeparator: ' - ',
 });
 
 // TODO засунуть в отдельный моудль
@@ -54,16 +35,15 @@ datepickerButtons[1].addEventListener('click', function(event) {
 const moreComfortFilter = document.getElementById('moreComfortFilter');
 const moreComfortFilterWrapper = document.getElementById('moreComfortFilterWrapper');
 
-moreComfortFilter.addEventListener('click', function(event) {
+moreComfortFilter.addEventListener('click', function() {
   moreComfortFilterWrapper.classList.toggle('checkbox__wrapper_expandable-active');
   this.classList.toggle('checkbox__title_expandable-active');
 });
 //
 
 // Dropdown
-const guests = document.getElementById('guests');
 const guestsDropDown = new DropDown({
-  anchor: guests,
+  anchor: document.getElementById('guests'),
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,
   anchorDeclensions: ['гость', 'гостя', 'гостей'],
@@ -83,12 +63,9 @@ const guestsDropDown = new DropDown({
   helpButtons: true,
 });
 
-// Dropdown comfortFilter
-const comfortFilter = document.getElementById('comfortFilter');
 const comfortFilterDropDown = new DropDown({
-  anchor: comfortFilter,
+  anchor: document.getElementById('comfortFilter'),
   fallbackTitle: 'Выберите удобства',
-  anchorDeclensions: ['гость', 'гостя', 'гостей'],
   showFullAmount: false,
   items: [
     {

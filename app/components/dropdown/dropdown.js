@@ -1,3 +1,5 @@
+import './dropdown.sass';
+
 class DropDown {
   constructor({ anchor, showFullAmount, fallbackTitle, anchorDeclensions, items, helpButtons }) {
     this.anchor = anchor;

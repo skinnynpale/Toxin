@@ -1,8 +1,8 @@
 import DropDown from '../../components/dropdown/dropdown';
+import Calendar from '../../components/calendar/Calendar';
 
-const guests = document.getElementById('guests');
 const guestsDropDown = new DropDown({
-  anchor: guests,
+  anchor: document.getElementById('guests'),
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,
   anchorDeclensions: ['гость', 'гостя', 'гостей'],
@@ -23,28 +23,10 @@ const guestsDropDown = new DropDown({
 });
 
 // Datepicker
-$('#find-room__from').datepicker({
-  minDate: new Date(),
-  range: true,
+const findRoomCalendar = new Calendar('#find-room__from', {
   multipleDatesSeparator: '-',
-  onSelect(formattedDate, date, inst) {
+  onSelect(formattedDate) {
     $('#find-room__from').val(formattedDate.split('-')[0]);
     $('#find-room__to').val(formattedDate.split('-')[1]);
   },
-  prevHtml: '<div class="find-room__arrow-date find-room__arrow-date-prev"></div>',
-  nextHtml: '<div class="find-room__arrow-date find-room__arrow-date-next"></div>',
-  clearButton: true,
-  todayButton: true,
-});
-
-// Закрытие календаря по нажатию кнопки применить
-const datepickerButtons = document.querySelectorAll('.datepicker--button');
-const myDatepicker = $('#find-room__from')
-  .datepicker()
-  .data('datepicker');
-
-$('#find-room__from').val('ДД.ММ.ГГГГ');
-
-datepickerButtons[1].addEventListener('click', event => {
-  myDatepicker.hide();
 });

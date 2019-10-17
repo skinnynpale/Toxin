@@ -22,6 +22,7 @@
     "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.6.0",
     "cssnano": "^4.1.10",
+    "g": "^2.0.1",
     "ion-rangeslider": "^2.3.0",
     "jquery": "^3.4.1",
     "jquery-ui-dist": "^1.12.1",
