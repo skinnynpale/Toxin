@@ -1,6 +1,6 @@
 // Datepicker
-import DropDown from '../../components/dropdown/dropdown';
-import Calendar from '../../components/calendar/Calendar';
+import DropDown from '../../components/DropDown/DropDown';
+import Calendar from '../../components/Calendar/Calendar';
 
 const checkFormCalendar = new Calendar('#check-form__from', {
   multipleDatesSeparator: '-',
@@ -9,6 +9,7 @@ const checkFormCalendar = new Calendar('#check-form__from', {
     $('#check-form__to').val(formattedDate.split('-')[1]);
   },
 });
+checkFormCalendar.calendar.css({ top: `${75}px` });
 
 // Dropdown
 const guests = document.getElementById('guests');

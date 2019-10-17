@@ -1,13 +1,12 @@
-// Подключение rangeslider
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
-// Подключение рейтинга
 import '../../components/buttons/rate/rate';
 
-import DropDown from '../../components/dropdown/dropdown';
-import Calendar from '../../components/calendar/Calendar';
+import DropDown from '../../components/DropDown/DropDown';
+import Calendar from '../../components/Calendar/Calendar';
+import ExpandableList from '../../components/ExpandableList/ExpandableList';
 
-// Инициализация rangeslider
+// rangeslider
 const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue');
 $('.js-range-slider').ionRangeSlider({
   type: 'double',
@@ -25,21 +24,20 @@ $('.js-range-slider').ionRangeSlider({
   hide_from_to: true,
 });
 
+// Calendar
 const dateFilterCalendar = new Calendar('#dateFilter', {
   dateFormat: 'dd M',
   multipleDatesSeparator: ' - ',
 });
+dateFilterCalendar.calendar.css({ left: `${290}px`, top: `${24}px` });
 
-// TODO засунуть в отдельный моудль
-// Развернутый список с чекбоксами
-const moreComfortFilter = document.getElementById('moreComfortFilter');
-const moreComfortFilterWrapper = document.getElementById('moreComfortFilterWrapper');
-
-moreComfortFilter.addEventListener('click', function() {
-  moreComfortFilterWrapper.classList.toggle('checkbox__wrapper_expandable-active');
-  this.classList.toggle('checkbox__title_expandable-active');
+// ExpandableList
+const moreComfortFilterList = new ExpandableList({
+  mainAnchor: 'moreComfortFilter',
+  wrapperAnchor: 'moreComfortFilterWrapper',
+  mainClassActive: 'checkbox__title_expandable-active',
+  wrapperClassActive: 'checkbox__wrapper_expandable-active',
 });
-//
 
 // Dropdown
 const guestsDropDown = new DropDown({
@@ -63,6 +61,7 @@ const guestsDropDown = new DropDown({
   helpButtons: true,
 });
 
+// Dropdown
 const comfortFilterDropDown = new DropDown({
   anchor: document.getElementById('comfortFilter'),
   fallbackTitle: 'Выберите удобства',

@@ -10,19 +10,20 @@ block styles
 block content
   include ../mixins-pug
 
-  include ../../components/header/header-non-authorized
+  .main
 
-  //a(id="ui-kit" href="../UI-kit-new/UI-kit-new.pug") Ui kit
-  a(id="ui-kit" href="../test-dev/test-dev.pug") test-dev
+    include ../../components/header/header-non-authorized
 
-  main.main
-    .container
-      include ../../components/find-room/find-room
-      p.main__wishes Лучшие номера для вашей работы, отдыха и просто вдохновения
+    //a(id="ui-kit" href="../UI-kit-new/UI-kit-new.pug") Ui kit
+    a(id="ui-kit" href="../test-dev/test-dev.pug") test-dev
+
+    .main-wrapper
+      .container
+        include ../../components/find-room/find-room
+        p.main__wishes Лучшие номера для вашей работы, отдыха и просто вдохновения
 
 
-  // todo прибить футер к низу
-  include ../../components/footer/footer
+    include ../../components/footer/footer
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="index.js")

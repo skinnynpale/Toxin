@@ -1,5 +1,5 @@
-import DropDown from '../../components/dropdown/dropdown';
-import Calendar from '../../components/calendar/Calendar';
+import DropDown from '../../components/DropDown/DropDown';
+import Calendar from '../../components/Calendar/Calendar';
 
 const guestsDropDown = new DropDown({
   anchor: document.getElementById('guests'),
