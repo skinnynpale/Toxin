@@ -29,7 +29,7 @@ const dateFilterCalendar = new Calendar('#dateFilter', {
   dateFormat: 'dd M',
   multipleDatesSeparator: ' - ',
 });
-dateFilterCalendar.calendar.css({ left: `${290}px`, top: `${24}px` });
+dateFilterCalendar.calendar.css({ left: `${290}px` });
 
 // ExpandableList
 const moreComfortFilterList = new ExpandableList({

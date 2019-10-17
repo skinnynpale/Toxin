@@ -19,16 +19,6 @@ block content
       .main__item
         .field__dropdown-wrapper
           +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
-          .dropdown__content#guestsDrop
-            span.dropdown__item
-              +dropdown-item('Взрослые')
-            span.dropdown__item
-              +dropdown-item('Дети')
-            span.dropdown__item#guestsDropPrimeItem
-              +dropdown-item('Младенцы', 'guestsDropPrimeItemValue')
-            .dropdown__functions
-              a.dropdown__func-btn.dropdown__clear(href="#!") Очистить
-              a.dropdown__func-btn.dropdown__apply(href="#!") Применить
       .main__item
         +field-masked()(placeholder="ДД.ММ.ГГГГ")
       .main__item.datepicker-place#firstDatepickerGroup
