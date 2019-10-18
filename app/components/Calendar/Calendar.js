@@ -3,7 +3,7 @@ import 'air-datepicker/dist/css/datepicker.min.css';
 import './calendar.scss';
 
 class Calendar {
-  constructor(anchor, options) {
+  constructor(anchor, options, isStatic) {
     this.anchor = anchor;
 
     this.initDatePicker(options);
@@ -11,7 +11,7 @@ class Calendar {
 
     this.calendar = $(anchor).data('datepicker').$datepicker;
 
-    this.addEventListeners();
+    isStatic ? '' : this.addEventListeners();
 
     this.calendar.hide();
   }
@@ -47,7 +47,7 @@ class Calendar {
   }
 
   addEventListeners() {
-    document.addEventListener('mouseup', this.checkClickOnHide.bind(this));
+    $(document).on('mouseup', this.checkClickOnHide.bind(this));
     $('span[data-action="today"]').on('click', this.hideCalendar.bind(this));
     $(this.anchor).on('click', this.showCalendar.bind(this));
   }

@@ -14,6 +14,7 @@ mixin field-arrow(text, id)
     input(class="field")&attributes(attributes)
 
 mixin field-masked(text, id)
+  label(class="label" for=id)= text
   input(class="field field_masked", id=id disabled)&attributes(attributes)
 
 mixin field-group(classes, text1, id1, text2, id2, value1, value2)

@@ -1,0 +1,38 @@
+.ui-kit__section
+    .cards
+        img.ui-kit__logo(src="img/logo_min.svg", alt="logo")
+        .cards-grid
+            .container
+                .cards__item
+                    include ../../../components/find-room/find-room
+                .cards__item
+                    include ../../../components/user-form/sign-up-form
+            .container
+                .cards__item
+                    include ../../../components/check-form/check-form
+                .cards__item
+                    include ../../../components/user-form/sign-in-form
+            .container
+                .cards__item
+                    div(id="ui-kit__preview-calendar")
+                .cards__item
+                    .rooms__item
+                        +rooms-item({
+                          img: "../rooms/img/image-1.jpg",
+                          num: "888",
+                          lux: true,
+                          price: "9 990",
+                          stars: 5,
+                          reviews: 145
+                        })
+                .cards__item
+                    .rooms__item
+                        +rooms-item({
+                          img: "../rooms/img/image-2.jpg",
+                          num: "840",
+                          lux: true,
+                          price: "9 900",
+                          stars: 4,
+                          reviews: 65
+                        })
+

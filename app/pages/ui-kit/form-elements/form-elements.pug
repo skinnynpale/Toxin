@@ -1,0 +1,127 @@
+.ui-kit__section
+    .form-elements
+        img.ui-kit__logo(src="img/logo_min.svg", alt="logo")
+        .container
+            .fields
+                .t-field
+                    +field-label('text field', 'fieldDefault')(placeholder="Email")
+                .t-field
+                    +field-label('text field', 'fieldHover')(value="This is pretty awesome")
+                .t-field
+                    +field-dropdown('text field', 'elements-guestsDropDown')(value="Сколько гостей" readonly)
+                .t-field
+                    +field-masked('Masked text field', 'masked', 't-field_dropdown')(placeholder="ДД.ММ.ГГГГ")
+                +field-group('t-field', 'date Dropdown', 'arrival', 'date Dropdown', 'checkOut')(placeholder="ДД.ММ.ГГГГ")
+                .t-field
+                    +field-dropdown('filter date dropdown', 'filterDate')(value="19 авг - 23 авг")
+                .t-field
+                    label.label(for='subscr') Subscription  text field
+                    +field-arrow('subscription text field', 'subscr')(type="email" placeholder="Email")#subscr
+            .buttons
+                .buttons__checkbox
+                    h3 Checkbox Buttons
+                    .checkbox__example
+                        +checkbox('Можно курить', 'smoke')
+                        +checkbox('Можно с питомцами', 'pets', 1)
+                        +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
+                .buttons__radio
+                    h3 Radio Buttons
+                    .radio__example
+                        +radio('Мужчина', 'man', 'sex', 'man')(checked)
+                        +radio('Женщина', 'woman', 'sex', 'woman')
+                .buttons__toggle
+                    h3 Toggle
+                    .toggle__example
+                        +btn-toggle('Получать спецпредложения', 'offer')(checked)
+                    .toggle__example
+                        +btn-toggle('Получать спецпредложения', 'offer2')
+                .buttons__like
+                    h3 Like Button
+                    .like__group
+                        +like('12')
+                        +like('12', true)
+                .buttons__rate
+                    h3 Rate Button
+                    .rate__group
+                        +rating('example', 4, 5)
+                    .rate__group
+                        +rating('example', 5, 5)
+            .buttons2
+                include ../../../components/range-slider/range-slider
+                .buttons__buttons
+                    h3 buttons
+                    .buttons__gradient
+                        +btn_gradient('btn__example', 'Click Me')
+                    .buttons__not-gradient
+                        +btn_not-gradient('btn__example', 'Click Me')
+                    .buttons__links
+                        +link('link_example','Click me')
+                    .buttons__arrow
+                        +btn_arrow('btn__example', 'Перейти к оплате')
+                .buttons__pagination
+                    h3 pagination
+                    include ../../../components/pagination/pagination
+
+        .form-elements_expandable
+            .container
+                .fields
+                    .t-field
+                        +field-dropdown('Dropdown', 'comfortFilter')(value="2 спальни, 2 кровати...")
+                    h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
+                    .checkbox__wrapper_expandable#moreComfortFilterWrapper
+                        +checkbox('Завтрак', 'breakfast')
+                        +checkbox('Письменный стол', 'desk', 1)
+                        +checkbox('Стул для кормления', 'feedingChair', 1)
+                        +checkbox('Кроватка', 'crib', 1)
+                        +checkbox('Телевизор', 'tv')
+                        +checkbox('Шампунь', 'shampoo')
+                        +checkbox('Интернет', 'internet')
+                        +checkbox('Связь с космосом', 'spaceConnection')
+
+                .fields
+                    .main__item
+                        label.label rich Checkbox Buttons
+                        +checkbox_rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
+                        +checkbox_rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'helper')
+                .fields
+                    .main__item
+                        label.label bullet list
+                        ul.rules-list
+                            +bullet-item("Нельзя с питомцами")
+                            +bullet-item("Без вечеринок и мероприятий")
+                            +bullet-item("Время прибытия — после 13:00, а выезд до 12:00")
+
+        .container
+            .main__item
+                ul.advantages
+                    li.advantages__item
+                        +advantages({
+                          ico: "insert_emoticon",
+                          title: "Комфорт",
+                          text: "Шумопоглощающие стены"
+                        })
+                    li.advantages__item
+                        +advantages({
+                          ico: "location_city",
+                          title: "Удобство",
+                          text: "Окно в каждой из спален"
+                        })
+                    li.advantages__item
+                        +advantages({
+                          ico: "whatshot",
+                          title: "Уют",
+                          text: "Номер оснащен камином"
+                        })
+
+            .main__item
+                .reviews__item
+                    +reviews-item({
+                      img: "../page-room/img/author-1.jpg",
+                      likes: "12",
+                      likeCheck: true,
+                      author: "Мурад Сарафанов",
+                      date: "5 дней назад",
+                      text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+                    })
+
+

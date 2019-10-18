@@ -2,105 +2,20 @@ extends ../template-base
 
 block title
   title Отель «Toxin» | Компоненты
-  
+
 block styles
+  link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
   link(rel="stylesheet" href="ui-kit.sass")
 
 block content
   include ../mixins-pug
-  
-  main
-    
-    include colors-type/colors-type
-    
-      
-    .form-elements
-      img.logo_min(src="img/logo_min.svg", alt="logo")
-      .container
-        .fields
-          .t-field
-            +field-label('text field', 'fieldDefault')(placeholder="Email")
-          .t-field
-            +field-label('text field', 'fieldHover')(value="This is pretty awesome")
-          .t-field
-            +field-dropdown('text field', 'dropdown')(value="Сколько гостей")
-          .t-field
-            +field-masked('Masked text field', 'masked', 't-field_dropdown')(placeholder="ДД.ММ.ГГГГ")
-          +field-group('t-field', 'date Dropdown', 'arrival', 'date Dropdown', 'checkOut', '', '19.03.2019')(placeholder="ДД.ММ.ГГГГ")
-          .t-field
-            +field-dropdown('filter date dropdown', 'filterDate')(value="19 авг - 23 авг")
-          .t-field
-            +field-arrow('subscription text field', 'subscr')(type="email" placeholder="Email")
-        .buttons
-          .buttons__checkbox
-            h3 Checkbox Buttons
-            .checkbox__example
-              +checkbox('Можно курить', 'smoke')
-              +checkbox('Можно с питомцами', 'pets', 1)
-              +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
-          .buttons__radio
-            h3 Radio Buttons
-            .radio__example
-              +radio('Мужчина', 'man', 'sex', 'man')
-              +radio('Женщина', 'woman', 'sex', 'woman')
-          .buttons__toggle
-            h3 Toggle
-            .toggle__example
-              +btn-toggle('Получать спецпредложения', 'offer')(checked)
-            .toggle__example
-              +btn-toggle('Получать спецпредложения', 'offer2')
-          .buttons__like
-            h3 Like Button
-            .like__group
-              +like('12')
-              +like('12', true)
-          .buttons__rate
-            h3 Rate Button
-            .rate__group
-              +rating('example', 4, 5)
-            .rate__group
-              +rating('example', 5, 5)
-        .buttons2
-          include ../../components/range-slider/range-slider
-          .buttons__buttons
-            h3 buttons
-            .buttons__gradient
-              +btn_gradient('btn__example', 'Click Me')
-              +btn_gradient('btn__example', 'Click Me')
-            .buttons__not-gradient
-              +btn_not-gradient('btn__example', 'Click Me')
-              +btn_not-gradient('btn__example', 'Click Me')
-            .buttons__links
-              +link('link_example','Click me')
-              +link('link_example','Click me')
-            .buttons__arrow
-              +btn_arrow('btn__example', 'Перейти к оплате')
-          .buttons__pagination
-            h3 pagination
-            include ../../components/pagination/pagination
-              
-      .form-elements_expandable
-        .container
-          .fields
-            .t-field
-              +field-dropdown('Dropdown', 'dropdown')(value="2 спальни, 2 кровати...")
-            h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
-            .checkbox__wrapper_expandable#moreComfortFilterWrapper
-              +checkbox('Завтрак', 'breakfast')
-              +checkbox('Письменный стол', 'desk', 1)
-              +checkbox('Стул для кормления', 'feedingChair', 1)
-              +checkbox('Кроватка', 'crib', 1)
-              +checkbox('Телевизор', 'tv')
-              +checkbox('Шампунь', 'shampoo')
-              +checkbox('Интернет', 'internet')
-              +checkbox('Связь с космосом', 'spaceConnection')
 
-      .rooms-filter
-        .container
-          .rooms-filter__wrapper
-            .t-field.rooms-filter__date
-              +field-dropdown('даты пребывания в отеле', 'roomsFilterDate')(value="19 авг - 23 авг")
-    
-  
+  main.ui-kit
+    include colors-type/colors-type
+    include form-elements/form-elements
+    include cards/cards
+    include headers-footers/headers-footers
+
+
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="ui-kit.js")
