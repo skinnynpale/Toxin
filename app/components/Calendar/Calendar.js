@@ -48,22 +48,24 @@ class Calendar {
 
   addEventListeners() {
     $(document).on('mouseup', this.checkClickOnHide.bind(this));
-    $('span[data-action="today"]').on('click', this.hideCalendar.bind(this));
     $(this.anchor).on('click', this.showCalendar.bind(this));
+    $('span[data-action="today"]').on('click', this.hideCalendar.bind(this));
   }
 
   showCalendar() {
-    this.calendar.toggle();
+    this.calendar.show();
   }
 
-  hideCalendar() {
+  hideCalendar(e) {
+    e.stopPropagation();
     this.calendar.hide();
   }
 
   checkClickOnHide(e) {
-    const div = $(this.calendar);
+    const div = this.calendar;
+
     if (!div.is(e.target) && div.has(e.target).length === 0) {
-      this.hideCalendar();
+      this.calendar.hide();
     }
   }
 }

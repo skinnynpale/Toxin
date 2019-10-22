@@ -5,7 +5,7 @@ form.check-form.datepicker-place
       | 888
     +link('check-form__lux', 'Люкс')
     p.check-form__price_default <b>9 990₽</b> в сутки
-  .check-form__item
+  .check-form__item#checkFormCalendar
     +field-group('check-form', 'Прибытие', 'check-form__from', 'Выезд', 'check-form__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
   .check-form__item
     +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)

@@ -1,36 +1,11 @@
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
-import '../../components/buttons/rate/rate';
 
-import DropDown from '../../components/DropDown/DropDown';
-import Calendar from '../../components/Calendar/Calendar';
-import ExpandableList from '../../components/ExpandableList/ExpandableList';
+import ExpandableList from '../../../components/ExpandableList/ExpandableList';
+import DropDown from '../../../components/DropDown/DropDown';
+import Calendar from '../../../components/Calendar/Calendar';
 
-// rangeslider
-const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue');
-$('.js-range-slider').ionRangeSlider({
-  type: 'double',
-  min: 0,
-  max: 15000,
-  from: 5000,
-  to: 10000,
-  onStart(data) {
-    rangeSliderRoomValue.innerHTML = `${data.from}₽` + ` - ${data.to}₽`;
-  },
-  onChange(data) {
-    rangeSliderRoomValue.innerHTML = `${data.from}₽` + ` - ${data.to}₽`;
-  },
-  hide_min_max: true,
-  hide_from_to: true,
-});
-
-// Calendar
-const dateFilterCalendar = new Calendar('#dateFilter', {
-  dateFormat: 'dd M',
-  multipleDatesSeparator: ' - ',
-});
-
-// ExpandableList
+// Развернутый список с чекбоксами
 const moreComfortFilterList = new ExpandableList({
   mainAnchor: 'moreComfortFilter',
   wrapperAnchor: 'moreComfortFilterWrapper',
@@ -38,9 +13,9 @@ const moreComfortFilterList = new ExpandableList({
   wrapperClassActive: 'checkbox__wrapper_expandable-active',
 });
 
-// Dropdown
+// DropDown
 const guestsDropDown = new DropDown({
-  anchor: document.getElementById('guests'),
+  anchor: document.getElementById('elements-guestsDropDown'),
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,
   anchorDeclensions: ['гость', 'гостя', 'гостей'],
@@ -58,6 +33,34 @@ const guestsDropDown = new DropDown({
     },
   ],
   helpButtons: true,
+});
+
+// Datepicker
+const arrivalCalendar = new Calendar('#formElementsCalendar', {
+  multipleDatesSeparator: '-',
+  onSelect(formattedDate) {
+    $('#arrival').val(formattedDate.split('-')[0]);
+    $('#checkOut').val(formattedDate.split('-')[1]);
+  },
+});
+arrivalCalendar.calendar.css({ top: `${80}px` });
+
+// rangeslider
+const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue');
+$('.js-range-slider').ionRangeSlider({
+  type: 'double',
+  min: 0,
+  max: 15000,
+  from: 5000,
+  to: 10000,
+  onStart(data) {
+    rangeSliderRoomValue.innerHTML = `${data.from}₽` + ` - ${data.to}₽`;
+  },
+  onChange(data) {
+    rangeSliderRoomValue.innerHTML = `${data.from}₽` + ` - ${data.to}₽`;
+  },
+  hide_min_max: true,
+  hide_from_to: true,
 });
 
 // Dropdown
@@ -85,15 +88,9 @@ const comfortFilterDropDown = new DropDown({
   helpButtons: false,
 });
 
-// Показать фильтры
-$('.js-show-filters').click(function(event) {
-  event.preventDefault();
-  const $elem = $('.rooms-filter');
-  $elem.slideToggle(300);
-
-  if (this.innerHTML == 'Показать фильтры') {
-    this.innerHTML = 'Спрятать фильтры';
-  } else {
-    this.innerHTML = 'Показать фильтры';
-  }
+// Calendar
+const dateFilterCalendar = new Calendar('#filterDateCalendar', {
+  dateFormat: 'dd M',
+  multipleDatesSeparator: ' - ',
 });
+dateFilterCalendar.calendar.css({ left: `${290}px`, width: '318px' });

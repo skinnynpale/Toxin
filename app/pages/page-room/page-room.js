@@ -2,14 +2,13 @@
 import DropDown from '../../components/DropDown/DropDown';
 import Calendar from '../../components/Calendar/Calendar';
 
-const checkFormCalendar = new Calendar('#check-form__from', {
+const checkFormCalendar = new Calendar('#checkFormCalendar', {
   multipleDatesSeparator: '-',
   onSelect(formattedDate, date, inst) {
     $('#check-form__from').val(formattedDate.split('-')[0]);
     $('#check-form__to').val(formattedDate.split('-')[1]);
   },
 });
-checkFormCalendar.calendar.css({ top: `${75}px` });
 
 // Dropdown
 const guests = document.getElementById('guests');

@@ -21,6 +21,12 @@
 .rooms-filter__item
   margin-bottom: 30px
   position: relative
+
+  .datepicker-inline
+    .js-Calendar
+      left: 290px
+      width: 318px
+
   &:last-child
     margin-bottom: 0
   &:nth-child(2)
@@ -69,6 +75,13 @@
 @media screen and ( max-width: 910px )
   .rooms-filter
     display: none
+
+    &__item
+      .datepicker-inline
+        .js-Calendar
+          left: 50%
+          transform: translateX(-50%)
+          top: 80px
 
   .js-show-filters
     display: inline-block

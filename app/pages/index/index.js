@@ -23,7 +23,7 @@ const guestsDropDown = new DropDown({
 });
 
 // Datepicker
-const findRoomCalendar = new Calendar('#find-room__from', {
+const findRoomCalendar = new Calendar('#findRoomCalendar', {
   multipleDatesSeparator: '-',
   onSelect(formattedDate) {
     $('#find-room__from').val(formattedDate.split('-')[0]);

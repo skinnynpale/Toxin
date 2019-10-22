@@ -11,8 +11,9 @@
                     +field-dropdown('text field', 'elements-guestsDropDown')(value="Сколько гостей" readonly)
                 .t-field
                     +field-masked('Masked text field', 'masked', 't-field_dropdown')(placeholder="ДД.ММ.ГГГГ")
-                +field-group('t-field', 'date Dropdown', 'arrival', 'date Dropdown', 'checkOut')(placeholder="ДД.ММ.ГГГГ")
-                .t-field
+                .t-field#formElementsCalendar
+                    +field-group('t-field', 'date Dropdown', 'arrival', 'date Dropdown', 'checkOut')(placeholder="ДД.ММ.ГГГГ")
+                .t-field#filterDateCalendar
                     +field-dropdown('filter date dropdown', 'filterDate')(value="19 авг - 23 авг")
                 .t-field
                     label.label(for='subscr') Subscription  text field

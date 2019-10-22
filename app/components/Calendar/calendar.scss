@@ -4,7 +4,7 @@
   .datepicker {
     position: absolute;
     top: 0;
-    width: 318px;
+    width: 100%;
     padding: 21.2px;
     background: #fff;
     border: 1px solid $accent25;
@@ -79,6 +79,10 @@
         border-radius: 50%;
         font-size: 12px;
         color: $accent50;
+
+        @media screen and (max-width: 405px) {
+          height: 36px;
+        }
 
         &.-current- {
           color: white;
