@@ -10,7 +10,7 @@ mixin footer(theme)
               li.footer__soc-item: a.footer__soc-link(href="#!"): img.footer__soc-ico(src="../../components/footer/img/twitter.svg", alt="Twitter")
               li.footer__soc-item: a.footer__soc-link(href="#!"): img.footer__soc-ico(src="../../components/footer/img/fb.svg", alt="FaceBook")
               li.footer__soc-item: a.footer__soc-link(href="#!"): img.footer__soc-ico(src="../../components/footer/img/ig.svg", alt="Instagram")
-  else
+  else if theme == 'full'
     footer.footer
       .footer__main
         .footer__container

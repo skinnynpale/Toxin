@@ -9,7 +9,7 @@ form.user-form
     .user-form__item
       +field-label('Дата рождения', 'birthday')(placeholder="ДД.ММ.ГГГГ" name="birthday")
     .user-form__item
-      h3 Данные для входа в сервис
+      label.label Данные для входа в сервис
       +field(placeholder="Email" name="email")
       +field(placeholder="Пароль" type="password")
       +btn-toggle('Получать спецпредложения', 'receive-offers', 'user-form__toggle')

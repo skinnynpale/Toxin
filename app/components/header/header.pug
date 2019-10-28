@@ -27,6 +27,6 @@ mixin header(status)
               +btn_not-gradient('', 'Войти')(href="./../sign-in/sign-in.pug")
             li.header__item
               +btn_gradient('', 'Зарегистрироваться')(href="./../sign-up/sign-up.pug")
-          else
+          else if status == 'authorized'
             li.header__item
               a(href="#!").header__link.header__user-name Александр Вологдин

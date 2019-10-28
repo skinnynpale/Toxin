@@ -8,12 +8,10 @@ block styles
 
 
 block content
-  include ../mixins-pug
-
-  include ../../components/header/header
+  +header('non-authorized')
 
   main.main
-    .container
+    .main__container
       include ../../components/user-form/sign-up-form
 
-  include ../../components/footer/footer
+  +footer('full')
