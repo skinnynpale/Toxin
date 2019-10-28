@@ -1,93 +1,93 @@
 @import "../field/field"
 
-.main-footer
-  border-top: 1px solid $accent25
-  background-color: #fff
+.footer
+  $root: &
 
-  .container
-    padding: 100px 15px
-    padding-top: 102px
-    display: -webkit-flex
-    display: -ms-flex
+  &__main
+    border-top: 1px solid $accent25
+    background-color: #fff
+    padding: 102px 15px 100px
+
+  &__container
+    @include container
     display: flex
     justify-content: space-between
     flex-wrap: wrap
 
-.main-footer__info
-  margin-top: 11px
+  &__description
+    width: 260px
+    line-height: 24px
+    margin-right: 40px
 
-.main-footer__logo
-  display: inline-block
-  margin-top: -4px
+  &__info
+    margin-top: 11px
 
-.main-footer__nav
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
+  &__logo
+    display: inline-block
+    margin-top: -4px
 
-.footer-nav
-  list-style: none
+  &__nav
+    display: flex
 
-  &:nth-child(2)
-    margin: 0 92px 0 58px
+  &__item
+    list-style: none
 
-.footer-nav__link
-  color: $accent50
-  line-height: 17px
+    &:nth-child(2)
+      margin: 0 92px 0 58px
 
-.footer-nav__item
-  margin-top: 22px
-  display: list-item
+  &__list-link
+    color: $accent50
+    line-height: 17px
 
-  &:nth-child(2)
-    margin-top: 21px
+  &__list-item
+    margin-top: 22px
+    display: list-item
 
-.main-footer__description
-  width: 260px
-  line-height: 24px
-  margin-right: 40px
+    &:nth-child(2)
+      margin-top: 21px
 
-.main-footer__subscription
-  width: 260px
-  line-height: 24px
-  margin-left: 51px
+  &__newsletter
+    width: 260px
+    line-height: 24px
+    margin-left: 51px
 
-.footer-subscription__offer
-  margin:
-    top: 18px
-    bottom: 23px
+    #{$root}__info
+      margin:
+        top: 18px
+        bottom: 23px
 
-.sub-footer__copyright
-  font-size: 14px
+  &__sub
+    border-top: 1px solid rgba(#d0d0d4, 0.50)
+    padding: 23px 0
+    padding-top: 18px
+    background-color: #fff
 
-.sub-footer
-  border-top: 1px solid rgba(#d0d0d4, 0.50)
-  padding: 23px 0
-  padding-top: 18px
-  background-color: #fff
-
-  .container
-    display: -webkit-flex
-    display: -ms-flex
+  &__sub-container
+    max-width: 1190px
+    margin: 0 auto
+    padding: 0 15px
     display: flex
     align-items: center
     justify-content: space-between
 
-.footer-soc__list
-  display: inline-block
-  margin-left: 21px
-  margin-top: 5px
-  margin-right: 1px
+  &__copyright
+    font-size: 14px
 
-  &:first-child
-    margin-left: 0
+  &__soc-item
+    display: inline-block
+    margin-left: 21px
+    margin-top: 5px
+    margin-right: 1px
 
-.footer-soc__ico
-  transition: .25s
+    &:first-child
+      margin-left: 0
 
-.footer-soc__ico:hover
-  transform: scale(1.1)
-  transition: .25s
+  &__soc-ico
+    transition: .25s
+
+  &__soc-ico:hover
+    transform: scale(1.1)
+    transition: .25s
 
 .footer-poor
   text-align: center
@@ -95,23 +95,23 @@
   .container
     justify-content: center
 
-  .main-footer__description
+  .footer__description
     width: 560px
 
-  .main-footer__info
+  .footer__info
     margin: 20px 0
 
 
 @media screen and (max-width: 1185px)
-  .main-footer__subscription
+  .footer__newsletter
     margin-left: 0
 
 @media screen and (max-width: 876px)
-  .main-footer__nav, .main-footer__subscription
+  .footer__nav, .footer__newsletter
     margin-top: 30px
 
 @media screen and (max-width: 772px)
-  .main-footer
+  .footer__main
     .container
       justify-content: center
       text-align: center
@@ -119,18 +119,18 @@
       > div
         margin: 0
 
-  .main-footer__nav
+  .footer__nav
     margin: 60px 0
 
-  .footer-nav:nth-child(2)
+  .footer__item:nth-child(2)
     margin: 0 15px
 
 @media screen and (max-width: 541px)
-  .sub-footer
+  .footer__sub
     .container
       flex-wrap: wrap
       justify-content: center
       text-align: center
 
-  .sub-footer__nav
+  .footer__item
     margin-top: 20px

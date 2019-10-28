@@ -1,38 +1,38 @@
-footer.main-footer-wrapper
-  .main-footer
-    .container
-      .main-footer__description
-        a.main-footer__logo(href="/index.pug"): img(src="../../logo.svg", alt="Toxin")
-        p.main-footer__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-      nav.main-footer__nav
-        ul.footer-nav
-          h3.footer-nav__title Навигация
-          li.footer-nav__item: a.footer-nav__link(href="#") О нас
-          li.footer-nav__item: a.footer-nav__link(href="#") Новости
-          li.footer-nav__item: a.footer-nav__link(href="#") Служба поддержки
-          li.footer-nav__item: a.footer-nav__link(href="#") Услуги
-        ul.footer-nav
-          h3.footer-nav__title О нас
-          li.footer-nav__item: a.footer-nav__link(href="#") О сервисе
-          li.footer-nav__item: a.footer-nav__link(href="#") Наша команда
-          li.footer-nav__item: a.footer-nav__link(href="#") Вакансии
-          li.footer-nav__item: a.footer-nav__link(href="#") Инвесторы
-        ul.footer-nav
-          h3.footer-nav__title Служба поддержки
-          li.footer-nav__item: a.footer-nav__link(href="#") Соглашения
-          li.footer-nav__item: a.footer-nav__link(href="#") Сообщества
-          li.footer-nav__item: a.footer-nav__link(href="#") Связь с нами
-      form.main-footer__subscription
-        h3.footer-subscription__title Подписка
-        p.footer-subscription__offer Получайте специальные предложения и новости сервиса
+footer.footer
+  .footer__main
+    .footer__container
+      .footer__description
+        a.footer__logo(href="/index.pug"): img(src="../../logo.svg", alt="Toxin")
+        p.footer__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+      nav.footer__nav
+        ul.footer__item
+          h3.footer__title Навигация
+          li.footer__list-item: a.footer__list-link(href="#") О нас
+          li.footer__list-item: a.footer__list-link(href="#") Новости
+          li.footer__list-item: a.footer__list-link(href="#") Служба поддержки
+          li.footer__list-item: a.footer__list-link(href="#") Услуги
+        ul.footer__item
+          h3.footer__title О нас
+          li.footer__list-item: a.footer__list-link(href="#") О сервисе
+          li.footer__list-item: a.footer__list-link(href="#") Наша команда
+          li.footer__list-item: a.footer__list-link(href="#") Вакансии
+          li.footer__list-item: a.footer__list-link(href="#") Инвесторы
+        ul.footer__item
+          h3.footer__title Служба поддержки
+          li.footer__list-item: a.footer__list-link(href="#") Соглашения
+          li.footer__list-item: a.footer__list-link(href="#") Сообщества
+          li.footer__list-item: a.footer__list-link(href="#") Связь с нами
+      form.footer__newsletter
+        h3.footer__title Подписка
+        p.footer__info Получайте специальные предложения и новости сервиса
         +field-arrow()(name="email" placeholder="Email")
 
-  .sub-footer
-    .container
-      p.sub-footer__copyright Copyright © 2018 Toxin отель. Все права зачищены.
-      nav.sub-footer__nav
-        ul.footer-soc
-          li.footer-soc__list: a.footer-soc__link(href="#!"): img.footer-soc__ico(src="../../components/footer/img/twitter.svg", alt="Twitter")
-          li.footer-soc__list: a.footer-soc__link(href="#!"): img.footer-soc__ico(src="../../components/footer/img/fb.svg", alt="FaceBook")
-          li.footer-soc__list: a.footer-soc__link(href="#!"): img.footer-soc__ico(src="../../components/footer/img/ig.svg", alt="Instagram")
+  .footer__sub
+    .footer__sub-container
+      p.footer__copyright Copyright © 2018 Toxin отель. Все права зачищены.
+      nav.footer__nav
+        ul.footer__item
+          li.footer__soc-item: a.footer__soc-link(href="#!"): img.footer__soc-ico(src="../../components/footer/img/twitter.svg", alt="Twitter")
+          li.footer__soc-item: a.footer__soc-link(href="#!"): img.footer__soc-ico(src="../../components/footer/img/fb.svg", alt="FaceBook")
+          li.footer__soc-item: a.footer__soc-link(href="#!"): img.footer__soc-ico(src="../../components/footer/img/ig.svg", alt="Instagram")
 
