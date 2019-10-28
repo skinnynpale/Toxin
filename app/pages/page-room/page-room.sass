@@ -41,11 +41,18 @@
 
 .page-room__details
   .container
+    @include container
     display: grid
     grid-template-columns: 1fr 1fr minmax(auto, 380px)
     grid-column-gap: 70px
 
+    @media screen and ( max-width: 853px )
+      grid-gap: 15px
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr))
+      margin: 20px 0
+
 .page-room__info-title
+  @include h1
   margin-bottom: 20px
 
 .page-room__info-grid
@@ -55,50 +62,38 @@
   grid-row-gap: 34px
   grid-column: 1 / 3
 
+  @media screen and ( max-width: 1120px )
+    grid-template-columns: 1fr
+
+  @media screen and ( max-width: 853px )
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr))
+
 // Отзывы посетителей номера
 
 .page-room__reviews
   grid-column: 1 / -1
 
 .page-room__title-group
-  display: -webkit-flex
-  display: -ms-flex
   display: flex
   justify-content: space-between
   align-items: baseline
+
+  @media screen and ( max-width: 410px )
+    display: block
+    margin-bottom: 20px
+
+    .page-room__info-title
+      margin-bottom: 10px
 
 // Правила
 .page-room__rules
   margin-left: 20px
 
 .cancel__text
+  line-height: 24px
   padding-right: 10px
 ////
 
 
-@media screen and ( max-width: 1120px )
-  .page-room__info-grid
-    grid-template-columns: 1fr
-
 @media screen and ( max-width: 853px )
-  .page-room__details .container
-    grid-gap: 15px
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr))
-
-  .page-room__info-grid
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr))
-
   .check-form
-    margin-top: 40px
-    margin: 40px auto
-
-  .page-room__details
-    margin: 20px 0
-
-@media screen and ( max-width: 410px )
-  .page-room__title-group
-    display: block
-    margin-bottom: 20px
-
-    .page-room__info-title
-      margin-bottom: 10px

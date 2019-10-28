@@ -1,6 +1,5 @@
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
-import '../../components/buttons/rate/rate';
 
 import DropDown from '../../components/DropDown/DropDown';
 import Calendar from '../../components/Calendar/Calendar';

@@ -26,6 +26,7 @@
       top: 75px
 
 .check-form__number
+  @include h2
   margin-right: 5px
   font-size: 25px
   span
@@ -44,8 +45,6 @@
   width: 150px
 
 .check-form__conclusion
-  display: -webkit-flex
-  display: -ms-flex
   display: flex
   justify-content: space-between
   margin-bottom: 10px
@@ -74,6 +73,9 @@
 
 .check-form__final-price
   margin-top: 27px
+
+  h2
+    @include h2
 
 .check-form__price-line
   border-bottom: 2px dotted $accent25

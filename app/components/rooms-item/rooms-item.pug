@@ -10,9 +10,9 @@ mixin rooms-item(parameters)
     include ../../components/image-helpers/image-helpers
   .rooms-item__wrapper
     .rooms-item__info
-      h2.rooms-item__num 
+      h2.rooms-item__num
         span №
-        h2= num
+        h2.rooms-item__num= num
       if (lux == true)
         +link('rooms-item__lux', 'Люкс')
       p.rooms-item__price

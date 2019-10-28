@@ -7,11 +7,8 @@ block styles
   link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
   link(rel="stylesheet" href="page-room.sass")
 
-
 block content
-  include ../mixins-pug
-
-  include ../../components/header/header
+  +header('non-authorized')
 
   main.page-room
     .gallery
@@ -98,13 +95,7 @@ block content
             p.cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         include ../../components/check-form/check-form
 
-
-
-
-
-
-
-  include ../../components/footer/footer
+  +footer('full')
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="page-room.js")

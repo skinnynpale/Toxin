@@ -6,14 +6,11 @@ block title
 block styles
   link(rel="stylesheet" href="rooms.sass")
 
-
 block content
-  include ../mixins-pug
-
-  include ../../components/header/header
+  +header('non-authorized')
 
   main.main
-    .container
+    .main__container
       .rooms-filter
         .rooms-filter__item
           .t-field.rooms-filter__field
@@ -21,19 +18,19 @@ block content
           .t-field.rooms-filter__field
             +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
         .rooms-filter__item.range-slider
-          h3.rooms-filter__name Диапазон цены
+          label.label.rooms-filter__name Диапазон цены
           span.rooms-filter__values#rangeSliderRoomValue
           .range-slider__app
             input(type="text" class="js-range-slider" name="my_range" value="")
             p.range-slider__info Стоимость за сутки пребывания в номере
         .rooms-filter__item
-          h3.rooms-filter__name Привелегии
+          label.label.rooms-filter__name Привелегии
           .checkbox__example.rooms-filter__checkbox
             +checkbox('Можно курить', 'smoke')
             +checkbox('Можно с питомцами', 'pets', 1)
             +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
         .rooms-filter__item
-          h3.rooms-filter__name Доступность
+          label.label.rooms-filter__name Доступность
           .rooms-filter__checkbox
             +checkbox_rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
             +checkbox_rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'helper')
@@ -41,7 +38,7 @@ block content
           .t-field
             +field-dropdown('Удобства номера', 'comfortFilter')(value="Выберите удобства" readonly)
         .rooms-filter__item
-          h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
+          label.label.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
           .checkbox__wrapper_expandable#moreComfortFilterWrapper
             +checkbox('Завтрак', 'breakfast')
             +checkbox('Письменный стол', 'desk', 1)
@@ -168,7 +165,7 @@ block content
           include ../../components/pagination/pagination
 
 
-  include ../../components/footer/footer
+  +footer('full')
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="rooms.js")

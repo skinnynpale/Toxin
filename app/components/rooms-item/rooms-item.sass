@@ -25,14 +25,6 @@
   font-size: 12px
   b
     font-size: 14px
-
-.rooms-item__lux
-  margin-left: 5px
-  font-size: 12px
-  text-transform: uppercase
-  color: $purple
-  font-weight: bold
-  line-height: 15px
   &:hover
     color: $accent50
 
@@ -46,11 +38,17 @@
 .rooms-item__wrapper
   padding: 20px
 
+  b
+    color: $accent50
+
 .rooms-item__num
   span
-    font-family: 'montserrat-example', sans-serif
+    font-family: $default-font
     font-size: 13px
-    margin-right: 5px
+
+  @include h2
+  font-family: $opensans-font
+  margin-right: 5px
 
 .rooms-item__image
   position: relative
@@ -58,6 +56,9 @@
     .image-helpers__arrow
       transition: .3s
       opacity: 1
+
+.rooms-item__reviews
+  line-height: 24px
 
 .image-helpers__arrow
   display: inline-block
@@ -80,8 +81,6 @@
   transform: translateY(-50%) rotate(135deg)
 
 .image-helpers__slide-wrapper
-  display: -webkit-flex
-  display: -ms-flex
   display: flex
   position: absolute
   right: 12px

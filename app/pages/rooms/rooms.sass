@@ -12,11 +12,31 @@
 .main
   margin-top: 30px
   margin-bottom: 70px
-  .container
+
+  &__container
+    @include container
     display: grid
     justify-content: space-between
     grid-template-columns: 266px 1fr
     grid-column-gap: 60px
+
+    @media screen and ( max-width: 910px )
+      grid-template-columns: 1fr
+
+.rooms-filter
+
+  @media screen and ( max-width: 910px )
+    display: none
+
+    &__item
+      .datepicker-inline
+      .js-Calendar
+        left: 50%
+        transform: translateX(-50%)
+        top: 80px
+
+.rooms__offer
+  @include h1
 
 .rooms-filter__item
   margin-bottom: 30px
@@ -49,7 +69,6 @@
 .rooms__grid
   margin-top: 20px
   display: grid
-  // grid-template-columns: 270px 270px 270px
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr))
   grid-column-gap: 12px
   grid-row-gap: 15px
@@ -69,31 +88,13 @@
   padding: 5px 15px
   cursor: pointer
 
-  //
-
-
-@media screen and ( max-width: 910px )
-  .rooms-filter
-    display: none
-
-    &__item
-      .datepicker-inline
-        .js-Calendar
-          left: 50%
-          transform: translateX(-50%)
-          top: 80px
-
-  .js-show-filters
+  @media screen and ( max-width: 910px )
     display: inline-block
     margin-left: 20px
 
-  .main
-    .container
-      grid-template-columns: 1fr
-
-@media screen and ( max-width: 735px )
-  .js-show-filters
+  @media screen and ( max-width: 735px )
     display: block
     text-align: center
     margin-top: 15px
     margin-left: 0
+
