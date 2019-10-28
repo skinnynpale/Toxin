@@ -12,32 +12,52 @@
     @include container
     display: flex
     justify-content: space-between
-    flex-wrap: wrap
+
+    @media screen and (max-width: 864px)
+      text-align: center
+      justify-content: center
 
   &__description
     width: 260px
     line-height: 24px
     margin-right: 40px
 
+    @media screen and (max-width: 864px)
+      width: 560px
+      margin: 0
+
   &__info
     margin-top: 11px
+
+    @media screen and (max-width: 864px)
+      margin: 20px 0
 
   &__logo
     display: inline-block
     margin-top: -4px
 
+  &__title
+    text-transform: uppercase
+    font-size: 12px
+    color: $accent
+
   &__nav
     display: flex
+
+    @media screen and (max-width: 864px)
+      display: none
 
   &__item
     list-style: none
 
-    &:nth-child(2)
-      margin: 0 92px 0 58px
+    @media screen and (max-width: 576px)
+      padding: 0
+      margin-top: 20px
 
   &__list-link
     color: $accent50
     line-height: 17px
+    text-decoration: none
 
   &__list-item
     margin-top: 22px
@@ -50,6 +70,9 @@
     width: 260px
     line-height: 24px
     margin-left: 51px
+
+    @media screen and (max-width: 864px)
+      display: none
 
     #{$root}__info
       margin:
@@ -70,6 +93,10 @@
     align-items: center
     justify-content: space-between
 
+    @media screen and (max-width: 576px)
+      flex-direction: column
+      text-align: center
+
   &__copyright
     font-size: 14px
 
@@ -89,48 +116,18 @@
     transform: scale(1.1)
     transition: .25s
 
-.footer-poor
-  text-align: center
-
-  .container
-    justify-content: center
-
-  .footer__description
-    width: 560px
-
-  .footer__info
-    margin: 20px 0
-
-
-@media screen and (max-width: 1185px)
-  .footer__newsletter
-    margin-left: 0
-
-@media screen and (max-width: 876px)
-  .footer__nav, .footer__newsletter
-    margin-top: 30px
-
-@media screen and (max-width: 772px)
-  .footer__main
-    .container
+  &_theme_poor
+    #{$root}__container
+      display: flex
       justify-content: center
       text-align: center
 
-      > div
-        margin: 0
+    #{$root}__description
+      width: auto
+      max-width: 560px
+      margin: 0
 
-  .footer__nav
-    margin: 60px 0
+    #{$root}__item
+      padding: 0
+      margin-top: 15px
 
-  .footer__item:nth-child(2)
-    margin: 0 15px
-
-@media screen and (max-width: 541px)
-  .footer__sub
-    .container
-      flex-wrap: wrap
-      justify-content: center
-      text-align: center
-
-  .footer__item
-    margin-top: 20px
