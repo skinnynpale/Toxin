@@ -3,13 +3,9 @@
 @import "vars"
 
 *
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
 	box-sizing: border-box
 	margin: 0
 	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
 		box-sizing: border-box
 
 *::-webkit-input-placeholder
@@ -41,11 +37,9 @@ html, body
 body
 	min-width: 320px
 	max-width: 1920px
-	// max-width: 1440px
 	margin: 0 auto
 	position: relative
 	font-family: $default-font
-	// overflow-x: hidden
 	font-size: 14px
 	color: $accent75
 	display: flex
@@ -124,4 +118,4 @@ main
 footer
 	flex: 0 0 auto
 
-@import "media" // Всегда в конце
+@import "media"

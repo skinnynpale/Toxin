@@ -1,0 +1,23 @@
+mixin header(status, items)
+  header.header
+    .header__container
+      a.header__logo(href="/index.pug"): img(src="../../logo.svg", alt="Toxin")
+      a(href="#!").header__burger
+      nav.header__nav
+        ul.header__site-nav
+          each item in items
+            if item.submenu
+              li.header__item.header__item_has-submenu
+                a.header__link(href="#") #{item.name}
+            else
+              li.header__item
+                a.header__link(href="#") #{item.name}
+        ul.header__user-nav
+          if status == 'non-authorized'
+            li.header__item
+              +btn_not-gradient('Войти')(href="./../sign-in/sign-in.pug")
+            li.header__item
+              +btn_gradient('Зарегистрироваться')(href="./../sign-up/sign-up.pug")
+          else
+            li.header__item
+              a(href="#!").header__link.header__user-name Александр Вологдин

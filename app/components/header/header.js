@@ -1,7 +1,7 @@
-$('.main-header__burger').click(function (event) {
+$('.header__burger').click(function (event) {
   event.preventDefault();
-  var $elem = $(this);
-  $elem.toggleClass('main-header__burger_opened');
-  $elem.next().slideToggle(300);
-  $elem.next().next().slideToggle(300);
+  const burget = $(this);
+  burget.toggleClass('header__burger_opened');
+  $('.header__site-nav').slideToggle(300);
+  $('.header__user-nav').slideToggle(300);
 });

@@ -22,7 +22,6 @@ const guestsDropDown = new DropDown({
   helpButtons: true,
 });
 
-// Datepicker
 const findRoomCalendar = new Calendar('#findRoomCalendar', {
   multipleDatesSeparator: '-',
   onSelect(formattedDate) {

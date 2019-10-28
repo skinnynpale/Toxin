@@ -6,19 +6,32 @@ block title
 block styles
   link(rel="stylesheet" href="index.sass")
 
-
 block content
-  include ../mixins-pug
-
-  include ../../components/header/header-non-authorized
+  +header('non-authorized',[
+    {
+      name: 'О нас'
+    },
+    {
+      name: 'Услуги',
+      submenu: true
+    },
+    {
+      name: 'Вакансии'
+    },
+    {
+      name: 'Новости',
+    },
+    {
+      name: 'Соглашения',
+      submenu: true
+    },
+  ])
 
   a(id="ui-kit" href="../ui-kit/ui-kit.pug") UI Компоненты
-
   main.main
-    .container
+    .main__container
       include ../../components/find-room/find-room
       p.main__wishes Лучшие номера для вашей работы, отдыха и просто вдохновения
-
 
   include ../../components/footer/footer
 

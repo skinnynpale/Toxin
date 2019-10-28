@@ -8,22 +8,25 @@
 .main
   background: $accent5 url('img/index-bg.jpg') no-repeat center / cover
 
-  .container
+  &__container
+    max-width: 1190px
+    margin: 0 auto
+    padding: 0 15px
     padding-top: 70px
     padding-bottom: 386px
     position: relative
     height: 100%
 
-.main__wishes
-  position: absolute
-  right: -6px
-  bottom: 23px
-  text-align: right
-  width: 297px
-  line-height: 24px
-  margin-right: 15px
+  &__wishes
+    position: absolute
+    right: -6px
+    bottom: 23px
+    text-align: right
+    width: 297px
+    line-height: 24px
+    margin-right: 15px
 
-.datepicker
+.js-Calendar
   top: 75px !important
 
 #ui-kit

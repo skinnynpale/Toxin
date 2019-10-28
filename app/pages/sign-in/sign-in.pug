@@ -2,16 +2,16 @@ extends ../template-base
 
 block title
   title Отель «Toxin» | Вход
-  
+
 block styles
   link(rel="stylesheet" href="sign-in.sass")
 
 
 block content
   include ../mixins-pug
-  
-  include ../../components/header/header-non-authorized
-    
+
+  include ../../components/header/header
+
   main.main
     .container
       include ../../components/user-form/sign-in-form

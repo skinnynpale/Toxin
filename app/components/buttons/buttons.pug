@@ -1,12 +1,12 @@
-mixin btn_gradient(classes, text)
-  a(class="btn btn_theme_gradient " + classes href="#!")&attributes(attributes)= text
+mixin btn_gradient(text)
+  a(class="btn btn_theme_gradient " href="#!")&attributes(attributes)= text
 
-mixin btn_not-gradient(classes, text)
-  a(class="btn btn_theme_not-gradient " + classes href="#!")&attributes(attributes)= text
+mixin btn_not-gradient(text)
+  a(class="btn btn_theme_not-gradient " href="#!")&attributes(attributes)= text
 
 mixin link(classes, text)
   a(class="default-link " + classes href="#!")&attributes(attributes)= text
-  
+
 mixin btn_arrow(classes, text)
   a(class="btn btn_theme_gradient btn_with-arrow " + classes href="#!")&attributes(attributes)= text
     svg.btn_with-arrow__svg(width='18', height='18', xmlns='http://www.w3.org/2000/svg')
