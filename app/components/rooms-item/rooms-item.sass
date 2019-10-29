@@ -1,97 +1,65 @@
+@import "../image-helpers/image-helpers"
+
 .rooms__item
   background: #FFFFFF
-  box-shadow: 0px 10px 20px $accent5
+  box-shadow: 0 10px 20px $accent5
   border-radius: 4px
   cursor: pointer
   transition: .25s
   position: relative
+
   &:hover
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.15)
+    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.15)
     transition: .25s
 
-.rooms-item__img
-  width: 100%
+.rooms-item
+  &__info
+    display: flex
+    align-items: baseline
+    padding-bottom: 10px
+    border-bottom: 1px solid $accent10
 
-.rooms-item__info
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  align-items: baseline
-  padding-bottom: 10px
-  border-bottom: 1px solid $accent10
+  &__img
+    width: 100%
 
-.rooms-item__price
-  margin-left: auto
-  font-size: 12px
-  b
-    font-size: 14px
-  &:hover
-    color: $accent50
+  &__price
+    margin-left: auto
+    font-size: 12px
 
-.rooms-item__rating
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  justify-content: space-between
-  margin-top: 8px
+    &-text
+      font-size: 14px
+      color: $accent50
 
-.rooms-item__wrapper
-  padding: 20px
+  &__rating
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    margin-top: 8px
 
-  b
-    color: $accent50
+  &__wrapper
+    padding: 20px
 
-.rooms-item__num
-  span
-    font-family: $default-font
-    font-size: 13px
+  &__num
+    @include h2
+    font-family: $opensans-font
+    margin-right: 5px
 
-  @include h2
-  font-family: $opensans-font
-  margin-right: 5px
+    &-ico
+      font-family: $default-font
+      font-size: 13px
 
-.rooms-item__image
-  position: relative
-  &:hover
-    .image-helpers__arrow
-      transition: .3s
-      opacity: 1
+  &__image
+    position: relative
+    &:hover
+      .image-helpers__arrow
+        transition: .3s
+        opacity: 1
 
-.rooms-item__reviews
-  line-height: 24px
+  &__reviews
+    line-height: 24px
 
-.image-helpers__arrow
-  display: inline-block
-  position: absolute
-  right: 21px
-  top: 77px
-  width: 9px
-  height: 9px
-  border: 3px solid #fff
-  border-top: 0
-  border-left: 0
-  transform: translateY(-50%) rotate(-45deg)
-  box-shadow: 0px 1px 30px #000
-  opacity: 0
-  transition: .3s
+    &-text
+      color: $accent50
 
-.image-helpers__arrow_left
-  left: 21px
-  top: 77px
-  transform: translateY(-50%) rotate(135deg)
 
-.image-helpers__slide-wrapper
-  display: flex
-  position: absolute
-  right: 12px
-  bottom: 15px
-
-.image-helpers__slide
-  width: 7.5px
-  height: 7.5px
-  border: 1px solid #fff
-  box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3)
-  border-radius: 50%
-  margin-right: 3.75px
-  &_active
-    background-color: #fff

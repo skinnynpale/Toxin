@@ -1,5 +1,7 @@
 // Забронировать
 .check-form
+  $root: &
+
   padding: 43px 30px 40px 30px
   border: 1px solid rgba(0, 0, 0, 0.12)
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
@@ -9,86 +11,85 @@
   max-width: 380px
   width: 100%
 
-.check-form__item
-  margin-bottom: 20px
-  position: relative
+  .datepicker-inline
+    .js-Calendar
+      top: 75px
 
-  &_group
-    display: -webkit-flex
-    display: -ms-flex
+  &__item
+    margin-bottom: 20px
+    position: relative
+
+  &__item-group
     display: flex
     align-items: baseline
     position: relative
     justify-content: space-between
 
-  .datepicker-inline
-    .js-Calendar
-      top: 75px
-
-.check-form__number
-  @include h2
-  margin-right: 5px
-  font-size: 25px
-  span
-    font-family: 'montserrat-example', sans-serif
-    font-size: 13px
-    margin-right: 5px
-
-.check-form__price_default
-  margin-left: auto
-  font-size: 12px
-  b
-    font-size: 14px
-
-.check-form__field
-  position: relative
-  width: 150px
-
-.check-form__conclusion
-  display: flex
-  justify-content: space-between
-  margin-bottom: 10px
-
-.check-form__text
-  max-width: 214px
-  position: relative
-  line-height: 18px
-  margin-bottom: 5px
-
-.check-form__text-info::after
-  content: 'i'
-  width: 20px
-  height: 20px
-  border-radius: 50%
-  border: 1px solid $accent25
-  position: absolute
-  text-align: center
-  line-height: 18px
-  color: $accent25
-  cursor: help
-  top: 0
-  right: -26px
-  display: block
-  font-weight: bold
-
-.check-form__final-price
-  margin-top: 27px
-
-  h2
+  &__number
     @include h2
+    margin-right: 5px
+    font-size: 25px
 
-.check-form__price-line
-  border-bottom: 2px dotted $accent25
-  width: 100%
-  height: 5px
-  margin: 0 5px
+    &-ico
+      font-family: 'montserrat-example', sans-serif
+      font-size: 13px
+      margin-right: 5px
 
-.check-form__final-price
-  h2:last-child
-    white-space: nowrap
-    font-family: 'opensans-example', sans-serif
+  &__price_default
+    margin-left: auto
+    font-size: 12px
 
+    #{$root}__price-text
+      font-size: 14px
 
-@media screen and ( max-width: 403px )
-  .check-form__text-info::after
-    display: none
+  &__group-field
+    @include group-field
+
+  &__field
+    @include field
+
+  &__conclusion
+    display: flex
+    justify-content: space-between
+    margin-bottom: 10px
+
+  &__text
+    max-width: 214px
+    position: relative
+    line-height: 18px
+    margin-bottom: 5px
+
+  &__text-info::after
+    content: 'i'
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    border: 1px solid $accent25
+    position: absolute
+    text-align: center
+    line-height: 18px
+    color: $accent25
+    cursor: help
+    top: 0
+    right: -26px
+    display: block
+    font-weight: bold
+
+    @media screen and ( max-width: 403px )
+      display: none
+
+  &__final-price
+    margin-top: 27px
+
+    &-text
+      @include h2
+
+    &-text:last-child
+      white-space: nowrap
+      font-family: 'opensans-example', sans-serif
+
+  &__price-line
+    border-bottom: 2px dotted $accent25
+    width: 100%
+    height: 5px
+    margin: 0 5px

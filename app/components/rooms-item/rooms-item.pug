@@ -11,15 +11,15 @@ mixin rooms-item(parameters)
   .rooms-item__wrapper
     .rooms-item__info
       h2.rooms-item__num
-        span №
+        span.rooms-item__num-ico №
         h2.rooms-item__num= num
       if (lux == true)
         +link('rooms-item__lux', 'Люкс')
       p.rooms-item__price
-        b= price + "₽"
+        b.rooms-item__price-text= price + "₽"
         |  в сутки
     .rooms-item__rating
       +rating('rooms-rating', stars, 5, 'ratingRoom')
       p.rooms-item__reviews
-        b= reviews
+        b.rooms-item__reviews-text= reviews
         |  Отзывов

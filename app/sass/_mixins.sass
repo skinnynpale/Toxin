@@ -25,3 +25,21 @@
   display: block
   max-width: 100%
   height: 100%
+
+@mixin field
+  position: relative
+  width: 150px
+
+  @media screen and ( max-width: 405px )
+    width: 100%
+    margin-bottom: 10px
+
+    &:last-child
+      margin-bottom: 0
+
+@mixin group-field
+  display: flex
+  justify-content: space-between
+
+  @media screen and ( max-width: 405px )
+    flex-direction: column

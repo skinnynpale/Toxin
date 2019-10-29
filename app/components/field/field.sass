@@ -6,13 +6,28 @@
   padding: 11px 40px 13px 14px
   outline: none
   color: $accent75
+
   &::placeholder
     color: $accent25
+
   &:hover, &:focus
     border: 1px solid $accent50
 
+  &_type_dropdown
+    cursor: pointer
+
+  &_masked
+    cursor: default
+
+    &:hover
+      border: 1px solid $accent25
+
+    &:disabled
+      background: #fff
+
 .field-wrapper_type_arrow
   position: relative
+
   &::after
     content: url('../../components/footer/img/arrow_forward.svg')
     display: inline-block
@@ -24,23 +39,6 @@
     text-align: center
     cursor: pointer
 
-.field_type_dropdown
-  cursor: pointer
-
-.field_masked
-  cursor: default
-  &:hover
-    border: 1px solid $accent25
-  &:disabled
-    background: #fff
-
-div[class$='group-field']
-  display: flex
-  justify-content: space-between
-  div[class$='field']
-    position: relative
-    width: 150px
-
 .label
   @include label
   font-family: $default-font
@@ -50,31 +48,19 @@ div[class$='group-field']
   font-weight: bold
   color: $accent
 
-.label_type_dropdown
-  position: relative
-  &::after
-    content: ""
-    display: inline-block
-    position: absolute
-    top: 39px
-    right: 18px
-    width: 9px
-    height: 9px
-    border: 2px solid $accent50
-    border-top: 0
-    border-left: 0
-    transform: translateY(-50%) rotate(45deg)
-    cursor: pointer
+  &_type_dropdown
+    position: relative
 
-
-
-
-
-@media screen and ( max-width: 405px )
-  div[class$='group-field']
-    flex-direction: column
-    div[class$='field']
-      width: 100%
-      margin-bottom: 10px
-      &:last-child
-        margin-bottom: 0
+    &::after
+      content: ""
+      display: inline-block
+      position: absolute
+      top: 39px
+      right: 18px
+      width: 9px
+      height: 9px
+      border: 2px solid $accent50
+      border-top: 0
+      border-left: 0
+      transform: translateY(-50%) rotate(45deg)
+      cursor: pointer
