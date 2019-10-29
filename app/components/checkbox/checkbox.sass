@@ -1,28 +1,34 @@
 .checkbox
+  $root: &
+
   line-height: 25px
   color: $accent50
-  input[type="checkbox"]
+
+  &__input
     opacity: 0
     position: absolute
     display: inline-block
-  label
+
+  &__label
     position: relative
     display: inline-block
     width: 217px
     cursor: pointer
     padding-left: 29px
-    // line-height: 18px
+
     &::before, &::after
       position: absolute
       content: ""
       display: inline-block
+
     &::before
       height: 20px
       width: 20px
       border: 1px solid $accent25
       border-radius: 4px
-      left: 0px
+      left: 0
       top: 2px
+
     &::after
       height: 6px
       width: 8px
@@ -31,71 +37,68 @@
       transform: rotate(-45deg)
       left: 6.5px
       top: 8px
-  input[type="checkbox"]
-    + label::after
+
+  &__input
+    + #{$root}__label::after
       content: none
-    &:checked + label::after
+    &:checked + #{$root}__label::after
       content: ""
-    &:checked + label::before
+    &:checked + #{$root}__label::before
       border: 1px solid $purple
     &:focus + label::before
       outline: none
 
-.checkbox__wrapper_rich
-  margin-bottom: 2px
-  &:last-child
-    margin-bottom: 0
+  &__wrapper_rich
+    margin-bottom: 2px
 
-.checkbox__title_rich
-  color: $accent75
-  font-weight: bold
-  width: 100% !important
+    &:last-child
+      margin-bottom: 0
 
-.checkbox__text_rich
-  font-size: 12px
-  line-height: 14px
-  margin-top: -5px
-  font-weight: 100
-  margin-top: 2px
-  color: $accent50
-  width: 230px
+  &__title_rich
+    color: $accent75
+    font-weight: bold
+    width: 100% !important
 
-//
+  &__text_rich
+    font-size: 12px
+    line-height: 14px
+    font-weight: 100
+    margin-top: 2px
+    color: $accent50
+    width: 230px
 
-.checkbox__title_expandable
-  position: relative
-  cursor: pointer
-  padding-bottom: 18px
-  &::after
-    content: ""
-    display: inline-block
-    position: absolute
-    right: 17px
-    top: 6px
-    width: 9px
-    height: 9px
-    border: 2px solid $accent50
-    border-top: 0
-    border-left: 0
-    transform: translateY(-50%) rotate(45deg)
+  &__title_expandable
+    position: relative
+    cursor: pointer
+    padding-bottom: 18px
 
-.checkbox__wrapper_expandable
-  opacity: 0
-  max-height: 0
-  overflow: hidden
-  left: 100000px
-  -moz-transition: opacity .3s, max-height .3s
-  -ms-transition: opacity .3s, max-height .3s
-  transition: opacity .3s, max-height .3s
+    &-active
+      transition: .3s
+      &::after
+        transform: translateY(0%) rotate(-135deg)
 
-.checkbox__wrapper_expandable-active
-  max-height: 1000px
-  left: auto
-  opacity: 1
+    &::after
+      content: ""
+      display: inline-block
+      position: absolute
+      right: 17px
+      top: 6px
+      width: 9px
+      height: 9px
+      border: 2px solid $accent50
+      border-top: 0
+      border-left: 0
+      transform: translateY(-50%) rotate(45deg)
 
-.checkbox__title_expandable-active
-  transition: .3s
-  &::after
-    transform: translateY(0%) rotate(-135deg)
+  &__wrapper_expandable
+    opacity: 0
+    max-height: 0
+    overflow: hidden
+    left: 100000px
+    transition: opacity .3s, max-height .3s
 
-//
+    &-active
+      max-height: 1000px
+      left: auto
+      opacity: 1
+

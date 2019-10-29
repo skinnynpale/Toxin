@@ -12,16 +12,6 @@ block content
 
   main.main
     .main__container
-      form.user-form
-        .user-form__wrapper
-          h1.user-form__title Войти
-          .user-form__item
-            +field(placeholder="Email" name="email")
-            +field(placeholder="Пароль" type="password")
-          .user-form__item
-            +btn_arrow('user-form__btn', 'Войти')(href="#!")
-          .user-form__sign-in
-            p Нет аккаунта на Toxin?
-            +btn_not-gradient('user-form__btn-sign-up', 'Создать')(href="/../sign-up/sign-up.pug")
+      include ../../components/sign-in-form/sign-in-form
 
   +footer('full')

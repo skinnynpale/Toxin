@@ -1,40 +1,42 @@
-input[type="radio"] + label
-  display: inline-block
-  cursor: pointer
-  position: relative
-  padding-left: 30px
-  margin-right: 25px
-  margin-top: 2px
-  font-size: 13px
-  width: auto
+.radio
+  $root: &
 
-  &:before
-    content: ""
-    display: block
-    width: 20px
-    height: 20px
-    margin-right: 14px
-    position: absolute
-    top: -3px
-    left: 0
-    border: 1px solid $accent25
-    background-color: #fff
-    border-radius: 50%
+  &-input + &-label
+    display: inline-block
+    cursor: pointer
+    position: relative
+    padding-left: 30px
+    margin-right: 25px
+    margin-top: 2px
+    font-size: 13px
+    width: auto
 
-input[type="radio"]
-  display: none !important
+    &:before
+      content: ""
+      display: block
+      width: 20px
+      height: 20px
+      margin-right: 14px
+      position: absolute
+      top: -3px
+      left: 0
+      border: 1px solid $accent25
+      background-color: #fff
+      border-radius: 50%
 
-  &:checked + label:after
-    content: ""
-    display: block
-    position: absolute
-    top: 1px
-    left: 4px
-    width: 12px
-    height: 12px
-    border-radius: 50%
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  &-input
+    display: none !important
 
-input[type="radio"]
-  &:checked + label
-    color: $accent75
+    &:checked + #{$root}-label:after
+      content: ""
+      display: block
+      position: absolute
+      top: 1px
+      left: 4px
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+    &:checked + #{$root}-label
+      color: $accent75

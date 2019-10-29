@@ -1,15 +1,15 @@
 mixin checkbox(text, id, checked)
-  if (checked == true)
+  if (checked === true)
     .checkbox
-      input(id=id type='checkbox' checked)
-      label(for=id)= text
+      input(id=id type='checkbox' checked).checkbox__input
+      label(for=id).checkbox__label= text
   else
     .checkbox
-      input(id=id type='checkbox')
-      label(for=id)= text
+      input(id=id type='checkbox').checkbox__input
+      label(for=id).checkbox__label= text
 
 mixin checkbox_rich(title, text, id)
   .checkbox.checkbox__wrapper_rich
-    input(id=id type='checkbox')
-    label(class="checkbox__title_rich" for=id)= title
+    input(id=id type='checkbox').checkbox__input
+    label(class="checkbox__title_rich" for=id).checkbox__label= title
       p(class="checkbox__text_rich")= text

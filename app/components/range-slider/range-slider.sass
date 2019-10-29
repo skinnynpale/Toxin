@@ -1,41 +1,34 @@
-.irs-bar
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+.irs
+  &-bar
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
 
-.irs-bar
-  height: 6px !important
+  &-bar
+    height: 6px !important
 
-.irs-line
-  height: 6px !important
+  &-line
+    height: 6px !important
 
-.irs-handle
-  width: 16px !important
-  height: 16px !important
-  border-radius: 10px
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
-  border: 2px solid #FFFFFF
-  top: 20px !important
-  cursor: pointer !important
-  z-index: 1 !important
+  &-handle
+    width: 16px !important
+    height: 16px !important
+    border-radius: 10px
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    border: 2px solid #FFFFFF
+    top: 20px !important
+    cursor: pointer !important
+    z-index: 1 !important
 
-.irs--flat .irs-handle > i:first-child
-  background: none !important
+  &--flat &-handle > i:first-child
+    background: none !important
 
-.range-slider__info
-  color: $accent50
-  font-size: 12px
-  line-height: 14px
-  margin-top: 6px
-
-.rooms-filter__values
-  position: absolute
-  right: 0
-  top: 0
-  font-size: 13px
-  color: $accent50
-
-.irs--flat .irs-line
-  background-color: #fff !important
-  border: 1px solid $accent25
+  &--flat &-line
+    background-color: #fff !important
+    border: 1px solid $accent25
 
 .range-slider
   position: relative
+  &__info
+    color: $accent50
+    font-size: 12px
+    line-height: 14px
+    margin-top: 6px

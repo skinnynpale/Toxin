@@ -12,9 +12,9 @@ form.user-form
       label.label Данные для входа в сервис
       +field(placeholder="Email" name="email")
       +field(placeholder="Пароль" type="password")
-      +btn-toggle('Получать спецпредложения', 'receive-offers', 'user-form__toggle')
+      +btn-toggle('Получать спецпредложения', 'receive-offers')
     .user-form__item
       +btn_arrow('user-form__btn-buy', 'Перейти к оплате')(href="#!")
     .user-form__sign-in
-      p Уже есть аккаунт на Toxin
+      p.user-form__question Уже есть аккаунт на Toxin
       +btn_not-gradient('user-form__btn-sign-in', 'Войти')(href="/../sign-in/sign-in.pug")

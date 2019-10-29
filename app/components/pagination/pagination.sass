@@ -1,38 +1,45 @@
 .pagination
+  $root: &
+
   text-align: center
 
-.pagination__item
-  font-size: 12px
-  color: $accent50
-  width: 40px
-  height: 40px
-  display: inline-block
-  margin-right: 0px
-  text-align: center
-  line-height: 40px
-  border-radius: 22px
-  &_current
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-    font-weight: bold
-    color: #fff
-  &:hover:not(.pagination__item_next):not(.pagination__item_current)
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-    font-weight: bold
-    color: #fff
-    opacity: .7
+  &__item
+    font-size: 12px
+    color: $accent50
+    width: 40px
+    height: 40px
+    display: inline-block
+    margin-right: 0
+    text-align: center
+    line-height: 40px
+    border-radius: 22px
+    text-decoration: none
 
-.pagination__item_next
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
-  position: relative
-  top: 15px
-  &:hover
-    opacity: .7
-  svg
-    position: absolute
-    top: 50%
-    right: 50%
-    transform: translate(50%, -50%)
-    fill: white
+    &_current
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+      font-weight: bold
+      color: #fff
 
-.pagination__result
-  margin-top: 12px
+    &:hover:not(.pagination__item_next):not(.pagination__item_current)
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+      font-weight: bold
+      color: #fff
+      opacity: .7
+
+  &__item_next
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    position: relative
+    top: 15px
+
+    &:hover
+      opacity: .7
+
+    #{$root}__arrow
+      position: absolute
+      top: 50%
+      right: 50%
+      transform: translate(50%, -50%)
+      fill: white
+
+  &__result
+    margin-top: 12px

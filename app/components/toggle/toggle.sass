@@ -2,11 +2,13 @@
   position: absolute
   z-index: -1
   opacity: 0
-  margin: 0px 0 0 20px
-  + label
+  margin: 0 0 0 20px
+
+  &__label
     position: relative
     padding-left: 50px
     cursor: pointer
+
     &:before
       content: ''
       position: absolute
@@ -17,6 +19,7 @@
       border-radius: 10px
       border: 1px solid $accent25
       transition: .2s
+
     &:after
       content: ''
       position: absolute
@@ -27,10 +30,11 @@
       border-radius: 10px
       background: $accent25
       transition: .2s
-  &:checked + label
+
+  &:checked + &__label
     &:before
       border: 1px solid $purple
+
     &:after
       left: 24px
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-  

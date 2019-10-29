@@ -8,49 +8,51 @@
   font-weight: bold
   color: $purple
   text-decoration: none
-
   position: relative
   background-color: #fff
 
-.btn_theme_not-gradient
-  padding: 2px 12px 7px 19px
-  &:not(.like__btn)
-    padding: 8px 19px 7px 19px
-  &:hover:not(.like__btn)::after
-    opacity: 0.5
+  &_theme_not-gradient
+    padding: 2px 12px 7px 19px
 
+    &:not(.like__btn)
+      padding: 8px 19px 7px 19px
 
-.btn_theme_not-gradient::after
-  content: ""
-  position: absolute
-  z-index: -1
-  border-radius: 22px
-  top: -2px
-  left: -2px
-  bottom: -2px
-  right: -2px
-  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    &:hover:not(.like__btn)::after
+      opacity: 0.5
 
-.btn_theme_gradient
-  color: #fff
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-  &:hover
-    opacity: 0.5
+    &::after
+      content: ""
+      position: absolute
+      z-index: -1
+      border-radius: 22px
+      top: -2px
+      left: -2px
+      bottom: -2px
+      right: -2px
+      background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 
-.btn_with-arrow
-  width: 100%
-  text-align: center
-  padding: 15px
-  padding-left: 13px
-  position: relative
-  .btn_with-arrow__svg
-    position: absolute
-    top: 13px
-    right: 12px
-    fill: white
+  &_theme_gradient
+    color: #fff
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 
-.btn_gradient-disable
-  cursor: default
+    &:hover
+      opacity: 0.5
+
+  &_with-arrow
+    width: 100%
+    text-align: center
+    padding: 15px
+    padding-left: 13px
+    position: relative
+
+    &__svg
+      position: absolute
+      top: 13px
+      right: 12px
+      fill: white
+
+  &_gradient-disable
+    cursor: default
 
 .link_theme_lux
   font-size: 12px

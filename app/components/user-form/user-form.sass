@@ -1,6 +1,6 @@
 @import "../field/field.sass"
 @import "../radio/radio.sass"
-@import "../buttons/toggle/toggle.sass"
+@import "../toggle/toggle.sass"
 
 .user-form
   z-index: 0
@@ -10,45 +10,45 @@
   border-radius: 4px
   padding: 40px 30px 30px 30px
 
-.user-form__wrapper
-  max-width: 320px
+  &__wrapper
+    max-width: 320px
 
-.user-form__title
-  @include h1
-  margin-bottom: 20px
+  &__title
+    @include h1
+    margin-bottom: 20px
 
-.user-form__item
-  margin-bottom: 18px
+  &__item
+    margin-bottom: 18px
 
-.user-form__item > input, label:not(.label)
-  margin-bottom: 10px
-  &:last-child
-    margin-bottom: 0
+  &__item > .field, .label:not(.label)
+    margin-bottom: 10px
 
-.user-form__toggle
-  margin-top: 5px
+    &:last-child
+      margin-bottom: 0
 
-.user-form__sign-in
-  margin-top: 30px
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  align-items: center
-  justify-content: space-between
-  p
+  &__toggle
+    margin-top: 5px
+
+  &__sign-in
+    margin-top: 30px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__question
     color: #000
     margin-right: 10px
 
-.user-form__btn-sign-in
-  padding: 13px 25px !important
-  margin-top: 4px
+  &__btn-sign-in
+    padding: 13px 25px !important
+    margin-top: 4px
 
-.user-form__btn-sign-up
-  padding: 14px 18px !important
+  &__btn-sign-up
+    padding: 14px 18px !important
 
-.user-form__item > h3
-  margin-bottom: 5px
+  &__item > .label
+    margin-bottom: 5px
 
-.user-form__btn-buy
-  margin-top: 9px
-  margin-bottom: -5px
+  &__btn-buy
+    margin-top: 9px
+    margin-bottom: -5px
