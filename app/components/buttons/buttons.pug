@@ -1,8 +1,14 @@
 mixin btn_gradient(classes, text)
   a(class="btn btn_theme_gradient " + classes href="#!")&attributes(attributes)= text
 
-mixin btn_not-gradient(classes, text)
-  a(class="btn btn_theme_not-gradient " + classes href="#!")&attributes(attributes)= text
+mixin btn_not-gradient(classes, text, size)
+  if size === 'l'
+    a(class="btn btn_theme_not-gradient btn_size_l" href="#!")&attributes(attributes)= text
+  else if size === 'xl'
+    a(class="btn btn_theme_not-gradient btn_size_xl" href="#!")&attributes(
+      attributes)= text
+  else
+    a(class="btn btn_theme_not-gradient" href="#!")&attributes(attributes)= text
 
 mixin link(classes, text)
   a(class="link_theme_lux " + classes href="#!")&attributes(attributes)= text

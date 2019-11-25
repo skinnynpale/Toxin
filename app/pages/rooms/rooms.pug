@@ -18,25 +18,24 @@ block content
           .t-field.rooms-filter__field
             +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
         .rooms-filter__item.range-slider
-          label.label.rooms-filter__name Диапазон цены
+          label.label Диапазон цены
           span.rooms-filter__values#rangeSliderRoomValue
           .range-slider__app
             input(type="text" class="js-range-slider" name="my_range" value="")
             p.range-slider__info Стоимость за сутки пребывания в номере
         .rooms-filter__item
-          label.label.rooms-filter__name Привелегии
+          label Привелегии
           .checkbox__example.rooms-filter__checkbox
             +checkbox('Можно курить', 'smoke')
             +checkbox('Можно с питомцами', 'pets', 1)
             +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
         .rooms-filter__item
-          label.label.rooms-filter__name Доступность
+          label.label Доступность
           .rooms-filter__checkbox
             +checkbox_rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
             +checkbox_rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'helper')
         .rooms-filter__item
-          .t-field
-            +field-dropdown('Удобства номера', 'comfortFilter')(value="Выберите удобства" readonly)
+          +field-dropdown('Удобства номера', 'comfortFilter')(value="Выберите удобства" readonly)
         .rooms-filter__item
           label.label.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
           .checkbox__wrapper_expandable#moreComfortFilterWrapper
@@ -52,17 +51,14 @@ block content
       .rooms
         h1.rooms__offer Номера, которые мы для вас подобрали <span class="js-show-filters">Показать фильтры</span>
         .rooms__grid
-          .rooms__item
-            a(href="/../page-room/page-room.pug")
-              +rooms-item({
-                img: "img/image-1.jpg",
-                num: "888",
-                lux: true,
-                price: "9 990",
-                stars: 5,
-                reviews: 145
-              })
-          .rooms__item
+            +rooms-item({
+              img: "img/image-1.jpg",
+              num: "888",
+              lux: true,
+              price: "9 990",
+              stars: 5,
+              reviews: 145
+            })
             +rooms-item({
               img: "img/image-2.jpg",
               num: "840",
@@ -71,7 +67,6 @@ block content
               stars: 4,
               reviews: 65
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-3.jpg",
               num: "980",
@@ -80,7 +75,6 @@ block content
               stars: 3,
               reviews: 35
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-4.jpg",
               num: "856",
@@ -89,7 +83,6 @@ block content
               stars: 5,
               reviews: 19
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-5.jpg",
               num: "740",
@@ -98,7 +91,6 @@ block content
               stars: 4,
               reviews: 44
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-6.jpg",
               num: "982",
@@ -107,7 +99,6 @@ block content
               stars: 3,
               reviews: 56
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-7.jpg",
               num: "678",
@@ -116,7 +107,6 @@ block content
               stars: 5,
               reviews: 45
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-8.jpg",
               num: "450",
@@ -125,7 +115,6 @@ block content
               stars: 4,
               reviews: 39
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-9.jpg",
               num: "350",
@@ -134,7 +123,6 @@ block content
               stars: 3,
               reviews: 77
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-10.jpg",
               num: "666",
@@ -143,7 +131,6 @@ block content
               stars: 5,
               reviews: 25
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-11.jpg",
               num: "444",
@@ -152,7 +139,6 @@ block content
               stars: 4,
               reviews: 15
             })
-          .rooms__item
             +rooms-item({
               img: "img/image-12.jpg",
               num: "352",

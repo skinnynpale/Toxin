@@ -1,8 +1,8 @@
-mixin rating(classes, stars, from, id)
-  span(class= classes + "__wrapper rating__wrapper", id=id)
+mixin rating(stars, from)
+  span(class= "rating__wrapper")
     - for (var i = 1; i <= from; i++)
     if (i <= stars)
-      span(class= classes + "__star rating__star rating__star_selected")
+      span(class= "rating__star_selected")
           svg(width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg")
               path(d="M10.264 15.749l-6.188 3.75 1.64-7.031L.28 7.732l7.172-.61L10.264.515l2.812 6.61 7.172.61-5.438 4.733 1.641 7.032-6.187-3.75z")
               defs
@@ -10,7 +10,7 @@ mixin rating(classes, stars, from, id)
                       stop(offset="0" stop-color="#BC9CFF")
                       stop(offset="1" stop-color="#8BA4F9")
     else
-      span(class= classes + "__star rating__star")
+      span(class= "rating__star")
           svg(width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg")
               path(d="M10.264 15.749l-6.188 3.75 1.64-7.031L.28 7.732l7.172-.61L10.264.515l2.812 6.61 7.172.61-5.438 4.733 1.641 7.032-6.187-3.75z")
               defs

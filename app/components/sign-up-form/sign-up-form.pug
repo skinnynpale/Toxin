@@ -14,7 +14,8 @@ form.user-form
       +field(placeholder="Пароль" type="password")
       +btn-toggle('Получать спецпредложения', 'receive-offers')
     .user-form__item
-      +btn_arrow('user-form__btn-buy', 'Перейти к оплате')(href="#!")
+      .user-form__btn-buy
+        +btn_arrow('', 'Перейти к оплате')(href="#!")
     .user-form__sign-in
       p.user-form__question Уже есть аккаунт на Toxin
-      +btn_not-gradient('user-form__btn-sign-in', 'Войти')(href="/../sign-in/sign-in.pug")
+      +btn_not-gradient('', 'Войти', 'xl')(href="/../sign-in/sign-in.pug")

@@ -1,6 +1,6 @@
 @import "../image-helpers/image-helpers"
 
-.rooms__item
+.rooms-item
   background: #FFFFFF
   box-shadow: 0 10px 20px $accent5
   border-radius: 4px
@@ -12,7 +12,14 @@
     box-shadow: 0 10px 20px rgba(31, 32, 65, 0.15)
     transition: .25s
 
-.rooms-item
+  &__link
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: 999
+
   &__info
     display: flex
     align-items: baseline
