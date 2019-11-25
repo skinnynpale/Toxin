@@ -22,11 +22,11 @@ mixin header(status)
               li.header__item
                 a.header__link(href="#") #{item.name}
         ul.header__user-nav
-          if status == 'non-authorized'
+          if status === 'non-authorized'
             li.header__item
-              +btn_not-gradient('', 'Войти')(href="./../sign-in/sign-in.pug")
+              +btn('Войти')(href="./../sign-in/sign-in.pug")
             li.header__item
-              +btn_gradient('', 'Зарегистрироваться')(href="./../sign-up/sign-up.pug")
-          else if status == 'authorized'
+              +btn('Зарегистрироваться', 'gradient')(href="./../sign-up/sign-up.pug")
+          else if status === 'authorized'
             li.header__item
               a(href="#!").header__link.header__user-name Александр Вологдин
