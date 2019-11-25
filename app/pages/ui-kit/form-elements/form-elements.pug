@@ -20,37 +20,42 @@
                     +field-arrow('subscription text field', 'subscr')(type="email" placeholder="Email")#subscr
             .buttons
                 .buttons__checkbox
-                    h3 Checkbox Buttons
+                    h3.label Checkbox Buttons
                     .checkbox__example
                         +checkbox('Можно курить', 'smoke')
                         +checkbox('Можно с питомцами', 'pets', 1)
                         +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
                 .buttons__radio
-                    h3 Radio Buttons
+                    h3.label Radio Buttons
                     .radio__example
                         +radio('Мужчина', 'man', 'sex', 'man')(checked)
                         +radio('Женщина', 'woman', 'sex', 'woman')
                 .buttons__toggle
-                    h3 Toggle
+                    h3.label Toggle
                     .toggle__example
                         +btn-toggle('Получать спецпредложения', 'offer')(checked)
                     .toggle__example
                         +btn-toggle('Получать спецпредложения', 'offer2')
                 .buttons__like
-                    h3 Like Button
+                    h3.label Like Button
                     .like__group
-                        +like('12')
-                        +like('12', true)
+                        +like(12)
+                        +like(12, true)
                 .buttons__rate
-                    h3 Rate Button
+                    h3.label Rate Button
                     .rate__group
-                        +rating('example', 4, 5)
+                        +rating(4, 5)
                     .rate__group
-                        +rating('example', 5, 5)
+                        +rating(5, 5)
             .buttons2
-                include ../../../components/range-slider/range-slider
+                .rooms-filter__item.range-slider
+                    h3.label Диапазон цены
+                    span.rooms-filter__values#rangeSliderRoomValue
+                    .range-slider__app
+                        input(type="text" class="js-range-slider" name="my_range" value="")
+                        p.range-slider__info Стоимость за сутки пребывания в номере
                 .buttons__buttons
-                    h3 buttons
+                    h3.label buttons
                     .buttons__gradient
                         +btn('Click Me', 'gradient')
                     .buttons__not-gradient
@@ -60,7 +65,7 @@
                     .buttons__arrow
                         +btn('Перейти к оплате', 'arrow')
                 .buttons__pagination
-                    h3 pagination
+                    h3.label pagination
                     include ../../../components/pagination/pagination
 
         .form-elements_expandable
@@ -68,7 +73,7 @@
                 .fields
                     .t-field
                         +field-dropdown('Dropdown', 'comfortFilter')(value="2 спальни, 2 кровати...")
-                    h3.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
+                    h3.label.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
                     .checkbox__wrapper_expandable#moreComfortFilterWrapper
                         +checkbox('Завтрак', 'breakfast')
                         +checkbox('Письменный стол', 'desk', 1)
