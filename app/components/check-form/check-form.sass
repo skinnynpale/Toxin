@@ -2,21 +2,21 @@
 .check-form
   $root: &
 
-  padding: 43px 30px 40px 30px
-  border: 1px solid rgba(0, 0, 0, 0.12)
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
-  border-radius: 4px
+  padding: 3.0714rem 2.1429rem 2.8571rem 2.1429rem
+  border: 0.0714rem solid rgba(0, 0, 0, 0.12)
+  box-shadow: 0rem 0rem 1.7857rem rgba(0, 0, 0, 0.2)
+  border-radius: 0.2857rem
   align-self: start
   background-color: #fff
-  max-width: 380px
+  max-width: 27.1429rem
   width: 100%
 
   .datepicker-inline
     .js-Calendar
-      top: 75px
+      top: 5.3571rem
 
   &__item
-    margin-bottom: 20px
+    margin-bottom: 1.4286rem
     position: relative
 
   &__item-group
@@ -27,20 +27,20 @@
 
   &__number
     @include h2
-    margin-right: 5px
-    font-size: 25px
+    margin-right: 0.3571rem
+    font-size: 1.7857rem
 
     &-ico
       font-family: 'montserrat-example', sans-serif
-      font-size: 13px
-      margin-right: 5px
+      font-size: 0.9286rem
+      margin-right: 0.3571rem
 
   &__price_default
     margin-left: auto
-    font-size: 12px
+    font-size: 0.8571rem
 
     #{$root}__price-text
-      font-size: 14px
+      font-size: 1rem
 
   &__group-field
     @include group-field
@@ -51,35 +51,35 @@
   &__conclusion
     display: flex
     justify-content: space-between
-    margin-bottom: 10px
+    margin-bottom: 0.7143rem
 
   &__text
-    max-width: 214px
+    max-width: 15.2857rem
     position: relative
-    line-height: 18px
-    margin-bottom: 5px
+    line-height: 1.2857rem
+    margin-bottom: 0.3571rem
 
   &__text-info::after
     content: 'i'
-    width: 20px
-    height: 20px
+    width: 1.4286rem
+    height: 1.4286rem
     border-radius: 50%
-    border: 1px solid $accent25
+    border: 0.0714rem solid $accent25
     position: absolute
     text-align: center
-    line-height: 18px
+    line-height: 1.2857rem
     color: $accent25
     cursor: help
     top: 0
-    right: -26px
+    right: -1.8571rem
     display: block
     font-weight: bold
 
-    @media screen and ( max-width: 403px )
+    @media screen and ( max-width: 28.7857rem )
       display: none
 
   &__final-price
-    margin-top: 27px
+    margin-top: 1.9286rem
 
     &-text
       @include h2
@@ -89,7 +89,7 @@
       font-family: 'opensans-example', sans-serif
 
   &__price-line
-    border-bottom: 2px dotted $accent25
+    border-bottom: 0.1429rem dotted $accent25
     width: 100%
-    height: 5px
-    margin: 0 5px
+    height: 0.3571rem
+    margin: 0 0.3571rem

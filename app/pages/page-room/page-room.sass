@@ -35,35 +35,35 @@
       transition: 1s
 
 .room-details
-  margin: 70px 0
+  margin: 5rem 0
 
   &__container
     @include container
     display: grid
-    grid-template-columns: 1fr 1fr minmax(auto, 380px)
-    grid-column-gap: 70px
+    grid-template-columns: 1fr 1fr minmax(auto, 27.1429rem)
+    grid-column-gap: 5rem
 
-    @media screen and ( max-width: 853px )
-      grid-gap: 15px
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr))
-      margin: 20px 0
+    @media screen and ( max-width: 60.9286rem )
+      grid-gap: 1.0714rem
+      grid-template-columns: repeat(auto-fill, minmax(20.7143rem, 1fr))
+      margin: 1.4286rem 0
 
   &__info-title
     @include h1
-    margin-bottom: 20px
+    margin-bottom: 1.4286rem
 
   &__info-grid
     display: grid
     grid-template-columns: 1fr 1fr
-    grid-column-gap: 17px
-    grid-row-gap: 34px
+    grid-column-gap: 1.2143rem
+    grid-row-gap: 2.4286rem
     grid-column: 1 / 3
 
-    @media screen and ( max-width: 1120px )
+    @media screen and ( max-width: 80rem )
       grid-template-columns: 1fr
 
-    @media screen and ( max-width: 853px )
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr))
+    @media screen and ( max-width: 60.9286rem )
+      grid-template-columns: repeat(auto-fill, minmax(20.7143rem, 1fr))
 
   &__reviews
     grid-column: 1 / -1
@@ -73,17 +73,16 @@
     justify-content: space-between
     align-items: baseline
 
-    @media screen and ( max-width: 410px )
+    @media screen and ( max-width: 29.2857rem )
       display: block
-      margin-bottom: 20px
+      margin-bottom: 1.4286rem
 
       .room-details__info-title
-        margin-bottom: 10px
+        margin-bottom: 0.7143rem
 
   &__rules
-    margin-left: 20px
+    margin-left: 1.4286rem
 
   &__cancel-text
-    line-height: 24px
-    padding-right: 10px
-
+    line-height: 1.7143rem
+    padding-right: 0.7143rem

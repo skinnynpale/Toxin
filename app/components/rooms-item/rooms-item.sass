@@ -2,14 +2,14 @@
 
 .rooms-item
   background: #FFFFFF
-  box-shadow: 0 10px 20px $accent5
-  border-radius: 4px
+  box-shadow: 0 0.7143rem 1.4286rem $accent5
+  border-radius: 0.2857rem
   cursor: pointer
   transition: .25s
   position: relative
 
   &:hover
-    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.15)
+    box-shadow: 0 0.7143rem 1.4286rem rgba(31, 32, 65, 0.15)
     transition: .25s
 
   &__link
@@ -18,23 +18,23 @@
     bottom: 0
     right: 0
     left: 0
-    z-index: 999
+    z-index: 2
 
   &__info
     display: flex
     align-items: baseline
-    padding-bottom: 10px
-    border-bottom: 1px solid $accent10
+    padding-bottom: 0.7143rem
+    border-bottom: 0.0714rem solid $accent10
 
   &__img
     width: 100%
 
   &__price
     margin-left: auto
-    font-size: 12px
+    font-size: 0.8571rem
 
     &-text
-      font-size: 14px
+      font-size: 1rem
       color: $accent50
 
   &__rating
@@ -42,19 +42,19 @@
     display: -ms-flex
     display: flex
     justify-content: space-between
-    margin-top: 8px
+    margin-top: 0.5714rem
 
   &__wrapper
-    padding: 20px
+    padding: 1.4286rem
 
   &__num
     @include h2
     font-family: $opensans-font
-    margin-right: 5px
+    margin-right: 0.3571rem
 
     &-ico
       font-family: $default-font
-      font-size: 13px
+      font-size: 0.9286rem
 
   &__image
     position: relative
@@ -64,9 +64,7 @@
         opacity: 1
 
   &__reviews
-    line-height: 24px
+    line-height: 1.7143rem
 
     &-text
       color: $accent50
-
-

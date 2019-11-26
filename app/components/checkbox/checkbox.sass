@@ -1,7 +1,7 @@
 .checkbox
   $root: &
 
-  line-height: 25px
+  line-height: 1.7857rem
   color: $accent50
 
   &__input
@@ -12,9 +12,9 @@
   &__label
     position: relative
     display: inline-block
-    width: 217px
+    width: 15.5rem
     cursor: pointer
-    padding-left: 29px
+    padding-left: 2.0714rem
 
     &::before, &::after
       position: absolute
@@ -22,21 +22,21 @@
       display: inline-block
 
     &::before
-      height: 20px
-      width: 20px
-      border: 1px solid $accent25
-      border-radius: 4px
+      height: 1.4286rem
+      width: 1.4286rem
+      border: 0.0714rem solid $accent25
+      border-radius: 0.2857rem
       left: 0
-      top: 2px
+      top: 0.1429rem
 
     &::after
-      height: 6px
-      width: 8px
-      border-left: 2px solid $purple
-      border-bottom: 2px solid lighten($purple, 3%)
+      height: 0.4286rem
+      width: 0.5714rem
+      border-left: 0.1429rem solid $purple
+      border-bottom: 0.1429rem solid lighten($purple, 3%)
       transform: rotate(-45deg)
-      left: 6.5px
-      top: 8px
+      left: 0.4643rem
+      top: 0.5714rem
 
   &__input
     + #{$root}__label::after
@@ -44,12 +44,12 @@
     &:checked + #{$root}__label::after
       content: ""
     &:checked + #{$root}__label::before
-      border: 1px solid $purple
+      border: 0.0714rem solid $purple
     &:focus + label::before
       outline: none
 
   &__wrapper_rich
-    margin-bottom: 2px
+    margin-bottom: 0.1429rem
 
     &:last-child
       margin-bottom: 0
@@ -60,16 +60,16 @@
     width: 100% !important
 
   &__text_rich
-    font-size: 12px
-    line-height: 14px
+    font-size: 0.8571rem
+    line-height: 1rem
     font-weight: 100
-    margin-top: 2px
+    margin-top: 0.1429rem
     color: $accent50
-    width: 230px
+    width: 16.4286rem
 
   &__title_expandable
     position: relative
-    padding-bottom: 18px
+    padding-bottom: 1.2857rem
     cursor: pointer
 
     &-active
@@ -81,11 +81,11 @@
       content: ""
       display: inline-block
       position: absolute
-      right: 17px
-      top: 6px
-      width: 9px
-      height: 9px
-      border: 2px solid $accent50
+      right: 1.2143rem
+      top: 0.4286rem
+      width: 0.6429rem
+      height: 0.6429rem
+      border: 0.1429rem solid $accent50
       border-top: 0
       border-left: 0
       transform: translateY(-50%) rotate(45deg)
@@ -94,11 +94,10 @@
     opacity: 0
     max-height: 0
     overflow: hidden
-    left: 100000px
+    left: 7142.8571rem
     transition: opacity .3s, max-height .3s
 
     &-active
-      max-height: 1000px
+      max-height: 71.4286rem
       left: auto
       opacity: 1
-

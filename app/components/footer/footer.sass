@@ -4,107 +4,106 @@
   $root: &
 
   &__main
-    border-top: 1px solid $accent25
+    border-top: 0.0714rem solid $accent25
     background-color: #fff
-    padding: 102px 15px 100px
+    padding: 7.2857rem 1.0714rem 7.1429rem
 
   &__container
     @include container
     display: flex
     justify-content: space-between
 
-    @media screen and (max-width: 864px)
+    @media screen and (max-width: 61.7143rem)
       text-align: center
       justify-content: center
 
   &__description
-    width: 260px
-    line-height: 24px
-    margin-right: 40px
+    width: 18.5714rem
+    line-height: 1.7143rem
+    margin-right: 2.8571rem
 
-    @media screen and (max-width: 864px)
-      width: 560px
+    @media screen and (max-width: 61.7143rem)
+      width: 40rem
       margin: 0
 
   &__info
-    margin-top: 11px
+    margin-top: 0.7857rem
 
-    @media screen and (max-width: 864px)
-      margin: 20px 0
+    @media screen and (max-width: 61.7143rem)
+      margin: 1.4286rem 0
 
   &__logo
     display: inline-block
-    margin-top: -4px
+    margin-top: -0.2857rem
 
   &__title
     text-transform: uppercase
-    font-size: 12px
+    font-size: 0.8571rem
     color: $accent
 
   &__nav
     display: flex
 
-    @media screen and (max-width: 864px)
+    @media screen and (max-width: 61.7143rem)
       display: none
 
   &__item
     list-style: none
 
-    @media screen and (max-width: 576px)
+    @media screen and (max-width: 41.1429rem)
       padding: 0
-      margin-top: 20px
+      margin-top: 1.4286rem
 
   &__list-link
     color: $accent50
-    line-height: 17px
+    line-height: 1.2143rem
     text-decoration: none
 
   &__list-item
-    margin-top: 22px
+    margin-top: 1.5714rem
     display: list-item
 
     &:nth-child(2)
-      margin-top: 21px
+      margin-top: 1.5rem
 
   &__newsletter
-    width: 260px
-    line-height: 24px
-    margin-left: 51px
+    width: 18.5714rem
+    line-height: 1.7143rem
+    margin-left: 3.6429rem
 
-    @media screen and (max-width: 864px)
+    @media screen and (max-width: 61.7143rem)
       display: none
 
     #{$root}__info
-      margin:
-        top: 18px
-        bottom: 23px
+      top: 1.2857rem
+      bottom: 1.6429rem
 
   &__sub
-    border-top: 1px solid rgba(#d0d0d4, 0.50)
-    padding: 23px 0
-    padding-top: 18px
+    border-top: 0.0714rem solid rgba(#d0d0d4, 0.50)
+    padding: 1.6429rem 0
+    padding-top: 1.2857rem
     background-color: #fff
 
   &__sub-container
-    max-width: 1190px
+    max-width: 85rem
     margin: 0 auto
-    padding: 0 15px
+    padding: 0 1.0714rem
     display: flex
     align-items: center
     justify-content: space-between
 
-    @media screen and (max-width: 576px)
+    @media screen and (max-width: 41.1429rem)
       flex-direction: column
       text-align: center
 
   &__copyright
-    font-size: 14px
+    font-size: 1rem
 
   &__soc-item
     display: inline-block
-    margin-left: 21px
-    margin-top: 5px
-    margin-right: 1px
+    margin-left: 1.5rem
+    margin-top: 0.3571rem
+    margin-right: 0.0714rem
 
     &:first-child
       margin-left: 0
@@ -124,10 +123,9 @@
 
     #{$root}__description
       width: auto
-      max-width: 560px
+      max-width: 40rem
       margin: 0
 
     #{$root}__item
       padding: 0
-      margin-top: 15px
-
+      margin-top: 1.0714rem

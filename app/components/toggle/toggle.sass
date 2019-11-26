@@ -2,39 +2,39 @@
   position: absolute
   z-index: -1
   opacity: 0
-  margin: 0 0 0 20px
+  margin: 0 0 0 1.4286rem
 
   &__label
     position: relative
-    padding-left: 50px
+    padding-left: 3.5714rem
     cursor: pointer
 
     &:before
       content: ''
       position: absolute
-      top: -4px
+      top: -0.2857rem
       left: 0
-      width: 40px
-      height: 20px
-      border-radius: 10px
-      border: 1px solid $accent25
+      width: 2.8571rem
+      height: 1.4286rem
+      border-radius: 0.7143rem
+      border: 0.0714rem solid $accent25
       transition: .2s
 
     &:after
       content: ''
       position: absolute
-      left: 4px
+      left: 0.2857rem
       top: 0
-      width: 12px
-      height: 12px
-      border-radius: 10px
+      width: 0.8571rem
+      height: 0.8571rem
+      border-radius: 0.7143rem
       background: $accent25
       transition: .2s
 
   &:checked + &__label
     &:before
-      border: 1px solid $purple
+      border: 0.0714rem solid $purple
 
     &:after
-      left: 24px
+      left: 1.7143rem
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)

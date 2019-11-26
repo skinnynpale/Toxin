@@ -1,9 +1,9 @@
 @import "../btn/btn"
 
 .header
-  box-shadow: 0 10px 20px $accent5
+  box-shadow: 0 0.7143rem 1.4286rem $accent5
   background-color: #fff
-  padding: 15px 0
+  padding: 1.0714rem 0
 
   &__container
     @include container
@@ -21,17 +21,17 @@
     flex-flow: row wrap
     z-index: 0
 
-    @media screen and ( max-width: 925px )
-      margin-top: 20px
+    @media screen and ( max-width: 66.0714rem )
+      margin-top: 1.4286rem
       align-items: flex-start
-      border-top: 3px solid $purple
-      padding-top: 20px
+      border-top: 0.2143rem solid $purple
+      padding-top: 1.4286rem
 
       .header__item
-        margin-bottom: 15px
+        margin-bottom: 1.0714rem
         width: 100%
 
-    @media screen and ( max-width: 331px )
+    @media screen and ( max-width: 23.6429rem )
       flex-direction: column
 
   &__site-nav
@@ -40,29 +40,29 @@
     margin-left: auto
     padding: 0
 
-    @media screen and ( max-width: 925px )
+    @media screen and ( max-width: 66.0714rem )
       display: none
       order: 0
       margin-left: 0
 
     .header__item
       &:nth-child(2)
-        margin-right: 28px
+        margin-right: 2rem
 
       &:nth-child(5)
-        margin-right: 29px
+        margin-right: 2.0714rem
 
   &__user-nav
     z-index: 0
     padding: 0
 
-    @media screen and ( max-width: 925px )
+    @media screen and ( max-width: 66.0714rem )
       display: none
-      margin-top: 5px
+      margin-top: 0.3571rem
 
-    @media screen and ( max-width: 331px )
+    @media screen and ( max-width: 23.6429rem )
       .header__item
-        margin-bottom: 10px
+        margin-bottom: 0.7143rem
 
         &:last-child
           margin-bottom: 0
@@ -71,27 +71,27 @@
       margin-right: 0
 
   &__logo
-    margin-right: 20px
+    margin-right: 1.4286rem
 
   &__item
     display: inline-block
-    margin-right: 20px
+    margin-right: 1.4286rem
 
     &_has-submenu
       & > .header__link::after
         content: ""
         display: inline-block
-        width: 9px
-        height: 9px
-        margin-left: 9px
-        margin-bottom: -2px
-        border: 2px solid $accent50
+        width: 0.6429rem
+        height: 0.6429rem
+        margin-left: 0.6429rem
+        margin-bottom: -0.1429rem
+        border: 0.1429rem solid $accent50
         border-top: 0
         border-left: 0
         transform: translateY(-50%) rotate(45deg)
 
       &:hover .header__link::after
-        border: 2px solid $accent25
+        border: 0.1429rem solid $accent25
         border-top: 0
         border-left: 0
 
@@ -103,59 +103,56 @@
       color: $accent25
 
   &__user-name
-    border-left: 1px solid $accent10
-    padding: 6px 0
-    padding-left: 30px
-
-
+    border-left: 0.0714rem solid $accent10
+    padding: 0.4286rem 0
+    padding-left: 2.1429rem
 
 .js-header__burger
-    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-    padding: 20px
-    position: relative
-    border-radius: 50%
-    display: none
+  background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  padding: 1.4286rem
+  position: relative
+  border-radius: 50%
+  display: none
+  transition: .3s ease
+
+  @media screen and ( max-width: 66.0714rem )
+    display: block
+    margin-left: auto
+
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 1.4286rem
+    height: 0.2143rem
+    border-radius: 0.1429rem
+    background-color: #fff
+    transform: translate(-50%,-50%)
+    box-shadow: 0 -0.4286rem 0 0 #fff, 0 0.4286rem 0 0 #fff
     transition: .3s ease
 
-    @media screen and ( max-width: 925px )
-      display: block
-      margin-left: auto
-
+  &_opened
     &::before
+      box-shadow: none
+      transform: translate(-50%,-50%) rotate(-45deg)
+      transition: .3s ease
+
+    &::after
       content: ""
       position: absolute
       top: 50%
       left: 50%
-      width: 20px
-      height: 3px
-      border-radius: 2px
+      width: 1.4286rem
+      height: 0.2143rem
       background-color: #fff
-      transform: translate(-50%,-50%)
-      box-shadow: 0 -6px 0 0 #fff, 0 6px 0 0 #fff
+      transform: translate(-50%,-50%) rotate(-135deg)
       transition: .3s ease
-
-    &_opened
-      &::before
-        box-shadow: none
-        transform: translate(-50%,-50%) rotate(-45deg)
-        transition: .3s ease
-
-      &::after
-        content: ""
-        position: absolute
-        top: 50%
-        left: 50%
-        width: 20px
-        height: 3px
-        background-color: #fff
-        transform: translate(-50%,-50%) rotate(-135deg)
-        transition: .3s ease
-        border-radius: 2px
-
+      border-radius: 0.1429rem
 
 #ui-kit
   position: absolute
-  left: -150px
+  left: -10.7143rem
   font-weight: bold
   text-decoration: none
   color: gray

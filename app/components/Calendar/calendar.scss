@@ -5,22 +5,23 @@
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 21.2px;
+    padding: 1.5143rem;
     background: #fff;
-    border: 1px solid $accent25;
+    border: 0.0714rem solid $accent25;
     box-sizing: border-box;
-    box-shadow: 0 10px 20px $accent5;
-    border-radius: 4px;
+    box-shadow: 0 0.7143rem 1.4286rem $accent5;
+    border-radius: 0.2857rem;
+    z-index: 999;
 
     &--buttons {
       border-top: 0;
       padding: 0;
-      margin-top: 20px;
+      margin-top: 1.4286rem;
     }
 
     &--button {
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 0.8571rem;
+      line-height: 1.0714rem;
       text-transform: uppercase;
       font-family: montserrat-example, sans-serif;
       font-weight: 700;
@@ -46,13 +47,13 @@
     &--nav {
       border-bottom: 0;
       padding: 0;
-      margin-bottom: 30px;
+      margin-bottom: 2.1429rem;
 
       &-title {
         font-family: montserrat-example, sans-serif;
         font-weight: 700;
-        font-size: 19px;
-        line-height: 24px;
+        font-size: 1.3571rem;
+        line-height: 1.7143rem;
         color: $accent;
 
         i {
@@ -68,20 +69,20 @@
         font-weight: bold;
         text-transform: none;
         margin: 0;
-        height: 40px;
+        height: 2.8571rem;
       }
     }
 
     &--cell {
       &-day {
         font-family: montserrat-example, sans-serif;
-        height: 40px;
+        height: 2.8571rem;
         border-radius: 50%;
-        font-size: 12px;
+        font-size: 0.8571rem;
         color: $accent50;
 
-        @media screen and (max-width: 405px) {
-          height: 36px;
+        @media screen and (max-width: 28.9286rem) {
+          height: 2.5714rem;
         }
 
         &.-current- {
