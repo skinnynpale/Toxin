@@ -54,10 +54,10 @@ $('.js-range-slider').ionRangeSlider({
   from: 5000,
   to: 10000,
   onStart(data) {
-    rangeSliderRoomValue.innerHTML = `${data.from}₽` + ` - ${data.to}₽`;
+    rangeSliderRoomValue.innerHTML = `${data.from}₽ - ${data.to}₽`;
   },
   onChange(data) {
-    rangeSliderRoomValue.innerHTML = `${data.from}₽` + ` - ${data.to}₽`;
+    rangeSliderRoomValue.innerHTML = `${data.from}₽ - ${data.to}₽`;
   },
   hide_min_max: true,
   hide_from_to: true,

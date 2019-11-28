@@ -1,4 +1,4 @@
-$('.js-header__burger').click(function (event) {
+$('.js-header__burger').click(function(event) {
   event.preventDefault();
   const burger = $(this);
   burger.toggleClass('js-header__burger_opened');

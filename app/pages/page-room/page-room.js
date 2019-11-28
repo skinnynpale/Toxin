@@ -4,7 +4,7 @@ import Calendar from '../../components/Calendar/Calendar';
 
 const checkFormCalendar = new Calendar('#checkFormCalendar', {
   multipleDatesSeparator: '-',
-  onSelect(formattedDate, date, inst) {
+  onSelect(formattedDate) {
     $('#check-form__from').val(formattedDate.split('-')[0]);
     $('#check-form__to').val(formattedDate.split('-')[1]);
   },

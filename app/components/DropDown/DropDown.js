@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import './dropdown.sass';
 
 class DropDown {
@@ -116,7 +117,8 @@ class DropDown {
   }
 
   createItem(item) {
-    item.id = this.lastId++;
+    item.id = this.lastId;
+    this.lastId += 1;
     const wrapperItemHTML = `
                                 <span class="dropdown__item" id="${item.id}">
                                   <span class="dropdown__target">${item.title}</span>
@@ -176,13 +178,13 @@ class DropDown {
   updateDisabledButtons() {
     const allButtonMinus = this.wrapperHTML.querySelectorAll('.dropdown__btn-minus');
 
-    for (const button of allButtonMinus) {
-      if (button.nextElementSibling.textContent > 0) {
-        button.classList.remove('dropdown__btn_disable');
+    allButtonMinus.forEach(btn => {
+      if (btn.nextElementSibling.textContent > 0) {
+        btn.classList.remove('dropdown__btn_disable');
       } else {
-        button.classList.add('dropdown__btn_disable');
+        btn.classList.add('dropdown__btn_disable');
       }
-    }
+    });
   }
 
   updateDisabledClear() {

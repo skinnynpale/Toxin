@@ -11,7 +11,9 @@ class Calendar {
 
     this.calendar = $(anchor).data('datepicker').$datepicker;
 
-    isStatic ? '' : this.addEventListeners();
+    if (!isStatic) {
+      this.addEventListeners();
+    }
 
     this.calendar.hide();
   }

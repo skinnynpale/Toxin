@@ -14,10 +14,10 @@ $('.js-range-slider').ionRangeSlider({
   from: 5000,
   to: 10000,
   onStart(data) {
-    rangeSliderRoomValue.innerHTML = `${data.from}₽` + ` - ${data.to}₽`;
+    rangeSliderRoomValue.innerHTML = `${data.from}₽ - ${data.to}₽`;
   },
   onChange(data) {
-    rangeSliderRoomValue.innerHTML = `${data.from}₽` + ` - ${data.to}₽`;
+    rangeSliderRoomValue.innerHTML = `${data.from}₽ - ${data.to}₽`;
   },
   hide_min_max: true,
   hide_from_to: true,
@@ -90,7 +90,7 @@ $('.js-show-filters').click(function(event) {
   const $elem = $('.rooms-filter');
   $elem.slideToggle(300);
 
-  if (this.innerHTML == 'Показать фильтры') {
+  if (this.innerHTML === 'Показать фильтры') {
     this.innerHTML = 'Спрятать фильтры';
   } else {
     this.innerHTML = 'Показать фильтры';
