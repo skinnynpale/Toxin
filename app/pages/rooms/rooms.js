@@ -34,7 +34,7 @@ const moreComfortFilterList = new ExpandableList({
   mainAnchor: 'moreComfortFilter',
   wrapperAnchor: 'moreComfortFilterWrapper',
   mainClassActive: 'checkbox__title_expandable-active',
-  wrapperClassActive: 'checkbox__wrapper_expandable-active',
+  wrapperClassActive: 'checkbox_expandable-active',
 });
 
 // Dropdown

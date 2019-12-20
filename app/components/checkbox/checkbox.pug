@@ -9,7 +9,7 @@ mixin checkbox(text, id, checked)
       label(for=id).checkbox__label= text
 
 mixin checkbox_rich(title, text, id)
-  .checkbox.checkbox__wrapper_rich
+  .checkbox.checkbox_rich
     input(id=id type='checkbox').checkbox__input
     label(class="checkbox__title_rich" for=id).checkbox__label= title
       p(class="checkbox__text_rich")= text

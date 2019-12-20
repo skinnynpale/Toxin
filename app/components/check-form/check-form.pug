@@ -1,12 +1,13 @@
 form.check-form
-  .check-form__item.check-form__item-group
-    h2.check-form__number
-      span.check-form__number-ico №
-      | 888
-    +btn('Люкс', 'link')
-    .check-form__price_default
-      b.check-form__price-text 9 990₽
-      |  в сутки
+  .check-form__item
+    .check-form__item-group
+      h2.check-form__number
+        span.check-form__number-ico №
+        | 888
+      +btn('Люкс', 'link')
+      .check-form__price_default
+        b.check-form__price-text 9 990₽
+        |  в сутки
   .check-form__item#checkFormCalendar
     +field({className: 'check-form',
       theme: 'group',
@@ -25,15 +26,16 @@ form.check-form
       span.check-form__text 9 990₽ х 4 суток
       span.check-form__text 39 960₽
     .check-form__conclusion
-      span.check-form__text.check-form__text-info Сбор за услуги: скидка 2 179₽
+      span.check-form__text.check-form__text--info Сбор за услуги: скидка 2 179₽
       span.check-form__text 0₽
     .check-form__conclusion
-      span.check-form__text.check-form__text-info Сбор за дополнительные услуги
+      span.check-form__text.check-form__text--info Сбор за дополнительные услуги
       span.check-form__text 300₽
   .check-form__item
-    .check-form__final-price.check-form__item-group
-      h2.check-form__final-price-text Итого
-      .check-form__price-line
-      h2.check-form__final-price-text 38 081₽
+    .check-form__final-price
+      .check-form__item-group
+        h2.check-form__final-price-text Итого
+        .check-form__price-line
+        h2.check-form__final-price-text 38 081₽
   .check-form__item
     +btn('Забронировать', 'arrow')(href="#!")

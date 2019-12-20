@@ -2,14 +2,14 @@ mixin header(status)
   header.header
     .header__container
       a.header__logo(href="/index.pug"): img(src="../../logo.svg", alt="Toxin")
-      a(href="#!").js-header__burger
+      a.js-header__burger(href="#!")
       a(id="ui-kit" href="../ui-kit/ui-kit.pug") UI Компоненты
       nav.header__nav
         ul.header__site-nav
           -
             const items = [
               {name: 'О нас'},
-              {name: 'Услуги',submenu: true},
+              {name: 'Услуги', submenu: true},
               {name: 'Вакансии'},
               {name: 'Новости'},
               {name: 'Соглашения', submenu: true}
@@ -30,4 +30,5 @@ mixin header(status)
               +btn('Зарегистрироваться', 'gradient')(href="./../sign-up/sign-up.pug")
           else if status === 'authorized'
             li.header__item
-              a(href="#!").header__link.header__user-name Александр Вологдин
+              span.header__user-name
+                a(href="#!").header__link Александр Вологдин

@@ -21,18 +21,19 @@ block content
               text: 'Гости',
               id: 'guests'
             })(value="Сколько гостей" readonly)
-        .rooms-filter__item.range-slider
+        .rooms-filter__item
           label.label Диапазон цены
           span.rooms-filter__values#rangeSliderRoomValue
-          .range-slider__app
-            input(type="text" class="js-range-slider" name="my_range" value="")
-            p.range-slider__info Стоимость за сутки пребывания в номере
+          .range-slider
+            .range-slider__app
+              input(type="text" class="js-range-slider" name="my_range" value="")
+              p.range-slider__info Стоимость за сутки пребывания в номере
         .rooms-filter__item
           label.label Привелегии
-          .checkbox__example.rooms-filter__checkbox
+          .rooms-filter__checkbox
             +checkbox('Можно курить', 'smoke')
             +checkbox('Можно с питомцами', 'pets', 1)
-            +checkbox('Можно пригласить гостей (до 10 человек)', 'guests', 1)
+            +checkbox('Можно пригласить гостей (до 10 человек)', 'guestsCheck', 1)
         .rooms-filter__item
           label.label Доступность
           .rooms-filter__checkbox
@@ -45,8 +46,8 @@ block content
             id: 'comfortFilter'
           })(value="Выберите удобства" readonly)
         .rooms-filter__item
-          label.label.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
-          .checkbox__wrapper_expandable#moreComfortFilterWrapper
+          label.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
+          .checkbox_expandable#moreComfortFilterWrapper
             +checkbox('Завтрак', 'breakfast')
             +checkbox('Письменный стол', 'desk', 1)
             +checkbox('Стул для кормления', 'feedingChair', 1)
