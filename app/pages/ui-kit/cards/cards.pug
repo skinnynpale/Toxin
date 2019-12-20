@@ -28,11 +28,22 @@
                             .user-form__item
                                 +field(placeholder="Имя" name="name")
                                 +field(placeholder="Фамилия" name="surname")
-                                +radio('Мужчина', 'man', 'sex', 'man')(checked)
-                                +radio('Женщина', 'woman', 'sex', 'woman')
+                                +radio({
+                                  text: 'Мужчина',
+                                  id: 'man',
+                                  name: 'sex',
+                                  value: 'man'
+                                })(checked)
+                                +radio({
+                                  text: 'Женщина',
+                                  id: 'woman',
+                                  name: 'sex',
+                                  value: 'woman'
+                                })
                             .user-form__item
                                 +field({
                                   theme: 'with-label',
+                                  className: 'user-form',
                                   text: 'Дата рождения',
                                   id: 'birthday'
                                 })(placeholder="ДД.ММ.ГГГГ" name="birthday")

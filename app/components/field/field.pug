@@ -2,20 +2,24 @@ mixin field({theme, id, text, className, value} = '')
   case theme
 
     when 'with-label'
-      label(class="label" for=id)= text
-      input(class="field", id=id)&attributes(attributes)
+      div(class=`${className}__field`)
+        label(class="label" for=id)= text
+        input(class="field", id=id)&attributes(
+          attributes)
 
     when 'with-dropdown'
-      label(class="label label_type_dropdown" for=id)= text
-      input(class="field field_type_dropdown " id=id, value=value)&attributes(attributes)
+      div(class=`${className}__field`)
+        label(class="label label_type_dropdown" for=id)= text
+        input(class="field field_type_dropdown " id=id, value=value)&attributes(attributes)
 
     when 'with-arrow'
       .field-wrapper_type_arrow
         input(class="field")&attributes(attributes)
 
     when 'masked'
-      label(class="label" for=id)= text
-      input(class="field field_masked", id=id disabled)&attributes(attributes)
+      div(class=`${className}__field`)
+        label(class="label" for=id)= text
+        input(class="field field_masked", id=id disabled)&attributes(attributes)
 
     when 'group'
       div(class=`${className}__group-field`)

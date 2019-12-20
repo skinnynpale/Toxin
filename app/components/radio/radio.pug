@@ -1,3 +1,4 @@
-mixin radio(text, id, name, value)
-  input(id=id type='radio' name=name value=value)&attributes(attributes).radio-input
-  label(for=id).radio-label= text
+mixin radio({ text, id, name, value })
+  span.radio
+    input.radio-input(id=id type='radio' name=name value=value)&attributes(attributes)
+    label.radio-label(for=id)= text

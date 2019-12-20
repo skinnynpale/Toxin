@@ -25,44 +25,25 @@ block content
         .room-details__info-grid
           .room-details__advan-list
             h2.room-details__info-title Сведения о номере
-            ul.advantages
-              li.advantages__item
-                +advantages({
-                  ico: "insert_emoticon",
-                  title: "Комфорт",
-                  text: "Шумопоглощающие стены"
-                })
-              li.advantages__item
-                +advantages({
-                  ico: "location_city",
-                  title: "Удобство",
-                  text: "Окно в каждой из спален"
-                })
-              li.advantages__item
-                +advantages({
-                  ico: "whatshot",
-                  title: "Уют",
-                  text: "Номер оснащен камином"
-                })
+            ul.room-details__advantages
+              +advantage({
+                ico: "insert_emoticon",
+                title: "Комфорт",
+                text: "Шумопоглощающие стены"
+              })
+              +advantage({
+                ico: "location_city",
+                title: "Удобство",
+                text: "Окно в каждой из спален"
+              })
+              +advantage({
+                ico: "whatshot",
+                title: "Уют",
+                text: "Номер оснащен камином"
+              })
           .room-details__impressions
             h2.room-details__info-title Впечатления от номера
-            .donut
-              .donut__circle
-                include ../../components/donut/donut
-              .donut__info
-                .donut__char
-                  .donut__lap.donut__lap_orange
-                  .donut__lap-value Великолепно
-                .donut__char
-                  .donut__lap.donut__lap_green
-                  .donut__lap-value Хорошо
-                .donut__char
-                  .donut__lap.donut__lap_purple
-                  .donut__lap-value Удовлетворительно
-                .donut__char
-                  .donut__lap.donut__lap_black
-                  .donut__lap-value Разочарован
-
+            +donut
           .room-details__reviews
             .room-details__title-group
               h2.room-details__info-title Отзывы посетителей номера

@@ -1,8 +1,17 @@
 .toggle
-  position: absolute
-  z-index: -1
-  opacity: 0
-  margin: 0 0 0 1.4286rem
+  &__checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+    margin: 0 0 0 1.4286rem
+
+    &:checked + .toggle__label
+      &:before
+        border: 0.0714rem solid $purple
+
+      &:after
+        left: 1.7143rem
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
 
   &__label
     position: relative
@@ -31,10 +40,4 @@
       background: $accent25
       transition: .2s
 
-  &:checked + &__label
-    &:before
-      border: 0.0714rem solid $purple
 
-    &:after
-      left: 1.7143rem
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)

@@ -4,10 +4,11 @@
         .container
             .fields
                 .t-field
-                    +field({ theme: 'with-label', text: 'text field', id: 'fieldDefault'})(placeholder="Email")
+                    +field({ theme: 'with-label', className: 't-field', text: 'text field', id: 'fieldDefault'})(placeholder="Email")
                 .t-field
                     +field({
                       theme: 'with-label',
+                      className: 't-field',
                       text: 'text field',
                       id: 'fieldHover'
                     })(value="This is pretty awesome")
@@ -43,8 +44,18 @@
                 .buttons__radio
                     h3.label Radio Buttons
                     .radio__example
-                        +radio('Мужчина', 'man', 'sex', 'man')(checked)
-                        +radio('Женщина', 'woman', 'sex', 'woman')
+                        +radio({
+                          text: 'Мужчина',
+                          id: 'man',
+                          name: 'sex',
+                          value: 'man'
+                        })(checked)
+                        +radio({
+                          text: 'Женщина',
+                          id: 'woman',
+                          name: 'sex',
+                          value: 'woman'
+                        })
                 .buttons__toggle
                     h3.label Toggle
                     .toggle__example
@@ -116,24 +127,21 @@
         .container
             .main__item
                 ul.advantages
-                    li.advantages__item
-                        +advantages({
-                          ico: "insert_emoticon",
-                          title: "Комфорт",
-                          text: "Шумопоглощающие стены"
-                        })
-                    li.advantages__item
-                        +advantages({
-                          ico: "location_city",
-                          title: "Удобство",
-                          text: "Окно в каждой из спален"
-                        })
-                    li.advantages__item
-                        +advantages({
-                          ico: "whatshot",
-                          title: "Уют",
-                          text: "Номер оснащен камином"
-                        })
+                    +advantage({
+                      ico: "insert_emoticon",
+                      title: "Комфорт",
+                      text: "Шумопоглощающие стены"
+                    })
+                    +advantage({
+                      ico: "location_city",
+                      title: "Удобство",
+                      text: "Окно в каждой из спален"
+                    })
+                    +advantage({
+                      ico: "whatshot",
+                      title: "Уют",
+                      text: "Номер оснащен камином"
+                    })
 
             .main__item
                 .reviews__item

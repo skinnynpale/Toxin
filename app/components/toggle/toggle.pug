@@ -1,3 +1,4 @@
 mixin toggle(text, id)
-  input(id=id type='checkbox')&attributes(attributes).toggle
-  label(for=id id=id class=classes).toggle__label= text
+  span.toggle
+    input.toggle__checkbox(id=id type='checkbox')&attributes(attributes)
+    label.toggle__label(for=id id=id class=classes)= text
