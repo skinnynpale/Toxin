@@ -1,0 +1,9 @@
+mixin review({avatar, likes, liked, author, date, text})
+  .review
+    .review__dynamics
+      img.review__profile-photo(src=avatar)
+      .review__likes: +like(likes, liked)
+    .review__comment
+      b.review__author= author
+      .review__date= date
+      .review__text= text

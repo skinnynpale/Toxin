@@ -14,9 +14,13 @@ block content
       .rooms-filter
         .rooms-filter__item
           .t-field.rooms-filter__field
-            +field-dropdown('Даты пребывания в отеле', 'dateFilter')(value="Выберите дату" readonly)
+            +field({theme: 'with-dropdown', text: 'Даты пребывания в отеле', id: 'dateFilter'})(value="Выберите дату" readonly)
           .t-field.rooms-filter__field
-            +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
+            +field({
+              theme: 'with-dropdown',
+              text: 'Гости',
+              id: 'guests'
+            })(value="Сколько гостей" readonly)
         .rooms-filter__item.range-slider
           label.label Диапазон цены
           span.rooms-filter__values#rangeSliderRoomValue
@@ -24,7 +28,7 @@ block content
             input(type="text" class="js-range-slider" name="my_range" value="")
             p.range-slider__info Стоимость за сутки пребывания в номере
         .rooms-filter__item
-          label Привелегии
+          label.label Привелегии
           .checkbox__example.rooms-filter__checkbox
             +checkbox('Можно курить', 'smoke')
             +checkbox('Можно с питомцами', 'pets', 1)
@@ -35,7 +39,11 @@ block content
             +checkbox_rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
             +checkbox_rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'helper')
         .rooms-filter__item
-          +field-dropdown('Удобства номера', 'comfortFilter')(value="Выберите удобства" readonly)
+          +field({
+            theme: 'with-dropdown',
+            text: 'Удобства номера',
+            id: 'comfortFilter'
+          })(value="Выберите удобства" readonly)
         .rooms-filter__item
           label.label.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
           .checkbox__wrapper_expandable#moreComfortFilterWrapper

@@ -1,9 +1,9 @@
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 
-import ExpandableList from '../../../components/ExpandableList/ExpandableList';
-import DropDown from '../../../components/DropDown/DropDown';
-import Calendar from '../../../components/Calendar/Calendar';
+import ExpandableList from '../../../components/expandable-list/expandable-list';
+import Dropdown from '../../../components/dropdown/dropdown';
+import Calendar from '../../../components/calendar/calendar';
 
 // Развернутый список с чекбоксами
 const moreComfortFilterList = new ExpandableList({
@@ -14,7 +14,7 @@ const moreComfortFilterList = new ExpandableList({
 });
 
 // DropDown
-const guestsDropDown = new DropDown({
+const guestsDropDown = new Dropdown({
   anchor: document.getElementById('elements-guestsDropDown'),
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,
@@ -64,7 +64,7 @@ $('.js-range-slider').ionRangeSlider({
 });
 
 // Dropdown
-const comfortFilterDropDown = new DropDown({
+const comfortFilterDropDown = new Dropdown({
   anchor: document.getElementById('comfortFilter'),
   fallbackTitle: 'Выберите удобства',
   showFullAmount: false,

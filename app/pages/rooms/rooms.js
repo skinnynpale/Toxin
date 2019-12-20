@@ -1,9 +1,9 @@
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 
-import DropDown from '../../components/DropDown/DropDown';
-import Calendar from '../../components/Calendar/Calendar';
-import ExpandableList from '../../components/ExpandableList/ExpandableList';
+import Dropdown from '../../components/dropdown/dropdown';
+import Calendar from '../../components/calendar/calendar';
+import ExpandableList from '../../components/expandable-list/expandable-list';
 
 // rangeslider
 const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue');
@@ -38,7 +38,7 @@ const moreComfortFilterList = new ExpandableList({
 });
 
 // Dropdown
-const guestsDropDown = new DropDown({
+const guestsDropDown = new Dropdown({
   anchor: document.getElementById('guests'),
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,
@@ -60,7 +60,7 @@ const guestsDropDown = new DropDown({
 });
 
 // Dropdown
-const comfortFilterDropDown = new DropDown({
+const comfortFilterDropDown = new Dropdown({
   anchor: document.getElementById('comfortFilter'),
   fallbackTitle: 'Выберите удобства',
   showFullAmount: false,
@@ -85,7 +85,7 @@ const comfortFilterDropDown = new DropDown({
 });
 
 // Показать фильтры
-$('.js-show-filters').click(function(event) {
+$('.js-show-filters').click(event => {
   event.preventDefault();
   const $elem = $('.rooms-filter');
   $elem.slideToggle(300);

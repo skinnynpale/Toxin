@@ -1,16 +1,25 @@
-form.check-form.datepicker-place
+form.check-form
   .check-form__item.check-form__item-group
     h2.check-form__number
       span.check-form__number-ico №
       | 888
-    +link('check-form__lux', 'Люкс')
+    +btn('Люкс', 'link')
     .check-form__price_default
       b.check-form__price-text 9 990₽
       |  в сутки
   .check-form__item#checkFormCalendar
-    +field-group('check-form', 'Прибытие', 'check-form__from', 'Выезд', 'check-form__to')(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
+    +field({className: 'check-form',
+      theme: 'group',
+      text: {
+        first: 'Прибытие',
+        second: 'Выезд'
+      },
+      id: {
+        first: 'check-form__from',
+        second: 'check-form__to'
+      } })(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
   .check-form__item
-    +field-dropdown('Гости', 'guests')(value="Сколько гостей" readonly)
+    +field({theme: 'with-dropdown', text: 'Гости', id: 'guests'})(value="Сколько гостей" readonly)
   .check-form__item
     .check-form__conclusion
       span.check-form__text 9 990₽ х 4 суток

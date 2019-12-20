@@ -1,25 +1,28 @@
-mixin field()
-  input(class="field")&attributes(attributes)
+mixin field({theme, id, text, className, value} = '')
+  case theme
 
-mixin field-label(text, id)
-  label(class="label" for=id)= text
-  input(class="field", id=id)&attributes(attributes)
+    when 'with-label'
+      label(class="label" for=id)= text
+      input(class="field", id=id)&attributes(attributes)
 
-mixin field-dropdown(text, id, value)
-  label(class="label label_type_dropdown" for=id)= text
-  input(class="field field_type_dropdown " id=id, value=value)&attributes(attributes)
+    when 'with-dropdown'
+      label(class="label label_type_dropdown" for=id)= text
+      input(class="field field_type_dropdown " id=id, value=value)&attributes(attributes)
 
-mixin field-arrow(text, id)
-  .field-wrapper_type_arrow
-    input(class="field")&attributes(attributes)
+    when 'with-arrow'
+      .field-wrapper_type_arrow
+        input(class="field")&attributes(attributes)
 
-mixin field-masked(text, id)
-  label(class="label" for=id)= text
-  input(class="field field_masked", id=id disabled)&attributes(attributes)
+    when 'masked'
+      label(class="label" for=id)= text
+      input(class="field field_masked", id=id disabled)&attributes(attributes)
 
-mixin field-group(classes, text1, id1, text2, id2, value1, value2)
-  div(class=classes + '__group-field')
-    div(class=classes + '__field')
-      +field-dropdown(text1, id1, value1)&attributes(attributes)
-    div(class=classes + '__field')
-      +field-dropdown(text2, id2, value2)&attributes(attributes)
+    when 'group'
+      div(class=`${className}__group-field`)
+        div(class=`${className}__field`)
+          +field({theme: 'with-dropdown', text: text.first, id: id.first })&attributes(attributes)
+        div(class=`${className}__field`)
+          +field({theme: 'with-dropdown', text: text.second, id: id.second })&attributes(attributes)
+
+    default
+      input(class="field")&attributes(attributes)

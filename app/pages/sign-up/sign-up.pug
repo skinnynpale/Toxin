@@ -12,6 +12,30 @@ block content
 
   main.main
     .main__container
-      include ../../components/sign-up-form/sign-up-form
+      form.user-form
+        .user-form__wrapper
+          h1.user-form__title Регистрация аккаунта
+          .user-form__item
+            +field(placeholder="Имя" name="name")
+            +field(placeholder="Фамилия" name="surname")
+            +radio('Мужчина', 'man', 'sex', 'man')(checked)
+            +radio('Женщина', 'woman', 'sex', 'woman')
+          .user-form__item
+            +field({
+              theme: 'with-label',
+              text: 'Дата рождения',
+              id: 'birthday'
+            })(placeholder="ДД.ММ.ГГГГ" name="birthday")
+          .user-form__item
+            label.label Данные для входа в сервис
+            +field(placeholder="Email" name="email")
+            +field(placeholder="Пароль" type="password")
+            +toggle('Получать спецпредложения', 'receive-offers')
+          .user-form__item
+            .user-form__btn-buy
+              +btn('Перейти к оплате', 'arrow')(href="#!")
+          .user-form__sign-in
+            p.user-form__question Уже есть аккаунт на Toxin
+            +btn('Войти', '', 'xl')(href="/../sign-in/sign-in.pug")
 
   +footer('full')

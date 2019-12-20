@@ -1,6 +1,6 @@
 // Datepicker
-import DropDown from '../../components/DropDown/DropDown';
-import Calendar from '../../components/Calendar/Calendar';
+import Dropdown from '../../components/dropdown/dropdown';
+import Calendar from '../../components/calendar/calendar';
 
 const checkFormCalendar = new Calendar('#checkFormCalendar', {
   multipleDatesSeparator: '-',
@@ -12,7 +12,7 @@ const checkFormCalendar = new Calendar('#checkFormCalendar', {
 
 // Dropdown
 const guests = document.getElementById('guests');
-const guestsDropDown = new DropDown({
+const guestsDropDown = new Dropdown({
   anchor: guests,
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,

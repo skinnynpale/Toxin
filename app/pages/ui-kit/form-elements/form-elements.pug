@@ -4,20 +4,35 @@
         .container
             .fields
                 .t-field
-                    +field-label('text field', 'fieldDefault')(placeholder="Email")
+                    +field({ theme: 'with-label', text: 'text field', id: 'fieldDefault'})(placeholder="Email")
                 .t-field
-                    +field-label('text field', 'fieldHover')(value="This is pretty awesome")
+                    +field({
+                      theme: 'with-label',
+                      text: 'text field',
+                      id: 'fieldHover'
+                    })(value="This is pretty awesome")
                 .t-field
-                    +field-dropdown('text field', 'elements-guestsDropDown')(value="Сколько гостей" readonly)
+                    +field({theme: 'with-dropdown', text: 'text field', id: 'elements-guestsDropDown'})(value="Сколько гостей" readonly)
+
                 .t-field
-                    +field-masked('Masked text field', 'masked', 't-field_dropdown')(placeholder="ДД.ММ.ГГГГ")
+                    +field({theme: 'masked', text: 'Masked text field', id:'t-field_dropdown'})(placeholder="ДД.ММ.ГГГГ")
                 .t-field#formElementsCalendar
-                    +field-group('t-field', 'date Dropdown', 'arrival', 'date Dropdown', 'checkOut')(placeholder="ДД.ММ.ГГГГ")
+                    +field({
+                      className: 't-field',
+                      value: {
+                        first: 'date Dropdown',
+                        second: 'date Dropdown'
+                      },
+                      id: {
+                        first: 'arrival',
+                        second: 'checkOut'
+                      }
+                    })(placeholder="ДД.ММ.ГГГГ")
                 .t-field#filterDateCalendar
-                    +field-dropdown('filter date dropdown', 'filterDate')(value="19 авг - 23 авг")
+                    +field({theme: 'with-dropdown', text: 'filter date dropdown', id: 'filterDate'})(value="19 авг - 23 авг")
                 .t-field
                     label.label(for='subscr') Subscription  text field
-                    +field-arrow('subscription text field', 'subscr')(type="email" placeholder="Email")#subscr
+                    +field({theme: 'with-arrow', text: 'subscription text field', id: 'subscr'})(type="email" placeholder="Email")
             .buttons
                 .buttons__checkbox
                     h3.label Checkbox Buttons
@@ -33,9 +48,9 @@
                 .buttons__toggle
                     h3.label Toggle
                     .toggle__example
-                        +btn-toggle('Получать спецпредложения', 'offer')(checked)
+                        +toggle('Получать спецпредложения', 'offer')(checked)
                     .toggle__example
-                        +btn-toggle('Получать спецпредложения', 'offer2')
+                        +toggle('Получать спецпредложения', 'offer2')
                 .buttons__like
                     h3.label Like Button
                     .like__group
@@ -44,9 +59,9 @@
                 .buttons__rate
                     h3.label Rate Button
                     .rate__group
-                        +rating(4, 5)
+                        +rate(4, 5)
                     .rate__group
-                        +rating(5, 5)
+                        +rate(5, 5)
             .buttons2
                 .rooms-filter__item.range-slider
                     h3.label Диапазон цены
@@ -61,7 +76,7 @@
                     .buttons__not-gradient
                         +btn('Click Me')
                     .buttons__links
-                        +link('link_example','Click me')
+                        +btn('Click me', 'link')
                     .buttons__arrow
                         +btn('Перейти к оплате', 'arrow')
                 .buttons__pagination
@@ -72,7 +87,11 @@
             .container
                 .fields
                     .t-field
-                        +field-dropdown('Dropdown', 'comfortFilter')(value="2 спальни, 2 кровати...")
+                        +field({
+                          theme: 'with-dropdown',
+                          text: 'Dropdown',
+                          id: 'comfortFilter'
+                        })(value="2 спальни, 2 кровати...")
                     h3.label.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
                     .checkbox__wrapper_expandable#moreComfortFilterWrapper
                         +checkbox('Завтрак', 'breakfast')
@@ -92,10 +111,7 @@
                 .fields
                     .main__item
                         label.label bullet list
-                        ul.rules-list
-                            +bullet-item("Нельзя с питомцами")
-                            +bullet-item("Без вечеринок и мероприятий")
-                            +bullet-item("Время прибытия — после 13:00, а выезд до 12:00")
+                        +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
 
         .container
             .main__item
@@ -121,7 +137,7 @@
 
             .main__item
                 .reviews__item
-                    +reviews-item({
+                    +review({
                       img: "../page-room/img/author-1.jpg",
                       likes: "12",
                       likeCheck: true,

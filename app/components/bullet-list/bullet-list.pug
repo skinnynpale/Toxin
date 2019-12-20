@@ -1,2 +1,3 @@
-mixin bullet-item(text)
-  li.rules-list__item= text
+mixin bullet-list(items)
+  each item in items
+    li.bullet-list__item= item

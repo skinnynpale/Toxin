@@ -1,7 +1,7 @@
-import DropDown from '../../components/DropDown/DropDown';
-import Calendar from '../../components/Calendar/Calendar';
+import Dropdown from '../../components/dropdown/dropdown';
+import Calendar from '../../components/calendar/calendar';
 
-const guestsDropDown = new DropDown({
+const guestsDropDown = new Dropdown({
   anchor: document.getElementById('guests'),
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,

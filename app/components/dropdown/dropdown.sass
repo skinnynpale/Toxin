@@ -1,0 +1,114 @@
+@import '../../sass/vars'
+
+.js-dropdown__content
+  width: 100%
+  border: 0.0714rem solid $accent50
+  box-shadow: 0 0.7143rem 1.4286rem $accent5
+  border-top: none
+  border-radius: 0.2857rem
+  padding: 0.5rem 0.5rem 0.9286rem 1.0714rem
+  position: absolute
+  background-color: #fff
+  z-index: 2
+  opacity: 0
+  max-height: 0
+  overflow: hidden
+  left: -7142.8571rem
+  transition: opacity .3s, max-height .3s
+
+.dropdown
+  &__item
+    text-transform: uppercase
+    font-size: 0.8571rem
+    line-height: 1.0714rem
+    font-weight: bold
+    color: $accent
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 1.4286rem
+    position: relative
+
+    &:first-child
+      margin-top: 0.3571rem
+
+  &__btn
+    position: absolute
+    width: 2.1429rem
+    height: 2.1429rem
+    border-radius: 50%
+    background: #fff
+    border: 0.0714rem solid $accent50
+    color: $accent50
+    text-align: center
+    line-height: 2.0714rem
+    font-size: 1.2857rem
+    font-weight: 100
+    transition: 0.25s ease
+    text-decoration: none
+
+    &:active
+      background-color: $purple
+      transition: 0.25s ease
+      color: #fff
+      border: none
+      font-weight: bold
+
+  &__btn-minus
+    right: 4.4286rem
+
+  &__btn-plus
+    right: 0
+
+  &__value
+    margin-right: 3rem
+
+  &__btn_disable
+    border: 0.0714rem solid $accent25
+    cursor: default
+    pointer-events: none
+
+  &__item:last-child
+    margin-bottom: 1.4286rem
+
+  &__functions
+    margin-top: 2.1429rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__func-btn
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 0.8571rem
+    line-height: 1.0714rem
+    text-decoration: none
+
+  &__clear
+    color: $accent50
+
+    &:hover
+      color: lighten($accent50, 30%)
+
+  &__apply
+    color: $purple
+
+    &:hover
+      color: lighten($purple, 5%)
+
+  &__content_active
+    max-height: 21.4286rem
+    left: auto
+    opacity: 1
+    border-top-right-radius: 0
+    border-top-left-radius: 0
+
+  &_content-poor
+    padding: 0.6429rem 0.5rem 1.0714rem 1.0714rem
+
+    .dropdown__item:last-child
+      margin-bottom: 0
+
+

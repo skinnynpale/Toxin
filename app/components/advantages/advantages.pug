@@ -1,12 +1,5 @@
-mixin advantages(parameters)
-    - var ico = parameters.ico
-    - var title = parameters.title
-    - var text = parameters.text
+mixin advantages({ico, title, text})
     i(class="material-icons advantages__ico")= ico
     div(class="advantages__content-wrapper")
       b.advantages__title= title
       p.advantages__text= text
-             
-             
-             
-             
