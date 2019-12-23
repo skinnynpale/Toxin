@@ -20,7 +20,15 @@
                                 +btn('Создать', '', 'l')(href="/../sign-up/sign-up.pug")
             .container
                 .cards__item
-                    include ../../../components/check-form/check-form
+                    +check-form({
+                      number: 888,
+                      lux: true,
+                      payPerDay: 9990,
+                      days: 4,
+                      serviceCharge: 0,
+                      serviceChargeDiscount: 2179,
+                      additionalServiceCharge: 300
+                    })
                 .cards__item
                     form.user-form
                         .user-form__wrapper

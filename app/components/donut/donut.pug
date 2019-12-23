@@ -1,4 +1,4 @@
-mixin donut()
+mixin donut({votes})
   .donut
     .donut__circle
       svg(width="100%" height="100%")
@@ -18,7 +18,7 @@ mixin donut()
             stop(offset="0" stop-color="#6cd1c1")
             stop(offset="1" stop-color="#6ecf99")
         g(class="donut__text")
-          text(x="38px", y="60px") 260
+          text(x="38px", y="60px") #{votes}
           text(x="29px", y="62px" transform="translate(0 19)") голосов
     .donut__info
       .donut__char

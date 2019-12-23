@@ -38,9 +38,20 @@
                 .buttons__checkbox
                     h3.label Checkbox Buttons
                     .checkbox__example
-                        +checkbox('Можно курить', 'smoke')
-                        +checkbox('Можно с питомцами', 'pets', 1)
-                        +checkbox('Можно пригласить гостей (до 10 человек)', 'guestsCheck', 1)
+                        +checkbox({
+                          text: 'Можно курить',
+                          id: 'smoke'
+                        })
+                        +checkbox({
+                          text: 'Можно с питомцами',
+                          id: 'pets',
+                          check: true
+                        })
+                        +checkbox({
+                          text: 'Можно пригласить гостей (до 10 человек)',
+                          id: 'guestsCheck',
+                          check: true
+                        })
                 .buttons__radio
                     h3.label Radio Buttons
                     .radio__example
@@ -104,21 +115,58 @@
                           id: 'comfortFilter'
                         })(value="2 спальни, 2 кровати...")
                     h3.label.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
-                    .checkbox__wrapper_expandable#moreComfortFilterWrapper
-                        +checkbox('Завтрак', 'breakfast')
-                        +checkbox('Письменный стол', 'desk', 1)
-                        +checkbox('Стул для кормления', 'feedingChair', 1)
-                        +checkbox('Кроватка', 'crib', 1)
-                        +checkbox('Телевизор', 'tv')
-                        +checkbox('Шампунь', 'shampoo')
-                        +checkbox('Интернет', 'internet')
-                        +checkbox('Связь с космосом', 'spaceConnection')
+                    .checkbox_expandable#moreComfortFilterWrapper
+                        +checkbox({
+                          text: 'Завтрак',
+                          id: 'breakfast'
+                        })
+                        +checkbox({
+                          text: 'Письменный стол',
+                          id: 'desk',
+                          check: true
+                        })
+                        +checkbox({
+                          text: 'Стул для кормления',
+                          id: 'feedingChair',
+                          check: true
+                        })
+                        +checkbox({
+                          text: 'Кроватка',
+                          id: 'crib',
+                          check: true
+                        })
+                        +checkbox({
+                          text: 'Телевизор',
+                          id: 'tv'
+                        })
+                        +checkbox({
+                          text: 'Шампунь',
+                          id: 'shampoo'
+                        })
+                        +checkbox({
+                          text: 'Интернет',
+                          id: 'internet'
+                        })
+                        +checkbox({
+                          text: 'Связь с космосом',
+                          id: 'spaceConnection'
+                        })
 
                 .fields
                     .main__item
                         label.label rich Checkbox Buttons
-                        +checkbox_rich('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
-                        +checkbox_rich('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'helper')
+                        +checkbox({
+                          theme: "rich",
+                          title: 'Широкий коридор',
+                          text: 'Ширина коридоров в номере не менее 91 см.',
+                          id: 'corridor'
+                        })
+                        +checkbox({
+                          theme: "rich",
+                          title: 'Помощник для инвалидов',
+                          text: 'На 1 этаже вас встретит специалист  и проводит до номера.',
+                          id: 'helper'
+                        })
                 .fields
                     .main__item
                         label.label bullet list
@@ -146,7 +194,7 @@
             .main__item
                 .reviews__item
                     +review({
-                      img: "../page-room/img/author-1.jpg",
+                      avatar: "../page-room/img/author-1.jpg",
                       likes: "12",
                       likeCheck: true,
                       author: "Мурад Сарафанов",

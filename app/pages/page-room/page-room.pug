@@ -43,7 +43,7 @@ block content
               })
           .room-details__impressions
             h2.room-details__info-title Впечатления от номера
-            +donut
+            +donut({votes: 260})
           .room-details__reviews
             .room-details__title-group
               h2.room-details__info-title Отзывы посетителей номера
@@ -71,7 +71,15 @@ block content
           .room-details__cancel
             h2.room-details__info-title Отмена
             p.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-        include ../../components/check-form/check-form
+        +check-form({
+          number: 888,
+          lux: true,
+          payPerDay: 9990,
+          days: 4,
+          serviceCharge: 0,
+          serviceChargeDiscount: 2179,
+          additionalServiceCharge: 300
+        })
 
   +footer('full')
 

@@ -1,41 +1,49 @@
-form.check-form
-  .check-form__item
-    .check-form__item-group
-      h2.check-form__number
-        span.check-form__number-ico №
-        | 888
-      +btn('Люкс', 'link')
-      .check-form__price_default
-        b.check-form__price-text 9 990₽
-        |  в сутки
-  .check-form__item#checkFormCalendar
-    +field({className: 'check-form',
-      theme: 'group',
-      text: {
-        first: 'Прибытие',
-        second: 'Выезд'
-      },
-      id: {
-        first: 'check-form__from',
-        second: 'check-form__to'
-      } })(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
-  .check-form__item
-    +field({theme: 'with-dropdown', text: 'Гости', id: 'guests'})(value="Сколько гостей" readonly)
-  .check-form__item
-    .check-form__conclusion
-      span.check-form__text 9 990₽ х 4 суток
-      span.check-form__text 39 960₽
-    .check-form__conclusion
-      span.check-form__text.check-form__text--info Сбор за услуги: скидка 2 179₽
-      span.check-form__text 0₽
-    .check-form__conclusion
-      span.check-form__text.check-form__text--info Сбор за дополнительные услуги
-      span.check-form__text 300₽
-  .check-form__item
-    .check-form__final-price
+mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount, additionalServiceCharge, days })
+  form.check-form
+    .check-form__item
       .check-form__item-group
-        h2.check-form__final-price-text Итого
-        .check-form__price-line
-        h2.check-form__final-price-text 38 081₽
-  .check-form__item
-    +btn('Забронировать', 'arrow')(href="#!")
+        h2.check-form__number
+          span.check-form__number-ico №
+          | #{number}
+        if lux
+          +btn('Люкс', 'link')
+        .check-form__price_default
+          b.check-form__price-text 9 990₽
+          |  в сутки
+    .check-form__item#checkFormCalendar
+      +field({
+        className: 'check-form',
+        theme: 'group',
+        text: {
+          first: 'Прибытие',
+          second: 'Выезд'
+        },
+        id: {
+          first: 'check-form__from',
+          second: 'check-form__to'
+        }
+      })(value="ДД.ММ.ГГГГ" autocomplete="off" readonly)
+    .check-form__item
+      +field({
+        theme: 'with-dropdown',
+        text: 'Гости',
+        id: 'guests'
+      })(value="Сколько гостей" readonly)
+    .check-form__item
+      .check-form__conclusion
+        span.check-form__text #{payPerDay}₽ х #{days} суток
+        span.check-form__text #{payPerDay * days}₽
+      .check-form__conclusion
+        span.check-form__text.check-form__text--info Сбор за услуги: скидка #{serviceChargeDiscount}₽
+        span.check-form__text #{serviceCharge}₽
+      .check-form__conclusion
+        span.check-form__text.check-form__text--info Сбор за дополнительные услуги
+        span.check-form__text #{additionalServiceCharge}₽
+    .check-form__item
+      .check-form__final-price
+        .check-form__item-group
+          h2.check-form__final-price-text Итого
+          .check-form__price-line
+          h2.check-form__final-price-text #{(payPerDay * days) + serviceCharge + additionalServiceCharge - serviceChargeDiscount}₽
+    .check-form__item
+      +btn('Забронировать', 'arrow')(href="#!")
