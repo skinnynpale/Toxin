@@ -1,8 +1,13 @@
-.image-helpers
-  a(href="#!").image-helpers__arrow.image-helpers__arrow-left
-  a(href="#!").image-helpers__arrow.image-helpers__arrow-right
-  .image-helpers__slide-wrapper
-    a(href="#!").image-helpers__slide.image-helpers__slide_active
-    a(href="#!").image-helpers__slide
-    a(href="#!").image-helpers__slide
-    a(href="#!").image-helpers__slide
+mixin image-helpers({ slides })
+  - var slides = [1];
+  - slides.length = 4;
+
+  .image-helpers
+    a(href="#!").image-helpers__arrow.image-helpers__arrow-left
+    a(href="#!").image-helpers__arrow.image-helpers__arrow-right
+    .image-helpers__slide-wrapper
+      each slide in slides
+        if slides[0] === slide
+          a(href="#!").image-helpers__slide.image-helpers__slide_active
+        else
+          a(href="#!").image-helpers__slide

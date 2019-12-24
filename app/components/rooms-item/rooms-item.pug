@@ -1,9 +1,9 @@
-mixin rooms-item({img, num, lux, price, stars, reviews})
+mixin rooms-item({ img, num, lux, price, stars, reviews, photos })
   .rooms-item
     a(href="/../page-room/page-room.pug" class="rooms-item__link")
     .rooms-item__image
       img.rooms-item__img(src=img, alt="Фотография номера")
-      include ../../components/image-helpers/image-helpers
+      +image-helpers({photos})
     .rooms-item__wrapper
       .rooms-item__info
         h2.rooms-item__num
