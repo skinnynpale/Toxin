@@ -227,7 +227,7 @@ class Dropdown {
 
   toggleDropdown() {
     this.wrapperHTML.classList.toggle('dropdown__content_active');
-    this.anchor.classList.toggle('field_default_active');
+    this.anchor.classList.toggle('field__input--active');
   }
 }
 

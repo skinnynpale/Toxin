@@ -22,6 +22,7 @@
 
   &__item > .field, .label:not(.label)
     margin-bottom: 0.7143rem
+    min-width: 320px
 
     &:last-child
       margin-bottom: 0
@@ -52,3 +53,13 @@
   &__btn-buy
     padding-top: 0.6429rem
     margin-bottom: -0.3571rem
+
+  &__label
+    @include label
+    font-family: $default-font
+    font-size: 0.8571rem
+    line-height: 1.0714rem
+    text-transform: uppercase
+    font-weight: bold
+    color: $accent
+

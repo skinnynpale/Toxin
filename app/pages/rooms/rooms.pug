@@ -22,20 +22,20 @@ block content
               id: 'guests'
             })(value="Сколько гостей" readonly)
         .rooms-filter__item
-          label.label Диапазон цены
+          label.rooms-filter__label Диапазон цены
           span.rooms-filter__values#rangeSliderRoomValue
           .range-slider
             .range-slider__app
               input(type="text" class="js-range-slider" name="my_range" value="")
               p.range-slider__info Стоимость за сутки пребывания в номере
         .rooms-filter__item
-          label.label Привелегии
+          label.rooms-filter__label Привелегии
           .rooms-filter__checkbox
             +checkbox({text: 'Можно курить', id: 'smoke'})
             +checkbox({text: 'Можно с питомцами', id: 'pets', check: true})
             +checkbox({text: 'Можно пригласить гостей (до 10 человек)', id: 'guestsCheck', check: true})
         .rooms-filter__item
-          label.label Доступность
+          label.rooms-filter__label Доступность
           .rooms-filter__checkbox
             +checkbox({ theme: "rich", title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.', id: 'corridor'})
             +checkbox({ theme: "rich", title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист  и проводит до номера.', id: 'helper'})

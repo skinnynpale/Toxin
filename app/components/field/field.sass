@@ -1,75 +1,83 @@
 .field
-  @include input
-  width: 100%
-  height: 3.1429rem
-  border: 0.0714rem solid $accent25
-  border-radius: 0.2857rem
-  padding: 0.7857rem 2.8571rem 0.9286rem 1rem
-  outline: none
-  color: $accent75
-
-  &::placeholder
-    color: $accent25
-
-  &:hover, &:focus
-    border: 0.0714rem solid $accent50
-
-  &_type_dropdown
-    cursor: pointer
-
-  &_masked
-    cursor: default
-
-    &:hover
-      border: 0.0714rem solid $accent25
-
-    &:disabled
-      background: #fff
-
-  &__dropdown-wrapper
-    position: relative
-
-  &_default_active
-    border: 0.0714rem solid $accent50
-    border-bottom-right-radius: 0
-    border-bottom-left-radius: 0
-
-.field-wrapper_type_arrow
-  position: relative
-
-  &::after
-    content: url('../../components/footer/img/arrow_forward.svg')
-    display: inline-block
-    width: 3.1429rem
+  &__input
+    @include input
+    width: 100%
     height: 3.1429rem
-    position: absolute
-    top: 0.8571rem
-    right: 0
-    text-align: center
-    cursor: pointer
+    border: 0.0714rem solid $accent25
+    border-radius: 0.2857rem
+    padding: 0.7857rem 2.8571rem 0.9286rem 1rem
+    outline: none
+    color: $accent75
 
-.label
-  @include label
-  font-family: $default-font
-  font-size: 0.8571rem
-  line-height: 1.0714rem
-  text-transform: uppercase
-  font-weight: bold
-  color: $accent
+    &::placeholder
+      color: $accent25
 
-  &_type_dropdown
+    &:hover, &:focus
+      border: 0.0714rem solid $accent50
+
+    &--active
+      border: 0.0714rem solid $accent50
+      border-bottom-right-radius: 0
+      border-bottom-left-radius: 0
+
+  &__label
+    @include label
+    font-family: $default-font
+    font-size: 0.8571rem
+    line-height: 1.0714rem
+    text-transform: uppercase
+    font-weight: bold
+    color: $accent
+
+  &__wrapper
     position: relative
 
     &::after
-      content: ""
+      content: url('../../components/footer/img/arrow_forward.svg')
       display: inline-block
+      width: 3.1429rem
+      height: 3.1429rem
       position: absolute
-      top: 2.7857rem
-      right: 1.2857rem
-      width: 0.6429rem
-      height: 0.6429rem
-      border: 0.1429rem solid $accent50
-      border-top: 0
-      border-left: 0
-      transform: translateY(-50%) rotate(45deg)
+      top: 0.8571rem
+      right: 0
+      text-align: center
       cursor: pointer
+
+  &_type_dropdown
+    .field__input
+      cursor: pointer
+
+      .field__label
+        position: relative
+
+        &::after
+          content: ""
+          display: inline-block
+          position: absolute
+          top: 2.7857rem
+          right: 1.2857rem
+          width: 0.6429rem
+          height: 0.6429rem
+          border: 0.1429rem solid $accent50
+          border-top: 0
+          border-left: 0
+          transform: translateY(-50%) rotate(45deg)
+          cursor: pointer
+
+    &_type_masked
+      .field__input
+        cursor: default
+
+        &:hover
+          border: 0.0714rem solid $accent25
+
+        &:disabled
+          background: #fff
+
+  &__dropdown-wrapper
+    .field__input
+      position: relative
+
+
+
+
