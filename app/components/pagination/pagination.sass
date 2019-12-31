@@ -20,7 +20,10 @@
       font-weight: bold
       color: #fff
 
-    &:hover:not(.pagination__item_next):not(.pagination__item_current)
+    &_disabled
+      cursor: default
+
+    &:hover:not(.pagination__item_next):not(.pagination__item_current):not(.pagination__item_disabled)
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
       font-weight: bold
       color: #fff
