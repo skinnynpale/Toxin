@@ -1,26 +1,26 @@
-mixin field({ theme, id, text, className, value } = '')
+mixin field({ theme, id, text, className, value, placeholder, name, type } = '')
   case theme
 
     when 'with-label'
       .field
         label(class="field__label" for=id)= text
-        input(class="field__input", id=id)&attributes(attributes)
+        input(class="field__input", id=id placeholder=placeholder name=name type=type)
 
     when 'with-dropdown'
       .field.field_type_dropdown
         label(class="field__label" for=id)= text
-        input(class="field__input" id=id, value=value readonly autocomplete="off")&attributes(attributes)
+        input(class="field__input" id=id, value=value readonly autocomplete="off" placeholder=placeholder name=name type=type)
 
     when 'with-arrow'
       .field
         .field__wrapper
-          input(class="field__input")&attributes(attributes)
+          input(class="field__input" placeholder=placeholder name=name type=type)
 
     when 'masked'
       .field.field_type_masked
         label(class="field__label" for=id)= text
-        input(class="field__input", id=id disabled)&attributes(attributes)
+        input(class="field__input", id=id disabled placeholder=placeholder name=name type=type)
 
     default
       .field
-        input(class="field__input")&attributes(attributes)
+        input(class="field__input" placeholder=placeholder name=name type=type)

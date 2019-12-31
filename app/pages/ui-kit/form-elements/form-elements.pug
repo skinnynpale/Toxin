@@ -4,38 +4,40 @@
         .container
             .fields
                 .t-field
-                    +field({ theme: 'with-label', className: 't-field', text: 'text field', id: 'fieldDefault'})(placeholder="Email")
+                    +field({ theme: 'with-label', className: 't-field', text: 'text field', id: 'fieldDefault', placeholder: "Email"})
                 .t-field
                     +field({
                       theme: 'with-label',
                       className: 't-field',
                       text: 'text field',
-                      id: 'fieldHover'
-                    })(value="This is pretty awesome")
+                      id: 'fieldHover',
+                      value: "This is pretty awesome"
+                    })
                 .t-field
-                    +field({theme: 'with-dropdown', text: 'text field', id: 'elements-guestsDropDown'})(value="Сколько гостей" readonly)
-
+                    +field({theme: 'with-dropdown', text: 'text field', id: 'elements-guestsDropDown', value: "Сколько гостей"})
                 .t-field
-                    +field({theme: 'masked', text: 'Masked text field', id:'t-field_dropdown'})(placeholder="ДД.ММ.ГГГГ")
+                    +field({theme: 'masked', text: 'Masked text field', id:'t-field_dropdown', placeholder: "ДД.ММ.ГГГГ"})
                 .t-field#formElementsCalendar
                     .t-field__group-field
                         .t-field__field
                             +field({
                               theme: 'with-dropdown',
                               text: 'date Dropdown',
-                              id: 'arrival'
-                            })(value="ДД.ММ.ГГГГ")
+                              id: 'arrival',
+                              value: "ДД.ММ.ГГГГ"
+                            })
                         .t-field__field
                             +field({
                               theme: 'with-dropdown',
                               text: 'date Dropdown',
-                              id: 'checkOut'
-                            })(value="ДД.ММ.ГГГГ")
+                              id: 'checkOut',
+                              value: "ДД.ММ.ГГГГ"
+                            })
                 .t-field
-                    +field({theme: 'with-dropdown', text: 'filter date dropdown', id: 'filterDate'})(value="Выберите дату")
+                    +field({theme: 'with-dropdown', text: 'filter date dropdown', id: 'filterDate', value: "Выберите дату"})
                 .t-field
                     label.label(for='subscr') Subscription  text field
-                    +field({theme: 'with-arrow', text: 'subscription text field', id: 'subscr'})(type="email" placeholder="Email")
+                    +field({theme: 'with-arrow', text: 'subscription text field', id: 'subscr', type: "email", placeholder: "Email"})
             .buttons
                 .buttons__checkbox
                     h3.label Checkbox Buttons
@@ -114,8 +116,9 @@
                         +field({
                           theme: 'with-dropdown',
                           text: 'Dropdown',
-                          id: 'comfortFilter'
-                        })(value="2 спальни, 2 кровати...")
+                          id: 'comfortFilter',
+                          value: "2 спальни, 2 кровати..."
+                        })
                     +expandable-list('moreComfortFilter' ,'Дополнительные удобства',
                       [
                         {

@@ -11,21 +11,24 @@ mixin find-room(title)
             +field({
               theme: 'with-dropdown',
               text: 'Прибытие',
-              id: 'find-room__from'
-            })(value="ДД.ММ.ГГГГ")
+              id: 'find-room__from',
+              value: "ДД.ММ.ГГГГ"
+            })
           .find-room__field
             +field({
               theme: 'with-dropdown',
               text: 'Выезд',
-              id: 'find-room__to'
-            })(value="ДД.ММ.ГГГГ")
+              id: 'find-room__to',
+              value: "ДД.ММ.ГГГГ"
+            })
       .find-room__item
         .find-room__guests
           +field({
             theme: 'with-dropdown',
             text: 'Гости',
-            id: 'guests'
-          })(value="Сколько гостей" readonly)
+            id: 'guests',
+            value: "Сколько гостей"
+          })
       .find-room__btn
         +btn({text: 'Подобрать номер', theme: 'arrow', href: "/../rooms/rooms.pug"})
 

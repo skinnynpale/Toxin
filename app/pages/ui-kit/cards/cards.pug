@@ -6,18 +6,7 @@
                 .cards__item
                     +find-room('Найдём номера под ваши пожелания')
                 .cards__item
-                    form.user-form
-                        .user-form__wrapper
-                            h1.user-form__title Войти
-                            .user-form__item
-                                +field(placeholder="Email" name="email")
-                                +field(placeholder="Пароль" type="password")
-                            .user-form__item
-                                .user-form__btn
-                                    +btn({text: 'Войти', theme: 'arrow'})
-                            .user-form__sign-in
-                                p.user-form__question Нет аккаунта на Toxin?
-                                +btn({text: 'Создать', size: 'l', href: "/../sign-up/sign-up.pug"})
+                    +sign-in()
             .container
                 .cards__item
                     +check-form({
@@ -30,42 +19,7 @@
                       additionalServiceCharge: 300
                     })
                 .cards__item
-                    form.user-form
-                        .user-form__wrapper
-                            h1.user-form__title Регистрация аккаунта
-                            .user-form__item
-                                +field(placeholder="Имя" name="name")
-                                +field(placeholder="Фамилия" name="surname")
-                                +radio({
-                                  text: 'Мужчина',
-                                  id: 'man',
-                                  name: 'sex',
-                                  value: 'man'
-                                })(checked)
-                                +radio({
-                                  text: 'Женщина',
-                                  id: 'woman',
-                                  name: 'sex',
-                                  value: 'woman'
-                                })
-                            .user-form__item
-                                +field({
-                                  theme: 'with-label',
-                                  className: 'user-form',
-                                  text: 'Дата рождения',
-                                  id: 'birthday'
-                                })(placeholder="ДД.ММ.ГГГГ" name="birthday")
-                            .user-form__item
-                                label.label Данные для входа в сервис
-                                +field(placeholder="Email" name="email")
-                                +field(placeholder="Пароль" type="password")
-                                +toggle('Получать спецпредложения', 'receive-offers')
-                            .user-form__item
-                                .user-form__btn-buy
-                                    +btn({text: 'Перейти к оплате', theme: 'arrow'})
-                            .user-form__sign-in
-                                p.user-form__question Уже есть аккаунт на Toxin
-                                +btn({text: 'Войти', size: 'xl', href: "/../sign-in/sign-in.pug"})
+                    +sign-up()
             .container
                 .cards__item
                     div(id="ui-kit__preview-calendar")

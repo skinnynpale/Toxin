@@ -16,15 +16,16 @@ mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount,
     .check-form__item#checkFormCalendar
       .check-form__group-field
         .check-form__field
-          +field({ theme: 'with-dropdown', text: 'Прибытие', id: 'check-form__from' })(value="ДД.ММ.ГГГГ")
+          +field({ theme: 'with-dropdown', text: 'Прибытие', id: 'check-form__from', value: "ДД.ММ.ГГГГ" })
         .check-form__field
-          +field({ theme: 'with-dropdown', text: 'Выезд', id: 'check-form__to' })(value="ДД.ММ.ГГГГ")
+          +field({ theme: 'with-dropdown', text: 'Выезд', id: 'check-form__to', value: "ДД.ММ.ГГГГ" })
     .check-form__item
       +field({
         theme: 'with-dropdown',
         text: 'Гости',
-        id: 'guests'
-      })(value="Сколько гостей" readonly)
+        id: 'guests',
+        value: "Сколько гостей"
+      })
     .check-form__item
       .check-form__conclusion
         span.check-form__text #{payPerDay}₽ х #{days} суток

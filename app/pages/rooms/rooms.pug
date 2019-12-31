@@ -12,13 +12,14 @@ block content
       .rooms-filter
         .rooms-filter__item
           .t-field.rooms-filter__field
-            +field({theme: 'with-dropdown', text: 'Даты пребывания в отеле', id: 'dateFilter'})(value="Выберите дату" readonly)
+            +field({theme: 'with-dropdown', text: 'Даты пребывания в отеле', id: 'dateFilter', value: "Выберите дату"})
           .t-field.rooms-filter__field
             +field({
               theme: 'with-dropdown',
               text: 'Гости',
-              id: 'guests'
-            })(value="Сколько гостей" readonly)
+              id: 'guests',
+              value: "Сколько гостей"
+            })
         .rooms-filter__item
           label.rooms-filter__label Диапазон цены
           span.rooms-filter__values#rangeSliderRoomValue
@@ -41,8 +42,9 @@ block content
           +field({
             theme: 'with-dropdown',
             text: 'Удобства номера',
-            id: 'comfortFilter'
-          })(value="Выберите удобства" readonly)
+            id: 'comfortFilter',
+            value: "Выберите удобства"
+          })
         .rooms-filter__item
           +expandable-list('moreComfortFilter' ,'Дополнительные удобства',
             [
