@@ -114,43 +114,44 @@
                           text: 'Dropdown',
                           id: 'comfortFilter'
                         })(value="2 спальни, 2 кровати...")
-                    h3.label.checkbox__title_expandable#moreComfortFilter Дополнительные удобства
-                    .checkbox_expandable#moreComfortFilterWrapper
-                        +checkbox({
+                    +expandable-list('moreComfortFilter' ,'Дополнительные удобства',
+                      [
+                        {
                           text: 'Завтрак',
                           id: 'breakfast'
-                        })
-                        +checkbox({
+                        },
+                        {
                           text: 'Письменный стол',
                           id: 'desk',
                           check: true
-                        })
-                        +checkbox({
+                        },
+                        {
                           text: 'Стул для кормления',
                           id: 'feedingChair',
                           check: true
-                        })
-                        +checkbox({
+                        },
+                        {
                           text: 'Кроватка',
                           id: 'crib',
                           check: true
-                        })
-                        +checkbox({
+                        },
+                        {
                           text: 'Телевизор',
                           id: 'tv'
-                        })
-                        +checkbox({
+                        },
+                        {
                           text: 'Шампунь',
                           id: 'shampoo'
-                        })
-                        +checkbox({
+                        },
+                        {
                           text: 'Интернет',
                           id: 'internet'
-                        })
-                        +checkbox({
+                        },
+                        {
                           text: 'Связь с космосом',
                           id: 'spaceConnection'
-                        })
+                        }
+                      ])
 
                 .fields
                     .main__item

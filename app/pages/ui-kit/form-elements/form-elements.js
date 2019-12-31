@@ -1,17 +1,8 @@
 import 'ion-rangeslider';
 import 'ion-rangeslider/css/ion.rangeSlider.css';
 
-import ExpandableList from '../../../components/expandable-list/expandable-list';
 import Dropdown from '../../../components/dropdown/dropdown';
 import Calendar from '../../../components/calendar/calendar';
-
-// Развернутый список с чекбоксами
-const moreComfortFilterList = new ExpandableList({
-  mainAnchor: 'moreComfortFilter',
-  wrapperAnchor: 'moreComfortFilterWrapper',
-  mainClassActive: 'checkbox__title_expandable-active',
-  wrapperClassActive: 'checkbox_expandable-active',
-});
 
 // DropDown
 const guestsDropDown = new Dropdown({

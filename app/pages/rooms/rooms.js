@@ -3,7 +3,6 @@ import 'ion-rangeslider/css/ion.rangeSlider.css';
 
 import Dropdown from '../../components/dropdown/dropdown';
 import Calendar from '../../components/calendar/calendar';
-import ExpandableList from '../../components/expandable-list/expandable-list';
 
 // rangeslider
 const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue');
@@ -27,14 +26,6 @@ $('.js-range-slider').ionRangeSlider({
 const dateFilterCalendar = new Calendar('#dateFilter', {
   dateFormat: 'dd M',
   multipleDatesSeparator: ' - ',
-});
-
-// ExpandableList
-const moreComfortFilterList = new ExpandableList({
-  mainAnchor: 'moreComfortFilter',
-  wrapperAnchor: 'moreComfortFilterWrapper',
-  mainClassActive: 'checkbox__title_expandable-active',
-  wrapperClassActive: 'checkbox_expandable-active',
 });
 
 // Dropdown

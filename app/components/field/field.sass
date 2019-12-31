@@ -22,12 +22,6 @@
 
   &__label
     @include label
-    font-family: $default-font
-    font-size: 0.8571rem
-    line-height: 1.0714rem
-    text-transform: uppercase
-    font-weight: bold
-    color: $accent
 
   &__wrapper
     position: relative
@@ -47,22 +41,22 @@
     .field__input
       cursor: pointer
 
-      .field__label
-        position: relative
+    .field__label
+      position: relative
 
-        &::after
-          content: ""
-          display: inline-block
-          position: absolute
-          top: 2.7857rem
-          right: 1.2857rem
-          width: 0.6429rem
-          height: 0.6429rem
-          border: 0.1429rem solid $accent50
-          border-top: 0
-          border-left: 0
-          transform: translateY(-50%) rotate(45deg)
-          cursor: pointer
+      &::after
+        content: ""
+        display: inline-block
+        position: absolute
+        top: 2.7857rem
+        right: 1.2857rem
+        width: 0.6429rem
+        height: 0.6429rem
+        border: 0.1429rem solid $accent50
+        border-top: 0
+        border-left: 0
+        transform: translateY(-50%) rotate(45deg)
+        cursor: pointer
 
     &_type_masked
       .field__input
@@ -73,11 +67,3 @@
 
         &:disabled
           background: #fff
-
-  &__dropdown-wrapper
-    .field__input
-      position: relative
-
-
-
-

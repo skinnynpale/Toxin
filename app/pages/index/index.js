@@ -1,5 +1,5 @@
 import Dropdown from '../../components/dropdown/dropdown';
-import Calendar from '../../components/calendar/calendar';
+import findRoomCalendar from '../../components/find-room/find-room';
 
 const guestsDropDown = new Dropdown({
   anchor: document.getElementById('guests'),
@@ -20,12 +20,4 @@ const guestsDropDown = new Dropdown({
     },
   ],
   helpButtons: true,
-});
-
-const findRoomCalendar = new Calendar('#findRoomCalendar', {
-  multipleDatesSeparator: '-',
-  onSelect(formattedDate) {
-    $('#find-room__from').val(formattedDate.split('-')[0]);
-    $('#find-room__to').val(formattedDate.split('-')[1]);
-  },
 });
