@@ -63,8 +63,9 @@
                           text: 'Мужчина',
                           id: 'man',
                           name: 'sex',
-                          value: 'man'
-                        })(checked)
+                          value: 'man',
+                          checked: true
+                        })
                         +radio({
                           text: 'Женщина',
                           id: 'woman',
@@ -74,7 +75,7 @@
                 .buttons__toggle
                     h3.label Toggle
                     .toggle__example
-                        +toggle('Получать спецпредложения', 'offer')(checked)
+                        +toggle('Получать спецпредложения', 'offer', true)
                     .toggle__example
                         +toggle('Получать спецпредложения', 'offer2')
                 .buttons__like

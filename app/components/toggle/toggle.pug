@@ -1,4 +1,4 @@
-mixin toggle(text, id)
+mixin toggle(text, id, checked = false)
   span.toggle
-    input.toggle__checkbox(id=id type='checkbox')&attributes(attributes)
+    input.toggle__checkbox(id=id type='checkbox' checked=checked)
     label.toggle__label(for=id class=classes)= text
