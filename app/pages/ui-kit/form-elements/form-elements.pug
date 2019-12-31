@@ -87,7 +87,7 @@
             .buttons2
                 .rooms-filter__item.range-slider
                     h3.label Диапазон цены
-                    span.rooms-filter__values#rangeSliderRoomValue
+                    span.rooms-filter__values
                     .range-slider__app
                         input(type="text" class="js-range-slider" name="my_range" value="")
                         p.range-slider__info Стоимость за сутки пребывания в номере
@@ -103,7 +103,7 @@
                         +btn('Перейти к оплате', 'arrow')
                 .buttons__pagination
                     h3.label pagination
-                    include ../../../components/pagination/pagination
+                    +pagination({ current: 1, totalPages: 15, totalVars: 100 })
 
         .form-elements_expandable
             .container

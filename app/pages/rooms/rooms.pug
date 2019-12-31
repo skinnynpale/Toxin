@@ -7,8 +7,6 @@ block styles
   link(rel="stylesheet" href="rooms.sass")
 
 block content
-  +header('non-authorized')
-
   main.main
     .main__container
       .rooms-filter
@@ -58,7 +56,8 @@ block content
               { text: 'Связь с космосом', id: 'spaceConnection' }
             ])
       .rooms
-        h1.rooms__offer Номера, которые мы для вас подобрали <span class="js-show-filters">Показать фильтры</span>
+        h1.rooms__offer Номера, которые мы для вас подобрали
+          span.js-show-filters Показать фильтры
         .rooms__grid
             +rooms-item({
               img: "img/image-1.jpg",
@@ -157,10 +156,7 @@ block content
               reviews: 55
             })
         .rooms__pagination
-          include ../../components/pagination/pagination
-
-
-  +footer('full')
+          +pagination({ current: 1, totalPages: 15, totalVars: 100 })
 
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
   script(src="rooms.js")

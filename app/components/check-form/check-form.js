@@ -1,16 +1,17 @@
 import Calendar from '../calendar/calendar';
 import Dropdown from '../dropdown/dropdown';
 
-const findRoomCalendar = new Calendar('#findRoomCalendar', {
+const checkFormCalendar = new Calendar('#checkFormCalendar', {
   multipleDatesSeparator: '-',
   onSelect(formattedDate) {
-    $('#find-room__from').val(formattedDate.split('-')[0]);
-    $('#find-room__to').val(formattedDate.split('-')[1]);
+    $('#check-form__from').val(formattedDate.split('-')[0]);
+    $('#check-form__to').val(formattedDate.split('-')[1]);
   },
 });
 
+const guests = document.getElementById('guests');
 const guestsDropDown = new Dropdown({
-  anchor: document.getElementById('guests'),
+  anchor: guests,
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,
   anchorDeclensions: ['гость', 'гостя', 'гостей'],
@@ -30,4 +31,4 @@ const guestsDropDown = new Dropdown({
   helpButtons: true,
 });
 
-export { guestsDropDown, findRoomCalendar };
+export { checkFormCalendar, guestsDropDown };
