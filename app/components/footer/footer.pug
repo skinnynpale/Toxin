@@ -1,6 +1,6 @@
 include ../field/field
 
-mixin footer(theme)
+mixin footer(theme, navigations = [])
   if theme === 'poor'
     footer.footer.footer_theme_poor
       .footer__main
@@ -20,23 +20,11 @@ mixin footer(theme)
             a.footer__logo(href="/index.pug"): img(src="../../logo.svg", alt="Toxin")
             p.footer__info Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
           nav.footer__nav
-            ul.footer__item
-              h3.footer__title Навигация
-              li.footer__list-item: a.footer__list-link(href="#") О нас
-              li.footer__list-item: a.footer__list-link(href="#") Новости
-              li.footer__list-item: a.footer__list-link(href="#") Служба поддержки
-              li.footer__list-item: a.footer__list-link(href="#") Услуги
-            ul.footer__item
-              h3.footer__title О нас
-              li.footer__list-item: a.footer__list-link(href="#") О сервисе
-              li.footer__list-item: a.footer__list-link(href="#") Наша команда
-              li.footer__list-item: a.footer__list-link(href="#") Вакансии
-              li.footer__list-item: a.footer__list-link(href="#") Инвесторы
-            ul.footer__item
-              h3.footer__title Служба поддержки
-              li.footer__list-item: a.footer__list-link(href="#") Соглашения
-              li.footer__list-item: a.footer__list-link(href="#") Сообщества
-              li.footer__list-item: a.footer__list-link(href="#") Связь с нами
+            each nav in navigations
+              ul.footer__item
+                h3.footer__title= nav.title
+                each item in nav.items
+                  li.footer__list-item: a.footer__list-link(href=`${item.href}`)= item.title
           form.footer__newsletter
             h3.footer__title Подписка
             p.footer__info Получайте специальные предложения и новости сервиса
