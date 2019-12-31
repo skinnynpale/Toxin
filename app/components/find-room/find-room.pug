@@ -1,22 +1,28 @@
-.find-room
-  h1.find-room__title Найдём номера под ваши пожелания
-  form.find-room__form
-    .find-room__item#findRoomCalendar
-      .find-room__group-field
-        .find-room__field
+mixin find-room(title)
+  .find-room
+    h1.find-room__title= title
+    form.find-room__form
+      .find-room__item#findRoomCalendar
+        .find-room__group-field
+          .find-room__field
+            +field({
+              theme: 'with-dropdown',
+              text: 'Прибытие',
+              id: 'find-room__from'
+            })(value="ДД.ММ.ГГГГ")
+          .find-room__field
+            +field({
+              theme: 'with-dropdown',
+              text: 'Выезд',
+              id: 'find-room__to'
+            })(value="ДД.ММ.ГГГГ")
+      .find-room__item
+        .find-room__guests
           +field({
             theme: 'with-dropdown',
-            text: 'Прибытие',
-            id: 'find-room__from'
-          })(value="ДД.ММ.ГГГГ")
-        .find-room__field
-          +field({
-            theme: 'with-dropdown',
-            text: 'Выезд',
-            id: 'find-room__to'
-          })(value="ДД.ММ.ГГГГ")
-    .find-room__item
-      .find-room__guests
-        +field({ theme: 'with-dropdown', text: 'Гости', id: 'guests'})(value="Сколько гостей" readonly)
-    .find-room__btn
-      +btn('Подобрать номер', 'arrow')(href="/../rooms/rooms.pug")
+            text: 'Гости',
+            id: 'guests'
+          })(value="Сколько гостей" readonly)
+      .find-room__btn
+        +btn('Подобрать номер', 'arrow')(href="/../rooms/rooms.pug")
+
