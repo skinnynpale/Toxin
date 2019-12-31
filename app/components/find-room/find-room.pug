@@ -27,5 +27,5 @@ mixin find-room(title)
             id: 'guests'
           })(value="Сколько гостей" readonly)
       .find-room__btn
-        +btn('Подобрать номер', 'arrow')(href="/../rooms/rooms.pug")
+        +btn({text: 'Подобрать номер', theme: 'arrow', href: "/../rooms/rooms.pug"})
 

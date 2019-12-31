@@ -96,13 +96,13 @@
                 .buttons__buttons
                     h3.label buttons
                     .buttons__gradient
-                        +btn('Click Me', 'gradient')
+                        +btn({text: 'Click Me', theme: 'gradient'})
                     .buttons__not-gradient
-                        +btn('Click Me')
+                        +btn({text: 'Click Me'})
                     .buttons__links
-                        +btn('Click me', 'link')
+                        +btn({text: 'Click Me', theme: 'link'})
                     .buttons__arrow
-                        +btn('Перейти к оплате', 'arrow')
+                        +btn({text: 'Перейти к оплате', theme: 'arrow'})
                 .buttons__pagination
                     h3.label pagination
                     +pagination({ current: 1, totalPages: 15, totalVars: 100 })

@@ -32,8 +32,8 @@ block content
             +toggle('Получать спецпредложения', 'receive-offers')
           .user-form__item
             .user-form__btn-buy
-              +btn('Перейти к оплате', 'arrow')(href="#!")
+              +btn({text: 'Перейти к оплате', theme: 'arrow'})
           .user-form__sign-in
             p.user-form__question Уже есть аккаунт на Toxin
-            +btn('Войти', '', 'xl')(href="/../sign-in/sign-in.pug")
+            +btn({text: 'Войти', size: 'xl', href: "/../sign-in/sign-in.pug"})
 

@@ -14,7 +14,7 @@ mixin rooms-item({ img, num, lux, price, stars, reviews, photos })
           span.rooms-item__num-ico №
           h2.rooms-item__num= num
         if (lux === true)
-          +btn('Люкс', 'link')
+          +btn({text: 'Люкс', theme: 'link'})
         p.rooms-item__price
           b.rooms-item__price-text= price + "₽"
           |  в сутки
