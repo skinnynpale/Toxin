@@ -1,11 +1,13 @@
 .fields
   margin-bottom: 7.1429rem
   width: 22.8571rem
+
   > div
     margin-bottom: 1.4286rem
 
 .t-field
   position: relative
+
   &::after
     content: ''
     display: inline-block
@@ -15,78 +17,76 @@
     text-transform: uppercase
     font-size: 0.8571rem
     line-height: 1.0714rem
+
   &:nth-child(1)::after
     content: 'Default'
+
   &:nth-child(2)::after
     content: 'Hover / Focus'
+
   &:nth-child(3)::after
     content: 'Default'
+
   &:nth-child(4)::after
     content: 'Default'
+
   &:nth-child(6)
     width: 19rem
     margin: 2.8571rem 0
+
   &:nth-child(7)
     width: 19rem
     margin: 2.8571rem 0
 
-.t-field__group-field
-  margin-top: 1.4286rem
+  &__group-field
+    @include group-field
+    margin-top: 1.4286rem
+
+  &__field
+    width: 10.7143rem
 
 .field-arrow::after
   top: 2.3571rem
 
-.t-field
-  label
-    font-family: $default-font
-    font-size: 0.8571rem
-    line-height: 1.0714rem
-    text-transform: uppercase
-    font-weight: bold
-    color: $accent
-
-//
-
 .buttons
   > div
     margin-bottom: 2.8571rem
+
     > h3
+
       margin-bottom: 1.1786rem
 
 .toggle__example
   margin-bottom: 1rem
+
   &:last-child
     margin-bottom: 0
 
-//
-
 .like__group
+
   button
     margin-right: 0.7143rem
-
-//
 
 .rate__group
   display: inline-block
   margin-right: 1.4286rem
 
-//
-
 .buttons__buttons
   > div
     margin-bottom: 2.1429rem
+
     > a
       margin-right: 1.4286rem
 
 .buttons2
   > div
     margin-top: 2.8571rem
+
     &:first-child
       margin-top: 0
+
     > h3
       margin-bottom: 1.1429rem
-
-//
 
 .form-elements_expandable
   .fields

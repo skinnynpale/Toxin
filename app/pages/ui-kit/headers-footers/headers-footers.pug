@@ -45,7 +45,68 @@
                 ])
         .footer-rich
             .section__item
-                include ../../../components/footer/footer
+                +footer('full', [
+                  {
+                    title: 'Навигация',
+                    items: [
+                      {
+                        title: 'О нас',
+                        href: '#!'
+                      },
+                      {
+                        title: 'Новости',
+                        href: '#!'
+                      },
+                      {
+                        title: 'Служба поддержки',
+                        href: '#!'
+                      },
+                      {
+                        title: 'Услуги',
+                        href: '#!'
+                      },
+                    ]
+                  },
+                  {
+                    title: 'О нас',
+                    items: [
+                      {
+                        title: 'О сервисе',
+                        href: '#!'
+                      },
+                      {
+                        title: 'Наша команда',
+                        href: '#!'
+                      },
+                      {
+                        title: 'Вакансии',
+                        href: '#!'
+                      },
+                      {
+                        title: 'Инвесторы',
+                        href: '#!'
+                      },
+                    ]
+                  },
+                  {
+                    title: 'Служба поддержки',
+                    items: [
+                      {
+                        title: 'Соглашения',
+                        href: '#!'
+                      },
+                      {
+                        title: 'Сообщества',
+                        href: '#!'
+                      },
+                      {
+                        title: 'Связь с нами',
+                        href: '#!'
+                      },
+                    ]
+                  },
+                ])
         .footer-poor
             .section__item
+                +footer('poor')
 

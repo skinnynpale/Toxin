@@ -3,6 +3,7 @@ import 'ion-rangeslider/css/ion.rangeSlider.css';
 
 import Dropdown from '../../../components/dropdown/dropdown';
 import Calendar from '../../../components/calendar/calendar';
+import rangeSlider from '../../../components/range-slider/range-slider';
 
 // DropDown
 const guestsDropDown = new Dropdown({
@@ -36,20 +37,20 @@ const arrivalCalendar = new Calendar('#formElementsCalendar', {
 });
 arrivalCalendar.calendar.css({ top: `${80}px` });
 
+// Calendar
+const dateFilterCalendar = new Calendar('#filterDate', {
+  dateFormat: 'dd M',
+  multipleDatesSeparator: ' - ',
+});
+dateFilterCalendar.calendar.css({ left: `${290}px`, width: '318px' });
+
 // rangeslider
-const rangeSliderRoomValue = document.getElementById('rangeSliderRoomValue');
-$('.js-range-slider').ionRangeSlider({
+const rangePrices = rangeSlider('.rooms-filter__values', {
   type: 'double',
   min: 0,
   max: 15000,
   from: 5000,
   to: 10000,
-  onStart(data) {
-    rangeSliderRoomValue.innerHTML = `${data.from}₽ - ${data.to}₽`;
-  },
-  onChange(data) {
-    rangeSliderRoomValue.innerHTML = `${data.from}₽ - ${data.to}₽`;
-  },
   hide_min_max: true,
   hide_from_to: true,
 });
@@ -78,10 +79,3 @@ const comfortFilterDropDown = new Dropdown({
   ],
   helpButtons: false,
 });
-
-// Calendar
-const dateFilterCalendar = new Calendar('#filterDateCalendar', {
-  dateFormat: 'dd M',
-  multipleDatesSeparator: ' - ',
-});
-dateFilterCalendar.calendar.css({ left: `${290}px`, width: '318px' });

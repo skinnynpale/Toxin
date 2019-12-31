@@ -18,19 +18,21 @@
                 .t-field
                     +field({theme: 'masked', text: 'Masked text field', id:'t-field_dropdown'})(placeholder="ДД.ММ.ГГГГ")
                 .t-field#formElementsCalendar
-                    +field({
-                      className: 't-field',
-                      value: {
-                        first: 'date Dropdown',
-                        second: 'date Dropdown'
-                      },
-                      id: {
-                        first: 'arrival',
-                        second: 'checkOut'
-                      }
-                    })(placeholder="ДД.ММ.ГГГГ")
-                .t-field#filterDateCalendar
-                    +field({theme: 'with-dropdown', text: 'filter date dropdown', id: 'filterDate'})(value="19 авг - 23 авг")
+                    .t-field__group-field
+                        .t-field__field
+                            +field({
+                              theme: 'with-dropdown',
+                              text: 'date Dropdown',
+                              id: 'arrival'
+                            })(value="ДД.ММ.ГГГГ")
+                        .t-field__field
+                            +field({
+                              theme: 'with-dropdown',
+                              text: 'date Dropdown',
+                              id: 'checkOut'
+                            })(value="ДД.ММ.ГГГГ")
+                .t-field
+                    +field({theme: 'with-dropdown', text: 'filter date dropdown', id: 'filterDate'})(value="Выберите дату")
                 .t-field
                     label.label(for='subscr') Subscription  text field
                     +field({theme: 'with-arrow', text: 'subscription text field', id: 'subscr'})(type="email" placeholder="Email")

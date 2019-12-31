@@ -6,7 +6,4 @@ mixin expandable-list(id, title, checkboxes)
         label.expandable-list__title(for=`${id}-check`)= title
         .expandable-list__checkboxes
             each checkbox in checkboxes
-                +checkbox({
-                  text: checkbox.text,
-                  id: checkbox.id
-                })
+                +checkbox(checkbox)
