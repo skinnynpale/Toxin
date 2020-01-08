@@ -82,7 +82,7 @@ class Dropdown {
   }
 
   createWrapper() {
-    const wrapperHTML = '<div class="js-dropdown__content"></div>';
+    const wrapperHTML = '<div class="dropdown__content js-dropdown__content"></div>';
     this.anchor.parentElement.insertAdjacentHTML('beforeend', wrapperHTML);
     this.wrapperHTML = this.anchor.parentElement.querySelector('.js-dropdown__content');
   }

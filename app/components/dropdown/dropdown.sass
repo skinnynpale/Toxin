@@ -1,21 +1,5 @@
 @import '../../sass/vars'
 
-.js-dropdown__content
-  width: 100%
-  border: 0.0714rem solid $accent50
-  box-shadow: 0 0.7143rem 1.4286rem $accent5
-  border-top: none
-  border-radius: 0.2857rem
-  padding: 0.5rem 0.5rem 0.9286rem 1.0714rem
-  position: absolute
-  background-color: #fff
-  z-index: 2
-  opacity: 0
-  max-height: 0
-  overflow: hidden
-  left: -7142.8571rem
-  transition: opacity .3s, max-height .3s
-
 .dropdown
   &__item
     text-transform: uppercase
@@ -31,6 +15,23 @@
 
     &:first-child
       margin-top: 0.3571rem
+
+
+  &__content
+    width: 100%
+    border: 0.0714rem solid $accent50
+    box-shadow: 0 0.7143rem 1.4286rem $accent5
+    border-top: none
+    border-radius: 0.2857rem
+    padding: 0.5rem 0.5rem 0.9286rem 1.0714rem
+    position: absolute
+    background-color: #fff
+    z-index: 2
+    opacity: 0
+    max-height: 0
+    overflow: hidden
+    left: -7142.8571rem
+    transition: opacity .3s, max-height .3s
 
   &__btn
     position: absolute

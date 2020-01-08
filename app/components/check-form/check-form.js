@@ -9,9 +9,8 @@ const checkFormCalendar = new Calendar('#checkFormCalendar', {
   },
 });
 
-const guests = document.getElementById('guests');
 const guestsDropDown = new Dropdown({
-  anchor: guests,
+  anchor: document.getElementById('guests'),
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,
   anchorDeclensions: ['гость', 'гостя', 'гостей'],
