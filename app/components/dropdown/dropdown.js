@@ -204,7 +204,7 @@ class Dropdown {
       return item;
     });
     this.lastId = 0;
-    this.wrapperHTML.innerHTML = ``;
+    this.wrapperHTML.textContent = '';
 
     this.renderHTML();
   }

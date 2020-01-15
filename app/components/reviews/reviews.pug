@@ -1,0 +1,16 @@
+include ../like/like
+
+mixin reviews(items = [])
+  ul.reviews
+    each item in items
+      +review-item(item)
+
+mixin review-item({avatar, likes, liked, author, date, text})
+  li.reviews__item
+    .reviews__dynamics
+      img.reviews__profile-photo(src=avatar)
+      .reviews__likes: +like(likes, liked)
+    .reviews__comment
+      b.reviews__author= author
+      .reviews__date= date
+      .reviews__text= text

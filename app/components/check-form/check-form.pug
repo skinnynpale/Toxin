@@ -5,12 +5,12 @@ mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount,
   form.check-form
     .check-form__item
       .check-form__item-group
-        h2.check-form__number
+        h3.check-form__number
           span.check-form__number-ico №
           | #{number}
         if lux
           +btn({text: 'Люкс', theme: 'link'})
-        .check-form__price_default
+        .check-form__price-default
           b.check-form__price-text 9 990₽
           |  в сутки
     .check-form__item#checkFormCalendar
@@ -39,8 +39,8 @@ mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount,
     .check-form__item
       .check-form__final-price
         .check-form__item-group
-          h2.check-form__final-price-text Итого
+          .check-form__final-price-text Итого
           .check-form__price-line
-          h2.check-form__final-price-text #{(payPerDay * days) + serviceCharge + additionalServiceCharge - serviceChargeDiscount}₽
+          .check-form__final-price-text #{(payPerDay * days) + serviceCharge + additionalServiceCharge - serviceChargeDiscount}₽
     .check-form__item
       +btn({text: 'Забронировать', theme: 'arrow'})

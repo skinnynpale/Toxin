@@ -20,16 +20,16 @@ mixin donut({votes})
         g(class="donut__text")
           text(x="38px", y="60px") #{votes}
           text(x="29px", y="62px" transform="translate(0 19)") голосов
-    .donut__info
-      .donut__char
+    ul.donut__info
+      li.donut__char
         .donut__lap.donut__lap_orange
         .donut__lap-value Великолепно
-      .donut__char
+      li.donut__char
         .donut__lap.donut__lap_green
         .donut__lap-value Хорошо
-      .donut__char
+      li.donut__char
         .donut__lap.donut__lap_purple
         .donut__lap-value Удовлетворительно
-      .donut__char
+      li.donut__char
         .donut__lap.donut__lap_black
         .donut__lap-value Разочарован
