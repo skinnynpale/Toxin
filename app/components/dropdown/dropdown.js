@@ -46,7 +46,10 @@ class Dropdown {
   }
 
   correctInputValue() {
-    const showedItems = this.items.map(item => item.tempDeclension || '').join(' ');
+    const showedItems = this.items
+      .map(item => item.tempDeclension || '')
+      .join(' ')
+      .trim();
 
     if (this.amount === 0) {
       this.anchor.value = this.fallbackTitle;
