@@ -1,4 +1,4 @@
-mixin field({ theme, id, text, className, value, placeholder, name, type } = '')
+mixin field({ theme, text, className, value, placeholder, name, id = name, type, labelledby } = '')
   case theme
 
     when 'with-label'
@@ -23,4 +23,4 @@ mixin field({ theme, id, text, className, value, placeholder, name, type } = '')
 
     default
       .field
-        input(class="field__input" placeholder=placeholder name=name type=type)
+        input(class="field__input" placeholder=placeholder name=name type=type aria-labelledby=labelledby)

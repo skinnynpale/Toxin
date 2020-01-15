@@ -2,16 +2,18 @@ mixin sign-in()
     form.user-form
         .user-form__wrapper
             h1.user-form__title Войти
-            .user-form__item
+            .user-form__item#signInData
                 +field({
                   placeholder: 'Email',
                   name: 'email',
-                  type: 'email'
+                  type: 'email',
+                  labelledby: 'signInData'
                 })
                 +field({
                   placeholder: 'Пароль',
                   name: 'password',
-                  type: 'password'
+                  type: 'password',
+                  labelledby: 'signInData'
                 })
             .user-form__item
                 .user-form__btn

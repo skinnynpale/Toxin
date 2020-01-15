@@ -2,14 +2,16 @@ mixin sign-up()
     form.user-form
         .user-form__wrapper
             h1.user-form__title Регистрация аккаунта
-            .user-form__item
+            .user-form__item#personData
                 +field({
                   placeholder: 'Имя',
-                  name: 'name'
+                  name: 'name',
+                  labelledby: 'personData'
                 })
                 +field({
                   placeholder: 'Фамилия',
-                  name: 'surname'
+                  name: 'surname',
+                  labelledby: 'personData'
                 })
                 +radio({
                   text: 'Мужчина',
@@ -34,17 +36,19 @@ mixin sign-up()
                       name: "birthday",
                       type: 'date'
                     })
-            .user-form__item
+            .user-form__item#signUpData
                 label.user-form__label Данные для входа в сервис
                 +field({
                   placeholder: 'Email',
                   name: 'email',
-                  type: 'email'
+                  type: 'email',
+                  labelledby: 'signUpData'
                 })
                 +field({
                   placeholder: 'Пароль',
                   name: 'password',
-                  type: 'password'
+                  type: 'password',
+                  labelledby: 'signUpData'
                 })
                 +toggle('Получать спецпредложения', 'receive-offers')
             .user-form__item
