@@ -1,0 +1,48 @@
+@import "../checkbox/checkbox"
+
+.checkbox-list
+  $root: &
+
+  &__checkboxes
+    padding: 0
+
+  &--expandable
+    #{$root}__check
+      display: none
+
+      &:checked
+        ~ #{$root}__checkboxes
+          max-height: 71.4286rem
+          left: auto
+          opacity: 1
+
+        ~ #{$root}__title
+          &::after
+            transform: translateY(0%) rotate(-135deg)
+
+    #{$root}__checkboxes
+      opacity: 0
+      max-height: 0
+      overflow: hidden
+      left: 7142.8571rem
+      transition: opacity .3s, max-height .3s
+
+    #{$root}__title
+      @include label
+      position: relative
+      padding-bottom: 1.2857rem
+      cursor: pointer
+
+      &::after
+        content: ""
+        display: inline-block
+        position: absolute
+        right: 1.2143rem
+        top: 0.4286rem
+        width: 0.6429rem
+        height: 0.6429rem
+        border: 0.1429rem solid $accent50
+        border-top: 0
+        border-left: 0
+        transform: translateY(-50%) rotate(45deg)
+        transition: .3s

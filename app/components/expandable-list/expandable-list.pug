@@ -1,9 +1,0 @@
-include ../checkbox/checkbox
-
-mixin expandable-list(id, title, checkboxes)
-    .expandable-list
-        input.expandable-list__check(type="checkbox" id=`${id}-check`)
-        label.expandable-list__title(for=`${id}-check`)= title
-        .expandable-list__checkboxes
-            each checkbox in checkboxes
-                +checkbox(checkbox)

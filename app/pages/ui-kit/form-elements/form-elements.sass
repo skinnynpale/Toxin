@@ -1,42 +1,29 @@
-.fields
-  margin-bottom: 7.1429rem
-  width: 22.8571rem
+.form-elements
+  &__column
+    margin-bottom: 7.1429rem
+    width: 22.8571rem
 
-  > div
-    margin-bottom: 1.4286rem
+    &--type-buttons
+      .label
+        margin-bottom: 1.071rem
 
-.t-field
-  position: relative
+  &__item
+    position: relative
+    margin-bottom: 2.857rem
 
-  &::after
-    content: ''
-    display: inline-block
-    position: absolute
-    top: 0
-    right: 0
-    text-transform: uppercase
-    font-size: 0.8571rem
-    line-height: 1.0714rem
+  &__sub-item
+    position: relative
+    margin-bottom: 1.429rem
 
-  &:nth-child(1)::after
-    content: 'Default'
-
-  &:nth-child(2)::after
-    content: 'Hover / Focus'
-
-  &:nth-child(3)::after
-    content: 'Default'
-
-  &:nth-child(4)::after
-    content: 'Default'
-
-  &:nth-child(6)
-    width: 19rem
-    margin: 2.8571rem 0
-
-  &:nth-child(7)
-    width: 19rem
-    margin: 2.8571rem 0
+    &::after
+      content: attr(data-tip)
+      display: inline-block
+      position: absolute
+      top: 0
+      right: 0
+      text-transform: uppercase
+      font-size: 0.8571rem
+      line-height: 1.0714rem
 
   &__group-field
     @include group-field
@@ -45,17 +32,6 @@
   &__field
     width: 10.7143rem
 
-.field-arrow::after
-  top: 2.3571rem
-
-.buttons
-  > div
-    margin-bottom: 2.8571rem
-
-    > h3
-
-      margin-bottom: 1.1786rem
-
 .toggle__example
   margin-bottom: 1rem
 
@@ -63,7 +39,6 @@
     margin-bottom: 0
 
 .like__group
-
   button
     margin-right: 0.7143rem
 

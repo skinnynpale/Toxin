@@ -30,14 +30,33 @@ block content
         .rooms-filter__item
           label.rooms-filter__label Привелегии
           .rooms-filter__checkbox
-            +checkbox({text: 'Можно курить', id: 'smoke'})
-            +checkbox({text: 'Можно с питомцами', id: 'pets', check: true})
-            +checkbox({text: 'Можно пригласить гостей (до 10 человек)', id: 'guestsCheck', check: true})
+              +checkbox-list({
+                items: [
+                  {
+                    text: 'Можно курить',
+                    id: 'smoke'
+                  },
+                  {
+                    text: 'Можно с питомцами',
+                    id: 'pets',
+                    check: true
+                  },
+                  {
+                    text: 'Можно пригласить гостей (до 10 человек)',
+                    id: 'guestsCheck',
+                    check: true
+                  }
+                ]
+              })
         .rooms-filter__item
           label.rooms-filter__label Доступность
           .rooms-filter__checkbox
-            +checkbox({ theme: "rich", title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.', id: 'corridor'})
-            +checkbox({ theme: "rich", title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист  и проводит до номера.', id: 'helper'})
+            +checkbox-list({
+              items: [
+                { theme: "rich", title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.', id: 'corridor'},
+                { theme: "rich", title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист  и проводит до номера.', id: 'helper'}
+              ]
+            })
         .rooms-filter__item
           +field({
             theme: 'with-dropdown',
@@ -46,17 +65,49 @@ block content
             value: "Выберите удобства"
           })
         .rooms-filter__item
-          +expandable-list('moreComfortFilter' ,'Дополнительные удобства',
-            [
-              { text: 'Завтрак', id: 'breakfast' },
-              { text: 'Письменный стол', id: 'desk', check: true },
-              { text: 'Стул для кормления', id: 'feedingChair', check: true },
-              { text: 'Кроватка', id: 'crib', check: true },
-              { text: 'Телевизор', id: 'tv' },
-              { text: 'Шампунь', id: 'shampoo' },
-              { text: 'Интернет', id: 'internet' },
-              { text: 'Связь с космосом', id: 'spaceConnection' }
-            ])
+          +checkbox-list({
+            expandable: true,
+            id: 'moreComfortFilter',
+            title: 'Дополнительные удобства',
+            items:
+                    [
+                      {
+                        text: 'Завтрак',
+                        id: 'breakfast'
+                      },
+                      {
+                        text: 'Письменный стол',
+                        id: 'desk',
+                        check: true
+                      },
+                      {
+                        text: 'Стул для кормления',
+                        id: 'feedingChair',
+                        check: true
+                      },
+                      {
+                        text: 'Кроватка',
+                        id: 'crib',
+                        check: true
+                      },
+                      {
+                        text: 'Телевизор',
+                        id: 'tv'
+                      },
+                      {
+                        text: 'Шампунь',
+                        id: 'shampoo'
+                      },
+                      {
+                        text: 'Интернет',
+                        id: 'internet'
+                      },
+                      {
+                        text: 'Связь с космосом',
+                        id: 'spaceConnection'
+                      }
+                    ]
+          })
       .rooms
         h1.rooms__offer Номера, которые мы для вас подобрали
           span.js-show-filters Показать фильтры

@@ -4,12 +4,12 @@ mixin field({ theme, text, className, value, placeholder, name, id = name, type,
     when 'with-label'
       .field
         label(class="field__label" for=id)= text
-        input(class="field__input", id=id placeholder=placeholder name=name type=type)
+        input(class="field__input" id=id value=value autocomplete="off" placeholder=placeholder name=name type=type)
 
     when 'with-dropdown'
       .field.field_type_dropdown
         label(class="field__label" for=id)= text
-        input(class="field__input" id=id, value=value readonly autocomplete="off" placeholder=placeholder name=name type=type)
+        input(class="field__input" id=id value=value readonly autocomplete="off" placeholder=placeholder name=name type=type)
 
     when 'with-arrow'
       .field
