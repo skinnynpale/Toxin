@@ -45,7 +45,7 @@ const dateFilterCalendar = new Calendar('#filterDate', {
 dateFilterCalendar.calendar.css({ left: `${290}px`, width: '318px' });
 
 // rangeslider
-const rangePrices = rangeSlider('.rooms-filter__values', {
+const rangePrices = rangeSlider('.form-elements__slider-values', {
   type: 'double',
   min: 0,
   max: 15000,

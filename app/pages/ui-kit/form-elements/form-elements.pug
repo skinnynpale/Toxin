@@ -61,138 +61,142 @@
                 })
             .form-elements__item
                 h3.label Radio Buttons
-                .radio__example
-                    +radio({
-                      text: 'Мужчина',
-                      id: 'man',
-                      name: 'sex',
-                      value: 'man',
-                      checked: true
-                    })
-                    +radio({
-                      text: 'Женщина',
-                      id: 'woman',
-                      name: 'sex',
-                      value: 'woman'
-                    })
+                +radio({
+                  text: 'Мужчина',
+                  id: 'man',
+                  name: 'sex',
+                  value: 'man',
+                  checked: true
+                })
+                +radio({
+                  text: 'Женщина',
+                  id: 'woman',
+                  name: 'sex',
+                  value: 'woman'
+                })
             .form-elements__item
                 h3.label Toggle
-                .toggle__example
+                .form-elements__toggle
                     +toggle('Получать спецпредложения', 'offer', true)
-                .toggle__example
+                .form-elements__toggle
                     +toggle('Получать спецпредложения', 'offer2')
             .form-elements__item
                 h3.label Like Button
-                .like__group
+                .form-elements__like-group
                     +like(12)
                     +like(12, true)
             .form-elements__item
                 h3.label Rate Button
-                .rate__group
+                span.form-elements__rate
                     +rate(4, 5)
-                .rate__group
+                span.form-elements__rate
                     +rate(5, 5)
-        .buttons2
-            .rooms-filter__item.range-slider
-                h3.label Диапазон цены
-                span.rooms-filter__values
+        .form-elements__column.form-elements__column--type-buttons
+            .form-elements__item
+                h3.label Range Slider
+                span.form-elements__slider-values
                 .range-slider__app
                     input(type="text" class="js-range-slider" name="my_range" value="")
-                    p.range-slider__info Стоимость за сутки пребывания в номере
-            .buttons__buttons
+            .form-elements__item
                 h3.label buttons
-                .buttons__gradient
+                .form-elements__sub-item
                     +btn({text: 'Click Me', theme: 'gradient'})
-                .buttons__not-gradient
+                .form-elements__sub-item
                     +btn({text: 'Click Me'})
-                .buttons__links
-                    +btn({text: 'Click Me', theme: 'link'})
-                .buttons__arrow
-                    +btn({text: 'Перейти к оплате', theme: 'arrow'})
-            .buttons__pagination
+                .form-elements__sub-item
+                    +btn({
+                      text: 'Click Me',
+                      theme: 'link'
+                    })
+                .form-elements__sub-item
+                    +btn({
+                      text: 'Перейти к оплате',
+                      theme: 'arrow'
+                    })
+            .form-elements__item
                 h3.label pagination
                 +pagination({ current: 1, totalPages: 15, totalVars: 100 })
-
-    .form-elements_expandable
-        .container
-            .fields
-                .t-field
+    .container
+        .form-elements__column
+            .form-elements__item
+                .form-elements__sub-item(data-tip='Default')
                     +field({
                       theme: 'with-dropdown',
                       text: 'Dropdown',
-                      id: 'comfortFilter',
+                      id: 'formElementsDropdownDefault',
                       value: "2 спальни, 2 кровати..."
                     })
-                +checkbox-list({
-                  expandable: true,
-                  id: 'moreComfortFilter',
-                  title: 'Дополнительные удобства',
-                  items:
-                    [
-                      {
-                        text: 'Завтрак',
-                        id: 'breakfast'
-                      },
-                      {
-                        text: 'Письменный стол',
-                        id: 'desk',
-                        check: true
-                      },
-                      {
-                        text: 'Стул для кормления',
-                        id: 'feedingChair',
-                        check: true
-                      },
-                      {
-                        text: 'Кроватка',
-                        id: 'crib',
-                        check: true
-                      },
-                      {
-                        text: 'Телевизор',
-                        id: 'tv'
-                      },
-                      {
-                        text: 'Шампунь',
-                        id: 'shampoo'
-                      },
-                      {
-                        text: 'Интернет',
-                        id: 'internet'
-                      },
-                      {
-                        text: 'Связь с космосом',
-                        id: 'spaceConnection'
-                      }
-                    ]
-                })
-
-            .fields
-                .main__item
-                    label.label rich Checkbox Buttons
-                    +checkbox-list({
-                      items: [
-                        {
-                          theme: "rich",
-                          title: 'Широкий коридор',
-                          text: 'Ширина коридоров в номере не менее 91 см.',
-                          id: 'corridor'
-                        },
-                        {
-                          theme: "rich",
-                          title: 'Помощник для инвалидов',
-                          text: 'На 1 этаже вас встретит специалист  и проводит до номера.',
-                          id: 'helper'
-                        }
-                      ]
+                .form-elements__sub-item(data-tip='Expanded')
+                    +field({
+                      theme: 'with-dropdown',
+                      text: 'Dropdown',
+                      id: 'formElementsDropdownExpanded',
+                      value: "2 спальни, 2 кровати..."
                     })
-            .fields
-                .main__item
-                    label.label bullet list
-                    +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
-
-    .container
-        .main__item
+        .form-elements__column
+            .form-elements__item
+                .form-elements__sub-item
+                    +field({
+                      theme: 'with-dropdown',
+                      text: 'Dropdown',
+                      id: 'formElementsDropdownDefault',
+                      value: "2 спальни, 2 кровати..."
+                    })
+        .form-elements__column
+            .form-elements__item
+                .form-elements__sub-item
+                    +field({
+                      theme: 'with-dropdown',
+                      text: 'Dropdown',
+                      id: 'formElementsDropdownDefault',
+                      value: "2 спальни, 2 кровати..."
+                    })
+    .form-elements__column
+        .form-elements__item
+            +checkbox-list({
+              expandable: true,
+              id: 'moreComfortFilter',
+              title: 'Дополнительные удобства',
+              items:
+                [
+                  {
+                    text: 'Завтрак',
+                    id: 'breakfast'
+                  },
+                  {
+                    text: 'Письменный стол',
+                    id: 'desk',
+                    check: true
+                  },
+                  {
+                    text: 'Стул для кормления',
+                    id: 'feedingChair',
+                    check: true
+                  },
+                  {
+                    text: 'Кроватка',
+                    id: 'crib',
+                    check: true
+                  },
+                  {
+                    text: 'Телевизор',
+                    id: 'tv'
+                  },
+                  {
+                    text: 'Шампунь',
+                    id: 'shampoo'
+                  },
+                  {
+                    text: 'Интернет',
+                    id: 'internet'
+                  },
+                  {
+                    text: 'Связь с космосом',
+                    id: 'spaceConnection'
+                  }
+                ]
+            })
+        .form-elements__item
             ul.advantages
                 +advantage({
                   ico: "insert_emoticon",
@@ -209,16 +213,38 @@
                   title: "Уют",
                   text: "Номер оснащен камином"
                 })
+        .form-elements__item
+            label.label rich Checkbox Buttons
+            +checkbox-list({
+              items: [
+                {
+                  theme: "rich",
+                  title: 'Широкий коридор',
+                  text: 'Ширина коридоров в номере не менее 91 см.',
+                  id: 'corridor'
+                },
+                {
+                  theme: "rich",
+                  title: 'Помощник для инвалидов',
+                  text: 'На 1 этаже вас встретит специалист  и проводит до номера.',
+                  id: 'helper'
+                }
+              ]
+            })
+        .fields
+            .main__item
+                label.label bullet list
+                +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
 
-        .main__item
-            .reviews__item
-                +reviews([{
-                  avatar: "../page-room/img/author-1.jpg",
-                  likes: 12,
-                  liked: true,
-                  author: 'Мурад Сарафанов',
-                  date: '5 дней назад',
-                  text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
-                }])
+    .main__item
+        .reviews__item
+            +reviews([{
+              avatar: "../page-room/img/author-1.jpg",
+              likes: 12,
+              liked: true,
+              author: 'Мурад Сарафанов',
+              date: '5 дней назад',
+              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+            }])
 
 
