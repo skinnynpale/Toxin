@@ -1,0 +1,35 @@
+@import "../field/field.sass"
+@import "../radio/radio.sass"
+@import "../toggle/toggle.sass"
+
+.sign-in
+  z-index: 0
+  background-color: #fff
+  border: 0.0714rem solid rgba(0, 0, 0, 0.12)
+  box-shadow: 0 0 1.7857rem rgba(0, 0, 0, 0.2)
+  border-radius: 0.2857rem
+  padding: 2.8571rem 2.1429rem 2.1429rem 2.1429rem
+
+  &__wrapper
+    max-width: 22.8571rem
+
+  &__title
+    @include h1
+    margin-bottom: 1.4286rem
+
+  &__item
+    margin-bottom: 1.2857rem
+
+  &__item > .field, .label:not(.label)
+    margin-bottom: 0.7143rem
+    min-width: 22.857rem
+
+    &:last-child
+      margin-bottom: 0
+
+  &__question
+    margin-top: 2.1429rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+

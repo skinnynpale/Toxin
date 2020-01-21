@@ -1,46 +1,45 @@
-.ui-kit__section
-    .cards
-        img.ui-kit__logo(src="img/logo_min.svg", alt="logo")
-        .cards-grid
-            .container
-                .cards__item
-                    +find-room('Найдём номера под ваши пожелания')
-                .cards__item
-                    +sign-in()
-            .container
-                .cards__item
-                    +check-form({
-                      number: 888,
+.cards
+    img.ui-kit__logo(src="img/logo_min.svg", alt="logo")
+    .cards__grid
+        .container
+            .cards__item
+                +find-room('Найдём номера под ваши пожелания')
+            .cards__item
+                +sign-in()
+        .container
+            .cards__item
+                +check-form({
+                  number: 888,
+                  lux: true,
+                  payPerDay: 9990,
+                  days: 4,
+                  serviceCharge: 0,
+                  serviceChargeDiscount: 2179,
+                  additionalServiceCharge: 300
+                })
+            .cards__item
+                +sign-up()
+        .container
+            .cards__item
+                div(id="ui-kit__preview-calendar")
+            .cards__item
+                .rooms__item
+                    +rooms-item({
+                      img: "../rooms/img/image-1.jpg",
+                      num: "888",
                       lux: true,
-                      payPerDay: 9990,
-                      days: 4,
-                      serviceCharge: 0,
-                      serviceChargeDiscount: 2179,
-                      additionalServiceCharge: 300
+                      price: "9 990",
+                      stars: 5,
+                      reviews: 145
                     })
-                .cards__item
-                    +sign-up()
-            .container
-                .cards__item
-                    div(id="ui-kit__preview-calendar")
-                .cards__item
-                    .rooms__item
-                        +rooms-item({
-                          img: "../rooms/img/image-1.jpg",
-                          num: "888",
-                          lux: true,
-                          price: "9 990",
-                          stars: 5,
-                          reviews: 145
-                        })
-                .cards__item
-                    .rooms__item
-                        +rooms-item({
-                          img: "../rooms/img/image-2.jpg",
-                          num: "840",
-                          lux: true,
-                          price: "9 900",
-                          stars: 4,
-                          reviews: 65
-                        })
+            .cards__item
+                .rooms__item
+                    +rooms-item({
+                      img: "../rooms/img/image-2.jpg",
+                      num: "840",
+                      lux: true,
+                      price: "9 900",
+                      stars: 4,
+                      reviews: 65
+                    })
 

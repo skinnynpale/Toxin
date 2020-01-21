@@ -1,0 +1,13 @@
+mixin advantage({ico, title, text})
+    li.advantages__item
+        span.advantages__icon
+            i(class="material-icons")= ico
+        .advantages__content
+            b.advantages__title= title
+            p.advantages__text= text
+
+
+mixin advantages(items)
+    ul.advantages
+        each item in items
+            +advantage(item)

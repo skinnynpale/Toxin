@@ -1,112 +1,107 @@
-.ui-kit__section
-    .header-footer
-        img.ui-kit__logo(src="img/logo_min.svg", alt="logo")
-        .header-non-authorized
-            .section__item
-                +header('non-authorized',[
-                  {
-                    name: 'О нас'
-                  },
-                  {
-                    name: 'Услуги',
-                    submenu: true
-                  },
-                  {
-                    name: 'Вакансии'
-                  },
-                  {
-                    name: 'Новости',
-                  },
-                  {
-                    name: 'Соглашения',
-                    submenu: true
-                  },
-                ])
-        .header-authorized
-            .section__item
-                +header('authorized',[
-                  {
-                    name: 'О нас'
-                  },
-                  {
-                    name: 'Услуги',
-                    submenu: true
-                  },
-                  {
-                    name: 'Вакансии'
-                  },
-                  {
-                    name: 'Новости',
-                  },
-                  {
-                    name: 'Соглашения',
-                    submenu: true
-                  },
-                ])
-        .footer-rich
-            .section__item
-                +footer('full', [
-                  {
-                    title: 'Навигация',
-                    items: [
-                      {
-                        title: 'О нас',
-                        href: '#!'
-                      },
-                      {
-                        title: 'Новости',
-                        href: '#!'
-                      },
-                      {
-                        title: 'Служба поддержки',
-                        href: '#!'
-                      },
-                      {
-                        title: 'Услуги',
-                        href: '#!'
-                      },
-                    ]
-                  },
-                  {
-                    title: 'О нас',
-                    items: [
-                      {
-                        title: 'О сервисе',
-                        href: '#!'
-                      },
-                      {
-                        title: 'Наша команда',
-                        href: '#!'
-                      },
-                      {
-                        title: 'Вакансии',
-                        href: '#!'
-                      },
-                      {
-                        title: 'Инвесторы',
-                        href: '#!'
-                      },
-                    ]
-                  },
-                  {
-                    title: 'Служба поддержки',
-                    items: [
-                      {
-                        title: 'Соглашения',
-                        href: '#!'
-                      },
-                      {
-                        title: 'Сообщества',
-                        href: '#!'
-                      },
-                      {
-                        title: 'Связь с нами',
-                        href: '#!'
-                      },
-                    ]
-                  },
-                ])
-        .footer-poor
-            .section__item
-                +footer('poor')
+.headers-footers
+  img.ui-kit__logo(src="img/logo_min.svg", alt="logo")
+  .headers-footers__item
+    +header('non-authorized',[
+      {
+        name: 'О нас'
+      },
+      {
+        name: 'Услуги',
+        submenu: true
+      },
+      {
+        name: 'Вакансии'
+      },
+      {
+        name: 'Новости',
+      },
+      {
+        name: 'Соглашения',
+        submenu: true
+      },
+    ])
+  .headers-footers__item
+    +header('authorized',[
+      {
+        name: 'О нас'
+      },
+      {
+        name: 'Услуги',
+        submenu: true
+      },
+      {
+        name: 'Вакансии'
+      },
+      {
+        name: 'Новости',
+      },
+      {
+        name: 'Соглашения',
+        submenu: true
+      },
+    ])
+  .headers-footers__item
+    +footer('full', [
+      {
+        title: 'Навигация',
+        items: [
+          {
+            title: 'О нас',
+            href: '#!'
+          },
+          {
+            title: 'Новости',
+            href: '#!'
+          },
+          {
+            title: 'Служба поддержки',
+            href: '#!'
+          },
+          {
+            title: 'Услуги',
+            href: '#!'
+          },
+        ]
+      },
+      {
+        title: 'О нас',
+        items: [
+          {
+            title: 'О сервисе',
+            href: '#!'
+          },
+          {
+            title: 'Наша команда',
+            href: '#!'
+          },
+          {
+            title: 'Вакансии',
+            href: '#!'
+          },
+          {
+            title: 'Инвесторы',
+            href: '#!'
+          },
+        ]
+      },
+      {
+        title: 'Служба поддержки',
+        items: [
+          {
+            title: 'Соглашения',
+            href: '#!'
+          },
+          {
+            title: 'Сообщества',
+            href: '#!'
+          },
+          {
+            title: 'Связь с нами',
+            href: '#!'
+          },
+        ]
+      },
+    ])
+  .headers-footers__item
+    +footer('poor')
 

@@ -123,14 +123,7 @@
                     +field({
                       theme: 'with-dropdown',
                       text: 'Dropdown',
-                      id: 'formElementsDropdownDefault',
-                      value: "2 спальни, 2 кровати..."
-                    })
-                .form-elements__sub-item(data-tip='Expanded')
-                    +field({
-                      theme: 'with-dropdown',
-                      text: 'Dropdown',
-                      id: 'formElementsDropdownExpanded',
+                      id: 'DropdownWithoutButtons',
                       value: "2 спальни, 2 кровати..."
                     })
         .form-elements__column
@@ -139,105 +132,99 @@
                     +field({
                       theme: 'with-dropdown',
                       text: 'Dropdown',
-                      id: 'formElementsDropdownDefault',
+                      id: 'DropdownWithButtons',
                       value: "2 спальни, 2 кровати..."
                     })
+    .container
         .form-elements__column
             .form-elements__item
-                .form-elements__sub-item
-                    +field({
-                      theme: 'with-dropdown',
-                      text: 'Dropdown',
-                      id: 'formElementsDropdownDefault',
-                      value: "2 спальни, 2 кровати..."
-                    })
-    .form-elements__column
-        .form-elements__item
-            +checkbox-list({
-              expandable: true,
-              id: 'moreComfortFilter',
-              title: 'Дополнительные удобства',
-              items:
-                [
-                  {
-                    text: 'Завтрак',
-                    id: 'breakfast'
-                  },
-                  {
-                    text: 'Письменный стол',
-                    id: 'desk',
-                    check: true
-                  },
-                  {
-                    text: 'Стул для кормления',
-                    id: 'feedingChair',
-                    check: true
-                  },
-                  {
-                    text: 'Кроватка',
-                    id: 'crib',
-                    check: true
-                  },
-                  {
-                    text: 'Телевизор',
-                    id: 'tv'
-                  },
-                  {
-                    text: 'Шампунь',
-                    id: 'shampoo'
-                  },
-                  {
-                    text: 'Интернет',
-                    id: 'internet'
-                  },
-                  {
-                    text: 'Связь с космосом',
-                    id: 'spaceConnection'
-                  }
-                ]
-            })
-        .form-elements__item
-            ul.advantages
-                +advantage({
-                  ico: "insert_emoticon",
-                  title: "Комфорт",
-                  text: "Шумопоглощающие стены"
+                +checkbox-list({
+                  expandable: true,
+                  id: 'moreComfortFilter',
+                  title: 'Дополнительные удобства',
+                  items:
+                    [
+                      {
+                        text: 'Завтрак',
+                        id: 'breakfast'
+                      },
+                      {
+                        text: 'Письменный стол',
+                        id: 'desk',
+                        check: true
+                      },
+                      {
+                        text: 'Стул для кормления',
+                        id: 'feedingChair',
+                        check: true
+                      },
+                      {
+                        text: 'Кроватка',
+                        id: 'crib',
+                        check: true
+                      },
+                      {
+                        text: 'Телевизор',
+                        id: 'tv'
+                      },
+                      {
+                        text: 'Шампунь',
+                        id: 'shampoo'
+                      },
+                      {
+                        text: 'Интернет',
+                        id: 'internet'
+                      },
+                      {
+                        text: 'Связь с космосом',
+                        id: 'spaceConnection'
+                      }
+                    ]
                 })
-                +advantage({
-                  ico: "location_city",
-                  title: "Удобство",
-                  text: "Окно в каждой из спален"
+        .form-elements__column
+            .form-elements__item
+                label.label rich Checkbox Buttons
+                +checkbox-list({
+                  items: [
+                    {
+                      theme: "rich",
+                      title: 'Широкий коридор',
+                      text: 'Ширина коридоров в номере не менее 91 см.',
+                      id: 'corridor'
+                    },
+                    {
+                      theme: "rich",
+                      title: 'Помощник для инвалидов',
+                      text: 'На 1 этаже вас встретит специалист  и проводит до номера.',
+                      id: 'helper'
+                    }
+                  ]
                 })
-                +advantage({
-                  ico: "whatshot",
-                  title: "Уют",
-                  text: "Номер оснащен камином"
-                })
-        .form-elements__item
-            label.label rich Checkbox Buttons
-            +checkbox-list({
-              items: [
-                {
-                  theme: "rich",
-                  title: 'Широкий коридор',
-                  text: 'Ширина коридоров в номере не менее 91 см.',
-                  id: 'corridor'
-                },
-                {
-                  theme: "rich",
-                  title: 'Помощник для инвалидов',
-                  text: 'На 1 этаже вас встретит специалист  и проводит до номера.',
-                  id: 'helper'
-                }
-              ]
-            })
-        .fields
-            .main__item
+        .form-elements__column
+            .form-elements__item
                 label.label bullet list
                 +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
-
-    .main__item
-        .reviews__item
+    .container
+        .form-elements__column
+            .form-elements__item.form-elements__item--with-advantages
+                +advantages([
+                  {
+                    ico: "insert_emoticon",
+                    title: "Комфорт",
+                    text: "Шумопоглощающие стены"
+                  },
+                  {
+                    ico: "location_city",
+                    title: "Удобство",
+                    text: "Окно в каждой из спален"
+                  },
+                  {
+                    ico: "whatshot",
+                    title: "Уют",
+                    text: "Номер оснащен камином"
+                  }
+                ])
+        .form-elements__item
             +reviews([{
               avatar: "../page-room/img/author-1.jpg",
               likes: 12,

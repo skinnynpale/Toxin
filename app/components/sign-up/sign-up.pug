@@ -1,8 +1,8 @@
 mixin sign-up()
-    form.user-form
-        .user-form__wrapper
-            h1.user-form__title Регистрация аккаунта
-            .user-form__item#personData
+    form.sign-up
+        .sign-up__wrapper
+            h1.sign-up__title Регистрация аккаунта
+            .sign-up__item#personData
                 +field({
                   placeholder: 'Имя',
                   name: 'name',
@@ -26,18 +26,18 @@ mixin sign-up()
                   name: 'sex',
                   value: 'woman'
                 })
-            .user-form__item
-                .user-form__birthday
+            .sign-up__item
+                .sign-up__birthday
                     +field({
                       theme: 'with-label',
-                      className: 'user-form',
+                      className: 'sign-up',
                       text: 'Дата рождения',
                       placeholder: "ДД.ММ.ГГГГ",
                       name: "birthday",
                       type: 'date'
                     })
-            .user-form__item#signUpData
-                label.user-form__label Данные для входа в сервис
+            .sign-up__item#signUpData
+                label.sign-up__label Данные для входа в сервис
                 +field({
                   placeholder: 'Email',
                   name: 'email',
@@ -51,14 +51,14 @@ mixin sign-up()
                   labelledby: 'signUpData'
                 })
                 +toggle('Получать спецпредложения', 'receive-offers')
-            .user-form__item
-                .user-form__btn-buy
+            .sign-up__item
+                .sign-up__btn-buy
                     +btn({
                       text: 'Перейти к оплате',
                       theme: 'arrow'
                     })
-            .user-form__sign-in
-                p.user-form__question Уже есть аккаунт на Toxin
+            .sign-up__question
+                p Уже есть аккаунт на Toxin
                 +btn({
                   text: 'Войти',
                   size: 'xl',

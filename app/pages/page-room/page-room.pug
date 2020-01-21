@@ -24,21 +24,23 @@ block content
           .room-details__advan-list
             h2.room-details__info-title Сведения о номере
             ul.room-details__advantages
-              +advantage({
-                ico: "insert_emoticon",
-                title: "Комфорт",
-                text: "Шумопоглощающие стены"
-              })
-              +advantage({
-                ico: "location_city",
-                title: "Удобство",
-                text: "Окно в каждой из спален"
-              })
-              +advantage({
-                ico: "whatshot",
-                title: "Уют",
-                text: "Номер оснащен камином"
-              })
+              +advantages([
+                {
+                  ico: "insert_emoticon",
+                  title: "Комфорт",
+                  text: "Шумопоглощающие стены"
+                },
+                {
+                  ico: "location_city",
+                  title: "Удобство",
+                  text: "Окно в каждой из спален"
+                } ,
+                {
+                  ico: "whatshot",
+                  title: "Уют",
+                  text: "Номер оснащен камином"
+                }
+              ])
           .room-details__impressions
             h2.room-details__info-title Впечатления от номера
             +donut({votes: 260})
