@@ -20,13 +20,9 @@ block content
                           id: 'guests',
                           value: "Сколько гостей"
                         })
-                .rooms-filter__item
+                .rooms-filter__item.rooms-filter__item--with-range-slider
                     label.rooms-filter__label Диапазон цены
-                    span.rooms-filter__values#rangeSliderRoomValue
-                    .range-slider
-                        .range-slider__app
-                            input(type="text" class="js-range-slider" name="my_range" value="")
-                            p.range-slider__info Стоимость за сутки пребывания в номере
+                    span.rooms-filter__values
                 .rooms-filter__item
                     label.rooms-filter__label Привелегии
                     .rooms-filter__checkbox

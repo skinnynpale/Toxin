@@ -1,7 +1,7 @@
 import Calendar from '../calendar/calendar';
 import Dropdown from '../dropdown/dropdown';
 
-const checkFormCalendar = new Calendar('#checkFormCalendar', {
+const checkFormCalendar = new Calendar('.check-form__item--with-calendar', {
   multipleDatesSeparator: '-',
   onSelect(formattedDate) {
     $('#check-form__from').val(formattedDate.split('-')[0]);

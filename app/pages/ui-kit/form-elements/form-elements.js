@@ -1,6 +1,3 @@
-import 'ion-rangeslider';
-import 'ion-rangeslider/css/ion.rangeSlider.css';
-
 import Dropdown from '../../../components/dropdown/dropdown';
 import Calendar from '../../../components/calendar/calendar';
 import rangeSlider from '../../../components/range-slider/range-slider';
@@ -86,12 +83,16 @@ const dateFilterCalendar = new Calendar('#filterDate', {
 });
 dateFilterCalendar.calendar.css({ left: `${350}px`, width: '318px' });
 
-const rangePrices = rangeSlider('.form-elements__slider-values', {
-  type: 'double',
-  min: 0,
-  max: 15000,
-  from: 5000,
-  to: 10000,
-  hide_min_max: true,
-  hide_from_to: true,
-});
+const rangePrices = rangeSlider(
+  '.form-elements__item--with-range-slider',
+  '.form-elements__slider-values',
+  {
+    type: 'double',
+    min: 0,
+    max: 15000,
+    from: 5000,
+    to: 10000,
+    hide_min_max: true,
+    hide_from_to: true,
+  },
+);

@@ -13,7 +13,7 @@ mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount,
         .check-form__price-default
           b.check-form__price-text 9 990₽
           |  в сутки
-    .check-form__item#checkFormCalendar
+    .check-form__item.check-form__item--with-calendar
       .check-form__group-field
         .check-form__field
           +field({ theme: 'with-dropdown', text: 'Прибытие', id: 'check-form__from', value: "ДД.ММ.ГГГГ" })

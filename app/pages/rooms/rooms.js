@@ -1,28 +1,27 @@
-import 'ion-rangeslider';
-import 'ion-rangeslider/css/ion.rangeSlider.css';
-
 import Dropdown from '../../components/dropdown/dropdown';
 import Calendar from '../../components/calendar/calendar';
 import rangeSlider from '../../components/range-slider/range-slider';
 
-// rangeslider
-const rangePrices = rangeSlider('.rooms-filter__values', {
-  type: 'double',
-  min: 0,
-  max: 15000,
-  from: 5000,
-  to: 10000,
-  hide_min_max: true,
-  hide_from_to: true,
-});
+const rangePrices = rangeSlider(
+  '.rooms-filter__item--with-range-slider',
+  '.rooms-filter__values',
+  {
+    type: 'double',
+    min: 0,
+    max: 15000,
+    from: 5000,
+    to: 10000,
+    hide_min_max: true,
+    hide_from_to: true,
+  },
+  'Стоимость за сутки пребывания в номере',
+);
 
-// Calendar
 const dateFilterCalendar = new Calendar('#dateFilter', {
   dateFormat: 'dd M',
   multipleDatesSeparator: ' - ',
 });
 
-// Dropdown
 const guestsDropDown = new Dropdown({
   anchor: document.getElementById('guests'),
   fallbackTitle: 'Сколько гостей',
@@ -44,7 +43,6 @@ const guestsDropDown = new Dropdown({
   helpButtons: true,
 });
 
-// Dropdown
 const comfortFilterDropDown = new Dropdown({
   anchor: document.getElementById('comfortFilter'),
   fallbackTitle: 'Выберите удобства',
