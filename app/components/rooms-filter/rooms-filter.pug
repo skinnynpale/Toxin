@@ -1,0 +1,97 @@
+include ../../pages/mixins-pug
+
+.rooms-filter
+    .rooms-filter__item
+        .rooms-filter__field
+            +field({theme: 'with-dropdown', text: 'Даты пребывания в отеле', id: 'dateFilter', value: "Выберите дату"})
+        .rooms-filter__field
+            +field({
+              theme: 'with-dropdown',
+              text: 'Гости',
+              id: 'guests',
+              value: "Сколько гостей"
+            })
+    .rooms-filter__item.rooms-filter__item--with-range-slider
+        label.rooms-filter__label Диапазон цены
+        span.rooms-filter__values
+    .rooms-filter__item
+        label.rooms-filter__label Привелегии
+        .rooms-filter__checkbox
+            +checkbox-list({
+              items: [
+                {
+                  text: 'Можно курить',
+                  id: 'smoke'
+                },
+                {
+                  text: 'Можно с питомцами',
+                  id: 'pets',
+                  check: true
+                },
+                {
+                  text: 'Можно пригласить гостей (до 10 человек)',
+                  id: 'guestsCheck',
+                  check: true
+                }
+              ]
+            })
+    .rooms-filter__item
+        label.rooms-filter__label Доступность
+        .rooms-filter__checkbox
+            +checkbox-list({
+              items: [
+                { theme: "rich", title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.', id: 'corridor'},
+                { theme: "rich", title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист  и проводит до номера.', id: 'helper'}
+              ]
+            })
+    .rooms-filter__item
+        +field({
+          theme: 'with-dropdown',
+          text: 'Удобства номера',
+          id: 'comfortFilter',
+          value: "Выберите удобства"
+        })
+    .rooms-filter__item
+        +checkbox-list({
+          expandable: true,
+          id: 'moreComfortFilter',
+          title: 'Дополнительные удобства',
+          items:
+            [
+              {
+                text: 'Завтрак',
+                id: 'breakfast'
+              },
+              {
+                text: 'Письменный стол',
+                id: 'desk',
+                check: true
+              },
+              {
+                text: 'Стул для кормления',
+                id: 'feedingChair',
+                check: true
+              },
+              {
+                text: 'Кроватка',
+                id: 'crib',
+                check: true
+              },
+              {
+                text: 'Телевизор',
+                id: 'tv'
+              },
+              {
+                text: 'Шампунь',
+                id: 'shampoo'
+              },
+              {
+                text: 'Интернет',
+                id: 'internet'
+              },
+              {
+                text: 'Связь с космосом',
+                id: 'spaceConnection'
+              }
+            ]
+        })

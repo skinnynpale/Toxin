@@ -1,0 +1,13 @@
+mixin rooms(items)
+    .rooms
+        h1.rooms__offer Номера, которые мы для вас подобрали
+            span.js-show-filters Показать фильтры
+        .rooms__grid
+            each item in items
+                +rooms-item(item)
+        .rooms__pagination
+            +pagination({
+              current: 1,
+              totalPages: 15,
+              totalVars: 100
+            })

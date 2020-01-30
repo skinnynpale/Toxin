@@ -1,0 +1,50 @@
+@import "../../../sass/vars"
+@import "../../../sass/mixins"
+
+.colors
+  &__item
+    display: flex
+    align-items: center
+    margin-top: 1.4286rem
+
+  &:first-child
+    margin-top: 0
+
+  &__info
+    font-family: 'opensans-example', sans-serif
+    font-size: 1.3571rem
+    line-height: 2.0714rem
+    color: $accent
+
+  &__hex
+    font-family: 'montserrat-example', sans-serif
+
+  &__box
+    width: 5rem
+    height: 5rem
+    border-radius: 0.4286rem
+    margin-right: 2.8571rem
+
+    &--
+      &d100
+        background-color: $accent
+
+      &d75
+        background-color: $accent75
+
+      &d50
+        background-color: $accent50
+
+      &d25
+        background-color: $accent25
+
+      &d5
+        background-color: $accent5
+
+      &purple
+        background-color: $purple
+
+      &green
+        background-color: $green
+
+

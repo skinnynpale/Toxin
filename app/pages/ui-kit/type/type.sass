@@ -1,0 +1,28 @@
+@import "../../../sass/vars"
+@import "../../../sass/mixins"
+
+.type
+  $root: &
+
+  &__item
+    position: relative
+    margin-bottom: 50px
+    width: 25rem
+
+    &--
+      &h1
+        @include h1
+
+      &h2
+        @include h2
+
+      &h3
+        @include label
+        margin-bottom: 50px
+
+  &__tag
+    text-align: right
+    position: absolute
+    left: -3.5714rem
+    color: $accent25
+    font-weight: 400

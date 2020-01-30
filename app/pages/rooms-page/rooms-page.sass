@@ -1,0 +1,29 @@
+@import "../../sass/main"
+@import "../../components/header/header"
+@import "../../components/footer/footer"
+@import "../../components/field/field"
+@import "../../components/dropdown/dropdown"
+@import "../../components/checkbox/checkbox"
+@import "../../components/rate/rate"
+@import "../../components/pagination/pagination"
+@import "../../components/rooms-item/rooms-item"
+@import "../../components/checkbox-list/checkbox-list"
+@import "../../components/rooms-filter/rooms-filter"
+@import "../../components/rooms/rooms"
+
+.main
+  margin-top: 2.1429rem
+  margin-bottom: 5rem
+
+  &__container
+    @include container
+    display: grid
+    justify-content: space-between
+    grid-template-columns: 19rem 1fr
+    grid-column-gap: 4.2857rem
+
+    @media screen and ( max-width: 65rem )
+      grid-template-columns: 1fr
+
+
+

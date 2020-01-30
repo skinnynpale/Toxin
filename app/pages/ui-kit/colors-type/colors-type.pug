@@ -1,53 +1,5 @@
 .colors-type
   img.ui-kit__logo(src="img/logo_min.svg", alt="logo")
   .ui-kit__container
-    .colors
-      .colors__item
-        .colors__box.colors__box--d100
-        .colors__info
-          p Dark Shade 100%
-          span.colors__hex #1F2041
-      .colors__item
-        .colors__box.colors__box--d75
-        .colors__info
-          p Dark Shade 75%
-          span.colors__hex #1F2041
-      .colors__item
-        .colors__box.colors__box--d50
-        .colors__info
-          p Dark Shade 50%
-          span.colors__hex #1F2041
-      .colors__item
-        .colors__box.colors__box--d25
-        .colors__info
-          p Dark Shade 25%
-          span.colors__hex #1F2041
-      .colors__item
-        .colors__box.colors__box--d5
-        .colors__info
-          p Dark Shade 5%
-          span.colors__hex #1F2041
-      .colors__item
-        .colors__box.colors__box--purple
-        .colors__info
-          p Purple
-          span.colors__hex #BC9CFF
-      .colors__item
-        .colors__box.colors__box--green
-        .colors__info
-          p Green
-          span.colors__hex #6FCF97
-
-    .type
-      .type__item.type__item--h1
-        span.type__tag H1
-        span.type__text This one is the sub-section or widget title
-      .type__item.type__item--h2
-        span.type__tag H2
-        span.type__text Next one is the item title inside widgets
-      .type__item.type__item--h3
-        span.type__tag H3
-        span.type__text This is a label or CTA text
-      .type__item.type__item--body
-        span.type__tag Body
-        span.type__text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+    include ../colors/colors
+    include ../type/type

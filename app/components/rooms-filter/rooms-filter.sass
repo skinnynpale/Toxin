@@ -1,0 +1,46 @@
+@import "../../sass/mixins"
+@import "../../sass/vars"
+
+.rooms-filter
+  @media screen and ( max-width: 65rem )
+    display: none
+
+  &__values
+    position: absolute
+    right: 0
+    top: 0
+    font-size: 0.9286rem
+    color: $accent50
+
+  &__label
+    @include label
+
+  &__item
+    margin-bottom: 2.1429rem
+    position: relative
+
+    .datepicker-inline
+      .js-Calendar
+        left: 20.7143rem
+        width: 22.7143rem
+
+    &:last-child
+      margin-bottom: 0
+
+    &:nth-child(2)
+      margin-bottom: 2.0714rem
+
+    &:nth-child(3)
+      margin-bottom: 1.0714rem
+
+    &:nth-child(4)
+      margin-bottom: 1.6429rem
+
+  &__field
+    margin-bottom: 1.4286rem
+
+    &:last-child
+      margin-bottom: 0
+
+  &__checkbox
+    margin-top: 1.1429rem

@@ -1,6 +1,6 @@
-import Dropdown from '../../components/dropdown/dropdown';
-import Calendar from '../../components/calendar/calendar';
-import rangeSlider from '../../components/range-slider/range-slider';
+import Dropdown from '../dropdown/dropdown';
+import Calendar from '../calendar/calendar';
+import rangeSlider from '../range-slider/range-slider';
 
 const rangePrices = rangeSlider(
   '.rooms-filter__item--with-range-slider',
@@ -65,17 +65,4 @@ const comfortFilterDropDown = new Dropdown({
     },
   ],
   helpButtons: false,
-});
-
-// Показать фильтры
-$('.js-show-filters').click(event => {
-  event.preventDefault();
-  const $elem = $('.rooms-filter');
-  $elem.slideToggle(300);
-
-  if (this.innerHTML === 'Показать фильтры') {
-    this.innerHTML = 'Спрятать фильтры';
-  } else {
-    this.innerHTML = 'Показать фильтры';
-  }
 });
