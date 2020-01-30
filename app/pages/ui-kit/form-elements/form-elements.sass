@@ -1,11 +1,18 @@
+@import "../../../sass/mixins"
+
 .form-elements
+  $root: &
+
   &__column
     margin-bottom: 7.1429rem
     width: 22.8571rem
 
     &--type-buttons
-      .label
+      #{$root}__label
         margin-bottom: 1.071rem
+
+  &__label
+    @include label
 
   &__item
     position: relative

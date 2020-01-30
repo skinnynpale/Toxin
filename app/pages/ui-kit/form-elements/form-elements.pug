@@ -1,6 +1,6 @@
 .form-elements
     img.ui-kit__logo(src="img/logo_min.svg", alt="logo")
-    .container
+    .ui-kit__container
         .form-elements__column
             .form-elements__item
                 .form-elements__sub-item(data-tip='Default')
@@ -36,11 +36,11 @@
             .form-elements__item
                 +field({theme: 'with-dropdown', text: 'filter date dropdown', id: 'filterDate', value: "Выберите дату"})
             .form-elements__item
-                label.label(for='subscr') Subscription  text field
+                label.form-elements__label(for='subscr') Subscription  text field
                 +field({theme: 'with-arrow', text: 'subscription text field', id: 'subscr', type: "email", placeholder: "Email"})
         .form-elements__column.form-elements__column--type-buttons
             .form-elements__item
-                h3.label Checkbox Buttons
+                h3.form-elements__label Checkbox Buttons
                 +checkbox-list({
                   items: [
                     {
@@ -60,7 +60,7 @@
                   ]
                 })
             .form-elements__item
-                h3.label Radio Buttons
+                h3.form-elements__label Radio Buttons
                 +radio({
                   text: 'Мужчина',
                   id: 'man',
@@ -75,28 +75,28 @@
                   value: 'woman'
                 })
             .form-elements__item
-                h3.label Toggle
+                h3.form-elements__label Toggle
                 .form-elements__toggle
                     +toggle('Получать спецпредложения', 'offer', true)
                 .form-elements__toggle
                     +toggle('Получать спецпредложения', 'offer2')
             .form-elements__item
-                h3.label Like Button
+                h3.form-elements__label Like Button
                 .form-elements__like-group
                     +like(12)
                     +like(12, true)
             .form-elements__item
-                h3.label Rate Button
+                h3.form-elements__label Rate Button
                 span.form-elements__rate
                     +rate(4, 5)
                 span.form-elements__rate
                     +rate(5, 5)
         .form-elements__column.form-elements__column--type-buttons
             .form-elements__item.form-elements__item--with-range-slider
-                h3.label Range Slider
+                h3.form-elements__label Range Slider
                 span.form-elements__slider-values
             .form-elements__item
-                h3.label buttons
+                h3.form-elements__label buttons
                 .form-elements__sub-item
                     +btn({text: 'Click Me', theme: 'gradient'})
                 .form-elements__sub-item
@@ -112,9 +112,9 @@
                       theme: 'arrow'
                     })
             .form-elements__item
-                h3.label pagination
+                h3.form-elements__label pagination
                 +pagination({ current: 1, totalPages: 15, totalVars: 100 })
-    .container
+    .ui-kit__container
         .form-elements__column
             .form-elements__item
                 .form-elements__sub-item(data-tip='Default')
@@ -133,7 +133,7 @@
                       id: 'DropdownWithButtons',
                       value: "2 спальни, 2 кровати..."
                     })
-    .container
+    .ui-kit__container
         .form-elements__column
             .form-elements__item
                 +checkbox-list({
@@ -181,7 +181,7 @@
                 })
         .form-elements__column
             .form-elements__item
-                label.label rich Checkbox Buttons
+                label.form-elements__label rich Checkbox Buttons
                 +checkbox-list({
                   items: [
                     {
@@ -200,9 +200,9 @@
                 })
         .form-elements__column
             .form-elements__item
-                label.label bullet list
+                label.form-elements__label bullet list
                 +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
-    .container
+    .ui-kit__container
         .form-elements__column
             .form-elements__item.form-elements__item--with-advantages
                 +advantages([
