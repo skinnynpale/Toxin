@@ -20,9 +20,9 @@ mixin header(status, navigations)
         ul.header__user-nav
           if status === 'non-authorized'
             li.header__item
-              +btn({text: 'Войти', href: './../sign-in/sign-in.pug'})
+              +btn({text: 'Войти', href: '../sign-in-page/sign-in-page.pug'})
             li.header__item
-              +btn({text: 'Зарегистрироваться', theme: 'gradient', href: "./../sign-up/sign-up.pug"})
+              +btn({text: 'Зарегистрироваться', theme: 'gradient', href: "../sign-up-page/sign-up-page.pug"})
           else if status === 'authorized'
             li.header__item
               span.header__user-name

@@ -1,15 +1,16 @@
 @import "../../sass/main"
 @import "../../components/header/header"
 @import "../../components/footer/footer"
-@import "../../components/sign-in/sign-in"
+@import "../../components/sign-up/sign-up"
 
-.main
-  background: $accent5 url('../sign-up/img/bg.jpg') no-repeat center / cover
+.sign-up-page
+  background: $accent5 url('img/bg.jpg') no-repeat center / cover
   background-position-y: bottom
-  padding: 11.6429rem 0
+  padding-top: 2.1429rem
+  padding-bottom: 1.8571rem
   z-index: 0
 
-  .main__container
+  &__container
     @include container
     display: flex
     justify-content: center
