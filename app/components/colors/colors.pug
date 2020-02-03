@@ -1,9 +1,8 @@
 mixin colors(items = [])
     .colors
         each item in items
-            - const opacity = item.opacity || '';
             .colors__item
-                .colors__box(style=`background-color: ${item.hex}; opacity: ${opacity}`)
+                .colors__box(class=item.class)
                 .colors__info
-                    p= `${item.title} ${opacity}`
+                    p= item.title
                     span.colors__hex= item.hex
