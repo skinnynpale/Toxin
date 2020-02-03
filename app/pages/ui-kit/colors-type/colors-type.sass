@@ -1,2 +1,20 @@
-@import "../colors/colors"
-@import "../type/type"
+@import "../../../components/colors/colors"
+@import "../../../components/type/type"
+
+.colors-type
+  &__container
+    @include container
+    display: flex
+    justify-content: space-between
+    padding: 0 1.0714rem
+
+  &__type-item
+    &--
+      &h1
+        @include h1
+
+      &h2
+        @include h2
+
+      &h3
+        @include label

@@ -1,0 +1,7 @@
+mixin type(items = [])
+    .type
+        each item in items
+            .type__item
+                div(class=item.class)
+                    span.type__tag= item.tag
+                    span.type__text= item.text
