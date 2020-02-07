@@ -2,6 +2,7 @@
 @import "../image-helpers/image-helpers"
 
 .rooms-item
+  $root: &
   background: #FFFFFF
   box-shadow: 0 0.7143rem 1.4286rem $accent5
   border-radius: 0.2857rem
@@ -12,9 +13,12 @@
   &:hover
     box-shadow: 0 0.7143rem 1.4286rem rgba(31, 32, 65, 0.15)
 
-    .image-helpers__arrow
-      transition: .3s
+    .rooms-item__image-helpers
       opacity: 1
+
+  &__image-helpers
+    transition: opacity 0.3s ease
+    opacity: 0
 
   &__link
     position: absolute
@@ -58,9 +62,6 @@
     font-family: $default-font
     font-size: 0.9286rem
     margin-right: 0.3571rem
-
-  &__image
-    position: relative
 
   &__reviews
     line-height: 1.7143rem

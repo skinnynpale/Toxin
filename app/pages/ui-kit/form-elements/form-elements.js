@@ -69,19 +69,19 @@ const guestsDropDown = new Dropdown({
 });
 
 const arrivalCalendar = new Calendar('#formElementsCalendar', {
+  className: 'js-form-elements__arrival-calendar',
   multipleDatesSeparator: '-',
   onSelect(formattedDate) {
     $('#arrival').val(formattedDate.split('-')[0]);
     $('#checkOut').val(formattedDate.split('-')[1]);
   },
 });
-arrivalCalendar.calendar.css({ top: `${80}px` });
 
 const dateFilterCalendar = new Calendar('#filterDate', {
+  className: 'js-form-elements__date-filter-calendar',
   dateFormat: 'dd M',
   multipleDatesSeparator: ' - ',
 });
-dateFilterCalendar.calendar.css({ left: `${350}px`, width: '318px' });
 
 const rangePrices = rangeSlider(
   '.form-elements__item--with-range-slider',

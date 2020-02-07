@@ -21,7 +21,7 @@ class Calendar {
   initDatePicker(options) {
     const defaultDatePicker = {
       inline: true,
-      classes: 'js-Calendar',
+      classes: options.className,
       minDate: new Date(),
       range: true,
       prevHtml: '<div class="js-calendar__arrow-date js-calendar__arrow-date-prev"></div>',

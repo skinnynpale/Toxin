@@ -18,6 +18,7 @@ const rangePrices = rangeSlider(
 );
 
 const dateFilterCalendar = new Calendar('#dateFilter', {
+  className: 'js-rooms-filter__calendar',
   dateFormat: 'dd M',
   multipleDatesSeparator: ' - ',
 });
