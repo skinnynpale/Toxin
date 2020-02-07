@@ -1,6 +1,7 @@
+@import "../../sass/index"
+
 .pagination
   $root: &
-
   text-align: center
 
   &__item
@@ -23,7 +24,7 @@
     &_disabled
       cursor: default
 
-    &:hover:not(.pagination__item_next):not(.pagination__item_current):not(.pagination__item_disabled)
+    &:hover:not(#{$root}__item_next):not(#{$root}__item_current):not(#{$root}__item_disabled)
       background: linear-gradient(180deg, $blue 0%, $blue 100%)
       font-weight: bold
       color: #fff

@@ -1,6 +1,7 @@
-@import "../field/field.sass"
-@import "../radio/radio.sass"
-@import "../toggle/toggle.sass"
+@import "../../sass/index"
+@import "../field/field"
+@import "../radio/radio"
+@import "../toggle/toggle"
 
 .sign-up
   z-index: 0
@@ -11,7 +12,7 @@
   padding: 2.8571rem 2.1429rem 2.1429rem 2.1429rem
 
   &__wrapper
-    max-width: 22.8571rem
+    min-width: 22.8571rem
 
   &__title
     @include h1
@@ -20,12 +21,8 @@
   &__item
     margin-bottom: 1.2857rem
 
-  &__item > .field, .label:not(.label)
+  &__field
     margin-bottom: 0.7143rem
-    min-width: 22.857rem
-
-    &:last-child
-      margin-bottom: 0
 
   &__toggle
     margin-top: 0.3571rem
@@ -56,11 +53,6 @@
 
   &__label
     @include label
-
-  &__birthday
-    .field__input
-      text-transform: uppercase
-      color: $accent25
 
   &__question
     margin-top: 2.1429rem

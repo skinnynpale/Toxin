@@ -3,53 +3,56 @@ mixin sign-up()
         .sign-up__wrapper
             h1.sign-up__title Регистрация аккаунта
             .sign-up__item#personData
-                +field({
-                  placeholder: 'Имя',
-                  name: 'name',
-                  labelledby: 'personData'
-                })
-                +field({
-                  placeholder: 'Фамилия',
-                  name: 'surname',
-                  labelledby: 'personData'
-                })
-                +radio({
-                  text: 'Мужчина',
-                  id: 'man',
-                  name: 'sex',
-                  value: 'man',
-                  checked: true
-                })
-                +radio({
-                  text: 'Женщина',
-                  id: 'woman',
-                  name: 'sex',
-                  value: 'woman'
-                })
-            .sign-up__item
-                .sign-up__birthday
+                .sign-up__field
                     +field({
-                      theme: 'with-label',
+                      placeholder: 'Имя',
+                      name: 'name',
+                      labelledby: 'personData'
+                    })
+                .sign-up__field
+                    +field({
+                      placeholder: 'Фамилия',
+                      name: 'surname',
+                      labelledby: 'personData'
+                    })
+                .sign-up__field
+                    +radio({
+                      text: 'Мужчина',
+                      id: 'man',
+                      name: 'sex',
+                      value: 'man',
+                      checked: true
+                    })
+                    +radio({
+                      text: 'Женщина',
+                      id: 'woman',
+                      name: 'sex',
+                      value: 'woman'
+                    })
+            .sign-up__item
+                .sign-up__field
+                    +field({
+                      theme: 'date',
                       className: 'sign-up',
                       text: 'Дата рождения',
-                      placeholder: "ДД.ММ.ГГГГ",
-                      name: "birthday",
-                      type: 'date'
+                      name: "birthday"
                     })
             .sign-up__item#signUpData
                 label.sign-up__label Данные для входа в сервис
-                +field({
-                  placeholder: 'Email',
-                  name: 'email',
-                  type: 'email',
-                  labelledby: 'signUpData'
-                })
-                +field({
-                  placeholder: 'Пароль',
-                  name: 'password',
-                  type: 'password',
-                  labelledby: 'signUpData'
-                })
+                .sign-up__field
+                    +field({
+                      placeholder: 'Email',
+                      name: 'email',
+                      type: 'email',
+                      labelledby: 'signUpData'
+                    })
+                .sign-up__field
+                    +field({
+                      placeholder: 'Пароль',
+                      name: 'password',
+                      type: 'password',
+                      labelledby: 'signUpData'
+                    })
                 +toggle('Получать спецпредложения', 'receive-offers')
             .sign-up__item
                 .sign-up__btn-buy

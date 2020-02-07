@@ -1,6 +1,8 @@
+@import "../../sass/index"
 @import "../btn/btn"
 
 .header
+  $root: &
   box-shadow: 0 0.7143rem 1.4286rem $accent5
   background-color: #fff
   padding: 1.0714rem 0
@@ -27,7 +29,7 @@
       border-top: 0.2143rem solid $purple
       padding-top: 1.4286rem
 
-      .header__item
+      #{$root}__item
         margin-bottom: 1.0714rem
         width: 100%
 
@@ -45,7 +47,7 @@
       order: 0
       margin-left: 0
 
-    .header__item
+    #{$root}__item
       &:nth-child(2)
         margin-right: 2rem
 
@@ -61,13 +63,13 @@
       margin-top: 0.3571rem
 
     @media screen and ( max-width: 23.6429rem )
-      .header__item
+      #{$root}__item
         margin-bottom: 0.7143rem
 
         &:last-child
           margin-bottom: 0
 
-    .header__item:last-child
+    #{$root}__item:last-child
       margin-right: 0
 
   &__logo
@@ -78,7 +80,7 @@
     margin-right: 1.4286rem
 
     &_has-submenu
-      & > .header__link::after
+      & > #{$root}__link::after
         content: ""
         display: inline-block
         width: 0.6429rem
@@ -90,7 +92,7 @@
         border-left: 0
         transform: translateY(-50%) rotate(45deg)
 
-      &:hover .header__link::after
+      &:hover #{$root}__link::after
         border: 0.1429rem solid $accent25
         border-top: 0
         border-left: 0
@@ -106,6 +108,9 @@
     border-left: 0.0714rem solid $accent10
     padding: 0.4286rem 0
     padding-left: 2.1429rem
+
+  &__ui-link
+    text-decoration: underline
 
 .js-header__burger
   background-image: linear-gradient(180deg, $blue 0%, $blue 100%)

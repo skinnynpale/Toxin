@@ -1,4 +1,8 @@
+@import "../../sass/index"
+
 .field
+  $root: &
+
   &__input
     @include input
     width: 100%
@@ -20,6 +24,10 @@
       border-bottom-right-radius: 0
       border-bottom-left-radius: 0
 
+    &--with-date
+      text-transform: uppercase
+      color: $accent50
+
   &__label
     @include label
 
@@ -38,10 +46,10 @@
       cursor: pointer
 
   &_type_dropdown
-    .field__input
+    #{$root}__input
       cursor: pointer
 
-    .field__label
+    #{$root}__label
       position: relative
 
       &::after
@@ -59,7 +67,7 @@
         cursor: pointer
 
   &_type_masked
-    .field__input
+    #{$root}_input
       cursor: default
 
       &:hover

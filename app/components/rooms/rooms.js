@@ -1,3 +1,3 @@
 import showFilters from '../show-filters/show-filters';
 
-showFilters('.js-show-filters', '.rooms-filter');
+showFilters('.js-rooms__show-filters', '.rooms-filter');

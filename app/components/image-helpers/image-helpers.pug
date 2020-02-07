@@ -3,11 +3,11 @@ mixin image-helpers({ slides })
   - slides.length = 4;
 
   .image-helpers
-    a(href="#!").image-helpers__arrow.image-helpers__arrow-left
-    a(href="#!").image-helpers__arrow.image-helpers__arrow-right
+    a(href="#!").image-helpers__arrow.image-helpers__arrow--nav-left
+    a(href="#!").image-helpers__arrow
     .image-helpers__slide-wrapper
       each slide in slides
         if slides[0] === slide
-          a(href="#!").image-helpers__slide.image-helpers__slide_active
+          a(href="#!").image-helpers__slide.image-helpers__slide--active
         else
           a(href="#!").image-helpers__slide

@@ -1,6 +1,5 @@
 mixin field({ theme, text, className, value, placeholder, name, id = name, type, labelledby } = '')
   case theme
-
     when 'with-label'
       .field
         label(class="field__label" for=id)= text
@@ -20,6 +19,11 @@ mixin field({ theme, text, className, value, placeholder, name, id = name, type,
       .field.field_type_masked
         label(class="field__label" for=id)= text
         input(class="field__input", id=id disabled placeholder=placeholder name=name type=type)
+
+    when 'date'
+      .field
+        label(class="field__label" for=id)= text
+        input(class="field__input field__input--with-date" id=id value=value autocomplete="off" placeholder=placeholder name=name type='date')
 
     default
       .field

@@ -1,7 +1,7 @@
 import Calendar from '../calendar/calendar';
 import Dropdown from '../dropdown/dropdown';
 
-const findRoomCalendar = new Calendar('#findRoomCalendar', {
+const findRoomCalendar = new Calendar('.find-room__item--with-calendar', {
   multipleDatesSeparator: '-',
   onSelect(formattedDate) {
     $('#find-room__from').val(formattedDate.split('-')[0]);

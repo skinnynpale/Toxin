@@ -8,7 +8,7 @@ mixin reviews(items = [])
 mixin review-item({avatar, likes, liked, author, date, text})
   li.reviews__item
     .reviews__dynamics
-      img.reviews__profile-photo(src=avatar)
+      img.reviews__avatar(src=avatar)
       .reviews__likes: +like(likes, liked)
     .reviews__comment
       b.reviews__author= author

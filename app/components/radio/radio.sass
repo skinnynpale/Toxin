@@ -1,7 +1,9 @@
+@import "../../sass/index"
+
 .radio
   $root: &
 
-  &-input + &-label
+  &__input + &__label
     display: inline-block
     cursor: pointer
     position: relative
@@ -24,10 +26,10 @@
       background-color: #fff
       border-radius: 50%
 
-  &-input
+  &__input
     display: none !important
 
-    &:checked + #{$root}-label:after
+    &:checked + #{$root}__label:after
       content: ""
       display: block
       position: absolute
@@ -38,5 +40,5 @@
       border-radius: 50%
       background: linear-gradient(180deg, $blue 0%, $blue 100%)
 
-    &:checked + #{$root}-label
+    &:checked + #{$root}__label
       color: $accent75
