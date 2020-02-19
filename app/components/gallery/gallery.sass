@@ -1,0 +1,25 @@
+@import "../../sass/index"
+
+.gallery
+  display: grid
+  grid-template-columns: auto auto auto
+  grid-template-rows: auto auto
+
+  &__img
+    width: 100%
+    height: 100%
+
+  &__item
+    overflow: hidden
+
+    &:first-child
+      grid-column: 1 / 3
+      grid-row: 1 / 3
+
+  &__img
+    @include img
+    transition: 0.5s
+
+    &:hover
+      transform: scale(1.1)
+      transition: 1s

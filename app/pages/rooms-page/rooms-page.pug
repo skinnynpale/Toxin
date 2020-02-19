@@ -1,111 +1,111 @@
 extends ../template-base
 
 block title
-    title Отель «Toxin» | Номера, которые мы для вас подобрали
+  title Отель «Toxin» | Номера, которые мы для вас подобрали
 
 block styles
-    link(rel="stylesheet" href="rooms-page.sass")
+  link(rel="stylesheet" href="rooms-page.sass")
 
 block content
-    main.main
-        .main__container
-            include ../../components/rooms-filter/rooms-filter
-            +rooms([{
-              img: "img/image-1.jpg",
-              num: "888",
-              lux: true,
-              price: "9 990",
-              stars: 5,
-              reviews: 145
-            },
-              {
-                img: "img/image-2.jpg",
-                num: "840",
-                lux: false,
-                price: "9 900",
-                stars: 4,
-                reviews: 65
-              },
-              {
-                img: "img/image-3.jpg",
-                num: "980",
-                lux: true,
-                price: "8 500",
-                stars: 3,
-                reviews: 35
-              },
-              {
-                img: "img/image-4.jpg",
-                num: "856",
-                lux: false,
-                price: "7 300",
-                stars: 5,
-                reviews: 19
-              },
-              {
-                img: "img/image-5.jpg",
-                num: "740",
-                lux: false,
-                price: "6 000",
-                stars: 4,
-                reviews: 44
-              },
-              {
-                img: "img/image-6.jpg",
-                num: "982",
-                lux: false,
-                price: "5 800",
-                stars: 3,
-                reviews: 56
-              },
-              {
-                img: "img/image-7.jpg",
-                num: "678",
-                lux: false,
-                price: "5 500",
-                stars: 5,
-                reviews: 45
-              },
-              {
-                img: "img/image-8.jpg",
-                num: "450",
-                lux: false,
-                price: "5 300",
-                stars: 4,
-                reviews: 39
-              },
-              {
-                img: "img/image-9.jpg",
-                num: "350",
-                lux: false,
-                price: "5 000",
-                stars: 3,
-                reviews: 77
-              },
-              {
-                img: "img/image-10.jpg",
-                num: "666",
-                lux: false,
-                price: "5 000",
-                stars: 5,
-                reviews: 25
-              },
-              {
-                img: "img/image-11.jpg",
-                num: "444",
-                lux: false,
-                price: "5 000",
-                stars: 4,
-                reviews: 15
-              },
-              {
-                img: "img/image-12.jpg",
-                num: "352",
-                lux: false,
-                price: "5 000",
-                stars: 3,
-                reviews: 55
-              }])
+  main.rooms-page
+    .rooms-page__container
+      include ../../components/rooms-filter/rooms-filter
+      +rooms([{
+        img: "img/image-1.jpg",
+        num: "888",
+        lux: true,
+        price: "9 990",
+        stars: 5,
+        reviews: 145
+      },
+        {
+          img: "img/image-2.jpg",
+          num: "840",
+          lux: false,
+          price: "9 900",
+          stars: 4,
+          reviews: 65
+        },
+        {
+          img: "img/image-3.jpg",
+          num: "980",
+          lux: true,
+          price: "8 500",
+          stars: 3,
+          reviews: 35
+        },
+        {
+          img: "img/image-4.jpg",
+          num: "856",
+          lux: false,
+          price: "7 300",
+          stars: 5,
+          reviews: 19
+        },
+        {
+          img: "img/image-5.jpg",
+          num: "740",
+          lux: false,
+          price: "6 000",
+          stars: 4,
+          reviews: 44
+        },
+        {
+          img: "img/image-6.jpg",
+          num: "982",
+          lux: false,
+          price: "5 800",
+          stars: 3,
+          reviews: 56
+        },
+        {
+          img: "img/image-7.jpg",
+          num: "678",
+          lux: false,
+          price: "5 500",
+          stars: 5,
+          reviews: 45
+        },
+        {
+          img: "img/image-8.jpg",
+          num: "450",
+          lux: false,
+          price: "5 300",
+          stars: 4,
+          reviews: 39
+        },
+        {
+          img: "img/image-9.jpg",
+          num: "350",
+          lux: false,
+          price: "5 000",
+          stars: 3,
+          reviews: 77
+        },
+        {
+          img: "img/image-10.jpg",
+          num: "666",
+          lux: false,
+          price: "5 000",
+          stars: 5,
+          reviews: 25
+        },
+        {
+          img: "img/image-11.jpg",
+          num: "444",
+          lux: false,
+          price: "5 000",
+          stars: 4,
+          reviews: 15
+        },
+        {
+          img: "img/image-12.jpg",
+          num: "352",
+          lux: false,
+          price: "5 000",
+          stars: 3,
+          reviews: 55
+        }])
 
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-    script(src="./rooms-page.js")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+  script(src="./rooms-page.js")

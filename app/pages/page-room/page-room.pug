@@ -8,22 +8,14 @@ block styles
   link(rel="stylesheet" href="page-room.sass")
 
 block content
-  main.main
-    .page-room
-      .gallery
-        figure.gallery__item.gallery__item--1
-          img.gallery__img(src="img/image.jpg", alt="Фотография номера")
-        figure.gallery__item.gallery__item--2
-          img.gallery__img(src="img/image-2.jpg", alt="Фотография номера")
-        figure.gallery__item.gallery__item--3
-          img.gallery__img(src="img/image-3.jpg", alt="Фотография номера")
-
-    .room-details
-      .room-details__container
-        .room-details__info-grid
-          .room-details__advan-list
-            h2.room-details__info-title Сведения о номере
-            ul.room-details__advantages
+  main.page-room
+    +gallery(["img/image.jpg", "img/image-2.jpg", "img/image-3.jpg"])
+    .page-room__wrapper
+      .page-room__container
+        .page-room__info-grid
+          .page-room__advan-list
+            h2.page-room__info-title Сведения о номере
+            ul.page-room__advantages
               +advantages([
                 {
                   ico: "insert_emoticon",
@@ -34,20 +26,20 @@ block content
                   ico: "location_city",
                   title: "Удобство",
                   text: "Окно в каждой из спален"
-                } ,
+                },
                 {
                   ico: "whatshot",
                   title: "Уют",
                   text: "Номер оснащен камином"
                 }
               ])
-          .room-details__impressions
-            h2.room-details__info-title Впечатления от номера
-            +donut({votes: 260})
-          .room-details__reviews
-            .room-details__title-group
-              h2.room-details__info-title Отзывы посетителей номера
-              span.room-details__info-value 2 отзыва
+          .page-room__impressions
+            h2.page-room__info-title Впечатления от номера
+            +donut({ votes: 260 })
+          .page-room__reviews
+            .page-room__title-group
+              h2.page-room__info-title Отзывы посетителей номера
+              span.page-room__info-value 2 отзыва
             +reviews([{
               avatar: "img/author-1.jpg",
               likes: 12,
@@ -63,12 +55,12 @@ block content
               date: 'Неделю назад',
               text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
             }])
-          .room-details__rules
-            h2.room-details__info-title Правила
+          .page-room__rules
+            h2.page-room__info-title Правила
             +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
-          .room-details__cancel
-            h2.room-details__info-title Отмена
-            p.room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+          .page-room__cancel
+            h2.page-room__info-title Отмена
+            p.page-room__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
         +check-form({
           number: 888,
           lux: true,

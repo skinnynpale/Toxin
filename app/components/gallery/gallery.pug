@@ -1,0 +1,5 @@
+mixin gallery(items = [])
+    .gallery
+        each src in items
+            figure.gallery__item
+                img.gallery__img(src=src, alt="Фотография номера")
