@@ -1,6 +1,33 @@
 @import "../../sass/index"
 
 .dropdown
+  width: 100%
+  border: 0.0714rem solid $accent50
+  box-shadow: 0 0.7143rem 1.4286rem $accent5
+  border-top: none
+  border-radius: 0.2857rem
+  padding: 0.5rem 0.5rem 0.9286rem 1.0714rem
+  position: absolute
+  background-color: #fff
+  z-index: 2
+  opacity: 0
+  max-height: 0
+  overflow: hidden
+  left: -7142.8571rem
+  transition: opacity .3s, max-height .3s
+
+  &--active
+    max-height: 21.4286rem
+    left: auto
+    opacity: 1
+    border-top-right-radius: 0
+    border-top-left-radius: 0
+
+  &--poor
+    padding: 0.6429rem 0.5rem 1.0714rem 1.0714rem
+    .dropdown__item:last-child
+      margin-bottom: 0
+
   &__item
     text-transform: uppercase
     font-size: 0.8571rem
@@ -16,22 +43,6 @@
     &:first-child
       margin-top: 0.3571rem
 
-
-  &__content
-    width: 100%
-    border: 0.0714rem solid $accent50
-    box-shadow: 0 0.7143rem 1.4286rem $accent5
-    border-top: none
-    border-radius: 0.2857rem
-    padding: 0.5rem 0.5rem 0.9286rem 1.0714rem
-    position: absolute
-    background-color: #fff
-    z-index: 2
-    opacity: 0
-    max-height: 0
-    overflow: hidden
-    left: -7142.8571rem
-    transition: opacity .3s, max-height .3s
 
   &__btn
     position: absolute
@@ -96,18 +107,4 @@
 
     &:hover
       color: lighten($purple, 5%)
-
-  &__content_active
-    max-height: 21.4286rem
-    left: auto
-    opacity: 1
-    border-top-right-radius: 0
-    border-top-left-radius: 0
-
-  &_content-poor
-    padding: 0.6429rem 0.5rem 1.0714rem 1.0714rem
-
-    .dropdown__item:last-child
-      margin-bottom: 0
-
 

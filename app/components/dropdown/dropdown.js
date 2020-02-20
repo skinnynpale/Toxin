@@ -11,13 +11,13 @@ class Dropdown {
 
     this.amount = 0;
     this.wrapperHTML = null;
-    this.lastId = 0;
+    this.lastId = Date.now();
 
     this.initAssignWithDefault(items);
     this.createWrapper();
 
     if (!helpButtons) {
-      this.wrapperHTML.classList.add('dropdown__content-poor');
+      this.wrapperHTML.classList.add('dropdown--poor');
     }
 
     this.renderHTML();
@@ -85,9 +85,9 @@ class Dropdown {
   }
 
   createWrapper() {
-    const wrapperHTML = '<div class="dropdown__content js-dropdown__content"></div>';
+    const wrapperHTML = '<div class="dropdown js-dropdown"></div>';
     this.anchor.parentElement.insertAdjacentHTML('beforeend', wrapperHTML);
-    this.wrapperHTML = this.anchor.parentElement.querySelector('.js-dropdown__content');
+    this.wrapperHTML = this.anchor.parentElement.querySelector('.js-dropdown');
   }
 
   createFuncButtons() {
@@ -160,16 +160,18 @@ class Dropdown {
 
   changeAmount(e) {
     if (!e.target.className.includes('dropdown__btn')) return;
+    const { id } = e.target.parentElement;
+    const [desiredItem] = this.items.filter(item => item.id === +id);
 
     if (e.target.className.includes('dropdown__btn dropdown__btn-plus')) {
-      this.items[e.target.parentElement.id].amount += 1;
+      desiredItem.amount += 1;
     } else {
-      this.items[e.target.parentElement.id].amount -= 1;
+      desiredItem.amount -= 1;
     }
 
     this.correctValues();
 
-    this.updateItemHTML(e);
+    this.updateItemHTML(e, desiredItem);
     this.updateDisabledHTML();
   }
 
@@ -212,14 +214,12 @@ class Dropdown {
     this.renderHTML();
   }
 
-  updateItemHTML(e) {
-    e.target.parentElement.querySelector('.dropdown__value').textContent = this.items[
-      e.target.parentElement.id
-    ].amount;
+  updateItemHTML(e, item) {
+    e.target.parentElement.querySelector('.dropdown__value').textContent = item.amount;
   }
 
   checkClickOnHide(e) {
-    if (this.wrapperHTML.classList.contains('dropdown__content_active')) {
+    if (this.wrapperHTML.classList.contains('dropdown--active')) {
       const div = this.wrapperHTML;
 
       if (div !== e.target && !div.contains(e.target)) {
@@ -229,7 +229,7 @@ class Dropdown {
   }
 
   toggleDropdown() {
-    this.wrapperHTML.classList.toggle('dropdown__content_active');
+    this.wrapperHTML.classList.toggle('dropdown--active');
     this.anchor.classList.toggle('field__input--active');
   }
 }
