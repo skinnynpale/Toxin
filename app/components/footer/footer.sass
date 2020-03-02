@@ -12,7 +12,6 @@
   &__container
     @include container
     display: flex
-    justify-content: space-between
 
     @media screen and (max-width: 61.7143rem)
       text-align: center
@@ -49,7 +48,14 @@
       display: none
 
   &__item
+    padding: 0
     list-style: none
+    white-space: nowrap
+    line-height: 0.9286rem
+
+    &:nth-child(2)
+      padding-left: 60px
+      padding-right: 92px
 
     @media screen and (max-width: 41.1429rem)
       padding: 0
@@ -69,15 +75,14 @@
 
   &__newsletter
     width: 18.5714rem
-    line-height: 1.7143rem
-    margin-left: 3.6429rem
+    margin-left: 3.7143rem
 
     @media screen and (max-width: 61.7143rem)
       display: none
 
     #{$root}__info
-      top: 1.2857rem
-      bottom: 1.6429rem
+      margin-top: 1.4286rem
+      line-height: 1.5714rem
 
   &__sub
     border-top: 0.0714rem solid rgba(#d0d0d4, 0.50)
@@ -98,7 +103,8 @@
       text-align: center
 
   &__copyright
-    font-size: 1rem
+    font-size: 14px
+    line-height: 35px
 
   &__soc-item
     display: inline-block
@@ -130,3 +136,6 @@
     #{$root}__item
       padding: 0
       margin-top: 1.0714rem
+
+  &__input-newsletter
+    margin-top: 1.6429rem

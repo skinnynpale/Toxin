@@ -28,7 +28,8 @@ mixin footer(theme, navigations = [])
           form.footer__newsletter
             h3.footer__title Подписка
             p.footer__info Получайте специальные предложения и новости сервиса
-            +field({theme: 'with-arrow', name: 'email', type: 'email', placeholder: 'Email'})
+            .footer__input-newsletter
+              +field({theme: 'with-arrow', name: 'email', type: 'email', placeholder: 'Email'})
       .footer__sub
         .footer__sub-container
           p.footer__copyright Copyright © 2019 Toxin отель. Все права зачищены.

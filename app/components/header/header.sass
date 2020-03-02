@@ -5,7 +5,7 @@
   $root: &
   box-shadow: 0 0.7143rem 1.4286rem $accent5
   background-color: #fff
-  padding: 1.0714rem 0
+  padding: 12px 0
 
   &__container
     @include container
@@ -47,13 +47,6 @@
       order: 0
       margin-left: 0
 
-    #{$root}__item
-      &:nth-child(2)
-        margin-right: 2rem
-
-      &:nth-child(5)
-        margin-right: 2.0714rem
-
   &__user-nav
     z-index: 0
     padding: 0
@@ -77,9 +70,11 @@
 
   &__item
     display: inline-block
-    margin-right: 1.4286rem
+    margin-right: 1.5rem
 
     &_has-submenu
+      margin-right: 2.0429rem
+
       & > #{$root}__link::after
         content: ""
         display: inline-block
