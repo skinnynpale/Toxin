@@ -1,6 +1,8 @@
 @import "../../sass/index"
 
 .rooms-filter
+  $root: &
+
   @media screen and ( max-width: 65rem )
     display: none
 
@@ -22,13 +24,13 @@
       margin-bottom: 0
 
     &:nth-child(2)
-      margin-bottom: 2.0714rem
+      margin-bottom: 1.4286rem
 
     &:nth-child(3)
-      margin-bottom: 1.0714rem
+      margin-bottom: 1.3571rem
 
     &:nth-child(4)
-      margin-bottom: 1.6429rem
+      margin-bottom: 1.3571rem
 
   &__field
     margin-bottom: 1.4286rem
@@ -38,6 +40,10 @@
 
   &__checkbox
     margin-top: 1.1429rem
+
+  &__item--with-range-slider
+    #{$root}__label
+      margin-bottom: 0
 
 
 .js-rooms-filter__calendar
