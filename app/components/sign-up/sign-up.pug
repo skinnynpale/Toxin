@@ -62,8 +62,9 @@ mixin sign-up()
                     })
             .sign-up__question
                 p Уже есть аккаунт на Toxin
-                +btn({
-                  text: 'Войти',
-                  size: 'xl',
-                  href: "/../sign-in-page/sign-in-page.pug"
-                })
+                .sign-up__sign-in-btn
+                  +btn({
+                    text: 'Войти',
+                    size: 'xl',
+                    href: "/../sign-in-page/sign-in-page.pug"
+                  })
