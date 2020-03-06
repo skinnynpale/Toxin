@@ -1,4 +1,4 @@
-@import "../../sass/index";
+@import '../../sass/index';
 
 .datepicker-inline {
   .datepicker {
@@ -146,7 +146,7 @@
     position: relative;
 
     &::after {
-      content: url('../footer/img/arrow_forward.svg');
+      content: url('../../icons/arrow-forward.svg');
       display: block;
       position: absolute;
       top: 50%;
