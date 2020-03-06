@@ -185,9 +185,9 @@ class Dropdown {
 
     allButtonMinus.forEach(btn => {
       if (btn.nextElementSibling.textContent > 0) {
-        btn.classList.remove('dropdown__btn_disable');
+        btn.classList.remove('dropdown__btn_disabled');
       } else {
-        btn.classList.add('dropdown__btn_disable');
+        btn.classList.add('dropdown__btn_disabled');
       }
     });
   }

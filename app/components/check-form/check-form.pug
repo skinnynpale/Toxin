@@ -6,7 +6,7 @@ mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount,
     .check-form__item
       .check-form__item-group
         h3.check-form__number
-          span.check-form__number-ico №
+          span.check-form__number-icon №
           | #{number}
         if lux
           +btn({text: 'Люкс', theme: 'link'})
@@ -31,16 +31,16 @@ mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount,
         span.check-form__text #{payPerDay}₽ х #{days} суток
         span.check-form__text #{payPerDay * days}₽
       .check-form__conclusion
-        span.check-form__text.check-form__text--info Сбор за услуги: скидка #{serviceChargeDiscount}₽
+        span.check-form__text.check-form__text_with-info Сбор за услуги: скидка #{serviceChargeDiscount}₽
         span.check-form__text #{serviceCharge}₽
       .check-form__conclusion
-        span.check-form__text.check-form__text--info Сбор за дополнительные услуги
+        span.check-form__text.check-form__text_with-info Сбор за дополнительные услуги
         span.check-form__text #{additionalServiceCharge}₽
     .check-form__item
       .check-form__final-price
         .check-form__item-group
           .check-form__final-price-text Итого
           .check-form__price-line
-          .check-form__final-price-text #{(payPerDay * days) + serviceCharge + additionalServiceCharge - serviceChargeDiscount}₽
+          .check-form__final-price-value #{(payPerDay * days) + serviceCharge + additionalServiceCharge - serviceChargeDiscount}₽
     .check-form__item
       +btn({text: 'Забронировать', theme: 'arrow'})

@@ -2,13 +2,13 @@ mixin image-helpers({ slides = [1] })
   - slides.length = 4;
 
   .image-helpers
-    .image-helpers__border.image-helpers__border--left
-    .image-helpers__border.image-helpers__border--right
-    a(href="#!").image-helpers__arrow.image-helpers__arrow--nav-left
+    .image-helpers__border.image-helpers__border_left
+    .image-helpers__border.image-helpers__border_right
+    a(href="#!").image-helpers__arrow.image-helpers__arrow_left
     a(href="#!").image-helpers__arrow
     .image-helpers__slide-wrapper
       each slide in slides
         if slides[0] === slide
-          a(href="#!").image-helpers__slide.image-helpers__slide--active
+          a(href="#!").image-helpers__slide.image-helpers__slide_active
         else
           a(href="#!").image-helpers__slide
