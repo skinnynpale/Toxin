@@ -84,7 +84,7 @@ const dateFilterCalendar = new Calendar('#filterDate', {
 });
 
 const rangePrices = rangeSlider(
-  '.form-elements__item--with-range-slider',
+  '.form-elements__item_with-range-slider',
   '.form-elements__slider-values',
   {
     type: 'double',

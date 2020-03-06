@@ -23,7 +23,7 @@ mixin field({ theme, text, className, value, placeholder, name, id = name, type,
     when 'date'
       .field
         label(class="field__label" for=id)= text
-        input(class="field__input field__input--with-date" id=id value=value autocomplete="off" placeholder=placeholder name=name type='date')
+        input(class="field__input field__input_with-date" id=id value=value autocomplete="off" placeholder=placeholder name=name type='date')
 
     default
       .field

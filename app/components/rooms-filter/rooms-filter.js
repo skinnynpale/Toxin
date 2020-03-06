@@ -3,7 +3,7 @@ import Calendar from '../calendar/calendar';
 import rangeSlider from '../range-slider/range-slider';
 
 const rangePrices = rangeSlider(
-  '.rooms-filter__item--with-range-slider',
+  '.rooms-filter__item_with-range-slider',
   '.rooms-filter__values',
   {
     type: 'double',

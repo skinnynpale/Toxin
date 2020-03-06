@@ -1,7 +1,7 @@
 import Calendar from '../calendar/calendar';
 import Dropdown from '../dropdown/dropdown';
 
-const findRoomCalendar = new Calendar('.find-room__item--with-calendar', {
+const findRoomCalendar = new Calendar('.find-room__item_with-calendar', {
   className: 'js-find-room__calendar',
   multipleDatesSeparator: '-',
   onSelect(formattedDate) {

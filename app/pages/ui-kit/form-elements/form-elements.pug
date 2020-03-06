@@ -37,7 +37,7 @@
             .form-elements__item
                 label.form-elements__label(for='subscr') Subscription  text field
                 +field({theme: 'with-arrow', text: 'subscription text field', id: 'subscr', type: "email", placeholder: "Email"})
-        .form-elements__column.form-elements__column--type-buttons
+        .form-elements__column.form-elements__column_type-buttons
             .form-elements__item
                 h3.form-elements__label Checkbox Buttons
                 +checkbox-list({
@@ -91,8 +91,8 @@
                     +rate(4, 5)
                 span.form-elements__rate
                     +rate(5, 5)
-        .form-elements__column.form-elements__column--type-buttons
-            .form-elements__item.form-elements__item--with-range-slider
+        .form-elements__column.form-elements__column_type-buttons
+            .form-elements__item.form-elements__item_with-range-slider
                 h3.form-elements__label Range Slider
                 span.form-elements__slider-values
             .form-elements__item
@@ -204,7 +204,7 @@
                 +bullet-list(["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
     .form-elements__container
         .form-elements__column
-            .form-elements__item.form-elements__item--with-advantages
+            .form-elements__item.form-elements__item_with-advantages
                 +advantages([
                   {
                     ico: "insert_emoticon",

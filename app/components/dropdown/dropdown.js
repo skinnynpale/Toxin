@@ -17,7 +17,7 @@ class Dropdown {
     this.createWrapper();
 
     if (!helpButtons) {
-      this.wrapperHTML.classList.add('dropdown--poor');
+      this.wrapperHTML.classList.add('dropdown_poor');
     }
 
     this.renderHTML();
@@ -219,7 +219,7 @@ class Dropdown {
   }
 
   checkClickOnHide(e) {
-    if (this.wrapperHTML.classList.contains('dropdown--active')) {
+    if (this.wrapperHTML.classList.contains('dropdown_active')) {
       const div = this.wrapperHTML;
 
       if (div !== e.target && !div.contains(e.target)) {
@@ -229,8 +229,8 @@ class Dropdown {
   }
 
   toggleDropdown() {
-    this.wrapperHTML.classList.toggle('dropdown--active');
-    this.anchor.classList.toggle('field__input--active');
+    this.wrapperHTML.classList.toggle('dropdown_active');
+    this.anchor.classList.toggle('field__input_active');
   }
 }
 

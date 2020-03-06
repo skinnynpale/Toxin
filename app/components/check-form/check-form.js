@@ -1,7 +1,7 @@
 import Calendar from '../calendar/calendar';
 import Dropdown from '../dropdown/dropdown';
 
-const checkFormCalendar = new Calendar('.check-form__item--with-calendar', {
+const checkFormCalendar = new Calendar('.check-form__item_with-calendar', {
   className: 'js-check-form__calendar',
   multipleDatesSeparator: '-',
   onSelect(formattedDate) {
