@@ -21,16 +21,13 @@ include ../../pages/mixins-pug
               items: [
                 {
                   text: 'Можно курить',
-                  id: 'smoke'
                 },
                 {
                   text: 'Можно с питомцами',
-                  id: 'pets',
                   check: true
                 },
                 {
                   text: 'Можно пригласить гостей (до 10 человек)',
-                  id: 'guestsCheck',
                   check: true
                 }
               ]
@@ -40,8 +37,8 @@ include ../../pages/mixins-pug
         .rooms-filter__checkbox
             +checkbox-list({
               items: [
-                { theme: "rich", title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.', id: 'corridor'},
-                { theme: "rich", title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист  и проводит до номера.', id: 'helper'}
+                { theme: "rich", title: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.'},
+                { theme: "rich", title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист  и проводит до номера.'}
               ]
             })
     .rooms-filter__item

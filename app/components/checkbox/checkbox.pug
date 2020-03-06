@@ -1,14 +1,16 @@
-mixin checkbox({ title, text, id, check, theme })
+mixin checkbox({ title, text, check, theme })
   case theme
     when 'rich'
       .checkbox.checkbox_rich
-        input(id=id type='checkbox').checkbox__input
-        label(class="checkbox__title_rich" for=id).checkbox__label= title
+        label(class="checkbox__title_rich").checkbox__label
+          input(type='checkbox').checkbox__input
+          span.checkbox__span= title
           p(class="checkbox__text_rich")= text
     default
       .checkbox
-        if check
-          input(id=id type='checkbox' checked).checkbox__input
-        else
-          input(id=id type='checkbox').checkbox__input
-        label(for=id).checkbox__label= text
+        label.checkbox__label
+          if check
+            input(type='checkbox' checked).checkbox__input
+          else
+            input(type='checkbox').checkbox__input
+          span.checkbox__span= text
