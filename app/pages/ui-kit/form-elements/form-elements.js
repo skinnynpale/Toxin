@@ -2,8 +2,44 @@ import Dropdown from '../../../components/dropdown/dropdown';
 import Calendar from '../../../components/calendar/calendar';
 import rangeSlider from '../../../components/range-slider/range-slider';
 
+const DropdownWithButtons = new Dropdown({
+  anchor: document.querySelector('.form-elements__sub-item_type-guests .field__input'),
+  fallbackTitle: 'Сколько гостей',
+  showFullAmount: true,
+  anchorDeclensions: ['гость', 'гостя', 'гостей'],
+  items: [
+    {
+      title: 'Младенцы',
+      show: true,
+      declensions: ['младенец', 'младенца', 'младенцев'],
+    },
+    {
+      title: 'Дети',
+    },
+    {
+      title: 'Взрослые',
+    },
+  ],
+  helpButtons: true,
+});
+
+const arrivalCalendar = new Calendar('.form-elements__item_with-calendar', {
+  className: 'js-form-elements__arrival-calendar',
+  multipleDatesSeparator: '-',
+  onSelect(formattedDate) {
+    $('.form-elements__field_type-arrival .field__input').val(formattedDate.split('-')[0]);
+    $('.form-elements__field_type-check-out .field__input').val(formattedDate.split('-')[1]);
+  },
+});
+
+const dateFilterCalendar = new Calendar('.form-elements__item_with-filter-date .field__input', {
+  className: 'js-form-elements__date-filter-calendar',
+  dateFormat: 'dd M',
+  multipleDatesSeparator: ' - ',
+});
+
 const DropdownWithoutButtons = new Dropdown({
-  anchor: document.getElementById('DropdownWithoutButtons'),
+  anchor: document.querySelector('.form-elements__sub-item_with-dropdown-no-buttons .field__input'),
   fallbackTitle: 'Выберите удобства',
   showFullAmount: false,
   items: [
@@ -26,29 +62,8 @@ const DropdownWithoutButtons = new Dropdown({
   helpButtons: false,
 });
 
-const DropdownWithButtons = new Dropdown({
-  anchor: document.getElementById('DropdownWithButtons'),
-  fallbackTitle: 'Сколько гостей',
-  showFullAmount: true,
-  anchorDeclensions: ['гость', 'гостя', 'гостей'],
-  items: [
-    {
-      title: 'Младенцы',
-      show: true,
-      declensions: ['младенец', 'младенца', 'младенцев'],
-    },
-    {
-      title: 'Дети',
-    },
-    {
-      title: 'Взрослые',
-    },
-  ],
-  helpButtons: true,
-});
-
 const guestsDropDown = new Dropdown({
-  anchor: document.getElementById('elements-guestsDropDown'),
+  anchor: document.querySelector('.form-elements__sub-item_with-dropdown .field__input'),
   fallbackTitle: 'Сколько гостей',
   showFullAmount: true,
   anchorDeclensions: ['гость', 'гостя', 'гостей'],
@@ -68,20 +83,7 @@ const guestsDropDown = new Dropdown({
   helpButtons: true,
 });
 
-const arrivalCalendar = new Calendar('#formElementsCalendar', {
-  className: 'js-form-elements__arrival-calendar',
-  multipleDatesSeparator: '-',
-  onSelect(formattedDate) {
-    $('#arrival').val(formattedDate.split('-')[0]);
-    $('#checkOut').val(formattedDate.split('-')[1]);
-  },
-});
-
-const dateFilterCalendar = new Calendar('#filterDate', {
-  className: 'js-form-elements__date-filter-calendar',
-  dateFormat: 'dd M',
-  multipleDatesSeparator: ' - ',
-});
+console.log(guestsDropDown);
 
 const rangePrices = rangeSlider(
   '.form-elements__item_with-range-slider',

@@ -2,13 +2,12 @@ include ../../pages/mixins-pug
 
 .rooms-filter
     .rooms-filter__item
-        .rooms-filter__field
-            +field({theme: 'with-dropdown', text: 'Даты пребывания в отеле', id: 'dateFilter', value: "Выберите дату"})
-        .rooms-filter__field
+        .rooms-filter__field.rooms-filter__field_with-date
+            +field({theme: 'with-dropdown', text: 'Даты пребывания в отеле', value: "Выберите дату"})
+        .rooms-filter__field.rooms-filter__field_with-guests
             +field({
               theme: 'with-dropdown',
               text: 'Гости',
-              id: 'guests',
               value: "Сколько гостей"
             })
     .rooms-filter__item.rooms-filter__item_with-range-slider
@@ -41,54 +40,44 @@ include ../../pages/mixins-pug
                 { theme: "rich", title: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист  и проводит до номера.'}
               ]
             })
-    .rooms-filter__item
+    .rooms-filter__item.rooms-filter__item_with-comfort-filter
         +field({
           theme: 'with-dropdown',
           text: 'Удобства номера',
-          id: 'comfortFilter',
           value: "Выберите удобства"
         })
     .rooms-filter__item
         +checkbox-list({
           expandable: true,
-          id: 'moreComfortFilter',
           title: 'Дополнительные удобства',
           items:
             [
               {
-                text: 'Завтрак',
-                id: 'breakfast'
+                text: 'Завтрак'
               },
               {
                 text: 'Письменный стол',
-                id: 'desk',
                 check: true
               },
               {
                 text: 'Стул для кормления',
-                id: 'feedingChair',
                 check: true
               },
               {
                 text: 'Кроватка',
-                id: 'crib',
                 check: true
               },
               {
-                text: 'Телевизор',
-                id: 'tv'
+                text: 'Телевизор'
               },
               {
-                text: 'Шампунь',
-                id: 'shampoo'
+                text: 'Шампунь'
               },
               {
-                text: 'Интернет',
-                id: 'internet'
+                text: 'Интернет'
               },
               {
-                text: 'Связь с космосом',
-                id: 'spaceConnection'
+                text: 'Связь с космосом'
               }
             ]
         })

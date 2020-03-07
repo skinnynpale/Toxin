@@ -7,18 +7,16 @@ mixin find-room(title)
     form.find-room__form
       .find-room__item.find-room__item_with-calendar
         .find-room__group-field
-          .find-room__field
+          .find-room__field.find-room__field_type-from
             +field({
               theme: 'with-dropdown',
               text: 'Прибытие',
-              id: 'find-room__from',
               value: "ДД.ММ.ГГГГ"
             })
-          .find-room__field
+          .find-room__field.find-room__field_type-to
             +field({
               theme: 'with-dropdown',
               text: 'Выезд',
-              id: 'find-room__to',
               value: "ДД.ММ.ГГГГ"
             })
       .find-room__item
@@ -26,7 +24,6 @@ mixin find-room(title)
           +field({
             theme: 'with-dropdown',
             text: 'Гости',
-            id: 'guests',
             value: "Сколько гостей"
           })
       .find-room__btn

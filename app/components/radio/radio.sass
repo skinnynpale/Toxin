@@ -3,7 +3,7 @@
 .radio
   $root: &
 
-  &__input + &__label
+  &__label
     display: inline-block
     cursor: pointer
     position: relative
@@ -13,6 +13,7 @@
     font-size: 0.9286rem
     width: auto
 
+  &__span
     &:before
       content: ""
       display: block
@@ -29,7 +30,7 @@
   &__input
     display: none !important
 
-    &:checked + #{$root}__label:after
+    &:checked + #{$root}__span:after
       content: ""
       display: block
       position: absolute
@@ -40,5 +41,5 @@
       border-radius: 50%
       background: linear-gradient(180deg, $blue 0%, $blue 100%)
 
-    &:checked + #{$root}__label
+    &:checked #{$root}__span
       color: $accent75

@@ -15,15 +15,14 @@ mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount,
           |  в сутки
     .check-form__item.check-form__item_with-calendar
       .check-form__group-field
-        .check-form__field
-          +field({ theme: 'with-dropdown', text: 'Прибытие', id: 'check-form__from', value: "ДД.ММ.ГГГГ" })
-        .check-form__field
-          +field({ theme: 'with-dropdown', text: 'Выезд', id: 'check-form__to', value: "ДД.ММ.ГГГГ" })
-    .check-form__item
+        .check-form__field.check-form__field_type-from
+          +field({ theme: 'with-dropdown', text: 'Прибытие', value: "ДД.ММ.ГГГГ" })
+        .check-form__field.check-form__field_type-to
+          +field({ theme: 'with-dropdown', text: 'Выезд', value: "ДД.ММ.ГГГГ" })
+    .check-form__item.check-form__item_with-guests
       +field({
         theme: 'with-dropdown',
         text: 'Гости',
-        id: 'guests',
         value: "Сколько гостей"
       })
     .check-form__item

@@ -1,14 +1,16 @@
-mixin field({ theme, text, className, value, placeholder, name, id = name, type, labelledby } = '')
+mixin field({ theme, text, className, value, placeholder, name = text.split(" ").join(""), type, labelledby } = '')
   case theme
     when 'with-label'
       .field
-        label(class="field__label" for=id)= text
-        input(class="field__input" id=id value=value autocomplete="off" placeholder=placeholder name=name type=type)
+        label(class="field__label")
+          .field__title= text
+          input(class="field__input" value=value autocomplete="off" placeholder=placeholder name=name type=type)
 
     when 'with-dropdown'
       .field.field_type_dropdown
-        label(class="field__label" for=id)= text
-        input(class="field__input" id=id value=value readonly autocomplete="off" placeholder=placeholder name=name type=type)
+        label(class="field__label")
+          .field__title= text
+        input(class="field__input" value=value readonly autocomplete="off" placeholder=placeholder name=name type=type)
 
     when 'with-arrow'
       .field
@@ -17,13 +19,15 @@ mixin field({ theme, text, className, value, placeholder, name, id = name, type,
 
     when 'masked'
       .field.field_type_masked
-        label(class="field__label" for=id)= text
-        input(class="field__input", id=id disabled placeholder=placeholder name=name type=type)
+        label(class="field__label")
+          .field__title= text
+          input(class="field__input" disabled placeholder=placeholder name=name type=type)
 
     when 'date'
       .field
-        label(class="field__label" for=id)= text
-        input(class="field__input field__input_with-date" id=id value=value autocomplete="off" placeholder=placeholder name=name type='date')
+        label(class="field__label")
+          .field__title= text
+          input(class="field__input field__input_with-date" value=value autocomplete="off" placeholder=placeholder name=name type='date')
 
     default
       .field

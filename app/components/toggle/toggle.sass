@@ -1,25 +1,14 @@
 @import "../../sass/index"
 
 .toggle
-  &__checkbox
-    position: absolute
-    z-index: -1
-    opacity: 0
-    margin: 0 0 0 1.4286rem
-
-    &:checked + .toggle__label
-      &:before
-        border: 0.0714rem solid $purple
-
-      &:after
-        left: 1.7143rem
-        background: linear-gradient(180deg, $blue 0%, $blue 100%)
+  $root: &
 
   &__label
     position: relative
     padding-left: 3.5714rem
     cursor: pointer
 
+  &__span
     &:before
       content: ''
       position: absolute
@@ -41,5 +30,22 @@
       border-radius: 0.7143rem
       background: $accent25
       transition: .2s
+
+  &__checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+    margin: 0 0 0 1.4286rem
+
+    &:checked + #{$root}__span
+      &:before
+        border: 0.0714rem solid $purple
+
+      &:after
+        left: 1.7143rem
+        background: linear-gradient(180deg, $blue 0%, $blue 100%)
+
+
+
 
 

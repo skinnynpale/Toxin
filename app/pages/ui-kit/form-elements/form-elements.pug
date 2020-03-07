@@ -3,57 +3,51 @@
         .form-elements__column
             .form-elements__item
                 .form-elements__sub-item(data-tip='Default')
-                    +field({ theme: 'with-label', className: 't-field', text: 'text field', id: 'fieldDefault', placeholder: "Email"})
+                    +field({ theme: 'with-label', className: 't-field', text: 'text field', placeholder: "Email"})
                 .form-elements__sub-item(data-tip='Hover / Focus')
                     +field({
                       theme: 'with-label',
                       className: 't-field',
                       text: 'text field',
-                      id: 'fieldHover',
                       value: "This is pretty awesome"
                     })
+                .form-elements__sub-item.form-elements__sub-item_type-guests(data-tip='Default')
+                    +field({theme: 'with-dropdown', text: 'text field', value: "Сколько гостей"})
                 .form-elements__sub-item(data-tip='Default')
-                    +field({theme: 'with-dropdown', text: 'text field', id: 'elements-guestsDropDown', value: "Сколько гостей"})
-                .form-elements__sub-item(data-tip='Default')
-                    +field({theme: 'masked', text: 'Masked text field', id:'t-field_dropdown', placeholder: "ДД.ММ.ГГГГ"})
-            .form-elements__item#formElementsCalendar
+                    +field({theme: 'masked', text: 'Masked text field', placeholder: "ДД.ММ.ГГГГ"})
+            .form-elements__item.form-elements__item_with-calendar
                 .form-elements__group-field
-                    .form-elements__field
+                    .form-elements__field.form-elements__field_type-arrival
                         +field({
                           theme: 'with-dropdown',
                           text: 'date Dropdown',
-                          id: 'arrival',
                           value: "ДД.ММ.ГГГГ"
                         })
-                    .form-elements__field
+                    .form-elements__field.form-elements__field_type-check-out
                         +field({
                           theme: 'with-dropdown',
                           text: 'date Dropdown',
-                          id: 'checkOut',
                           value: "ДД.ММ.ГГГГ"
                         })
+            .form-elements__item.form-elements__item_with-filter-date
+                +field({theme: 'with-dropdown', text: 'filter date dropdown', value: "Выберите дату"})
             .form-elements__item
-                +field({theme: 'with-dropdown', text: 'filter date dropdown', id: 'filterDate', value: "Выберите дату"})
-            .form-elements__item
-                label.form-elements__label(for='subscr') Subscription  text field
-                +field({theme: 'with-arrow', text: 'subscription text field', id: 'subscr', type: "email", placeholder: "Email"})
+                label.form-elements__label Subscription  text field
+                +field({theme: 'with-arrow', text: 'subscription text field', type: "email", placeholder: "Email"})
         .form-elements__column.form-elements__column_type-buttons
             .form-elements__item
                 h3.form-elements__label Checkbox Buttons
                 +checkbox-list({
                   items: [
                     {
-                      text: 'Можно курить',
-                      id: 'smoke'
+                      text: 'Можно курить'
                     },
                     {
                       text: 'Можно с питомцами',
-                      id: 'pets',
                       check: true
                     },
                     {
                       text: 'Можно пригласить гостей (до 10 человек)',
-                      id: 'guestsCheck',
                       check: true
                     }
                   ]
@@ -62,23 +56,21 @@
                 h3.form-elements__label Radio Buttons
                 +radio({
                   text: 'Мужчина',
-                  id: 'man',
                   name: 'sex',
                   value: 'man',
                   checked: true
                 })
                 +radio({
                   text: 'Женщина',
-                  id: 'woman',
                   name: 'sex',
                   value: 'woman'
                 })
             .form-elements__item
                 h3.form-elements__label Toggle
                 .form-elements__toggle
-                    +toggle('Получать спецпредложения', 'offer', true)
+                    +toggle('Получать спецпредложения', true)
                 .form-elements__toggle
-                    +toggle('Получать спецпредложения', 'offer2')
+                    +toggle('Получать спецпредложения')
             .form-elements__item
                 h3.form-elements__label Like Button
                 span.form-elements__like
@@ -117,20 +109,18 @@
     .form-elements__container
         .form-elements__column
             .form-elements__item
-                .form-elements__sub-item(data-tip='Default')
+                .form-elements__sub-item.form-elements__sub-item_with-dropdown-no-buttons(data-tip='Default')
                     +field({
                       theme: 'with-dropdown',
                       text: 'Dropdown',
-                      id: 'DropdownWithoutButtons',
                       value: "2 спальни, 2 кровати..."
                     })
         .form-elements__column
             .form-elements__item
-                .form-elements__sub-item
+                .form-elements__sub-item.form-elements__sub-item_with-dropdown
                     +field({
                       theme: 'with-dropdown',
                       text: 'Dropdown',
-                      id: 'DropdownWithButtons',
                       value: "2 спальни, 2 кровати..."
                     })
     .form-elements__container
@@ -138,44 +128,35 @@
             .form-elements__item
                 +checkbox-list({
                   expandable: true,
-                  id: 'moreComfortFilter',
                   title: 'Дополнительные удобства',
                   items:
                     [
                       {
-                        text: 'Завтрак',
-                        id: 'breakfast'
+                        text: 'Завтрак'
                       },
                       {
                         text: 'Письменный стол',
-                        id: 'desk',
                         check: true
                       },
                       {
                         text: 'Стул для кормления',
-                        id: 'feedingChair',
                         check: true
                       },
                       {
                         text: 'Кроватка',
-                        id: 'crib',
                         check: true
                       },
                       {
-                        text: 'Телевизор',
-                        id: 'tv'
+                        text: 'Телевизор'
                       },
                       {
-                        text: 'Шампунь',
-                        id: 'shampoo'
+                        text: 'Шампунь'
                       },
                       {
-                        text: 'Интернет',
-                        id: 'internet'
+                        text: 'Интернет'
                       },
                       {
-                        text: 'Связь с космосом',
-                        id: 'spaceConnection'
+                        text: 'Связь с космосом'
                       }
                     ]
                 })
@@ -187,14 +168,12 @@
                     {
                       theme: "rich",
                       title: 'Широкий коридор',
-                      text: 'Ширина коридоров в номере не менее 91 см.',
-                      id: 'corridor'
+                      text: 'Ширина коридоров в номере не менее 91 см.'
                     },
                     {
                       theme: "rich",
                       title: 'Помощник для инвалидов',
-                      text: 'На 1 этаже вас встретит специалист  и проводит до номера.',
-                      id: 'helper'
+                      text: 'На 1 этаже вас встретит специалист  и проводит до номера.'
                     }
                   ]
                 })

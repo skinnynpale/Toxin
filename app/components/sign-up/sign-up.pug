@@ -18,14 +18,12 @@ mixin sign-up()
                 .sign-up__field
                     +radio({
                       text: 'Мужчина',
-                      id: 'man',
                       name: 'sex',
                       value: 'man',
                       checked: true
                     })
                     +radio({
                       text: 'Женщина',
-                      id: 'woman',
                       name: 'sex',
                       value: 'woman'
                     })
@@ -53,7 +51,7 @@ mixin sign-up()
                       type: 'password',
                       labelledby: 'signUpData'
                     })
-                +toggle('Получать спецпредложения', 'receive-offers')
+                +toggle('Получать спецпредложения')
             .sign-up__item
                 .sign-up__btn-buy
                     +btn({
