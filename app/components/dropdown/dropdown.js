@@ -123,7 +123,7 @@ class Dropdown {
     item.id = this.lastId;
     this.lastId += 1;
     const wrapperItemHTML = `
-                                <span class="dropdown__item" id="${item.id}">
+                                <span class="dropdown__item" data-id="${item.id}">
                                   <span class="dropdown__target">${item.title}</span>
                                   <a class="dropdown__btn dropdown__btn-minus" href="#!">
                                     -
@@ -160,8 +160,9 @@ class Dropdown {
 
   changeAmount(e) {
     if (!e.target.className.includes('dropdown__btn')) return;
-    const { id } = e.target.parentElement;
-    const [desiredItem] = this.items.filter(item => item.id === +id);
+
+    const { dataset } = e.target.parentElement;
+    const [desiredItem] = this.items.filter(item => item.id === +dataset.id);
 
     if (e.target.className.includes('dropdown__btn dropdown__btn-plus')) {
       desiredItem.amount += 1;

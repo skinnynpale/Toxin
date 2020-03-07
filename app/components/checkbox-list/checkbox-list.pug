@@ -1,13 +1,14 @@
 include ../checkbox/checkbox
 
-mixin checkbox-list({ id, title, items, expandable })
+mixin checkbox-list({ title, items, expandable })
     if expandable === true
         .checkbox-list.checkbox-list_expandable
-            input.checkbox-list__check(type="checkbox" id=`${id}-check`)
-            label.checkbox-list__title(for=`${id}-check`)= title
-            ul.checkbox-list__checkboxes
-                each item in items
-                    +checkbox(item)
+            label.checkbox-list__title= title
+                input.checkbox-list__check(type="checkbox")
+                .checkbox-list__cap
+                ul.checkbox-list__checkboxes
+                    each item in items
+                        +checkbox(item)
     else
         .checkbox-list
             ul.checkbox-list__checkboxes
