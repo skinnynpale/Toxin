@@ -83,8 +83,6 @@ const guestsDropDown = new Dropdown({
   helpButtons: true,
 });
 
-console.log(guestsDropDown);
-
 const rangePrices = rangeSlider(
   '.form-elements__item_with-range-slider',
   '.form-elements__slider-values',

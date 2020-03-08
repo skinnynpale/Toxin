@@ -4,5 +4,5 @@ mixin colors(items = [])
             .colors__item
                 .colors__box(class=item.class)
                 .colors__info
-                    p= item.title
+                    p.colors__title= item.title
                     span.colors__hex= item.hex
