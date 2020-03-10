@@ -1,6 +1,6 @@
 # Отель «Toxin»
 
-### [Превью сайта](https://skinnynpale.github.io/Toxin/)
+### Первью сайта — [клик](https://skinnynpale.github.io/Toxin/)
 
 ### Клонировать репозиторий
 
@@ -9,3 +9,9 @@
 | Режим разработки | Режим продакшена |
 | ---------------- | ---------------- |
 | `npm run dev`    | `npm run build`  |
+
+### Сторонние библиотеки
+
+Календарь - [air-datepicker](https://www.npmjs.com/package/air-datepicker)
+
+Бегунок - [ion-rangeslider](https://www.npmjs.com/package/ion-rangeslider)
