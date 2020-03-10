@@ -39,12 +39,6 @@ class Dropdown {
     this.correctInputValue();
   }
 
-  addEventListeners() {
-    this.anchor.addEventListener('click', this.toggleDropdown.bind(this));
-    document.addEventListener('mouseup', this.checkClickOnHide.bind(this));
-    this.wrapperHTML.addEventListener('click', this.changeAmount.bind(this));
-  }
-
   correctInputValue() {
     const showedItems = this.items
       .map(item => item.tempDeclension || '')
@@ -219,11 +213,21 @@ class Dropdown {
     e.target.parentElement.querySelector('.dropdown__value').textContent = item.amount;
   }
 
+  addEventListeners() {
+    this.anchor.addEventListener('click', this.toggleDropdown.bind(this));
+    document.addEventListener('mouseup', this.checkClickOnHide.bind(this));
+    this.wrapperHTML.addEventListener('click', this.changeAmount.bind(this));
+  }
+
   checkClickOnHide(e) {
     if (this.wrapperHTML.classList.contains('dropdown_active')) {
-      const div = this.wrapperHTML;
+      const wrapper = this.wrapperHTML;
 
-      if (div !== e.target && !div.contains(e.target)) {
+      if (e.target === this.anchor) {
+        this.toggleDropdown();
+      }
+
+      if (wrapper !== e.target && !wrapper.contains(e.target)) {
         this.toggleDropdown();
       }
     }

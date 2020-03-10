@@ -49,26 +49,47 @@ class Calendar {
   }
 
   addEventListeners() {
-    $(document).on('mouseup', this.checkClickOnHide.bind(this));
-    $(this.anchor).on('click', this.showCalendar.bind(this));
+    $(this.anchor).on('click', this.handleAnchorClick.bind(this));
+    $(document).on('mouseup', this.handleDocumentClick.bind(this));
     $('span[data-action="today"]').on('click', this.hideCalendar.bind(this));
   }
 
-  showCalendar() {
-    this.calendar.show();
+  isClickOnCalendar(e) {
+    const { target } = e;
+    return target.className.match(/(datepicker|calendar)/g);
+  }
+
+  isDisplay() {
+    return this.calendar[0].style.display === '';
+  }
+
+  isClickOnOurNodes(e) {
+    return $(this.anchor).has(e.target).length !== 0;
+  }
+
+  handleAnchorClick(e) {
+    if (!this.isClickOnCalendar(e)) {
+      this.toggleCalendar();
+    }
+  }
+
+  handleDocumentClick(e) {
+    if (!this.isClickOnOurNodes(e)) {
+      this.calendar.hide();
+    }
+  }
+
+  toggleCalendar() {
+    if (this.isDisplay()) {
+      this.calendar.hide();
+    } else {
+      this.calendar.show();
+    }
   }
 
   hideCalendar(e) {
     e.stopPropagation();
     this.calendar.hide();
-  }
-
-  checkClickOnHide(e) {
-    const div = this.calendar;
-
-    if (!div.is(e.target) && div.has(e.target).length === 0) {
-      this.calendar.hide();
-    }
   }
 }
 
