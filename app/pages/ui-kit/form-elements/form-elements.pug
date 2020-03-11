@@ -2,52 +2,52 @@
     .form-elements__container
         .form-elements__column
             .form-elements__item
-                .form-elements__sub-item(data-tip='Default')
-                    +field({ theme: 'with-label', className: 't-field', text: 'text field', placeholder: "Email"})
-                .form-elements__sub-item(data-tip='Hover / Focus')
+                .form-elements__sub-item(data-tip="Default")
+                    +field({ theme: "with-label", className: "t-field", text: "text field", placeholder: "Email"})
+                .form-elements__sub-item(data-tip="Hover / Focus")
                     +field({
-                      theme: 'with-label',
-                      className: 't-field',
-                      text: 'text field',
+                      theme: "with-label",
+                      className: "t-field",
+                      text: "text field",
                       value: "This is pretty awesome"
                     })
-                .form-elements__sub-item.form-elements__sub-item_type-guests(data-tip='Default')
-                    +field({theme: 'with-dropdown', text: 'text field', value: "Сколько гостей"})
-                .form-elements__sub-item(data-tip='Default')
-                    +field({theme: 'masked', text: 'Masked text field', placeholder: "ДД.ММ.ГГГГ"})
+                .form-elements__sub-item.form-elements__sub-item_type-guests(data-tip="Default")
+                    +field({theme: "with-dropdown", text: "text field", value: "Сколько гостей"})
+                .form-elements__sub-item(data-tip="Default")
+                    +field({theme: "masked", text: "Masked text field", placeholder: "ДД.ММ.ГГГГ"})
             .form-elements__item.form-elements__item_with-calendar
                 .form-elements__group-field
                     .form-elements__field.form-elements__field_type-arrival
                         +field({
-                          theme: 'with-dropdown',
-                          text: 'date Dropdown',
+                          theme: "with-dropdown",
+                          text: "date Dropdown",
                           value: "ДД.ММ.ГГГГ"
                         })
                     .form-elements__field.form-elements__field_type-check-out
                         +field({
-                          theme: 'with-dropdown',
-                          text: 'date Dropdown',
+                          theme: "with-dropdown",
+                          text: "date Dropdown",
                           value: "ДД.ММ.ГГГГ"
                         })
             .form-elements__item.form-elements__item_with-filter-date
-                +field({theme: 'with-dropdown', text: 'filter date dropdown', value: "Выберите дату"})
+                +field({theme: "with-dropdown", text: "filter date dropdown", value: "Выберите дату"})
             .form-elements__item
                 label.form-elements__label Subscription  text field
-                +field({theme: 'with-arrow', text: 'subscription text field', type: "email", placeholder: "Email"})
+                +field({theme: "with-arrow", text: "subscription text field", type: "email", placeholder: "Email"})
         .form-elements__column.form-elements__column_type-buttons
             .form-elements__item
                 h3.form-elements__label Checkbox Buttons
                 +checkbox-list({
                   items: [
                     {
-                      text: 'Можно курить'
+                      text: "Можно курить"
                     },
                     {
-                      text: 'Можно с питомцами',
+                      text: "Можно с питомцами",
                       check: true
                     },
                     {
-                      text: 'Можно пригласить гостей (до 10 человек)',
+                      text: "Можно пригласить гостей (до 10 человек)",
                       check: true
                     }
                   ]
@@ -55,22 +55,22 @@
             .form-elements__item
                 h3.form-elements__label Radio Buttons
                 +radio({
-                  text: 'Мужчина',
-                  name: 'sex',
-                  value: 'man',
+                  text: "Мужчина",
+                  name: "sex",
+                  value: "man",
                   checked: true
                 })
                 +radio({
-                  text: 'Женщина',
-                  name: 'sex',
-                  value: 'woman'
+                  text: "Женщина",
+                  name: "sex",
+                  value: "woman"
                 })
             .form-elements__item
                 h3.form-elements__label Toggle
                 .form-elements__toggle
-                    +toggle('Получать спецпредложения', true)
+                    +toggle("Получать спецпредложения", true)
                 .form-elements__toggle
-                    +toggle('Получать спецпредложения')
+                    +toggle("Получать спецпредложения")
             .form-elements__item
                 h3.form-elements__label Like Button
                 span.form-elements__like
@@ -90,18 +90,18 @@
             .form-elements__item
                 h3.form-elements__label buttons
                 .form-elements__sub-item
-                    +btn({text: 'Click Me', theme: 'gradient'})
+                    +btn({text: "Click Me", theme: "gradient"})
                 .form-elements__sub-item
-                    +btn({text: 'Click Me'})
+                    +btn({text: "Click Me"})
                 .form-elements__sub-item
                     +btn({
-                      text: 'Click Me',
-                      theme: 'link'
+                      text: "Click Me",
+                      theme: "link"
                     })
                 .form-elements__sub-item
                     +btn({
-                      text: 'Перейти к оплате',
-                      theme: 'arrow'
+                      text: "Перейти к оплате",
+                      theme: "arrow"
                     })
             .form-elements__item
                 h3.form-elements__label pagination
@@ -109,18 +109,18 @@
     .form-elements__container
         .form-elements__column
             .form-elements__item
-                .form-elements__sub-item.form-elements__sub-item_with-dropdown-no-buttons(data-tip='Default')
+                .form-elements__sub-item.form-elements__sub-item_with-dropdown-no-buttons(data-tip="Default")
                     +field({
-                      theme: 'with-dropdown',
-                      text: 'Dropdown',
+                      theme: "with-dropdown",
+                      text: "Dropdown",
                       value: "2 спальни, 2 кровати..."
                     })
         .form-elements__column
             .form-elements__item
                 .form-elements__sub-item.form-elements__sub-item_with-dropdown
                     +field({
-                      theme: 'with-dropdown',
-                      text: 'Dropdown',
+                      theme: "with-dropdown",
+                      text: "Dropdown",
                       value: "2 спальни, 2 кровати..."
                     })
     .form-elements__container
@@ -128,35 +128,35 @@
             .form-elements__item
                 +checkbox-list({
                   expandable: true,
-                  title: 'Дополнительные удобства',
+                  title: "Дополнительные удобства",
                   items:
                     [
                       {
-                        text: 'Завтрак'
+                        text: "Завтрак"
                       },
                       {
-                        text: 'Письменный стол',
+                        text: "Письменный стол",
                         check: true
                       },
                       {
-                        text: 'Стул для кормления',
+                        text: "Стул для кормления",
                         check: true
                       },
                       {
-                        text: 'Кроватка',
+                        text: "Кроватка",
                         check: true
                       },
                       {
-                        text: 'Телевизор'
+                        text: "Телевизор"
                       },
                       {
-                        text: 'Шампунь'
+                        text: "Шампунь"
                       },
                       {
-                        text: 'Интернет'
+                        text: "Интернет"
                       },
                       {
-                        text: 'Связь с космосом'
+                        text: "Связь с космосом"
                       }
                     ]
                 })
@@ -167,13 +167,13 @@
                   items: [
                     {
                       theme: "rich",
-                      title: 'Широкий коридор',
-                      text: 'Ширина коридоров в номере не менее 91 см.'
+                      title: "Широкий коридор",
+                      text: "Ширина коридоров в номере не менее 91 см."
                     },
                     {
                       theme: "rich",
-                      title: 'Помощник для инвалидов',
-                      text: 'На 1 этаже вас встретит специалист  и проводит до номера.'
+                      title: "Помощник для инвалидов",
+                      text: "На 1 этаже вас встретит специалист  и проводит до номера."
                     }
                   ]
                 })
@@ -206,9 +206,9 @@
               avatar: "../page-room/img/author-1.jpg",
               likes: 12,
               liked: true,
-              author: 'Мурад Сарафанов',
-              date: '5 дней назад',
-              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+              author: "Мурад Сарафанов",
+              date: "5 дней назад",
+              text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
             }])
 
 

@@ -1,16 +1,16 @@
 mixin checkbox({ title, text, check, theme })
   case theme
-    when 'rich'
+    when "rich"
       .checkbox.checkbox_rich
         label(class="checkbox__title_rich").checkbox__label
-          input(type='checkbox').checkbox__input
+          input(type="checkbox").checkbox__input
           span.checkbox__span= title
           p.checkbox__text_rich= text
     default
       .checkbox
         label.checkbox__label
           if check
-            input(type='checkbox' checked).checkbox__input
+            input(type="checkbox" checked).checkbox__input
           else
-            input(type='checkbox').checkbox__input
+            input(type="checkbox").checkbox__input
           span.checkbox__span= text

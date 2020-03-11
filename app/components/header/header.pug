@@ -17,12 +17,12 @@ mixin header(status, navigations)
               li.header__item
                 a.header__link(href="#") #{item.name}
         ul.header__user-nav
-          if status === 'non-authorized'
+          if status === "non-authorized"
             li.header__item
-              +btn({text: 'Войти', href: '../sign-in-page/sign-in-page.pug'})
+              +btn({text: "Войти", href: "../sign-in-page/sign-in-page.pug"})
             li.header__item
-              +btn({text: 'Зарегистрироваться', theme: 'gradient', href: "../sign-up-page/sign-up-page.pug"})
-          else if status === 'authorized'
+              +btn({text: "Зарегистрироваться", theme: "gradient", href: "../sign-up-page/sign-up-page.pug"})
+          else if status === "authorized"
             li.header__item
               span.header__user-name
                 a(href="#!").header__link Александр Вологдин

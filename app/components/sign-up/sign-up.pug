@@ -5,63 +5,63 @@ mixin sign-up()
             .sign-up__item#personData
                 .sign-up__field
                     +field({
-                      placeholder: 'Имя',
-                      name: 'name',
-                      labelledby: 'personData'
+                      placeholder: "Имя",
+                      name: "name",
+                      labelledby: "personData"
                     })
                 .sign-up__field
                     +field({
-                      placeholder: 'Фамилия',
-                      name: 'surname',
-                      labelledby: 'personData'
+                      placeholder: "Фамилия",
+                      name: "surname",
+                      labelledby: "personData"
                     })
                 .sign-up__field
                     +radio({
-                      text: 'Мужчина',
-                      name: 'sex',
-                      value: 'man',
+                      text: "Мужчина",
+                      name: "sex",
+                      value: "man",
                       checked: true
                     })
                     +radio({
-                      text: 'Женщина',
-                      name: 'sex',
-                      value: 'woman'
+                      text: "Женщина",
+                      name: "sex",
+                      value: "woman"
                     })
             .sign-up__item
                 .sign-up__field
                     +field({
-                      theme: 'date',
-                      className: 'sign-up',
-                      text: 'Дата рождения',
+                      theme: "date",
+                      className: "sign-up",
+                      text: "Дата рождения",
                       name: "birthday"
                     })
             .sign-up__item#signUpData
                 label.sign-up__label Данные для входа в сервис
                 .sign-up__field
                     +field({
-                      placeholder: 'Email',
-                      name: 'email',
-                      type: 'email',
-                      labelledby: 'signUpData'
+                      placeholder: "Email",
+                      name: "email",
+                      type: "email",
+                      labelledby: "signUpData"
                     })
                 .sign-up__field
                     +field({
-                      placeholder: 'Пароль',
-                      name: 'password',
-                      type: 'password',
-                      labelledby: 'signUpData'
+                      placeholder: "Пароль",
+                      name: "password",
+                      type: "password",
+                      labelledby: "signUpData"
                     })
-                +toggle('Получать спецпредложения')
+                +toggle("Получать спецпредложения")
             .sign-up__item
                 .sign-up__btn-buy
                     +btn({
-                      text: 'Перейти к оплате',
-                      theme: 'arrow'
+                      text: "Перейти к оплате",
+                      theme: "arrow"
                     })
             .sign-up__question Уже есть аккаунт на Toxin
                 .sign-up__sign-in-btn
                   +btn({
-                    text: 'Войти',
-                    size: 'xl',
+                    text: "Войти",
+                    size: "xl",
                     href: "/../sign-in-page/sign-in-page.pug"
                   })

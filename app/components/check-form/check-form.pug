@@ -9,20 +9,20 @@ mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount,
           span.check-form__number-icon №
           | #{number}
         if lux
-          +btn({text: 'Люкс', theme: 'link'})
+          +btn({text: "Люкс", theme: "link"})
         .check-form__price-default
           b.check-form__price-text 9 990₽
           |  в сутки
     .check-form__item.check-form__item_with-calendar
       .check-form__group-field
         .check-form__field.check-form__field_type-from
-          +field({ theme: 'with-dropdown', text: 'Прибытие', value: "ДД.ММ.ГГГГ" })
+          +field({ theme: "with-dropdown", text: "Прибытие", value: "ДД.ММ.ГГГГ" })
         .check-form__field.check-form__field_type-to
-          +field({ theme: 'with-dropdown', text: 'Выезд', value: "ДД.ММ.ГГГГ" })
+          +field({ theme: "with-dropdown", text: "Выезд", value: "ДД.ММ.ГГГГ" })
     .check-form__item.check-form__item_with-guests
       +field({
-        theme: 'with-dropdown',
-        text: 'Гости',
+        theme: "with-dropdown",
+        text: "Гости",
         value: "Сколько гостей"
       })
     .check-form__item
@@ -42,4 +42,4 @@ mixin check-form({ number, lux, payPerDay, serviceCharge, serviceChargeDiscount,
           .check-form__price-line
           .check-form__final-price-value #{(payPerDay * days) + serviceCharge + additionalServiceCharge - serviceChargeDiscount}₽
     .check-form__item
-      +btn({text: 'Забронировать', theme: 'arrow'})
+      +btn({text: "Забронировать", theme: "arrow"})

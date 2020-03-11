@@ -1,106 +1,106 @@
 .headers-footers
   .headers-footers__item
-    +header('non-authorized',[
+    +header("non-authorized",[
       {
-        name: 'О нас'
+        name: "О нас"
       },
       {
-        name: 'Услуги',
+        name: "Услуги",
         submenu: true
       },
       {
-        name: 'Вакансии'
+        name: "Вакансии"
       },
       {
-        name: 'Новости',
+        name: "Новости",
       },
       {
-        name: 'Соглашения',
-        submenu: true
-      },
-    ])
-  .headers-footers__item
-    +header('authorized',[
-      {
-        name: 'О нас'
-      },
-      {
-        name: 'Услуги',
-        submenu: true
-      },
-      {
-        name: 'Вакансии'
-      },
-      {
-        name: 'Новости',
-      },
-      {
-        name: 'Соглашения',
+        name: "Соглашения",
         submenu: true
       },
     ])
   .headers-footers__item
-    +footer('full', [
+    +header("authorized",[
       {
-        title: 'Навигация',
+        name: "О нас"
+      },
+      {
+        name: "Услуги",
+        submenu: true
+      },
+      {
+        name: "Вакансии"
+      },
+      {
+        name: "Новости",
+      },
+      {
+        name: "Соглашения",
+        submenu: true
+      },
+    ])
+  .headers-footers__item
+    +footer("full", [
+      {
+        title: "Навигация",
         items: [
           {
-            title: 'О нас',
-            href: '#!'
+            title: "О нас",
+            href: "#!"
           },
           {
-            title: 'Новости',
-            href: '#!'
+            title: "Новости",
+            href: "#!"
           },
           {
-            title: 'Служба поддержки',
-            href: '#!'
+            title: "Служба поддержки",
+            href: "#!"
           },
           {
-            title: 'Услуги',
-            href: '#!'
+            title: "Услуги",
+            href: "#!"
           },
         ]
       },
       {
-        title: 'О нас',
+        title: "О нас",
         items: [
           {
-            title: 'О сервисе',
-            href: '#!'
+            title: "О сервисе",
+            href: "#!"
           },
           {
-            title: 'Наша команда',
-            href: '#!'
+            title: "Наша команда",
+            href: "#!"
           },
           {
-            title: 'Вакансии',
-            href: '#!'
+            title: "Вакансии",
+            href: "#!"
           },
           {
-            title: 'Инвесторы',
-            href: '#!'
+            title: "Инвесторы",
+            href: "#!"
           },
         ]
       },
       {
-        title: 'Служба поддержки',
+        title: "Служба поддержки",
         items: [
           {
-            title: 'Соглашения',
-            href: '#!'
+            title: "Соглашения",
+            href: "#!"
           },
           {
-            title: 'Сообщества',
-            href: '#!'
+            title: "Сообщества",
+            href: "#!"
           },
           {
-            title: 'Связь с нами',
-            href: '#!'
+            title: "Связь с нами",
+            href: "#!"
           },
         ]
       },
     ])
   .headers-footers__item
-    +footer('poor')
+    +footer("poor")
 

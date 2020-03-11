@@ -5,27 +5,27 @@ mixin sign-in()
             .sign-in__item#signInData
                 .sign-in__field
                     +field({
-                      placeholder: 'Email',
-                      name: 'email',
-                      type: 'email',
-                      labelledby: 'signInData'
+                      placeholder: "Email",
+                      name: "email",
+                      type: "email",
+                      labelledby: "signInData"
                     })
                 .sign-in__field
                     +field({
-                      placeholder: 'Пароль',
-                      name: 'password',
-                      type: 'password',
-                      labelledby: 'signInData'
+                      placeholder: "Пароль",
+                      name: "password",
+                      type: "password",
+                      labelledby: "signInData"
                     })
             .sign-in__item
                 .sign-in__btn
                     +btn({
-                      text: 'Войти',
-                      theme: 'arrow'
+                      text: "Войти",
+                      theme: "arrow"
                     })
             .sign-in__question Нет аккаунта на Toxin?
                 +btn({
-                  text: 'Создать',
-                  size: 'l',
+                  text: "Создать",
+                  size: "l",
                   href: "/../sign-up-page/sign-up-page.pug"
                 })

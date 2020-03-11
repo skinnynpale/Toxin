@@ -1,33 +1,33 @@
-mixin field({ theme, text, className, value, placeholder, name = text.split(" ").join(""), type, labelledby } = '')
+mixin field({ theme, text, className, value, placeholder, name = text.split(" ").join(""), type, labelledby } = "")
   case theme
-    when 'with-label'
+    when "with-label"
       .field
         label(class="field__label")
           .field__title= text
           input.field__input(value=value autocomplete="off" placeholder=placeholder name=name type=type)
 
-    when 'with-dropdown'
+    when "with-dropdown"
       .field.field_type_dropdown
         label(class="field__label")
           .field__title= text
         input.field__input(value=value readonly autocomplete="off" placeholder=placeholder name=name type=type)
 
-    when 'with-arrow'
+    when "with-arrow"
       .field
         .field__wrapper
           input.field__input(placeholder=placeholder name=name type=type)
 
-    when 'masked'
+    when "masked"
       .field.field_type_masked
         label(class="field__label")
           .field__title= text
           input.field__input(disabled placeholder=placeholder name=name type=type)
 
-    when 'date'
+    when "date"
       .field
         label(class="field__label")
           .field__title= text
-          input.field__input.field__input_with-date(value=value autocomplete="off" placeholder=placeholder name=name type='date')
+          input.field__input.field__input_with-date(value=value autocomplete="off" placeholder=placeholder name=name type="date")
 
     default
       .field

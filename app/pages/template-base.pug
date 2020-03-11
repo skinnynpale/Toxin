@@ -3,91 +3,91 @@ html(lang="ru")
   head
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel='apple-touch-icon' sizes='180x180' href='../../favicon/apple-touch-icon.png')
-    link(rel='icon' type='image/png' sizes='32x32' href='../../favicon/favicon-32x32.png')
-    link(rel='icon' type='image/png' sizes='16x16' href='../../favicon/favicon-16x16.png')
-    link(rel='mask-icon' href='../../favicon/safari-pinned-tab.svg' color='#5bbad5')
-    meta(name='msapplication-TileColor' content='#da532c')
-    meta(name='theme-color' content='#ffffff')
+    link(rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png")
+    link(rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="msapplication-TileColor" content="#da532c")
+    meta(name="theme-color" content="#ffffff")
 
     block title
     block styles
   body
     include mixins-pug
 
-    +header('non-authorized', [
-      { name: 'О нас' },
+    +header("non-authorized", [
+      { name: "О нас" },
       {
-        name: 'Услуги',
+        name: "Услуги",
         submenu: true
       },
-      { name: 'Вакансии' },
-      { name: 'Новости' },
+      { name: "Вакансии" },
+      { name: "Новости" },
       {
-        name: 'Соглашения',
+        name: "Соглашения",
         submenu: true
       }
     ])
 
     block content
 
-    +footer('full', [
+    +footer("full", [
       {
-        title: 'Навигация',
+        title: "Навигация",
         items: [
           {
-            title: 'О нас',
-            href: '#!'
+            title: "О нас",
+            href: "#!"
           },
           {
-            title: 'Новости',
-            href: '#!'
+            title: "Новости",
+            href: "#!"
           },
           {
-            title: 'Служба поддержки',
-            href: '#!'
+            title: "Служба поддержки",
+            href: "#!"
           },
           {
-            title: 'Услуги',
-            href: '#!'
+            title: "Услуги",
+            href: "#!"
           },
         ]
       },
       {
-        title: 'О нас',
+        title: "О нас",
         items: [
           {
-            title: 'О сервисе',
-            href: '#!'
+            title: "О сервисе",
+            href: "#!"
           },
           {
-            title: 'Наша команда',
-            href: '#!'
+            title: "Наша команда",
+            href: "#!"
           },
           {
-            title: 'Вакансии',
-            href: '#!'
+            title: "Вакансии",
+            href: "#!"
           },
           {
-            title: 'Инвесторы',
-            href: '#!'
+            title: "Инвесторы",
+            href: "#!"
           },
         ]
       },
       {
-        title: 'Служба поддержки',
+        title: "Служба поддержки",
         items: [
           {
-            title: 'Соглашения',
-            href: '#!'
+            title: "Соглашения",
+            href: "#!"
           },
           {
-            title: 'Сообщества',
-            href: '#!'
+            title: "Сообщества",
+            href: "#!"
           },
           {
-            title: 'Связь с нами',
-            href: '#!'
+            title: "Связь с нами",
+            href: "#!"
           },
         ]
       },
